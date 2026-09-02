@@ -3,9 +3,11 @@
 Ratio at matched eps for {blockwise, per-channel, per-token}, split by tensor
 kind (keys vs values) and by depth.
 
-This figure carries the project's research judgement. Scientific compressors earn
-their ratio from spatial smoothness and assume *one* exploitable structure; these
-tensors do not have one. Keys carry strong per-channel structure — at layer 0,
+This figure is about where *this* codec should spend its error budget. It is not
+evidence that general error-bounded compressors do poorly here — D14 measured SZ3
+compressing these same tensors 5x better, so that reading would be wrong.
+
+Keys carry strong per-channel structure — at layer 0,
 blockwise and per-token allocation achieve no compression at all while
 per-channel reaches 3.5x. Values behave the opposite way, with per-channel often
 the worst choice. The right axis is a property of the tensor, not of the codec,

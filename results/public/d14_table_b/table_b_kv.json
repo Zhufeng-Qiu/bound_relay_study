@@ -1,0 +1,2401 @@
+{
+  "eps_grid": [
+    0.05,
+    0.15,
+    0.5
+  ],
+  "n_tensors": 24,
+  "note": "all ratios are against bf16 bytes (2 B/element); SZ3 and zfp consume a lossless bf16->fp32 upcast",
+  "rows": {
+    "p0_l0_k": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 84273,
+          "max_error": 0.04999936372041702,
+          "encode_s": 0.001469832997827325,
+          "ratio": 1.9684596489978996,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 120248,
+          "max_error": 0.0133056640625,
+          "encode_s": 0.0006449590000556782,
+          "ratio": 1.3795489322067727,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 168804,
+          "max_error": 0.0,
+          "encode_s": 0.025852749997284263,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 95760,
+          "max_error": 0.04296875,
+          "encode_s": 0.008052042001509108,
+          "ratio": 1.7323308270676692,
+          "within_bound": true
+        },
+        "upcast_s": 0.0011057919982704334,
+        "upcast_extra_bytes": 165888
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 63376,
+          "max_error": 0.1499992311000824,
+          "encode_s": 0.0014116250022198074,
+          "ratio": 2.6175208280737188,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 99512,
+          "max_error": 0.04541015625,
+          "encode_s": 0.00050133399781771,
+          "ratio": 1.6670150333628104,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 168804,
+          "max_error": 0.0,
+          "encode_s": 0.004506208002567291,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 67896,
+          "max_error": 0.1328125,
+          "encode_s": 0.006873292004456744,
+          "ratio": 2.443266171792153,
+          "within_bound": true
+        },
+        "upcast_s": 0.0011057919982704334,
+        "upcast_extra_bytes": 165888
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 41874,
+          "max_error": 0.49997830390930176,
+          "encode_s": 0.0011590830035856925,
+          "ratio": 3.961599082963175,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 78776,
+          "max_error": 0.1875,
+          "encode_s": 0.0005082079951534979,
+          "ratio": 2.1058190311770084,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 168804,
+          "max_error": 0.0,
+          "encode_s": 0.004322084001614712,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 47808,
+          "max_error": 0.4765625,
+          "encode_s": 0.006728084001224488,
+          "ratio": 3.4698795180722892,
+          "within_bound": true
+        },
+        "upcast_s": 0.0011057919982704334,
+        "upcast_extra_bytes": 165888
+      }
+    },
+    "p0_l0_v": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 30299,
+          "max_error": 0.04999999701976776,
+          "encode_s": 0.0007137089996831492,
+          "ratio": 5.475032179279844,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 79312,
+          "max_error": 0.0117340087890625,
+          "encode_s": 0.000484208001580555,
+          "ratio": 2.091587653822877,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 50020,
+          "max_error": 0.0458984375,
+          "encode_s": 0.010608832999423612,
+          "ratio": 3.3164334266293483,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 45540,
+          "max_error": 0.0478515625,
+          "encode_s": 0.006848874996649101,
+          "ratio": 3.642687747035573,
+          "within_bound": true
+        },
+        "upcast_s": 2.0166000467725098e-05,
+        "upcast_extra_bytes": 165888
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 14680,
+          "max_error": 0.14999695122241974,
+          "encode_s": 0.0007294999959412962,
+          "ratio": 11.300272479564033,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 58576,
+          "max_error": 0.04931640625,
+          "encode_s": 0.00047658300172770396,
+          "ratio": 2.8320131111718108,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 44388,
+          "max_error": 0.115234375,
+          "encode_s": 0.010504625002795365,
+          "ratio": 3.7372262773722627,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 42624,
+          "max_error": 0.109375,
+          "encode_s": 0.0066785419985535555,
+          "ratio": 3.891891891891892,
+          "within_bound": true
+        },
+        "upcast_s": 2.0166000467725098e-05,
+        "upcast_extra_bytes": 165888
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 2949,
+          "max_error": 0.499969482421875,
+          "encode_s": 0.0006644579989369959,
+          "ratio": 56.25228891149542,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 37800,
+          "max_error": 0.1923828125,
+          "encode_s": 0.00043258399819023907,
+          "ratio": 4.388571428571429,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 44388,
+          "max_error": 0.115234375,
+          "encode_s": 0.010243417003948707,
+          "ratio": 3.7372262773722627,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 42624,
+          "max_error": 0.109375,
+          "encode_s": 0.0064872079965425655,
+          "ratio": 3.891891891891892,
+          "within_bound": true
+        },
+        "upcast_s": 2.0166000467725098e-05,
+        "upcast_extra_bytes": 165888
+      }
+    },
+    "p0_l14_k": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 72074,
+          "max_error": 0.049999892711639404,
+          "encode_s": 0.0011299580000923015,
+          "ratio": 2.301634431278963,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 113896,
+          "max_error": 0.0137939453125,
+          "encode_s": 0.0005507910027517937,
+          "ratio": 1.4564866193720587,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 165476,
+          "max_error": 0.03125,
+          "encode_s": 0.004559332999633625,
+          "ratio": 1.0024897870386038,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 99972,
+          "max_error": 0.046875,
+          "encode_s": 0.0062212499979068525,
+          "ratio": 1.659344616492618,
+          "within_bound": true
+        },
+        "upcast_s": 2.366699482081458e-05,
+        "upcast_extra_bytes": 165888
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 51793,
+          "max_error": 0.14999999105930328,
+          "encode_s": 0.0009027920023072511,
+          "ratio": 3.2029038673179775,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 93160,
+          "max_error": 0.04931640625,
+          "encode_s": 0.0005265840009087697,
+          "ratio": 1.7806784027479605,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 84836,
+          "max_error": 0.125,
+          "encode_s": 0.010710167000070214,
+          "ratio": 1.955396294026121,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 66276,
+          "max_error": 0.125,
+          "encode_s": 0.006789624996599741,
+          "ratio": 2.502987506789788,
+          "within_bound": true
+        },
+        "upcast_s": 2.366699482081458e-05,
+        "upcast_extra_bytes": 165888
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 33721,
+          "max_error": 0.5,
+          "encode_s": 0.000803167000412941,
+          "ratio": 4.919427063254352,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 72432,
+          "max_error": 0.189453125,
+          "encode_s": 0.0004829160025110468,
+          "ratio": 2.290258449304175,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 64548,
+          "max_error": 0.4716796875,
+          "encode_s": 0.010499500000150874,
+          "ratio": 2.5699944227551588,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 47160,
+          "max_error": 0.46875,
+          "encode_s": 0.006890374999784399,
+          "ratio": 3.517557251908397,
+          "within_bound": true
+        },
+        "upcast_s": 2.366699482081458e-05,
+        "upcast_extra_bytes": 165888
+      }
+    },
+    "p0_l14_v": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 77780,
+          "max_error": 0.04999995231628418,
+          "encode_s": 0.0011760829947888851,
+          "ratio": 2.1327847775777835,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 119464,
+          "max_error": 0.012451171875,
+          "encode_s": 0.0005616659982479177,
+          "ratio": 1.3886024241612536,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 121316,
+          "max_error": 0.0313720703125,
+          "encode_s": 0.008009707999008242,
+          "ratio": 1.3674041346565993,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 165096,
+          "max_error": 0.03125,
+          "encode_s": 0.004172540997387841,
+          "ratio": 1.004797208896642,
+          "within_bound": true
+        },
+        "upcast_s": 2.395800402155146e-05,
+        "upcast_extra_bytes": 165888
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 58070,
+          "max_error": 0.14999425411224365,
+          "encode_s": 0.001029624996590428,
+          "ratio": 2.8566902014809714,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 98728,
+          "max_error": 0.0498046875,
+          "encode_s": 0.0005191660020500422,
+          "ratio": 1.6802528158171948,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 75812,
+          "max_error": 0.13134765625,
+          "encode_s": 0.010202958997979295,
+          "ratio": 2.1881496333034347,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 115200,
+          "max_error": 0.125,
+          "encode_s": 0.005788333000964485,
+          "ratio": 1.44,
+          "within_bound": true
+        },
+        "upcast_s": 2.395800402155146e-05,
+        "upcast_extra_bytes": 165888
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 38715,
+          "max_error": 0.5,
+          "encode_s": 0.0008404170002904721,
+          "ratio": 4.284850833010461,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 77992,
+          "max_error": 0.177734375,
+          "encode_s": 0.0004964159961673431,
+          "ratio": 2.1269873833213664,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 55844,
+          "max_error": 0.484375,
+          "encode_s": 0.01046195800154237,
+          "ratio": 2.970560848076785,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 68382,
+          "max_error": 0.4375,
+          "encode_s": 0.0068985000034444965,
+          "ratio": 2.4259015530402737,
+          "within_bound": true
+        },
+        "upcast_s": 2.395800402155146e-05,
+        "upcast_extra_bytes": 165888
+      }
+    },
+    "p0_l27_k": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 73251,
+          "max_error": 0.04999947547912598,
+          "encode_s": 0.000995124995824881,
+          "ratio": 2.2646516771102103,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 115584,
+          "max_error": 0.011962890625,
+          "encode_s": 0.0005363339951145463,
+          "ratio": 1.435215946843854,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 168804,
+          "max_error": 0.0,
+          "encode_s": 0.004340333995060064,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 90576,
+          "max_error": 0.046875,
+          "encode_s": 0.0061439589990186505,
+          "ratio": 1.8314785373608904,
+          "within_bound": true
+        },
+        "upcast_s": 2.474999928381294e-05,
+        "upcast_extra_bytes": 165888
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 53164,
+          "max_error": 0.1499999761581421,
+          "encode_s": 0.0008365829999092966,
+          "ratio": 3.1203069746444965,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 94848,
+          "max_error": 0.0478515625,
+          "encode_s": 0.0005313329966156743,
+          "ratio": 1.7489878542510122,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 140388,
+          "max_error": 0.125,
+          "encode_s": 0.006096875004004687,
+          "ratio": 1.1816394563637918,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 65304,
+          "max_error": 0.1270751953125,
+          "encode_s": 0.006088542002544273,
+          "ratio": 2.5402425578831314,
+          "within_bound": true
+        },
+        "upcast_s": 2.474999928381294e-05,
+        "upcast_extra_bytes": 165888
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 35488,
+          "max_error": 0.499997615814209,
+          "encode_s": 0.0007238329999381676,
+          "ratio": 4.674481514878269,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 74112,
+          "max_error": 0.185546875,
+          "encode_s": 0.0004732079978566617,
+          "ratio": 2.238341968911917,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 68836,
+          "max_error": 0.3828125,
+          "encode_s": 0.009891167006571777,
+          "ratio": 2.4099017955720843,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 45216,
+          "max_error": 0.484375,
+          "encode_s": 0.006006708004861139,
+          "ratio": 3.6687898089171975,
+          "within_bound": true
+        },
+        "upcast_s": 2.474999928381294e-05,
+        "upcast_extra_bytes": 165888
+      }
+    },
+    "p0_l27_v": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 118236,
+          "max_error": 0.049999237060546875,
+          "encode_s": 0.0026998329994967207,
+          "ratio": 1.4030244595554653,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 148232,
+          "max_error": 0.0159912109375,
+          "encode_s": 0.0005604589969152585,
+          "ratio": 1.11911058340979,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 168548,
+          "max_error": 0.03125,
+          "encode_s": 0.003963124996516854,
+          "ratio": 0.9842181455727745,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 167040,
+          "max_error": 0.0,
+          "encode_s": 0.00354416600021068,
+          "ratio": 0.993103448275862,
+          "within_bound": true
+        },
+        "upcast_s": 1.9625003915280104e-05,
+        "upcast_extra_bytes": 165888
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 88386,
+          "max_error": 0.14999961853027344,
+          "encode_s": 0.000981665994913783,
+          "ratio": 1.8768583259792275,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 127496,
+          "max_error": 0.0517578125,
+          "encode_s": 0.0005244169951765798,
+          "ratio": 1.301123172491686,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 167716,
+          "max_error": 0.09765625,
+          "encode_s": 0.004107041997485794,
+          "ratio": 0.9891006224808605,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 167040,
+          "max_error": 0.0,
+          "encode_s": 0.0036343339961604215,
+          "ratio": 0.993103448275862,
+          "within_bound": true
+        },
+        "upcast_s": 1.9625003915280104e-05,
+        "upcast_extra_bytes": 165888
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 66739,
+          "max_error": 0.5,
+          "encode_s": 0.0009626250030123629,
+          "ratio": 2.4856230989376527,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 106760,
+          "max_error": 0.193359375,
+          "encode_s": 0.0005063749995315447,
+          "ratio": 1.5538403896590482,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 92260,
+          "max_error": 0.4375,
+          "encode_s": 0.009485959002631716,
+          "ratio": 1.7980489919791893,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 91872,
+          "max_error": 0.25,
+          "encode_s": 0.006190167005115654,
+          "ratio": 1.8056426332288402,
+          "within_bound": true
+        },
+        "upcast_s": 1.9625003915280104e-05,
+        "upcast_extra_bytes": 165888
+      }
+    },
+    "p1_l0_k": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 79947,
+          "max_error": 0.049999237060546875,
+          "encode_s": 0.0012719580045086332,
+          "ratio": 1.9725067857455565,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 114400,
+          "max_error": 0.0120849609375,
+          "encode_s": 0.0005047910017310642,
+          "ratio": 1.3784615384615384,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 160468,
+          "max_error": 0.0,
+          "encode_s": 0.0038003750014468096,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 89702,
+          "max_error": 0.046875,
+          "encode_s": 0.006139167002402246,
+          "ratio": 1.7579987068292793,
+          "within_bound": true
+        },
+        "upcast_s": 2.070800110232085e-05,
+        "upcast_extra_bytes": 157696
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 58821,
+          "max_error": 0.1499999761581421,
+          "encode_s": 0.001104666996980086,
+          "ratio": 2.6809472807330716,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 94688,
+          "max_error": 0.0546875,
+          "encode_s": 0.00045362499804468825,
+          "ratio": 1.6654275092936803,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 160468,
+          "max_error": 0.0,
+          "encode_s": 0.0037421250017359853,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 63984,
+          "max_error": 0.125,
+          "encode_s": 0.005946666999079753,
+          "ratio": 2.4646161540385094,
+          "within_bound": true
+        },
+        "upcast_s": 2.070800110232085e-05,
+        "upcast_extra_bytes": 157696
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 38510,
+          "max_error": 0.5,
+          "encode_s": 0.0007993340041139163,
+          "ratio": 4.0949363801609975,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 74976,
+          "max_error": 0.17578125,
+          "encode_s": 0.00044341699685901403,
+          "ratio": 2.103286384976526,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 160468,
+          "max_error": 0.0,
+          "encode_s": 0.003976957996201236,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 45196,
+          "max_error": 0.47265625,
+          "encode_s": 0.00591862500004936,
+          "ratio": 3.489158332595805,
+          "within_bound": true
+        },
+        "upcast_s": 2.070800110232085e-05,
+        "upcast_extra_bytes": 157696
+      }
+    },
+    "p1_l0_v": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 28763,
+          "max_error": 0.04999999701976776,
+          "encode_s": 0.0006719580051139928,
+          "ratio": 5.482599172548065,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 75440,
+          "max_error": 0.0113525390625,
+          "encode_s": 0.00047891699796309695,
+          "ratio": 2.0903499469777307,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 47572,
+          "max_error": 0.0478515625,
+          "encode_s": 0.009359499999845866,
+          "ratio": 3.31489111241907,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 42578,
+          "max_error": 0.04736328125,
+          "encode_s": 0.006002375004754867,
+          "ratio": 3.703696744797783,
+          "within_bound": true
+        },
+        "upcast_s": 1.7915997887030244e-05,
+        "upcast_extra_bytes": 157696
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 14838,
+          "max_error": 0.1499989628791809,
+          "encode_s": 0.0006523750053020194,
+          "ratio": 10.627847418789594,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 55720,
+          "max_error": 0.0509033203125,
+          "encode_s": 0.00042137499985983595,
+          "ratio": 2.8301507537688444,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 42196,
+          "max_error": 0.09033203125,
+          "encode_s": 0.009264917003747541,
+          "ratio": 3.7372262773722627,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 40576,
+          "max_error": 0.07666015625,
+          "encode_s": 0.005934791995969135,
+          "ratio": 3.8864353312302837,
+          "within_bound": true
+        },
+        "upcast_s": 1.7915997887030244e-05,
+        "upcast_extra_bytes": 157696
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 3512,
+          "max_error": 0.4999855160713196,
+          "encode_s": 0.0005587080013356172,
+          "ratio": 44.902050113895214,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 35960,
+          "max_error": 0.36376953125,
+          "encode_s": 0.00038154100184328854,
+          "ratio": 4.3853170189099,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 42196,
+          "max_error": 0.09033203125,
+          "encode_s": 0.009179082997434307,
+          "ratio": 3.7372262773722627,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 40576,
+          "max_error": 0.07666015625,
+          "encode_s": 0.005953082996711601,
+          "ratio": 3.8864353312302837,
+          "within_bound": true
+        },
+        "upcast_s": 1.7915997887030244e-05,
+        "upcast_extra_bytes": 157696
+      }
+    },
+    "p1_l14_k": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 66835,
+          "max_error": 0.04999995231628418,
+          "encode_s": 0.0010588750010356307,
+          "ratio": 2.359482307174385,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 108056,
+          "max_error": 0.012939453125,
+          "encode_s": 0.0004982919999747537,
+          "ratio": 1.4593914266676538,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 158420,
+          "max_error": 0.03125,
+          "encode_s": 0.003993582999100909,
+          "ratio": 0.9954298699659134,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 92166,
+          "max_error": 0.046875,
+          "encode_s": 0.005852583002706524,
+          "ratio": 1.7109997179003102,
+          "within_bound": true
+        },
+        "upcast_s": 1.820900070015341e-05,
+        "upcast_extra_bytes": 157696
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 49038,
+          "max_error": 0.14999543130397797,
+          "encode_s": 0.0010021249981946312,
+          "ratio": 3.2157918349035444,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 88344,
+          "max_error": 0.052734375,
+          "encode_s": 0.0004734169997391291,
+          "ratio": 1.7850221860001811,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 80660,
+          "max_error": 0.125,
+          "encode_s": 0.009572666996973567,
+          "ratio": 1.9550706669972726,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 61982,
+          "max_error": 0.138671875,
+          "encode_s": 0.006208832994161639,
+          "ratio": 2.544222516214385,
+          "within_bound": true
+        },
+        "upcast_s": 1.820900070015341e-05,
+        "upcast_extra_bytes": 157696
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 31933,
+          "max_error": 0.4999847412109375,
+          "encode_s": 0.0007137499997043051,
+          "ratio": 4.938339648639339,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 68640,
+          "max_error": 0.189453125,
+          "encode_s": 0.0004530829974100925,
+          "ratio": 2.2974358974358973,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 61396,
+          "max_error": 0.46875,
+          "encode_s": 0.009434958999918308,
+          "ratio": 2.5685060916020586,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 44580,
+          "max_error": 0.46875,
+          "encode_s": 0.005976332999125589,
+          "ratio": 3.5373710183938987,
+          "within_bound": true
+        },
+        "upcast_s": 1.820900070015341e-05,
+        "upcast_extra_bytes": 157696
+      }
+    },
+    "p1_l14_v": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 75304,
+          "max_error": 0.04999995231628418,
+          "encode_s": 0.0013699170012841932,
+          "ratio": 2.094125146074578,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 113872,
+          "max_error": 0.0118408203125,
+          "encode_s": 0.0005012080000597052,
+          "ratio": 1.3848531684698608,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 125524,
+          "max_error": 0.03125,
+          "encode_s": 0.0063554170046700165,
+          "ratio": 1.2563015837608744,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 157616,
+          "max_error": 0.03125,
+          "encode_s": 0.003688333003083244,
+          "ratio": 1.0005075626839914,
+          "within_bound": true
+        },
+        "upcast_s": 1.8582999473437667e-05,
+        "upcast_extra_bytes": 157696
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 57628,
+          "max_error": 0.149997279047966,
+          "encode_s": 0.000980041004368104,
+          "ratio": 2.7364475602137848,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 94160,
+          "max_error": 0.05340576171875,
+          "encode_s": 0.0004779170049005188,
+          "ratio": 1.674766355140187,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 75284,
+          "max_error": 0.13134765625,
+          "encode_s": 0.009117040994169656,
+          "ratio": 2.0946814728229106,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 103562,
+          "max_error": 0.125,
+          "encode_s": 0.0055810830017435364,
+          "ratio": 1.5227206890558314,
+          "within_bound": true
+        },
+        "upcast_s": 1.8582999473437667e-05,
+        "upcast_extra_bytes": 157696
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 36990,
+          "max_error": 0.5,
+          "encode_s": 0.0008173330061254092,
+          "ratio": 4.263206271965396,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 74448,
+          "max_error": 0.197265625,
+          "encode_s": 0.0004744580000988208,
+          "ratio": 2.1182033096926713,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 56660,
+          "max_error": 0.484375,
+          "encode_s": 0.009191125005600043,
+          "ratio": 2.7831980232968583,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 64446,
+          "max_error": 0.4375,
+          "encode_s": 0.006100458005676046,
+          "ratio": 2.446947832293703,
+          "within_bound": true
+        },
+        "upcast_s": 1.8582999473437667e-05,
+        "upcast_extra_bytes": 157696
+      }
+    },
+    "p1_l27_k": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 67675,
+          "max_error": 0.049999989569187164,
+          "encode_s": 0.0009617920004529878,
+          "ratio": 2.330195788695973,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 109352,
+          "max_error": 0.0118408203125,
+          "encode_s": 0.0004827920056413859,
+          "ratio": 1.442095252030141,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 160468,
+          "max_error": 0.0,
+          "encode_s": 0.00372429200069746,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 83542,
+          "max_error": 0.046875,
+          "encode_s": 0.005734500002290588,
+          "ratio": 1.8876253860333725,
+          "within_bound": true
+        },
+        "upcast_s": 1.9915998564101756e-05,
+        "upcast_extra_bytes": 157696
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 50946,
+          "max_error": 0.14999869465827942,
+          "encode_s": 0.000835541999549605,
+          "ratio": 3.0953558669964276,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 89640,
+          "max_error": 0.04541015625,
+          "encode_s": 0.00046595799358328804,
+          "ratio": 1.75921463632307,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 114644,
+          "max_error": 0.125,
+          "encode_s": 0.007165042006818112,
+          "ratio": 1.3755277205959318,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 60442,
+          "max_error": 0.140625,
+          "encode_s": 0.006021459004841745,
+          "ratio": 2.609046689388174,
+          "within_bound": true
+        },
+        "upcast_s": 1.9915998564101756e-05,
+        "upcast_extra_bytes": 157696
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 32604,
+          "max_error": 0.4999903440475464,
+          "encode_s": 0.000691167006152682,
+          "ratio": 4.8367071524966265,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 69928,
+          "max_error": 0.201171875,
+          "encode_s": 0.00044083399552619085,
+          "ratio": 2.2551195515387255,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 62740,
+          "max_error": 0.375,
+          "encode_s": 0.009410915998159908,
+          "ratio": 2.513484220592923,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 43040,
+          "max_error": 0.4765625,
+          "encode_s": 0.0059081250001327135,
+          "ratio": 3.6639405204460966,
+          "within_bound": true
+        },
+        "upcast_s": 1.9915998564101756e-05,
+        "upcast_extra_bytes": 157696
+      }
+    },
+    "p1_l27_v": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 102159,
+          "max_error": 0.04999995231628418,
+          "encode_s": 0.0013020830010646023,
+          "ratio": 1.543632964300747,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 137984,
+          "max_error": 0.0130615234375,
+          "encode_s": 0.0005155420003575273,
+          "ratio": 1.1428571428571428,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 160212,
+          "max_error": 0.03125,
+          "encode_s": 0.0037762909996672533,
+          "ratio": 0.984295808054328,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 158848,
+          "max_error": 0.0,
+          "encode_s": 0.0035456660043564625,
+          "ratio": 0.9927477840451249,
+          "within_bound": true
+        },
+        "upcast_s": 1.8999999156221747e-05,
+        "upcast_extra_bytes": 157696
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 79967,
+          "max_error": 0.14999961853027344,
+          "encode_s": 0.0012403750006342307,
+          "ratio": 1.9720134555504145,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 118272,
+          "max_error": 0.05908203125,
+          "encode_s": 0.000495457999932114,
+          "ratio": 1.3333333333333333,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 159380,
+          "max_error": 0.1015625,
+          "encode_s": 0.003876666996802669,
+          "ratio": 0.9894340569707617,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 158848,
+          "max_error": 0.0,
+          "encode_s": 0.003685625000798609,
+          "ratio": 0.9927477840451249,
+          "within_bound": true
+        },
+        "upcast_s": 1.8999999156221747e-05,
+        "upcast_extra_bytes": 157696
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 60290,
+          "max_error": 0.5,
+          "encode_s": 0.0008721249978407286,
+          "ratio": 2.615624481671919,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 98560,
+          "max_error": 0.1796875,
+          "encode_s": 0.00047525000263703987,
+          "ratio": 1.6,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 79380,
+          "max_error": 0.4375,
+          "encode_s": 0.009492000004684087,
+          "ratio": 1.9865961199294533,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 79846,
+          "max_error": 0.4375,
+          "encode_s": 0.006493209002655931,
+          "ratio": 1.9750018786163364,
+          "within_bound": true
+        },
+        "upcast_s": 1.8999999156221747e-05,
+        "upcast_extra_bytes": 157696
+      }
+    },
+    "p2_l0_k": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 80202,
+          "max_error": 0.04999998211860657,
+          "encode_s": 0.0012391670024953783,
+          "ratio": 1.9917707787835714,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 116240,
+          "max_error": 0.0130615234375,
+          "encode_s": 0.0004957499986630864,
+          "ratio": 1.374260151410874,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 162552,
+          "max_error": 0.0,
+          "encode_s": 0.003763790999073535,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 92412,
+          "max_error": 0.046875,
+          "encode_s": 0.005672500003129244,
+          "ratio": 1.7286066744578625,
+          "within_bound": true
+        },
+        "upcast_s": 2.120799763360992e-05,
+        "upcast_extra_bytes": 159744
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 62155,
+          "max_error": 0.14999988675117493,
+          "encode_s": 0.0009622919969842769,
+          "ratio": 2.5700909017778137,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 96272,
+          "max_error": 0.05029296875,
+          "encode_s": 0.0004672499999287538,
+          "ratio": 1.6592986538141932,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 162552,
+          "max_error": 0.0,
+          "encode_s": 0.003846500003419351,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 65580,
+          "max_error": 0.140625,
+          "encode_s": 0.00603995900019072,
+          "ratio": 2.4358645928636777,
+          "within_bound": true
+        },
+        "upcast_s": 2.120799763360992e-05,
+        "upcast_extra_bytes": 159744
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 40562,
+          "max_error": 0.4999864101409912,
+          "encode_s": 0.000818458000139799,
+          "ratio": 3.9382673438193385,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 76304,
+          "max_error": 0.1796875,
+          "encode_s": 0.0004474160014069639,
+          "ratio": 2.0935206542252045,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 162552,
+          "max_error": 0.0,
+          "encode_s": 0.003787374997045845,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 45924,
+          "max_error": 0.45703125,
+          "encode_s": 0.006137665994174313,
+          "ratio": 3.4784426443689576,
+          "within_bound": true
+        },
+        "upcast_s": 2.120799763360992e-05,
+        "upcast_extra_bytes": 159744
+      }
+    },
+    "p2_l0_v": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 31248,
+          "max_error": 0.04999987781047821,
+          "encode_s": 0.0007667909958399832,
+          "ratio": 5.1121351766513055,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 76768,
+          "max_error": 0.0117340087890625,
+          "encode_s": 0.00045208300434751436,
+          "ratio": 2.0808670279283032,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 47480,
+          "max_error": 0.0478515625,
+          "encode_s": 0.00945020899962401,
+          "ratio": 3.364448188711036,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 43116,
+          "max_error": 0.04736328125,
+          "encode_s": 0.006027249997714534,
+          "ratio": 3.704981909268021,
+          "within_bound": true
+        },
+        "upcast_s": 1.895800232887268e-05,
+        "upcast_extra_bytes": 159744
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 14977,
+          "max_error": 0.14999887347221375,
+          "encode_s": 0.0006852910009911284,
+          "ratio": 10.665954463510717,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 56792,
+          "max_error": 0.04931640625,
+          "encode_s": 0.00043354200170142576,
+          "ratio": 2.812790533878011,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 42744,
+          "max_error": 0.09033203125,
+          "encode_s": 0.009246999994502403,
+          "ratio": 3.7372262773722627,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 41088,
+          "max_error": 0.07684326171875,
+          "encode_s": 0.006230332997802179,
+          "ratio": 3.8878504672897196,
+          "within_bound": true
+        },
+        "upcast_s": 1.895800232887268e-05,
+        "upcast_extra_bytes": 159744
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 2378,
+          "max_error": 0.49996185302734375,
+          "encode_s": 0.0005371250008465722,
+          "ratio": 67.1757779646762,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 36784,
+          "max_error": 0.36376953125,
+          "encode_s": 0.00039649999962421134,
+          "ratio": 4.342757720748152,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 42744,
+          "max_error": 0.09033203125,
+          "encode_s": 0.009435541003767867,
+          "ratio": 3.7372262773722627,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 41088,
+          "max_error": 0.07684326171875,
+          "encode_s": 0.006052249998901971,
+          "ratio": 3.8878504672897196,
+          "within_bound": true
+        },
+        "upcast_s": 1.895800232887268e-05,
+        "upcast_extra_bytes": 159744
+      }
+    },
+    "p2_l14_k": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 68438,
+          "max_error": 0.04999876022338867,
+          "encode_s": 0.0009429160054423846,
+          "ratio": 2.33414185101844,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 109816,
+          "max_error": 0.0133056640625,
+          "encode_s": 0.0005047919985372573,
+          "ratio": 1.4546514169155678,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 161272,
+          "max_error": 0.03125,
+          "encode_s": 0.0039613339977222495,
+          "ratio": 0.9905253236767697,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 94752,
+          "max_error": 0.046875,
+          "encode_s": 0.005687290999048855,
+          "ratio": 1.6859169199594732,
+          "within_bound": true
+        },
+        "upcast_s": 1.8667000404093415e-05,
+        "upcast_extra_bytes": 159744
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 51392,
+          "max_error": 0.14999818801879883,
+          "encode_s": 0.0008096250021480955,
+          "ratio": 3.108343711083437,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 89848,
+          "max_error": 0.048828125,
+          "encode_s": 0.0004767499995068647,
+          "ratio": 1.7779360698067848,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 82488,
+          "max_error": 0.125,
+          "encode_s": 0.009695957996882498,
+          "ratio": 1.9365725923770731,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 62616,
+          "max_error": 0.1328125,
+          "encode_s": 0.006188167004438583,
+          "ratio": 2.5511690302798007,
+          "within_bound": true
+        },
+        "upcast_s": 1.8667000404093415e-05,
+        "upcast_extra_bytes": 159744
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 32723,
+          "max_error": 0.49997711181640625,
+          "encode_s": 0.0008096660021692514,
+          "ratio": 4.8817040002444765,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 69888,
+          "max_error": 0.197265625,
+          "encode_s": 0.00045487500028684735,
+          "ratio": 2.2857142857142856,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 62392,
+          "max_error": 0.453125,
+          "encode_s": 0.009553084004437551,
+          "ratio": 2.560328247211181,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 45300,
+          "max_error": 0.46875,
+          "encode_s": 0.0061852500002714805,
+          "ratio": 3.5263576158940397,
+          "within_bound": true
+        },
+        "upcast_s": 1.8667000404093415e-05,
+        "upcast_extra_bytes": 159744
+      }
+    },
+    "p2_l14_v": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 73984,
+          "max_error": 0.04999995231628418,
+          "encode_s": 0.0012149169997428544,
+          "ratio": 2.1591695501730106,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 113440,
+          "max_error": 0.011474609375,
+          "encode_s": 0.0005194999976083636,
+          "ratio": 1.4081805359661494,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 112504,
+          "max_error": 0.03125,
+          "encode_s": 0.00748024999484187,
+          "ratio": 1.4198961814691033,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 159024,
+          "max_error": 0.03125,
+          "encode_s": 0.0037217499993857928,
+          "ratio": 1.0045276184726835,
+          "within_bound": true
+        },
+        "upcast_s": 1.8667000404093415e-05,
+        "upcast_extra_bytes": 159744
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 54394,
+          "max_error": 0.14999401569366455,
+          "encode_s": 0.0008970830022008158,
+          "ratio": 2.9367944993933155,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 93472,
+          "max_error": 0.04931640625,
+          "encode_s": 0.0004930830036755651,
+          "ratio": 1.7090037658336186,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 70648,
+          "max_error": 0.130859375,
+          "encode_s": 0.009206667004036717,
+          "ratio": 2.261125580341977,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 107232,
+          "max_error": 0.125,
+          "encode_s": 0.005472500000905711,
+          "ratio": 1.4897045658012533,
+          "within_bound": true
+        },
+        "upcast_s": 1.8667000404093415e-05,
+        "upcast_extra_bytes": 159744
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 35411,
+          "max_error": 0.5,
+          "encode_s": 0.0008449590022792108,
+          "ratio": 4.511140606026376,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 73504,
+          "max_error": 0.189453125,
+          "encode_s": 0.0004637910024030134,
+          "ratio": 2.173269481932956,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 52024,
+          "max_error": 0.47576904296875,
+          "encode_s": 0.009277208002458792,
+          "ratio": 3.0705828079347994,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 65424,
+          "max_error": 0.4150390625,
+          "encode_s": 0.006201333002536558,
+          "ratio": 2.4416727806309613,
+          "within_bound": true
+        },
+        "upcast_s": 1.8667000404093415e-05,
+        "upcast_extra_bytes": 159744
+      }
+    },
+    "p2_l27_k": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 70137,
+          "max_error": 0.04999762773513794,
+          "encode_s": 0.0010250409977743402,
+          "ratio": 2.277599555156337,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 111192,
+          "max_error": 0.01220703125,
+          "encode_s": 0.0004943329986417666,
+          "ratio": 1.4366501187135765,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 162552,
+          "max_error": 0.0,
+          "encode_s": 0.0037648750003427267,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 84924,
+          "max_error": 0.046875,
+          "encode_s": 0.005932125000981614,
+          "ratio": 1.881023032358344,
+          "within_bound": true
+        },
+        "upcast_s": 1.8667000404093415e-05,
+        "upcast_extra_bytes": 159744
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 49934,
+          "max_error": 0.1499999761581421,
+          "encode_s": 0.0007463750007445924,
+          "ratio": 3.199102815716746,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 91224,
+          "max_error": 0.04833984375,
+          "encode_s": 0.0004738749994430691,
+          "ratio": 1.7511181268087346,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 121336,
+          "max_error": 0.125,
+          "encode_s": 0.006920084000739735,
+          "ratio": 1.31654249357157,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 62304,
+          "max_error": 0.140625,
+          "encode_s": 0.006296249994193204,
+          "ratio": 2.563944530046225,
+          "within_bound": true
+        },
+        "upcast_s": 1.8667000404093415e-05,
+        "upcast_extra_bytes": 159744
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 32385,
+          "max_error": 0.5,
+          "encode_s": 0.000698665993695613,
+          "ratio": 4.9326540064844835,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 71248,
+          "max_error": 0.189453125,
+          "encode_s": 0.0004556659987429157,
+          "ratio": 2.242083988322479,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 64568,
+          "max_error": 0.408111572265625,
+          "encode_s": 0.00982158300030278,
+          "ratio": 2.4740428695328958,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 43428,
+          "max_error": 0.4609375,
+          "encode_s": 0.00621583400061354,
+          "ratio": 3.6783641890024867,
+          "within_bound": true
+        },
+        "upcast_s": 1.8667000404093415e-05,
+        "upcast_extra_bytes": 159744
+      }
+    },
+    "p2_l27_v": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 113829,
+          "max_error": 0.04999732971191406,
+          "encode_s": 0.0027492919980431907,
+          "ratio": 1.403368210210052,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 141840,
+          "max_error": 0.013916015625,
+          "encode_s": 0.0005289170003379695,
+          "ratio": 1.1262267343485617,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 162296,
+          "max_error": 0.0242919921875,
+          "encode_s": 0.003842833000817336,
+          "ratio": 0.9842756445014048,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 160896,
+          "max_error": 0.0,
+          "encode_s": 0.0034311659983359277,
+          "ratio": 0.9928400954653938,
+          "within_bound": true
+        },
+        "upcast_s": 1.8207996618002653e-05,
+        "upcast_extra_bytes": 159744
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 84204,
+          "max_error": 0.14999961853027344,
+          "encode_s": 0.0010172080001211725,
+          "ratio": 1.897107025794499,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 121872,
+          "max_error": 0.05322265625,
+          "encode_s": 0.0005211249954300001,
+          "ratio": 1.3107522646711303,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 161208,
+          "max_error": 0.1015625,
+          "encode_s": 0.0038944999978411943,
+          "ratio": 0.990918564835492,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 160896,
+          "max_error": 0.0,
+          "encode_s": 0.0037502499981201254,
+          "ratio": 0.9928400954653938,
+          "within_bound": true
+        },
+        "upcast_s": 1.8207996618002653e-05,
+        "upcast_extra_bytes": 159744
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 63501,
+          "max_error": 0.5,
+          "encode_s": 0.0009593340000719763,
+          "ratio": 2.515613927339727,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 101904,
+          "max_error": 0.208984375,
+          "encode_s": 0.000535457998921629,
+          "ratio": 1.5675930287329252,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 84856,
+          "max_error": 0.4375,
+          "encode_s": 0.009621375000278931,
+          "ratio": 1.8825304044498916,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 93504,
+          "max_error": 0.25,
+          "encode_s": 0.005867125000804663,
+          "ratio": 1.7084188911704312,
+          "within_bound": true
+        },
+        "upcast_s": 1.8207996618002653e-05,
+        "upcast_extra_bytes": 159744
+      }
+    },
+    "p3_l0_k": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 78223,
+          "max_error": 0.049999989569187164,
+          "encode_s": 0.0012609590048668906,
+          "ratio": 1.9636168390371118,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 111168,
+          "max_error": 0.0120849609375,
+          "encode_s": 0.00047633399663027376,
+          "ratio": 1.381692573402418,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 156300,
+          "max_error": 0.0,
+          "encode_s": 0.0038075000047683716,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 89352,
+          "max_error": 0.04296875,
+          "encode_s": 0.005902500000956934,
+          "ratio": 1.7190437818963202,
+          "within_bound": true
+        },
+        "upcast_s": 1.8416998500470072e-05,
+        "upcast_extra_bytes": 153600
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 61845,
+          "max_error": 0.14999759197235107,
+          "encode_s": 0.001081207999959588,
+          "ratio": 2.4836284259034684,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 91968,
+          "max_error": 0.0478515625,
+          "encode_s": 0.00045483299618354067,
+          "ratio": 1.6701461377870563,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 156300,
+          "max_error": 0.0,
+          "encode_s": 0.003718375002790708,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 63402,
+          "max_error": 0.125,
+          "encode_s": 0.006046208000043407,
+          "ratio": 2.422636509889278,
+          "within_bound": true
+        },
+        "upcast_s": 1.8416998500470072e-05,
+        "upcast_extra_bytes": 153600
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 39061,
+          "max_error": 0.49998533725738525,
+          "encode_s": 0.0007873750000726432,
+          "ratio": 3.9323110007424287,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 72768,
+          "max_error": 0.189453125,
+          "encode_s": 0.0004422080019139685,
+          "ratio": 2.1108179419525066,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 156044,
+          "max_error": 0.234375,
+          "encode_s": 0.0038896250043762848,
+          "ratio": 0.9843377508907744,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 44352,
+          "max_error": 0.48046875,
+          "encode_s": 0.0065095829995698296,
+          "ratio": 3.463203463203463,
+          "within_bound": true
+        },
+        "upcast_s": 1.8416998500470072e-05,
+        "upcast_extra_bytes": 153600
+      }
+    },
+    "p3_l0_v": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 28053,
+          "max_error": 0.04999999701976776,
+          "encode_s": 0.0006805419980082661,
+          "ratio": 5.475350229921934,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 73464,
+          "max_error": 0.011474609375,
+          "encode_s": 0.00045433400373440236,
+          "ratio": 2.0908199934661873,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 47116,
+          "max_error": 0.046142578125,
+          "encode_s": 0.009785208996618167,
+          "ratio": 3.2600390525511505,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 42252,
+          "max_error": 0.04833984375,
+          "encode_s": 0.00607283299905248,
+          "ratio": 3.6353308719113886,
+          "within_bound": true
+        },
+        "upcast_s": 2.5207998987752944e-05,
+        "upcast_extra_bytes": 153600
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 14353,
+          "max_error": 0.1499968320131302,
+          "encode_s": 0.0007839999962016009,
+          "ratio": 10.701595485264404,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 54264,
+          "max_error": 0.0458984375,
+          "encode_s": 0.0005453330013551749,
+          "ratio": 2.8306059265811587,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 41100,
+          "max_error": 0.115234375,
+          "encode_s": 0.010455333002028055,
+          "ratio": 3.7372262773722627,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 39552,
+          "max_error": 0.109375,
+          "encode_s": 0.00615687500248896,
+          "ratio": 3.883495145631068,
+          "within_bound": true
+        },
+        "upcast_s": 2.5207998987752944e-05,
+        "upcast_extra_bytes": 153600
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 2914,
+          "max_error": 0.49996185302734375,
+          "encode_s": 0.0005536660028155893,
+          "ratio": 52.71105010295127,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 35032,
+          "max_error": 0.3701171875,
+          "encode_s": 0.0003880829972331412,
+          "ratio": 4.384562685544645,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 41100,
+          "max_error": 0.115234375,
+          "encode_s": 0.009178083993901964,
+          "ratio": 3.7372262773722627,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 39552,
+          "max_error": 0.109375,
+          "encode_s": 0.005939291004324332,
+          "ratio": 3.883495145631068,
+          "within_bound": true
+        },
+        "upcast_s": 2.5207998987752944e-05,
+        "upcast_extra_bytes": 153600
+      }
+    },
+    "p3_l14_k": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 67375,
+          "max_error": 0.049999117851257324,
+          "encode_s": 0.0008619169966550544,
+          "ratio": 2.2797773654916513,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 105792,
+          "max_error": 0.0120849609375,
+          "encode_s": 0.00047504100075457245,
+          "ratio": 1.4519056261343013,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 154252,
+          "max_error": 0.03125,
+          "encode_s": 0.003958082997996826,
+          "ratio": 0.9957731504291678,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 91752,
+          "max_error": 0.046875,
+          "encode_s": 0.005561000005400274,
+          "ratio": 1.6740779492545121,
+          "within_bound": true
+        },
+        "upcast_s": 1.9209001038689166e-05,
+        "upcast_extra_bytes": 153600
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 49680,
+          "max_error": 0.14999985694885254,
+          "encode_s": 0.0007563749968539923,
+          "ratio": 3.0917874396135265,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 86592,
+          "max_error": 0.04638671875,
+          "encode_s": 0.00047283299500122666,
+          "ratio": 1.7738359201773837,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 78796,
+          "max_error": 0.125,
+          "encode_s": 0.009387834004883189,
+          "ratio": 1.949337529823849,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 61152,
+          "max_error": 0.125,
+          "encode_s": 0.0063938750026864,
+          "ratio": 2.511773940345369,
+          "within_bound": true
+        },
+        "upcast_s": 1.9209001038689166e-05,
+        "upcast_extra_bytes": 153600
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 31628,
+          "max_error": 0.49999141693115234,
+          "encode_s": 0.000694417001795955,
+          "ratio": 4.856456304540281,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 67400,
+          "max_error": 0.220703125,
+          "encode_s": 0.0004377080040285364,
+          "ratio": 2.27893175074184,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 59724,
+          "max_error": 0.4716796875,
+          "encode_s": 0.009305583000241313,
+          "ratio": 2.5718304199316857,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 43602,
+          "max_error": 0.484375,
+          "encode_s": 0.006056999998691026,
+          "ratio": 3.522774184670428,
+          "within_bound": true
+        },
+        "upcast_s": 1.9209001038689166e-05,
+        "upcast_extra_bytes": 153600
+      }
+    },
+    "p3_l14_v": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 73600,
+          "max_error": 0.04999999701976776,
+          "encode_s": 0.0010441659978823736,
+          "ratio": 2.0869565217391304,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 110496,
+          "max_error": 0.0133056640625,
+          "encode_s": 0.0005371250008465722,
+          "ratio": 1.3900955690703736,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 102412,
+          "max_error": 0.03125,
+          "encode_s": 0.007719084002019372,
+          "ratio": 1.4998242393469516,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 153552,
+          "max_error": 0.03125,
+          "encode_s": 0.003656458000477869,
+          "ratio": 1.000312597686777,
+          "within_bound": true
+        },
+        "upcast_s": 1.8250000721309334e-05,
+        "upcast_extra_bytes": 153600
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 54469,
+          "max_error": 0.1499999761581421,
+          "encode_s": 0.0007863339997129515,
+          "ratio": 2.8199526336081076,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 91296,
+          "max_error": 0.048828125,
+          "encode_s": 0.0004661249986384064,
+          "ratio": 1.6824395373291272,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 69900,
+          "max_error": 0.1318359375,
+          "encode_s": 0.008889999997336417,
+          "ratio": 2.1974248927038627,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 106002,
+          "max_error": 0.125,
+          "encode_s": 0.00517112499801442,
+          "ratio": 1.4490292635988,
+          "within_bound": true
+        },
+        "upcast_s": 1.8250000721309334e-05,
+        "upcast_extra_bytes": 153600
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 36394,
+          "max_error": 0.5,
+          "encode_s": 0.000687291998474393,
+          "ratio": 4.2204759026213114,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 72096,
+          "max_error": 0.201171875,
+          "encode_s": 0.0004459999981918372,
+          "ratio": 2.130492676431425,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 51404,
+          "max_error": 0.484375,
+          "encode_s": 0.008919041996705346,
+          "ratio": 2.988094311726714,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 63402,
+          "max_error": 0.4296875,
+          "encode_s": 0.006263540999498218,
+          "ratio": 2.422636509889278,
+          "within_bound": true
+        },
+        "upcast_s": 1.8250000721309334e-05,
+        "upcast_extra_bytes": 153600
+      }
+    },
+    "p3_l27_k": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 67155,
+          "max_error": 0.04999995231628418,
+          "encode_s": 0.0009667080012150109,
+          "ratio": 2.28724592360956,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 107248,
+          "max_error": 0.01171875,
+          "encode_s": 0.0004855840015807189,
+          "ratio": 1.4321945397583171,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 156300,
+          "max_error": 0.0,
+          "encode_s": 0.0036615420031012036,
+          "ratio": 0.982725527831094,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 83952,
+          "max_error": 0.046875,
+          "encode_s": 0.005855875002453104,
+          "ratio": 1.8296169239565465,
+          "within_bound": true
+        },
+        "upcast_s": 1.7499995010439306e-05,
+        "upcast_extra_bytes": 153600
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 49724,
+          "max_error": 0.14999806880950928,
+          "encode_s": 0.0007534999967901967,
+          "ratio": 3.089051564636795,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 88048,
+          "max_error": 0.05029296875,
+          "encode_s": 0.00046424999891314656,
+          "ratio": 1.7445029983645284,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 134796,
+          "max_error": 0.125,
+          "encode_s": 0.005372749998059589,
+          "ratio": 1.139499688418054,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 60702,
+          "max_error": 0.1328125,
+          "encode_s": 0.005950082995695993,
+          "ratio": 2.530394385687457,
+          "within_bound": true
+        },
+        "upcast_s": 1.7499995010439306e-05,
+        "upcast_extra_bytes": 153600
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 31422,
+          "max_error": 0.5,
+          "encode_s": 0.0006923749970155768,
+          "ratio": 4.888294825281649,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 68840,
+          "max_error": 0.185546875,
+          "encode_s": 0.0004900830026599579,
+          "ratio": 2.231260894828588,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 64012,
+          "max_error": 0.41650390625,
+          "encode_s": 0.009215874997607898,
+          "ratio": 2.399550084359183,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 42102,
+          "max_error": 0.47265625,
+          "encode_s": 0.005805207998491824,
+          "ratio": 3.648282741912498,
+          "within_bound": true
+        },
+        "upcast_s": 1.7499995010439306e-05,
+        "upcast_extra_bytes": 153600
+      }
+    },
+    "p3_l27_v": {
+      "eps0.05": {
+        "sz3": {
+          "bytes": 112563,
+          "max_error": 0.049999237060546875,
+          "encode_s": 0.00250462500116555,
+          "ratio": 1.36456917459556,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 138672,
+          "max_error": 0.01513671875,
+          "encode_s": 0.0005055419969721697,
+          "ratio": 1.107649705780547,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 156044,
+          "max_error": 0.0234375,
+          "encode_s": 0.0037927920056972653,
+          "ratio": 0.9843377508907744,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 154752,
+          "max_error": 0.0,
+          "encode_s": 0.0032978750023175962,
+          "ratio": 0.9925558312655087,
+          "within_bound": true
+        },
+        "upcast_s": 1.7958001990336925e-05,
+        "upcast_extra_bytes": 153600
+      },
+      "eps0.15": {
+        "sz3": {
+          "bytes": 86029,
+          "max_error": 0.14999961853027344,
+          "encode_s": 0.0010613749982439913,
+          "ratio": 1.7854444431528904,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 119472,
+          "max_error": 0.05224609375,
+          "encode_s": 0.0004936250043101609,
+          "ratio": 1.2856568903173966,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 154956,
+          "max_error": 0.0966796875,
+          "encode_s": 0.003787416993873194,
+          "ratio": 0.9912491287849454,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 154752,
+          "max_error": 0.0,
+          "encode_s": 0.0034717919988906942,
+          "ratio": 0.9925558312655087,
+          "within_bound": true
+        },
+        "upcast_s": 1.7958001990336925e-05,
+        "upcast_extra_bytes": 153600
+      },
+      "eps0.5": {
+        "sz3": {
+          "bytes": 64056,
+          "max_error": 0.5,
+          "encode_s": 0.0009796669983188622,
+          "ratio": 2.397901835893593,
+          "within_bound": true
+        },
+        "zfp": {
+          "bytes": 100272,
+          "max_error": 0.1796875,
+          "encode_s": 0.00047291599912568927,
+          "ratio": 1.5318334131163236,
+          "within_bound": true
+        },
+        "ours_blockwise": {
+          "bytes": 93388,
+          "max_error": 0.4375,
+          "encode_s": 0.008335874998010695,
+          "ratio": 1.6447509315972073,
+          "within_bound": true
+        },
+        "ours_per_channel": {
+          "bytes": 111552,
+          "max_error": 0.25,
+          "encode_s": 0.005230292001215275,
+          "ratio": 1.3769363166953528,
+          "within_bound": true
+        },
+        "upcast_s": 1.7958001990336925e-05,
+        "upcast_extra_bytes": 153600
+      }
+    }
+  },
+  "mean": {
+    "sz3.eps0.05.ratio": 2.585992938113631,
+    "sz3.eps0.05.err": 0.04999953415244818,
+    "sz3.eps0.05.enc_s": 0.001253256875012691,
+    "zfp.eps0.05.ratio": 1.479323109507327,
+    "zfp.eps0.05.err": 0.012660980224609375,
+    "zfp.eps0.05.enc_s": 0.0005103872499603312,
+    "ours_blockwise.eps0.05.ratio": 1.440932817596776,
+    "ours_blockwise.eps0.05.err": 0.022837320963541668,
+    "ours_blockwise.eps0.05.enc_s": 0.00638879345812408,
+    "ours_per_channel.eps0.05.ratio": 1.823589687223831,
+    "ours_per_channel.eps0.05.err": 0.036275227864583336,
+    "ours_per_channel.eps0.05.enc_s": 0.005281836667563766,
+    "sz3.eps0.15.ratio": 4.068825395987624,
+    "sz3.eps0.15.err": 0.14999843699236712,
+    "sz3.eps0.15.enc_s": 0.0009186492494942892,
+    "zfp.eps0.15.ratio": 1.8360863328779538,
+    "zfp.eps0.15.err": 0.050020853678385414,
+    "zfp.eps0.15.enc_s": 0.00048457462435180787,
+    "ours_blockwise.eps0.15.ratio": 1.8496449006346387,
+    "ours_blockwise.eps0.15.err": 0.09724934895833333,
+    "ours_blockwise.eps0.15.enc_s": 0.007220364708397635,
+    "ours_per_channel.eps0.15.ratio": 2.3142724624486952,
+    "ours_per_channel.eps0.15.err": 0.10242970784505208,
+    "ours_per_channel.eps0.15.enc_s": 0.005683272666222668,
+    "sz3.eps0.5.ratio": 12.632949265582916,
+    "sz3.eps0.5.err": 0.49999041606982547,
+    "sz3.eps0.5.enc_s": 0.0007778750007976972,
+    "zfp.eps0.5.ratio": 2.451500805657916,
+    "zfp.eps0.5.err": 0.21284993489583334,
+    "zfp.eps0.5.enc_s": 0.00045829141618014546,
+    "ours_blockwise.eps0.5.ratio": 2.419725834767549,
+    "ours_blockwise.eps0.5.err": 0.3238360087076823,
+    "ours_blockwise.eps0.5.enc_s": 0.00858039066739972,
+    "ours_per_channel.eps0.5.ratio": 3.1173730217080706,
+    "ours_per_channel.eps0.5.err": 0.37297312418619794,
+    "ours_per_channel.eps0.5.enc_s": 0.006167302000600709
+  }
+}

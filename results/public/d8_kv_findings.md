@@ -40,10 +40,15 @@ per-channel structure turned out to have it.
 
 Measured on real cache the finding is sharper and partly contradicts the
 prediction: **the right axis is a property of the tensor and its depth, not of
-the model or the codec.** That is a mechanistic explanation for why a general
-error-bounded compressor underperforms here — not that its bound is wrong, but
-that its inductive bias assumes one exploitable structure where these tensors
-carry different ones, and none at all in places.
+the model or the codec.**
+
+> **Corrected by D14.** This section originally went on to claim that the result
+> explains why a general error-bounded compressor underperforms on these tensors.
+> It does not. Benchmarked directly, SZ3 compresses them 5× better than this
+> codec at ε = 0.5 — its prediction works fine on KV cache, and the assumption
+> that LLM intermediate state is too unsmooth to predict was wrong. What survives
+> is the narrower statement above, about which axis *this* codec should spend its
+> budget along. See `d14_table_b_findings.md`.
 
 It also gives the adaptive controller something real to adapt to: the choice is
 not merely *whether* to compress, but *along which axis to spend the budget*.
