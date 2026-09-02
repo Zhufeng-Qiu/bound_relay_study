@@ -1,0 +1,41 @@
+{
+  "peer": {
+    "0->1": true,
+    "1->0": true
+  },
+  "results": {
+    "4MB": {
+      "d2d_blocking_ms": 95.316,
+      "d2d_blocking_GBps": 0.04,
+      "d2d_nonblocking_ms": 96.975,
+      "d2d_nonblocking_GBps": 0.04,
+      "hoststaged_ms": 0.514,
+      "hoststaged_GBps": 8.16,
+      "d2h_GBps": 22.57,
+      "h2d_GBps": 22.94,
+      "launch_floor_ms": 0.0074
+    },
+    "64MB": {
+      "d2d_blocking_ms": 98.546,
+      "d2d_blocking_GBps": 0.68,
+      "d2d_nonblocking_ms": 98.543,
+      "d2d_nonblocking_GBps": 0.68,
+      "hoststaged_ms": 7.894,
+      "hoststaged_GBps": 8.5,
+      "d2h_GBps": 23.29,
+      "h2d_GBps": 23.8,
+      "launch_floor_ms": 0.2399
+    },
+    "256MB": {
+      "d2d_blocking_ms": 98.519,
+      "d2d_blocking_GBps": 2.72,
+      "d2d_nonblocking_ms": 98.552,
+      "d2d_nonblocking_GBps": 2.72,
+      "hoststaged_ms": 31.754,
+      "hoststaged_GBps": 8.45,
+      "d2h_GBps": 23.33,
+      "h2d_GBps": 23.21,
+      "launch_floor_ms": 0.9549
+    }
+  }
+}

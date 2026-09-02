@@ -7,11 +7,11 @@ Fill before the first pod (Gate A). Pin SHAs and digests, never tags or `main`.
 | Item | Value |
 |---|---|
 | SGLang-Omni commit SHA | `TODO` |
-| Docker image (linux/amd64) tag | `TODO` |
+| Docker image (linux/amd64) tag | `runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404` |
 | Docker image digest | `TODO` |
-| CUDA | `TODO` |
-| PyTorch | `TODO` |
-| Triton | `TODO` |
+| CUDA | 12.8 (container toolkit; host driver reports 13.0) |
+| PyTorch | 2.8.0+cu128 |
+| Triton | 3.4.0 |
 | Python | 3.12 |
 
 > The Mac is arm64 and cannot build or test the amd64 image locally without slow
@@ -31,7 +31,7 @@ Fill before the first pod (Gate A). Pin SHAs and digests, never tags or `main`.
 
 | Session | GPU | P2P enabled | `nvidia-smi topo -m` |
 |---|---|---|---|
-| Topology smoke | 2×A40 | `TODO` | `TODO` |
+| Topology smoke | 2×A40, CA-MTL-1, sm_86, driver 580.159.04 | driver says OK, **but path is pathological** | `SYS` (cross-socket PCIe, different NUMA nodes, no NVLink) |
 | Capture | `TODO` | — | — |
 | Final | 2×H100 SXM | `TODO` | `TODO` |
 
