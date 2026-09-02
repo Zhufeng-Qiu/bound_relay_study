@@ -1,0 +1,595 @@
+{
+  "schema_version": 1,
+  "corpus_id": "kv_cache",
+  "env": {
+    "gpu": "NVIDIA A40",
+    "gpu_count": 1,
+    "driver": "see environment.json",
+    "cuda": "12.8",
+    "torch": "2.8.0+cu128",
+    "model_id": "Qwen/Qwen3-1.7B",
+    "model_revision": "main",
+    "weight_dtype": "bf16",
+    "sglang_omni_sha": "n/a",
+    "image_digest": "runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404",
+    "notes": "KV cache captured during greedy decode; second tensor family"
+  },
+  "tensors": [
+    {
+      "name": "p0_l0_k",
+      "shape": [
+        1,
+        8,
+        81,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer0",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 165888,
+      "extras": {
+        "kind": "k",
+        "layer": 0,
+        "prompt": 0,
+        "flat_shape": [
+          648,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p0_l0_v",
+      "shape": [
+        1,
+        8,
+        81,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer0",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 165888,
+      "extras": {
+        "kind": "v",
+        "layer": 0,
+        "prompt": 0,
+        "flat_shape": [
+          648,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p0_l14_k",
+      "shape": [
+        1,
+        8,
+        81,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer14",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 165888,
+      "extras": {
+        "kind": "k",
+        "layer": 14,
+        "prompt": 0,
+        "flat_shape": [
+          648,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p0_l14_v",
+      "shape": [
+        1,
+        8,
+        81,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer14",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 165888,
+      "extras": {
+        "kind": "v",
+        "layer": 14,
+        "prompt": 0,
+        "flat_shape": [
+          648,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p0_l27_k",
+      "shape": [
+        1,
+        8,
+        81,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer27",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 165888,
+      "extras": {
+        "kind": "k",
+        "layer": 27,
+        "prompt": 0,
+        "flat_shape": [
+          648,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p0_l27_v",
+      "shape": [
+        1,
+        8,
+        81,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer27",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 165888,
+      "extras": {
+        "kind": "v",
+        "layer": 27,
+        "prompt": 0,
+        "flat_shape": [
+          648,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p1_l0_k",
+      "shape": [
+        1,
+        8,
+        77,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer0",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 157696,
+      "extras": {
+        "kind": "k",
+        "layer": 0,
+        "prompt": 1,
+        "flat_shape": [
+          616,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p1_l0_v",
+      "shape": [
+        1,
+        8,
+        77,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer0",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 157696,
+      "extras": {
+        "kind": "v",
+        "layer": 0,
+        "prompt": 1,
+        "flat_shape": [
+          616,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p1_l14_k",
+      "shape": [
+        1,
+        8,
+        77,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer14",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 157696,
+      "extras": {
+        "kind": "k",
+        "layer": 14,
+        "prompt": 1,
+        "flat_shape": [
+          616,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p1_l14_v",
+      "shape": [
+        1,
+        8,
+        77,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer14",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 157696,
+      "extras": {
+        "kind": "v",
+        "layer": 14,
+        "prompt": 1,
+        "flat_shape": [
+          616,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p1_l27_k",
+      "shape": [
+        1,
+        8,
+        77,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer27",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 157696,
+      "extras": {
+        "kind": "k",
+        "layer": 27,
+        "prompt": 1,
+        "flat_shape": [
+          616,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p1_l27_v",
+      "shape": [
+        1,
+        8,
+        77,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer27",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 157696,
+      "extras": {
+        "kind": "v",
+        "layer": 27,
+        "prompt": 1,
+        "flat_shape": [
+          616,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p2_l0_k",
+      "shape": [
+        1,
+        8,
+        78,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer0",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 159744,
+      "extras": {
+        "kind": "k",
+        "layer": 0,
+        "prompt": 2,
+        "flat_shape": [
+          624,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p2_l0_v",
+      "shape": [
+        1,
+        8,
+        78,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer0",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 159744,
+      "extras": {
+        "kind": "v",
+        "layer": 0,
+        "prompt": 2,
+        "flat_shape": [
+          624,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p2_l14_k",
+      "shape": [
+        1,
+        8,
+        78,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer14",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 159744,
+      "extras": {
+        "kind": "k",
+        "layer": 14,
+        "prompt": 2,
+        "flat_shape": [
+          624,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p2_l14_v",
+      "shape": [
+        1,
+        8,
+        78,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer14",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 159744,
+      "extras": {
+        "kind": "v",
+        "layer": 14,
+        "prompt": 2,
+        "flat_shape": [
+          624,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p2_l27_k",
+      "shape": [
+        1,
+        8,
+        78,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer27",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 159744,
+      "extras": {
+        "kind": "k",
+        "layer": 27,
+        "prompt": 2,
+        "flat_shape": [
+          624,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p2_l27_v",
+      "shape": [
+        1,
+        8,
+        78,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer27",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 159744,
+      "extras": {
+        "kind": "v",
+        "layer": 27,
+        "prompt": 2,
+        "flat_shape": [
+          624,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p3_l0_k",
+      "shape": [
+        1,
+        8,
+        75,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer0",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 153600,
+      "extras": {
+        "kind": "k",
+        "layer": 0,
+        "prompt": 3,
+        "flat_shape": [
+          600,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p3_l0_v",
+      "shape": [
+        1,
+        8,
+        75,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer0",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 153600,
+      "extras": {
+        "kind": "v",
+        "layer": 0,
+        "prompt": 3,
+        "flat_shape": [
+          600,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p3_l14_k",
+      "shape": [
+        1,
+        8,
+        75,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer14",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 153600,
+      "extras": {
+        "kind": "k",
+        "layer": 14,
+        "prompt": 3,
+        "flat_shape": [
+          600,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p3_l14_v",
+      "shape": [
+        1,
+        8,
+        75,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer14",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 153600,
+      "extras": {
+        "kind": "v",
+        "layer": 14,
+        "prompt": 3,
+        "flat_shape": [
+          600,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p3_l27_k",
+      "shape": [
+        1,
+        8,
+        75,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer27",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 153600,
+      "extras": {
+        "kind": "k",
+        "layer": 27,
+        "prompt": 3,
+        "flat_shape": [
+          600,
+          128
+        ]
+      }
+    },
+    {
+      "name": "p3_l27_v",
+      "shape": [
+        1,
+        8,
+        75,
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "contiguous": true,
+      "producer": "layer27",
+      "consumer": "attention",
+      "family": "kv_cache",
+      "bytes_per_request": 153600,
+      "extras": {
+        "kind": "v",
+        "layer": 27,
+        "prompt": 3,
+        "flat_shape": [
+          600,
+          128
+        ]
+      }
+    }
+  ]
+}
