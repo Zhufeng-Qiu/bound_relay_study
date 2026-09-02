@@ -1,0 +1,305 @@
+{
+  "bw_points_gbps": [
+    0.5,
+    2.0,
+    7.0,
+    8.45,
+    12.5,
+    23.0,
+    50.0,
+    64.0,
+    450.0
+  ],
+  "measured_points": [
+    8.45,
+    23.0
+  ],
+  "fabric": {
+    "network storage": 0.5,
+    "NVMe": 7.0,
+    "100G Eth": 12.5,
+    "400G IB": 50.0,
+    "PCIe Gen5": 64.0,
+    "NVLink": 450.0
+  },
+  "summary": {
+    "margin_0ms": {
+      "compress": 11,
+      "bypass": 25,
+      "bypass_rate": 0.694,
+      "flipped_vs_oracle": 0,
+      "total_regret_ms": 0.0,
+      "mean_regret_ms": 0.0
+    },
+    "margin_0.1ms": {
+      "compress": 11,
+      "bypass": 25,
+      "bypass_rate": 0.694,
+      "flipped_vs_oracle": 0,
+      "total_regret_ms": 0.0,
+      "mean_regret_ms": 0.0
+    },
+    "margin_0.25ms": {
+      "compress": 9,
+      "bypass": 27,
+      "bypass_rate": 0.75,
+      "flipped_vs_oracle": 2,
+      "total_regret_ms": 0.3351,
+      "mean_regret_ms": 0.00931
+    }
+  },
+  "decisions_margin0": [
+    {
+      "payload": "(64, 2048)",
+      "bw_gbps": 0.5,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(64, 2048)",
+      "bw_gbps": 2.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(64, 2048)",
+      "bw_gbps": 7.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(64, 2048)",
+      "bw_gbps": 8.45,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(64, 2048)",
+      "bw_gbps": 12.5,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(64, 2048)",
+      "bw_gbps": 23.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(64, 2048)",
+      "bw_gbps": 50.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(64, 2048)",
+      "bw_gbps": 64.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(64, 2048)",
+      "bw_gbps": 450.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(512, 2048)",
+      "bw_gbps": 0.5,
+      "choice": "w6@eps0.15",
+      "net_ms": 2.0533,
+      "bypass_reason": null
+    },
+    {
+      "payload": "(512, 2048)",
+      "bw_gbps": 2.0,
+      "choice": "w6@eps0.15",
+      "net_ms": 0.1425,
+      "bypass_reason": null
+    },
+    {
+      "payload": "(512, 2048)",
+      "bw_gbps": 7.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(512, 2048)",
+      "bw_gbps": 8.45,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(512, 2048)",
+      "bw_gbps": 12.5,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(512, 2048)",
+      "bw_gbps": 23.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(512, 2048)",
+      "bw_gbps": 50.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(512, 2048)",
+      "bw_gbps": 64.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(512, 2048)",
+      "bw_gbps": 450.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(2560, 2048)",
+      "bw_gbps": 0.5,
+      "choice": "w6@eps0.15",
+      "net_ms": 12.1774,
+      "bypass_reason": null
+    },
+    {
+      "payload": "(2560, 2048)",
+      "bw_gbps": 2.0,
+      "choice": "w6@eps0.15",
+      "net_ms": 2.6235,
+      "bypass_reason": null
+    },
+    {
+      "payload": "(2560, 2048)",
+      "bw_gbps": 7.0,
+      "choice": "w6@eps0.15",
+      "net_ms": 0.3487,
+      "bypass_reason": null
+    },
+    {
+      "payload": "(2560, 2048)",
+      "bw_gbps": 8.45,
+      "choice": "w6@eps0.15",
+      "net_ms": 0.1926,
+      "bypass_reason": null
+    },
+    {
+      "payload": "(2560, 2048)",
+      "bw_gbps": 12.5,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(2560, 2048)",
+      "bw_gbps": 23.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(2560, 2048)",
+      "bw_gbps": 50.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(2560, 2048)",
+      "bw_gbps": 64.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(2560, 2048)",
+      "bw_gbps": 450.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(5120, 2048)",
+      "bw_gbps": 0.5,
+      "choice": "w6@eps0.15",
+      "net_ms": 24.8286,
+      "bypass_reason": null
+    },
+    {
+      "payload": "(5120, 2048)",
+      "bw_gbps": 2.0,
+      "choice": "w6@eps0.15",
+      "net_ms": 5.7208,
+      "bypass_reason": null
+    },
+    {
+      "payload": "(5120, 2048)",
+      "bw_gbps": 7.0,
+      "choice": "w6@eps0.15",
+      "net_ms": 1.1713,
+      "bypass_reason": null
+    },
+    {
+      "payload": "(5120, 2048)",
+      "bw_gbps": 8.45,
+      "choice": "w6@eps0.15",
+      "net_ms": 0.859,
+      "bypass_reason": null
+    },
+    {
+      "payload": "(5120, 2048)",
+      "bw_gbps": 12.5,
+      "choice": "w6@eps0.15",
+      "net_ms": 0.3706,
+      "bypass_reason": null
+    },
+    {
+      "payload": "(5120, 2048)",
+      "bw_gbps": 23.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(5120, 2048)",
+      "bw_gbps": 50.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(5120, 2048)",
+      "bw_gbps": 64.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    },
+    {
+      "payload": "(5120, 2048)",
+      "bw_gbps": 450.0,
+      "choice": "bf16_passthrough",
+      "net_ms": 0.0,
+      "bypass_reason": "not_profitable"
+    }
+  ]
+}
