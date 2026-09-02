@@ -1,0 +1,78 @@
+# BoundRelay
+
+**Error-bounded GPU compression for intermediate-state transport in multi-stage LLM inference.**
+
+> **Status: scaffold.** No measurements yet. Every `[X]` below is a placeholder.
+> Nothing enters this README, the CV, or any email until it traces back to a
+> committed manifest, a commit SHA, and a raw JSON file in `results/public/`.
+
+## The research question
+
+Scientific data compressors earn their ratio from spatial smoothness. LLM
+intermediate states are not smooth along the token axis. So:
+
+> For non-smooth LLM intermediate states, what codec design and what
+> payload × bandwidth regime let error-bounded compression pay for its own
+> overhead?
+
+The answer is a boundary, not a speedup. Public SGLang-Omni profiling already
+puts inter-stage IPC at ~0.4% of wall time on the canonical single-host path,
+with same-node relay running as zero-copy CUDA IPC — so on that path the correct
+behaviour is to **bypass**, and the interesting question is where the boundary
+lies for the paths that are not that one.
+
+## What is out of scope
+
+- Not a KV-cache compression method. PackKV and CacheGen are the neighbours this
+  work is positioned against, not competitors it is trying to beat.
+- Not a claim of backend generality: one edge, one relay backend.
+- Not multi-node. Slow paths are host-staged or bandwidth-capped, and are
+  labelled **controlled regimes**, never presented as production cross-node.
+- Not a quality guarantee. An element-wise error bound bounds tensors, not WER.
+
+## Results
+
+| | Result | Where |
+|---|---|---|
+| Codec | `[X]` GB/s encode / `[Y]` GB/s decode at `[Z]`× on `[GPU]` | `results/public/table_a.json` |
+| Coordinate | benchmarked against cuSZp, SZ3, CUDA zfp under matched error settings | `results/public/table_b.json` |
+| Boundary | compression pays below `[B]` GB/s effective bandwidth | Figure 1 |
+| Quality | perplexity delta `[d]` at eps `[e]` | Figure 3 |
+
+## Error contract
+
+See [`docs/codec_contract.md`](docs/codec_contract.md). In short: `max|x - x̂| ≤ ε`
+on finite blocks; NaN/Inf blocks travel bit-exact, are counted, and are outside
+the guarantee; every fallback is `bf16_passthrough` with a recorded reason.
+
+## Reproduction
+
+| Level | What | Needs a model? |
+|---|---|---|
+| **L0** | `pytest` — codec property tests, both suites | no |
+| **L1** | download the sanitised tensor sample, redraw one break-even curve | no |
+| **L2** | rebuild baseline + one adaptive cell per `docs/environment.lock.md` | yes, 2×H100 |
+
+```bash
+uv sync --extra dev
+uv run pytest
+```
+
+## What did not work
+
+`results/public/` carries the failed and excluded configurations alongside the
+successful ones. A sweep that only publishes its best cell is not a measurement.
+
+## Layout
+
+```
+boundrelay/codec/        contract, reference, allocation, packing, Triton kernel
+boundrelay/trace/        edge capture + replay manifest
+boundrelay/policy/       break-even cost model + decision log
+boundrelay/integration/  SGLang-Omni transform hook (stretch)
+boundrelay/bench/        Table A, Table B, atlas, quality
+tests/                   two separate suites: finite bound, non-finite bypass
+docs/                    contract, environment lock, budget ledger, edge budget
+results/public/          sanitised JSON, committed
+results/private_raw/     never committed
+```

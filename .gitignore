@@ -1,0 +1,43 @@
+# --- secrets ---
+.env
+.env.*
+*.pem
+*.key
+
+# --- model / tensor payloads (never in Git) ---
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.npy
+*.npz
+hf-cache/
+artifacts/tensors/*
+
+# --- raw traces & profiler output (may contain prompts / env) ---
+traces/
+nsys-rep/
+*.nsys-rep
+*.qdrep
+*.sqlite
+results/private_raw/*
+
+# --- python ---
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# --- os / editor ---
+.DS_Store
+.idea/
+.vscode/
+
+# --- keep the explanatory READMEs inside otherwise-ignored dirs, so a reviewer
+#     cloning the repo sees why those directories exist and what belongs there ---
+!artifacts/tensors/README.md
+!results/private_raw/README.md
