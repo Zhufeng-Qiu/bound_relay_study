@@ -1,0 +1,26 @@
+{
+  "SYNTHETIC": "placeholder until D20 perplexity sweep",
+  "eps": [
+    0.02,
+    0.05,
+    0.15,
+    0.5,
+    1.0
+  ],
+  "ppl_delta": [
+    0.01,
+    0.04,
+    0.18,
+    0.9,
+    3.1
+  ],
+  "wer_delta": null,
+  "ratio": [
+    1.9,
+    2.1,
+    2.5,
+    3.7,
+    4.6
+  ],
+  "gate": 0.5
+}
