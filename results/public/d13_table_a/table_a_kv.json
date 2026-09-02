@@ -1,0 +1,2307 @@
+{
+  "n_tensors": 24,
+  "eps_grid": [
+    0.05,
+    0.15,
+    0.5
+  ],
+  "per_tensor": {
+    "p0_l0_k": {
+      "shape": [
+        648,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.9999035540338526,
+        "max_error": 1.551177978515625,
+        "bytes": 82948,
+        "bits_per_element": 8.000385802469136
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 3.7631686402613314,
+        "max_error": 1.46875,
+        "eps": 1.551177978515625,
+        "raw_pct": 0.78125,
+        "bits_per_element": 4.251736111111111
+      },
+      "int8_per_channel": {
+        "ratio": 1.9877300613496933,
+        "max_error": 1.551177978515625,
+        "bytes": 83456,
+        "bits_per_element": 8.049382716049383
+      },
+      "matched_int8_per_channel": {
+        "ratio": 3.7631686402613314,
+        "max_error": 1.46875,
+        "eps": 1.551177978515625,
+        "raw_pct": 0.78125,
+        "bits_per_element": 4.251736111111111
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.7323308270676692,
+        "max_error": 0.04296875,
+        "eps": 0.05,
+        "raw_pct": 15.625,
+        "bits_per_element": 9.23611111111111
+      },
+      "eps0.05_per_token": {
+        "ratio": 0.9660377358490566,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.5625
+      },
+      "eps0.15_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.15,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.15_per_channel": {
+        "ratio": 2.443266171792153,
+        "max_error": 0.1328125,
+        "eps": 0.15,
+        "raw_pct": 2.34375,
+        "bits_per_element": 6.548611111111111
+      },
+      "eps0.15_per_token": {
+        "ratio": 0.9836345524405863,
+        "max_error": 0.08203125,
+        "eps": 0.15,
+        "raw_pct": 96.29629850387573,
+        "bits_per_element": 16.266203703703702
+      },
+      "eps0.5_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.5,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.4698795180722892,
+        "max_error": 0.4765625,
+        "eps": 0.5,
+        "raw_pct": 1.5625,
+        "bits_per_element": 4.611111111111111
+      },
+      "eps0.5_per_token": {
+        "ratio": 1.0719048849831998,
+        "max_error": 0.375,
+        "eps": 0.5,
+        "raw_pct": 81.0185194015503,
+        "bits_per_element": 14.926697530864198
+      }
+    },
+    "p0_l0_v": {
+      "shape": [
+        648,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.9999035540338526,
+        "max_error": 0.01088637113571167,
+        "bytes": 82948,
+        "bits_per_element": 8.000385802469136
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.348025477707006,
+        "max_error": 0.0089111328125,
+        "eps": 0.01088637113571167,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.814236111111111
+      },
+      "int8_per_channel": {
+        "ratio": 1.9877300613496933,
+        "max_error": 0.010838307440280914,
+        "bytes": 83456,
+        "bits_per_element": 8.049382716049383
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.3426537874936453,
+        "max_error": 0.0087890625,
+        "eps": 0.010838307440280914,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.829861111111111
+      },
+      "eps0.05_blockwise": {
+        "ratio": 3.3164334266293483,
+        "max_error": 0.0458984375,
+        "eps": 0.05,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.82445987654321
+      },
+      "eps0.05_per_channel": {
+        "ratio": 3.642687747035573,
+        "max_error": 0.0478515625,
+        "eps": 0.05,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.392361111111111
+      },
+      "eps0.05_per_token": {
+        "ratio": 3.3055954088952655,
+        "max_error": 0.0477294921875,
+        "eps": 0.05,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.840277777777778
+      },
+      "eps0.15_blockwise": {
+        "ratio": 3.7372262773722627,
+        "max_error": 0.115234375,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.28125
+      },
+      "eps0.15_per_channel": {
+        "ratio": 3.891891891891892,
+        "max_error": 0.109375,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.111111111111111
+      },
+      "eps0.15_per_token": {
+        "ratio": 3.506849315068493,
+        "max_error": 0.1094970703125,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.5625
+      },
+      "eps0.5_blockwise": {
+        "ratio": 3.7372262773722627,
+        "max_error": 0.115234375,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.28125
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.891891891891892,
+        "max_error": 0.109375,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.111111111111111
+      },
+      "eps0.5_per_token": {
+        "ratio": 3.506849315068493,
+        "max_error": 0.1094970703125,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.5625
+      }
+    },
+    "p0_l14_k": {
+      "shape": [
+        648,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.9999035540338526,
+        "max_error": 0.11171245574951172,
+        "bytes": 82948,
+        "bits_per_element": 8.000385802469136
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.369760863975315,
+        "max_error": 0.10302734375,
+        "eps": 0.11171245574951172,
+        "raw_pct": 3.125,
+        "bits_per_element": 6.751736111111111
+      },
+      "int8_per_channel": {
+        "ratio": 1.9877300613496933,
+        "max_error": 0.11171245574951172,
+        "bytes": 83456,
+        "bits_per_element": 8.049382716049383
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.369760863975315,
+        "max_error": 0.10302734375,
+        "eps": 0.11171245574951172,
+        "raw_pct": 3.125,
+        "bits_per_element": 6.751736111111111
+      },
+      "eps0.05_blockwise": {
+        "ratio": 1.0024897870386038,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 95.9876537322998,
+        "bits_per_element": 15.960262345679013
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.659344616492618,
+        "max_error": 0.046875,
+        "eps": 0.05,
+        "raw_pct": 23.4375,
+        "bits_per_element": 9.64236111111111
+      },
+      "eps0.05_per_token": {
+        "ratio": 1.0557507255231404,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 82.40740895271301,
+        "bits_per_element": 15.155092592592593
+      },
+      "eps0.15_blockwise": {
+        "ratio": 1.955396294026121,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 8.182484567901234
+      },
+      "eps0.15_per_channel": {
+        "ratio": 2.502987506789788,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.392361111111111
+      },
+      "eps0.15_per_token": {
+        "ratio": 1.9944214677310763,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 8.022376543209877
+      },
+      "eps0.5_blockwise": {
+        "ratio": 2.5699944227551588,
+        "max_error": 0.4716796875,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.225694444444445
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.517557251908397,
+        "max_error": 0.46875,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.548611111111111
+      },
+      "eps0.5_per_token": {
+        "ratio": 2.591676040494938,
+        "max_error": 0.484375,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.173611111111111
+      }
+    },
+    "p0_l14_v": {
+      "shape": [
+        648,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.9999035540338526,
+        "max_error": 0.6879901885986328,
+        "bytes": 82948,
+        "bits_per_element": 8.000385802469136
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.645235361653272,
+        "max_error": 0.65625,
+        "eps": 0.6879901885986328,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.048611111111111
+      },
+      "int8_per_channel": {
+        "ratio": 1.9877300613496933,
+        "max_error": 0.6865465641021729,
+        "bytes": 83456,
+        "bits_per_element": 8.049382716049383
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.645235361653272,
+        "max_error": 0.65625,
+        "eps": 0.6865465641021729,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.048611111111111
+      },
+      "eps0.05_blockwise": {
+        "ratio": 1.3674041346565993,
+        "max_error": 0.0313720703125,
+        "eps": 0.05,
+        "raw_pct": 42.901235818862915,
+        "bits_per_element": 11.701003086419753
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.004797208896642,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 97.65625,
+        "bits_per_element": 15.92361111111111
+      },
+      "eps0.05_per_token": {
+        "ratio": 1.5033712752845647,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 26.234567165374756,
+        "bits_per_element": 10.642746913580247
+      },
+      "eps0.15_blockwise": {
+        "ratio": 2.1881496333034347,
+        "max_error": 0.13134765625,
+        "eps": 0.15,
+        "raw_pct": 4.938271641731262,
+        "bits_per_element": 7.312114197530864
+      },
+      "eps0.15_per_channel": {
+        "ratio": 1.44,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 38.28125,
+        "bits_per_element": 11.11111111111111
+      },
+      "eps0.15_per_token": {
+        "ratio": 2.2448847028255927,
+        "max_error": 0.13134765625,
+        "eps": 0.15,
+        "raw_pct": 3.7037037312984467,
+        "bits_per_element": 7.127314814814815
+      },
+      "eps0.5_blockwise": {
+        "ratio": 2.970560848076785,
+        "max_error": 0.484375,
+        "eps": 0.5,
+        "raw_pct": 2.777777798473835,
+        "bits_per_element": 5.386188271604938
+      },
+      "eps0.5_per_channel": {
+        "ratio": 2.4259015530402737,
+        "max_error": 0.4375,
+        "eps": 0.5,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.595486111111111
+      },
+      "eps0.5_per_token": {
+        "ratio": 3.1261872455902306,
+        "max_error": 0.4697265625,
+        "eps": 0.5,
+        "raw_pct": 1.3888888992369175,
+        "bits_per_element": 5.118055555555555
+      }
+    },
+    "p0_l27_k": {
+      "shape": [
+        648,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.9999035540338526,
+        "max_error": 0.17716598510742188,
+        "bytes": 82948,
+        "bits_per_element": 8.000385802469136
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.618181818181818,
+        "max_error": 0.169921875,
+        "eps": 0.17716598510742188,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.111111111111111
+      },
+      "int8_per_channel": {
+        "ratio": 1.9877300613496933,
+        "max_error": 0.17716598510742188,
+        "bytes": 83456,
+        "bits_per_element": 8.049382716049383
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.618181818181818,
+        "max_error": 0.169921875,
+        "eps": 0.17716598510742188,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.111111111111111
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.8314785373608904,
+        "max_error": 0.046875,
+        "eps": 0.05,
+        "raw_pct": 11.71875,
+        "bits_per_element": 8.73611111111111
+      },
+      "eps0.05_per_token": {
+        "ratio": 0.9667583570329619,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 99.84567761421204,
+        "bits_per_element": 16.550154320987655
+      },
+      "eps0.15_blockwise": {
+        "ratio": 1.1816394563637918,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 65.74074029922485,
+        "bits_per_element": 13.54050925925926
+      },
+      "eps0.15_per_channel": {
+        "ratio": 2.5402425578831314,
+        "max_error": 0.1270751953125,
+        "eps": 0.15,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.298611111111111
+      },
+      "eps0.15_per_token": {
+        "ratio": 1.4447153905106946,
+        "max_error": 0.109375,
+        "eps": 0.15,
+        "raw_pct": 31.481480598449707,
+        "bits_per_element": 11.074845679012345
+      },
+      "eps0.5_blockwise": {
+        "ratio": 2.4099017955720843,
+        "max_error": 0.3828125,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.6392746913580245
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.6687898089171975,
+        "max_error": 0.484375,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.361111111111111
+      },
+      "eps0.5_per_token": {
+        "ratio": 2.408642118712975,
+        "max_error": 0.45751953125,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.642746913580247
+      }
+    },
+    "p0_l27_v": {
+      "shape": [
+        648,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.9999035540338526,
+        "max_error": 0.519683837890625,
+        "bytes": 82948,
+        "bits_per_element": 8.000385802469136
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 1.8716490658001625,
+        "max_error": 0.265625,
+        "eps": 0.519683837890625,
+        "raw_pct": 5.46875,
+        "bits_per_element": 8.54861111111111
+      },
+      "int8_per_channel": {
+        "ratio": 1.9877300613496933,
+        "max_error": 0.5187005996704102,
+        "bytes": 83456,
+        "bits_per_element": 8.049382716049383
+      },
+      "matched_int8_per_channel": {
+        "ratio": 1.8716490658001625,
+        "max_error": 0.265625,
+        "eps": 0.5187005996704102,
+        "raw_pct": 5.46875,
+        "bits_per_element": 8.54861111111111
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.9842181455727745,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 99.69135522842407,
+        "bits_per_element": 16.25655864197531
+      },
+      "eps0.05_per_channel": {
+        "ratio": 0.993103448275862,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.11111111111111
+      },
+      "eps0.05_per_token": {
+        "ratio": 0.968926685668894,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 99.38271641731262,
+        "bits_per_element": 16.513117283950617
+      },
+      "eps0.15_blockwise": {
+        "ratio": 0.9891006224808605,
+        "max_error": 0.09765625,
+        "eps": 0.15,
+        "raw_pct": 98.76543283462524,
+        "bits_per_element": 16.176311728395063
+      },
+      "eps0.15_per_channel": {
+        "ratio": 0.993103448275862,
+        "max_error": 0.0,
+        "eps": 0.15,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.11111111111111
+      },
+      "eps0.15_per_token": {
+        "ratio": 0.9825159914712154,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 96.75925970077515,
+        "bits_per_element": 16.28472222222222
+      },
+      "eps0.5_blockwise": {
+        "ratio": 1.7980489919791893,
+        "max_error": 0.4375,
+        "eps": 0.5,
+        "raw_pct": 8.950617164373398,
+        "bits_per_element": 8.898533950617283
+      },
+      "eps0.5_per_channel": {
+        "ratio": 1.8056426332288402,
+        "max_error": 0.25,
+        "eps": 0.5,
+        "raw_pct": 9.375,
+        "bits_per_element": 8.86111111111111
+      },
+      "eps0.5_per_token": {
+        "ratio": 1.8699612228334386,
+        "max_error": 0.4638671875,
+        "eps": 0.5,
+        "raw_pct": 4.16666679084301,
+        "bits_per_element": 8.556327160493828
+      }
+    },
+    "p1_l0_k": {
+      "shape": [
+        616,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999898544107949,
+        "max_error": 1.4000988006591797,
+        "bytes": 78852,
+        "bits_per_element": 8.000405844155845
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 3.7580668223630904,
+        "max_error": 1.25,
+        "eps": 1.4000988006591797,
+        "raw_pct": 0.78125,
+        "bits_per_element": 4.257508116883117
+      },
+      "int8_per_channel": {
+        "ratio": 1.9870967741935484,
+        "max_error": 1.3877944946289062,
+        "bytes": 79360,
+        "bits_per_element": 8.051948051948052
+      },
+      "matched_int8_per_channel": {
+        "ratio": 3.7580668223630904,
+        "max_error": 1.25,
+        "eps": 1.3877944946289062,
+        "raw_pct": 0.78125,
+        "bits_per_element": 4.257508116883117
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.7579987068292793,
+        "max_error": 0.046875,
+        "eps": 0.05,
+        "raw_pct": 14.84375,
+        "bits_per_element": 9.101258116883116
+      },
+      "eps0.05_per_token": {
+        "ratio": 0.9660377358490566,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.5625
+      },
+      "eps0.15_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.15,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.15_per_channel": {
+        "ratio": 2.4646161540385094,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 2.34375,
+        "bits_per_element": 6.491883116883117
+      },
+      "eps0.15_per_token": {
+        "ratio": 0.990901322073091,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 94.8051929473877,
+        "bits_per_element": 16.146915584415584
+      },
+      "eps0.5_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.5,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.489158332595805,
+        "max_error": 0.47265625,
+        "eps": 0.5,
+        "raw_pct": 1.5625,
+        "bits_per_element": 4.585633116883117
+      },
+      "eps0.5_per_token": {
+        "ratio": 1.0679958823210707,
+        "max_error": 0.375,
+        "eps": 0.5,
+        "raw_pct": 82.6298713684082,
+        "bits_per_element": 14.981331168831169
+      }
+    },
+    "p1_l0_v": {
+      "shape": [
+        616,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999898544107949,
+        "max_error": 0.006582200527191162,
+        "bytes": 78852,
+        "bits_per_element": 8.000405844155845
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 1.8772439407647254,
+        "max_error": 0.005859375,
+        "eps": 0.006582200527191162,
+        "raw_pct": 5.46875,
+        "bits_per_element": 8.523133116883116
+      },
+      "int8_per_channel": {
+        "ratio": 1.9870967741935484,
+        "max_error": 0.006559118628501892,
+        "bytes": 79360,
+        "bits_per_element": 8.051948051948052
+      },
+      "matched_int8_per_channel": {
+        "ratio": 1.8772439407647254,
+        "max_error": 0.005859375,
+        "eps": 0.006559118628501892,
+        "raw_pct": 5.46875,
+        "bits_per_element": 8.523133116883116
+      },
+      "eps0.05_blockwise": {
+        "ratio": 3.31489111241907,
+        "max_error": 0.0478515625,
+        "eps": 0.05,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.826704545454546
+      },
+      "eps0.05_per_channel": {
+        "ratio": 3.703696744797783,
+        "max_error": 0.04736328125,
+        "eps": 0.05,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.320008116883117
+      },
+      "eps0.05_per_token": {
+        "ratio": 3.3134980669020004,
+        "max_error": 0.046234130859375,
+        "eps": 0.05,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.828733766233766
+      },
+      "eps0.15_blockwise": {
+        "ratio": 3.7372262773722627,
+        "max_error": 0.09033203125,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.28125
+      },
+      "eps0.15_per_channel": {
+        "ratio": 3.8864353312302837,
+        "max_error": 0.07666015625,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.116883116883117
+      },
+      "eps0.15_per_token": {
+        "ratio": 3.506849315068493,
+        "max_error": 0.09033203125,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.5625
+      },
+      "eps0.5_blockwise": {
+        "ratio": 3.7372262773722627,
+        "max_error": 0.09033203125,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.28125
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.8864353312302837,
+        "max_error": 0.07666015625,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.116883116883117
+      },
+      "eps0.5_per_token": {
+        "ratio": 3.506849315068493,
+        "max_error": 0.09033203125,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.5625
+      }
+    },
+    "p1_l14_k": {
+      "shape": [
+        616,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999898544107949,
+        "max_error": 0.10875988006591797,
+        "bytes": 78852,
+        "bits_per_element": 8.000405844155845
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.2986414786309837,
+        "max_error": 0.09375,
+        "eps": 0.10875988006591797,
+        "raw_pct": 5.46875,
+        "bits_per_element": 6.960633116883117
+      },
+      "int8_per_channel": {
+        "ratio": 1.9870967741935484,
+        "max_error": 0.10875988006591797,
+        "bytes": 79360,
+        "bits_per_element": 8.051948051948052
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.2986414786309837,
+        "max_error": 0.09375,
+        "eps": 0.10875988006591797,
+        "raw_pct": 5.46875,
+        "bits_per_element": 6.960633116883117
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.9954298699659134,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 97.40259647369385,
+        "bits_per_element": 16.073457792207794
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.7109997179003102,
+        "max_error": 0.046875,
+        "eps": 0.05,
+        "raw_pct": 21.09375,
+        "bits_per_element": 9.351258116883116
+      },
+      "eps0.05_per_token": {
+        "ratio": 1.0162396246842296,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 89.77272510528564,
+        "bits_per_element": 15.744318181818182
+      },
+      "eps0.15_blockwise": {
+        "ratio": 1.9550706669972726,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 8.183847402597403
+      },
+      "eps0.15_per_channel": {
+        "ratio": 2.544222516214385,
+        "max_error": 0.138671875,
+        "eps": 0.15,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.288758116883117
+      },
+      "eps0.15_per_token": {
+        "ratio": 1.9694275152362875,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 8.124188311688311
+      },
+      "eps0.5_blockwise": {
+        "ratio": 2.5685060916020586,
+        "max_error": 0.46875,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.2293019480519485
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.5373710183938987,
+        "max_error": 0.46875,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.523133116883117
+      },
+      "eps0.5_per_token": {
+        "ratio": 2.5451258876694642,
+        "max_error": 0.48046875,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.286525974025974
+      }
+    },
+    "p1_l14_v": {
+      "shape": [
+        616,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999898544107949,
+        "max_error": 0.6496047973632812,
+        "bytes": 78852,
+        "bits_per_element": 8.000405844155845
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.6157112526539277,
+        "max_error": 0.625,
+        "eps": 0.6496047973632812,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.116883116883117
+      },
+      "int8_per_channel": {
+        "ratio": 1.9870967741935484,
+        "max_error": 0.6484375,
+        "bytes": 79360,
+        "bits_per_element": 8.051948051948052
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.6157112526539277,
+        "max_error": 0.625,
+        "eps": 0.6484375,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.116883116883117
+      },
+      "eps0.05_blockwise": {
+        "ratio": 1.2563015837608744,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 55.84415793418884,
+        "bits_per_element": 12.735795454545455
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.0005075626839914,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 98.4375,
+        "bits_per_element": 15.991883116883116
+      },
+      "eps0.05_per_token": {
+        "ratio": 1.4180274800374073,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 34.25324559211731,
+        "bits_per_element": 11.283279220779221
+      },
+      "eps0.15_blockwise": {
+        "ratio": 2.0946814728229106,
+        "max_error": 0.13134765625,
+        "eps": 0.15,
+        "raw_pct": 6.493506580591202,
+        "bits_per_element": 7.638392857142857
+      },
+      "eps0.15_per_channel": {
+        "ratio": 1.5227206890558314,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 30.46875,
+        "bits_per_element": 10.507508116883116
+      },
+      "eps0.15_per_token": {
+        "ratio": 2.1754773203840636,
+        "max_error": 0.13134765625,
+        "eps": 0.15,
+        "raw_pct": 4.870129749178886,
+        "bits_per_element": 7.354707792207792
+      },
+      "eps0.5_blockwise": {
+        "ratio": 2.7831980232968583,
+        "max_error": 0.484375,
+        "eps": 0.5,
+        "raw_pct": 4.220779240131378,
+        "bits_per_element": 5.748782467532467
+      },
+      "eps0.5_per_channel": {
+        "ratio": 2.446947832293703,
+        "max_error": 0.4375,
+        "eps": 0.5,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.538758116883117
+      },
+      "eps0.5_per_token": {
+        "ratio": 2.977193777375019,
+        "max_error": 0.484375,
+        "eps": 0.5,
+        "raw_pct": 2.110389620065689,
+        "bits_per_element": 5.374188311688312
+      }
+    },
+    "p1_l27_k": {
+      "shape": [
+        616,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999898544107949,
+        "max_error": 0.16330891847610474,
+        "bytes": 78852,
+        "bits_per_element": 8.000405844155845
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.6702790571660797,
+        "max_error": 0.15625,
+        "eps": 0.16330891847610474,
+        "raw_pct": 0.78125,
+        "bits_per_element": 5.991883116883117
+      },
+      "int8_per_channel": {
+        "ratio": 1.9870967741935484,
+        "max_error": 0.16141700744628906,
+        "bytes": 79360,
+        "bits_per_element": 8.051948051948052
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.6702790571660797,
+        "max_error": 0.15625,
+        "eps": 0.16141700744628906,
+        "raw_pct": 0.78125,
+        "bits_per_element": 5.991883116883117
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.8876253860333725,
+        "max_error": 0.046875,
+        "eps": 0.05,
+        "raw_pct": 11.71875,
+        "bits_per_element": 8.476258116883116
+      },
+      "eps0.05_per_token": {
+        "ratio": 0.9667958212761784,
+        "max_error": 0.0234375,
+        "eps": 0.05,
+        "raw_pct": 99.83766078948975,
+        "bits_per_element": 16.54951298701299
+      },
+      "eps0.15_blockwise": {
+        "ratio": 1.3755277205959318,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 41.88311696052551,
+        "bits_per_element": 11.63189935064935
+      },
+      "eps0.15_per_channel": {
+        "ratio": 2.609046689388174,
+        "max_error": 0.140625,
+        "eps": 0.15,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.132508116883117
+      },
+      "eps0.15_per_token": {
+        "ratio": 1.559370302982359,
+        "max_error": 0.09375,
+        "eps": 0.15,
+        "raw_pct": 21.266233921051025,
+        "bits_per_element": 10.260551948051948
+      },
+      "eps0.5_blockwise": {
+        "ratio": 2.513484220592923,
+        "max_error": 0.375,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.365665584415584
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.6639405204460966,
+        "max_error": 0.4765625,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.366883116883117
+      },
+      "eps0.5_per_token": {
+        "ratio": 2.429680759275237,
+        "max_error": 0.375,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.5852272727272725
+      }
+    },
+    "p1_l27_v": {
+      "shape": [
+        616,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999898544107949,
+        "max_error": 0.293304443359375,
+        "bytes": 78852,
+        "bits_per_element": 8.000405844155845
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 1.6012997562956945,
+        "max_error": 0.25,
+        "eps": 0.293304443359375,
+        "raw_pct": 23.4375,
+        "bits_per_element": 9.991883116883116
+      },
+      "int8_per_channel": {
+        "ratio": 1.9870967741935484,
+        "max_error": 0.293304443359375,
+        "bytes": 79360,
+        "bits_per_element": 8.051948051948052
+      },
+      "matched_int8_per_channel": {
+        "ratio": 1.6012997562956945,
+        "max_error": 0.25,
+        "eps": 0.293304443359375,
+        "raw_pct": 23.4375,
+        "bits_per_element": 9.991883116883116
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.984295808054328,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 99.67532753944397,
+        "bits_per_element": 16.255275974025974
+      },
+      "eps0.05_per_channel": {
+        "ratio": 0.9927477840451249,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.116883116883116
+      },
+      "eps0.05_per_token": {
+        "ratio": 0.9690772331743769,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 99.35064911842346,
+        "bits_per_element": 16.510551948051948
+      },
+      "eps0.15_blockwise": {
+        "ratio": 0.9894340569707617,
+        "max_error": 0.1015625,
+        "eps": 0.15,
+        "raw_pct": 98.70129823684692,
+        "bits_per_element": 16.17086038961039
+      },
+      "eps0.15_per_channel": {
+        "ratio": 0.9927477840451249,
+        "max_error": 0.0,
+        "eps": 0.15,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.116883116883116
+      },
+      "eps0.15_per_token": {
+        "ratio": 1.014148273910583,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 90.42207598686218,
+        "bits_per_element": 15.776785714285714
+      },
+      "eps0.5_blockwise": {
+        "ratio": 1.9865961199294533,
+        "max_error": 0.4375,
+        "eps": 0.5,
+        "raw_pct": 0.3246753243729472,
+        "bits_per_element": 8.053977272727273
+      },
+      "eps0.5_per_channel": {
+        "ratio": 1.9750018786163364,
+        "max_error": 0.4375,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 8.101258116883116
+      },
+      "eps0.5_per_token": {
+        "ratio": 2.041213627420524,
+        "max_error": 0.44921875,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 7.838474025974026
+      }
+    },
+    "p2_l0_k": {
+      "shape": [
+        624,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999899844759377,
+        "max_error": 1.3464508056640625,
+        "bytes": 79876,
+        "bits_per_element": 8.00040064102564
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 3.7456387169386605,
+        "max_error": 1.203125,
+        "eps": 1.3464508056640625,
+        "raw_pct": 0.78125,
+        "bits_per_element": 4.271634615384615
+      },
+      "int8_per_channel": {
+        "ratio": 1.9872611464968153,
+        "max_error": 1.3464508056640625,
+        "bytes": 80384,
+        "bits_per_element": 8.051282051282051
+      },
+      "matched_int8_per_channel": {
+        "ratio": 3.7456387169386605,
+        "max_error": 1.203125,
+        "eps": 1.3464508056640625,
+        "raw_pct": 0.78125,
+        "bits_per_element": 4.271634615384615
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.7286066744578625,
+        "max_error": 0.046875,
+        "eps": 0.05,
+        "raw_pct": 17.1875,
+        "bits_per_element": 9.256009615384615
+      },
+      "eps0.05_per_token": {
+        "ratio": 0.9660377358490566,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.5625
+      },
+      "eps0.15_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.15,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.15_per_channel": {
+        "ratio": 2.4358645928636777,
+        "max_error": 0.140625,
+        "eps": 0.15,
+        "raw_pct": 2.34375,
+        "bits_per_element": 6.568509615384615
+      },
+      "eps0.15_per_token": {
+        "ratio": 0.9921494584120044,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 94.55128312110901,
+        "bits_per_element": 16.126602564102566
+      },
+      "eps0.5_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.5,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.4784426443689576,
+        "max_error": 0.45703125,
+        "eps": 0.5,
+        "raw_pct": 1.5625,
+        "bits_per_element": 4.599759615384615
+      },
+      "eps0.5_per_token": {
+        "ratio": 1.072510473735095,
+        "max_error": 0.375,
+        "eps": 0.5,
+        "raw_pct": 81.7307710647583,
+        "bits_per_element": 14.91826923076923
+      }
+    },
+    "p2_l0_v": {
+      "shape": [
+        624,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999899844759377,
+        "max_error": 0.006572573445737362,
+        "bytes": 79876,
+        "bits_per_element": 8.00040064102564
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 1.874137688300718,
+        "max_error": 0.005859375,
+        "eps": 0.006572573445737362,
+        "raw_pct": 6.25,
+        "bits_per_element": 8.537259615384615
+      },
+      "int8_per_channel": {
+        "ratio": 1.9872611464968153,
+        "max_error": 0.006559118628501892,
+        "bytes": 80384,
+        "bits_per_element": 8.051282051282051
+      },
+      "matched_int8_per_channel": {
+        "ratio": 1.874137688300718,
+        "max_error": 0.005859375,
+        "eps": 0.006559118628501892,
+        "raw_pct": 6.25,
+        "bits_per_element": 8.537259615384615
+      },
+      "eps0.05_blockwise": {
+        "ratio": 3.364448188711036,
+        "max_error": 0.0478515625,
+        "eps": 0.05,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.7556089743589745
+      },
+      "eps0.05_per_channel": {
+        "ratio": 3.704981909268021,
+        "max_error": 0.04736328125,
+        "eps": 0.05,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.318509615384615
+      },
+      "eps0.05_per_token": {
+        "ratio": 3.338014042126379,
+        "max_error": 0.046142578125,
+        "eps": 0.05,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.793269230769231
+      },
+      "eps0.15_blockwise": {
+        "ratio": 3.7372262773722627,
+        "max_error": 0.09033203125,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.28125
+      },
+      "eps0.15_per_channel": {
+        "ratio": 3.8878504672897196,
+        "max_error": 0.07684326171875,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.115384615384615
+      },
+      "eps0.15_per_token": {
+        "ratio": 3.506849315068493,
+        "max_error": 0.09033203125,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.5625
+      },
+      "eps0.5_blockwise": {
+        "ratio": 3.7372262773722627,
+        "max_error": 0.09033203125,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.28125
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.8878504672897196,
+        "max_error": 0.07684326171875,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.115384615384615
+      },
+      "eps0.5_per_token": {
+        "ratio": 3.506849315068493,
+        "max_error": 0.09033203125,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.5625
+      }
+    },
+    "p2_l14_k": {
+      "shape": [
+        624,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999899844759377,
+        "max_error": 0.13582611083984375,
+        "bytes": 79876,
+        "bits_per_element": 8.00040064102564
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.501315295001879,
+        "max_error": 0.126953125,
+        "eps": 0.13582611083984375,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.396634615384615
+      },
+      "int8_per_channel": {
+        "ratio": 1.9872611464968153,
+        "max_error": 0.13582611083984375,
+        "bytes": 80384,
+        "bits_per_element": 8.051282051282051
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.501315295001879,
+        "max_error": 0.126953125,
+        "eps": 0.13582611083984375,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.396634615384615
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.9905253236767697,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 98.39743375778198,
+        "bits_per_element": 16.153044871794872
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.6859169199594732,
+        "max_error": 0.046875,
+        "eps": 0.05,
+        "raw_pct": 23.4375,
+        "bits_per_element": 9.490384615384615
+      },
+      "eps0.05_per_token": {
+        "ratio": 1.018879477497704,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 89.26281929016113,
+        "bits_per_element": 15.70352564102564
+      },
+      "eps0.15_blockwise": {
+        "ratio": 1.9365725923770731,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 0.32051282469183207,
+        "bits_per_element": 8.26201923076923
+      },
+      "eps0.15_per_channel": {
+        "ratio": 2.5511690302798007,
+        "max_error": 0.1328125,
+        "eps": 0.15,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.271634615384615
+      },
+      "eps0.15_per_token": {
+        "ratio": 1.9465782803665432,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 0.16025641234591603,
+        "bits_per_element": 8.219551282051283
+      },
+      "eps0.5_blockwise": {
+        "ratio": 2.560328247211181,
+        "max_error": 0.453125,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.249198717948718
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.5263576158940397,
+        "max_error": 0.46875,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.537259615384615
+      },
+      "eps0.5_per_token": {
+        "ratio": 2.529516088168229,
+        "max_error": 0.484375,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.325320512820513
+      }
+    },
+    "p2_l14_v": {
+      "shape": [
+        624,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999899844759377,
+        "max_error": 0.672490119934082,
+        "bytes": 79876,
+        "bits_per_element": 8.00040064102564
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.643367752184273,
+        "max_error": 0.640625,
+        "eps": 0.672490119934082,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.052884615384615
+      },
+      "int8_per_channel": {
+        "ratio": 1.9872611464968153,
+        "max_error": 0.671875,
+        "bytes": 80384,
+        "bits_per_element": 8.051282051282051
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.643367752184273,
+        "max_error": 0.640625,
+        "eps": 0.671875,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.052884615384615
+      },
+      "eps0.05_blockwise": {
+        "ratio": 1.4198961814691033,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 37.5,
+        "bits_per_element": 11.268429487179487
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.0045276184726835,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 97.65625,
+        "bits_per_element": 15.927884615384615
+      },
+      "eps0.05_per_token": {
+        "ratio": 1.547667028367695,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 22.43589758872986,
+        "bits_per_element": 10.338141025641026
+      },
+      "eps0.15_blockwise": {
+        "ratio": 2.261125580341977,
+        "max_error": 0.130859375,
+        "eps": 0.15,
+        "raw_pct": 5.128205195069313,
+        "bits_per_element": 7.076121794871795
+      },
+      "eps0.15_per_channel": {
+        "ratio": 1.4897045658012533,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 33.59375,
+        "bits_per_element": 10.740384615384615
+      },
+      "eps0.15_per_token": {
+        "ratio": 2.27374174447734,
+        "max_error": 0.130859375,
+        "eps": 0.15,
+        "raw_pct": 3.8461539894342422,
+        "bits_per_element": 7.0368589743589745
+      },
+      "eps0.5_blockwise": {
+        "ratio": 3.0705828079347994,
+        "max_error": 0.47576904296875,
+        "eps": 0.5,
+        "raw_pct": 3.205128386616707,
+        "bits_per_element": 5.21073717948718
+      },
+      "eps0.5_per_channel": {
+        "ratio": 2.4416727806309613,
+        "max_error": 0.4150390625,
+        "eps": 0.5,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.552884615384615
+      },
+      "eps0.5_per_token": {
+        "ratio": 3.164500792393027,
+        "max_error": 0.47265625,
+        "eps": 0.5,
+        "raw_pct": 1.6025641933083534,
+        "bits_per_element": 5.056089743589744
+      }
+    },
+    "p2_l27_k": {
+      "shape": [
+        624,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999899844759377,
+        "max_error": 0.18208694458007812,
+        "bytes": 79876,
+        "bits_per_element": 8.00040064102564
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.720621295728592,
+        "max_error": 0.171875,
+        "eps": 0.18208694458007812,
+        "raw_pct": 0.78125,
+        "bits_per_element": 5.881009615384615
+      },
+      "int8_per_channel": {
+        "ratio": 1.9872611464968153,
+        "max_error": 0.18208694458007812,
+        "bytes": 80384,
+        "bits_per_element": 8.051282051282051
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.720621295728592,
+        "max_error": 0.171875,
+        "eps": 0.18208694458007812,
+        "raw_pct": 0.78125,
+        "bits_per_element": 5.881009615384615
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.881023032358344,
+        "max_error": 0.046875,
+        "eps": 0.05,
+        "raw_pct": 10.9375,
+        "bits_per_element": 8.506009615384615
+      },
+      "eps0.05_per_token": {
+        "ratio": 0.9667860947032052,
+        "max_error": 0.0234375,
+        "eps": 0.05,
+        "raw_pct": 99.83974099159241,
+        "bits_per_element": 16.549679487179485
+      },
+      "eps0.15_blockwise": {
+        "ratio": 1.31654249357157,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 48.39743673801422,
+        "bits_per_element": 12.153044871794872
+      },
+      "eps0.15_per_channel": {
+        "ratio": 2.563944530046225,
+        "max_error": 0.140625,
+        "eps": 0.15,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.240384615384615
+      },
+      "eps0.15_per_token": {
+        "ratio": 1.5428836346777932,
+        "max_error": 0.1171875,
+        "eps": 0.15,
+        "raw_pct": 22.91666716337204,
+        "bits_per_element": 10.370192307692308
+      },
+      "eps0.5_blockwise": {
+        "ratio": 2.4740428695328958,
+        "max_error": 0.408111572265625,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.467147435897436
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.6783641890024867,
+        "max_error": 0.4609375,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.349759615384615
+      },
+      "eps0.5_per_token": {
+        "ratio": 2.4156786837648196,
+        "max_error": 0.46728515625,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.623397435897436
+      }
+    },
+    "p2_l27_v": {
+      "shape": [
+        624,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999899844759377,
+        "max_error": 0.38779449462890625,
+        "bytes": 79876,
+        "bits_per_element": 8.00040064102564
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 1.5252062328139322,
+        "max_error": 0.25,
+        "eps": 0.38779449462890625,
+        "raw_pct": 29.6875,
+        "bits_per_element": 10.490384615384615
+      },
+      "int8_per_channel": {
+        "ratio": 1.9872611464968153,
+        "max_error": 0.3871185779571533,
+        "bytes": 80384,
+        "bits_per_element": 8.051282051282051
+      },
+      "matched_int8_per_channel": {
+        "ratio": 1.5252062328139322,
+        "max_error": 0.25,
+        "eps": 0.3871185779571533,
+        "raw_pct": 29.6875,
+        "bits_per_element": 10.490384615384615
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.9842756445014048,
+        "max_error": 0.0242919921875,
+        "eps": 0.05,
+        "raw_pct": 99.67948794364929,
+        "bits_per_element": 16.255608974358974
+      },
+      "eps0.05_per_channel": {
+        "ratio": 0.9928400954653938,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.115384615384617
+      },
+      "eps0.05_per_token": {
+        "ratio": 0.9690381442298359,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 99.35897588729858,
+        "bits_per_element": 16.51121794871795
+      },
+      "eps0.15_blockwise": {
+        "ratio": 0.990918564835492,
+        "max_error": 0.1015625,
+        "eps": 0.15,
+        "raw_pct": 98.39743375778198,
+        "bits_per_element": 16.146634615384617
+      },
+      "eps0.15_per_channel": {
+        "ratio": 0.9928400954653938,
+        "max_error": 0.0,
+        "eps": 0.15,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.115384615384617
+      },
+      "eps0.15_per_token": {
+        "ratio": 0.9870489372219476,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 95.83333134651184,
+        "bits_per_element": 16.209935897435898
+      },
+      "eps0.5_blockwise": {
+        "ratio": 1.8825304044498916,
+        "max_error": 0.4375,
+        "eps": 0.5,
+        "raw_pct": 4.16666679084301,
+        "bits_per_element": 8.499198717948717
+      },
+      "eps0.5_per_channel": {
+        "ratio": 1.7084188911704312,
+        "max_error": 0.25,
+        "eps": 0.5,
+        "raw_pct": 15.625,
+        "bits_per_element": 9.365384615384615
+      },
+      "eps0.5_per_token": {
+        "ratio": 1.9225880993645292,
+        "max_error": 0.458984375,
+        "eps": 0.5,
+        "raw_pct": 2.243589796125889,
+        "bits_per_element": 8.322115384615385
+      }
+    },
+    "p3_l0_k": {
+      "shape": [
+        600,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999895838758398,
+        "max_error": 1.551177978515625,
+        "bytes": 76804,
+        "bits_per_element": 8.000416666666666
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 3.755317588381986,
+        "max_error": 1.23046875,
+        "eps": 1.551177978515625,
+        "raw_pct": 0.78125,
+        "bits_per_element": 4.260625
+      },
+      "int8_per_channel": {
+        "ratio": 1.9867549668874172,
+        "max_error": 1.551177978515625,
+        "bytes": 77312,
+        "bits_per_element": 8.053333333333333
+      },
+      "matched_int8_per_channel": {
+        "ratio": 3.755317588381986,
+        "max_error": 1.23046875,
+        "eps": 1.551177978515625,
+        "raw_pct": 0.78125,
+        "bits_per_element": 4.260625
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.7190437818963202,
+        "max_error": 0.04296875,
+        "eps": 0.05,
+        "raw_pct": 16.40625,
+        "bits_per_element": 9.3075
+      },
+      "eps0.05_per_token": {
+        "ratio": 0.9660377358490566,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.5625
+      },
+      "eps0.15_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.15,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.15_per_channel": {
+        "ratio": 2.422636509889278,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 2.34375,
+        "bits_per_element": 6.604375
+      },
+      "eps0.15_per_token": {
+        "ratio": 0.9818460751725901,
+        "max_error": 0.09375,
+        "eps": 0.15,
+        "raw_pct": 96.66666388511658,
+        "bits_per_element": 16.295833333333334
+      },
+      "eps0.5_blockwise": {
+        "ratio": 0.9843377508907744,
+        "max_error": 0.234375,
+        "eps": 0.5,
+        "raw_pct": 99.6666669845581,
+        "bits_per_element": 16.254583333333333
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.463203463203463,
+        "max_error": 0.48046875,
+        "eps": 0.5,
+        "raw_pct": 1.5625,
+        "bits_per_element": 4.62
+      },
+      "eps0.5_per_token": {
+        "ratio": 1.0676750264138353,
+        "max_error": 0.375,
+        "eps": 0.5,
+        "raw_pct": 81.49999976158142,
+        "bits_per_element": 14.985833333333334
+      }
+    },
+    "p3_l0_v": {
+      "shape": [
+        600,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999895838758398,
+        "max_error": 0.01088637113571167,
+        "bytes": 76804,
+        "bits_per_element": 8.000416666666666
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.3131833378512696,
+        "max_error": 0.00927734375,
+        "eps": 0.01088637113571167,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.916875
+      },
+      "int8_per_channel": {
+        "ratio": 1.9867549668874172,
+        "max_error": 0.01088637113571167,
+        "bytes": 77312,
+        "bits_per_element": 8.053333333333333
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.3131833378512696,
+        "max_error": 0.00927734375,
+        "eps": 0.01088637113571167,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.916875
+      },
+      "eps0.05_blockwise": {
+        "ratio": 3.2600390525511505,
+        "max_error": 0.046142578125,
+        "eps": 0.05,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.907916666666667
+      },
+      "eps0.05_per_channel": {
+        "ratio": 3.6353308719113886,
+        "max_error": 0.04833984375,
+        "eps": 0.05,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.40125
+      },
+      "eps0.05_per_token": {
+        "ratio": 3.290488431876607,
+        "max_error": 0.0477294921875,
+        "eps": 0.05,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.8625
+      },
+      "eps0.15_blockwise": {
+        "ratio": 3.7372262773722627,
+        "max_error": 0.115234375,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.28125
+      },
+      "eps0.15_per_channel": {
+        "ratio": 3.883495145631068,
+        "max_error": 0.109375,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.12
+      },
+      "eps0.15_per_token": {
+        "ratio": 3.506849315068493,
+        "max_error": 0.1094970703125,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.5625
+      },
+      "eps0.5_blockwise": {
+        "ratio": 3.7372262773722627,
+        "max_error": 0.115234375,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.28125
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.883495145631068,
+        "max_error": 0.109375,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.12
+      },
+      "eps0.5_per_token": {
+        "ratio": 3.506849315068493,
+        "max_error": 0.1094970703125,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.5625
+      }
+    },
+    "p3_l14_k": {
+      "shape": [
+        600,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999895838758398,
+        "max_error": 0.12007904052734375,
+        "bytes": 76804,
+        "bits_per_element": 8.000416666666666
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.399925002343677,
+        "max_error": 0.109375,
+        "eps": 0.12007904052734375,
+        "raw_pct": 2.34375,
+        "bits_per_element": 6.666875
+      },
+      "int8_per_channel": {
+        "ratio": 1.9867549668874172,
+        "max_error": 0.12007904052734375,
+        "bytes": 77312,
+        "bits_per_element": 8.053333333333333
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.399925002343677,
+        "max_error": 0.109375,
+        "eps": 0.12007904052734375,
+        "raw_pct": 2.34375,
+        "bits_per_element": 6.666875
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.9957731504291678,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 97.33333587646484,
+        "bits_per_element": 16.067916666666665
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.6740779492545121,
+        "max_error": 0.046875,
+        "eps": 0.05,
+        "raw_pct": 21.875,
+        "bits_per_element": 9.5575
+      },
+      "eps0.05_per_token": {
+        "ratio": 1.0414971521562246,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 85.00000238418579,
+        "bits_per_element": 15.3625
+      },
+      "eps0.15_blockwise": {
+        "ratio": 1.949337529823849,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 8.207916666666666
+      },
+      "eps0.15_per_channel": {
+        "ratio": 2.511773940345369,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.37
+      },
+      "eps0.15_per_token": {
+        "ratio": 1.977954053775626,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 0.0,
+        "bits_per_element": 8.089166666666667
+      },
+      "eps0.5_blockwise": {
+        "ratio": 2.5718304199316857,
+        "max_error": 0.4716796875,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.22125
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.522774184670428,
+        "max_error": 0.484375,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.541875
+      },
+      "eps0.5_per_token": {
+        "ratio": 2.569937090081649,
+        "max_error": 0.484375,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.225833333333333
+      }
+    },
+    "p3_l14_v": {
+      "shape": [
+        600,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999895838758398,
+        "max_error": 0.6879901885986328,
+        "bytes": 76804,
+        "bits_per_element": 8.000416666666666
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.655050819332089,
+        "max_error": 0.65625,
+        "eps": 0.6879901885986328,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.02625
+      },
+      "int8_per_channel": {
+        "ratio": 1.9867549668874172,
+        "max_error": 0.6875,
+        "bytes": 77312,
+        "bits_per_element": 8.053333333333333
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.655050819332089,
+        "max_error": 0.65625,
+        "eps": 0.6875,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.02625
+      },
+      "eps0.05_blockwise": {
+        "ratio": 1.4998242393469516,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 30.000001192092896,
+        "bits_per_element": 10.667916666666667
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.000312597686777,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 98.4375,
+        "bits_per_element": 15.995
+      },
+      "eps0.05_per_token": {
+        "ratio": 1.598534676546499,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 18.333333730697632,
+        "bits_per_element": 10.009166666666667
+      },
+      "eps0.15_blockwise": {
+        "ratio": 2.1974248927038627,
+        "max_error": 0.1318359375,
+        "eps": 0.15,
+        "raw_pct": 7.333333045244217,
+        "bits_per_element": 7.28125
+      },
+      "eps0.15_per_channel": {
+        "ratio": 1.4490292635988,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 37.5,
+        "bits_per_element": 11.041875
+      },
+      "eps0.15_per_token": {
+        "ratio": 2.217346113869962,
+        "max_error": 0.1318359375,
+        "eps": 0.15,
+        "raw_pct": 5.666666850447655,
+        "bits_per_element": 7.215833333333333
+      },
+      "eps0.5_blockwise": {
+        "ratio": 2.988094311726714,
+        "max_error": 0.484375,
+        "eps": 0.5,
+        "raw_pct": 4.666666686534882,
+        "bits_per_element": 5.354583333333333
+      },
+      "eps0.5_per_channel": {
+        "ratio": 2.422636509889278,
+        "max_error": 0.4296875,
+        "eps": 0.5,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.604375
+      },
+      "eps0.5_per_token": {
+        "ratio": 3.137767609086452,
+        "max_error": 0.4765625,
+        "eps": 0.5,
+        "raw_pct": 1.9999999552965164,
+        "bits_per_element": 5.099166666666667
+      }
+    },
+    "p3_l27_k": {
+      "shape": [
+        600,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999895838758398,
+        "max_error": 0.17815017700195312,
+        "bytes": 76804,
+        "bits_per_element": 8.000416666666666
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.6010973379394433,
+        "max_error": 0.171875,
+        "eps": 0.17815017700195312,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.15125
+      },
+      "int8_per_channel": {
+        "ratio": 1.9867549668874172,
+        "max_error": 0.17815017700195312,
+        "bytes": 77312,
+        "bits_per_element": 8.053333333333333
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.6010973379394433,
+        "max_error": 0.171875,
+        "eps": 0.17815017700195312,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.15125
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.982725527831094,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.28125
+      },
+      "eps0.05_per_channel": {
+        "ratio": 1.8296169239565465,
+        "max_error": 0.046875,
+        "eps": 0.05,
+        "raw_pct": 11.71875,
+        "bits_per_element": 8.745
+      },
+      "eps0.05_per_token": {
+        "ratio": 0.966816053174883,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 99.83333349227905,
+        "bits_per_element": 16.549166666666668
+      },
+      "eps0.15_blockwise": {
+        "ratio": 1.139499688418054,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 72.00000286102295,
+        "bits_per_element": 14.04125
+      },
+      "eps0.15_per_channel": {
+        "ratio": 2.530394385687457,
+        "max_error": 0.1328125,
+        "eps": 0.15,
+        "raw_pct": 0.78125,
+        "bits_per_element": 6.323125
+      },
+      "eps0.15_per_token": {
+        "ratio": 1.4085540312522926,
+        "max_error": 0.09375,
+        "eps": 0.15,
+        "raw_pct": 34.99999940395355,
+        "bits_per_element": 11.359166666666667
+      },
+      "eps0.5_blockwise": {
+        "ratio": 2.399550084359183,
+        "max_error": 0.41650390625,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.667916666666667
+      },
+      "eps0.5_per_channel": {
+        "ratio": 3.648282741912498,
+        "max_error": 0.47265625,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 4.385625
+      },
+      "eps0.5_per_token": {
+        "ratio": 2.4051108605787297,
+        "max_error": 0.375,
+        "eps": 0.5,
+        "raw_pct": 0.0,
+        "bits_per_element": 6.6525
+      }
+    },
+    "p3_l27_v": {
+      "shape": [
+        600,
+        128
+      ],
+      "int8_per_tensor": {
+        "ratio": 1.999895838758398,
+        "max_error": 1.0703125,
+        "bytes": 76804,
+        "bits_per_element": 8.000416666666666
+      },
+      "matched_int8_per_tensor": {
+        "ratio": 2.065848934796643,
+        "max_error": 1.0,
+        "eps": 1.0703125,
+        "raw_pct": 1.5625,
+        "bits_per_element": 7.745
+      },
+      "int8_per_channel": {
+        "ratio": 1.9867549668874172,
+        "max_error": 1.0647144317626953,
+        "bytes": 77312,
+        "bits_per_element": 8.053333333333333
+      },
+      "matched_int8_per_channel": {
+        "ratio": 2.057547018164282,
+        "max_error": 1.0,
+        "eps": 1.0647144317626953,
+        "raw_pct": 1.5625,
+        "bits_per_element": 7.77625
+      },
+      "eps0.05_blockwise": {
+        "ratio": 0.9843377508907744,
+        "max_error": 0.0234375,
+        "eps": 0.05,
+        "raw_pct": 99.6666669845581,
+        "bits_per_element": 16.254583333333333
+      },
+      "eps0.05_per_channel": {
+        "ratio": 0.9925558312655087,
+        "max_error": 0.0,
+        "eps": 0.05,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.12
+      },
+      "eps0.05_per_token": {
+        "ratio": 0.9691585482812579,
+        "max_error": 0.03125,
+        "eps": 0.05,
+        "raw_pct": 99.33333396911621,
+        "bits_per_element": 16.509166666666665
+      },
+      "eps0.15_blockwise": {
+        "ratio": 0.9912491287849454,
+        "max_error": 0.0966796875,
+        "eps": 0.15,
+        "raw_pct": 98.33333492279053,
+        "bits_per_element": 16.14125
+      },
+      "eps0.15_per_channel": {
+        "ratio": 0.9925558312655087,
+        "max_error": 0.0,
+        "eps": 0.15,
+        "raw_pct": 100.0,
+        "bits_per_element": 16.12
+      },
+      "eps0.15_per_token": {
+        "ratio": 0.9879084126575766,
+        "max_error": 0.125,
+        "eps": 0.15,
+        "raw_pct": 95.6666648387909,
+        "bits_per_element": 16.195833333333333
+      },
+      "eps0.5_blockwise": {
+        "ratio": 1.6447509315972073,
+        "max_error": 0.4375,
+        "eps": 0.5,
+        "raw_pct": 19.333332777023315,
+        "bits_per_element": 9.727916666666667
+      },
+      "eps0.5_per_channel": {
+        "ratio": 1.3769363166953528,
+        "max_error": 0.25,
+        "eps": 0.5,
+        "raw_pct": 43.75,
+        "bits_per_element": 11.62
+      },
+      "eps0.5_per_token": {
+        "ratio": 1.7713811237199004,
+        "max_error": 0.46044921875,
+        "eps": 0.5,
+        "raw_pct": 9.333333373069763,
+        "bits_per_element": 9.0325
+      }
+    }
+  },
+  "mean": {
+    "int8_per_tensor.ratio": 1.9998994454148942,
+    "int8_per_tensor.max_error": 0.5012538817633564,
+    "matched_int8_per_tensor.ratio": 2.5515822307111073,
+    "int8_per_channel.ratio": 1.9872107372318686,
+    "int8_per_channel.max_error": 0.5002016204719743,
+    "matched_int8_per_channel.ratio": 2.551012497092535,
+    "eps0.05_blockwise.ratio": 1.440932817596776,
+    "eps0.05_per_channel.ratio": 1.823589687223831,
+    "eps0.05_per_token.ratio": 1.4606279696181472,
+    "eps0.15_blockwise.ratio": 1.8496449006346387,
+    "eps0.15_per_channel.ratio": 2.3142724624486952,
+    "eps0.15_per_token.ratio": 1.8626210350717998,
+    "eps0.5_blockwise.ratio": 2.419725834767549,
+    "eps0.5_per_channel.ratio": 3.1173730217080706,
+    "eps0.5_per_token.ratio": 2.425568523094014
+  }
+}
