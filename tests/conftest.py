@@ -14,7 +14,15 @@ import torch
 HIDDEN = 2048
 TALKER_HIDDEN = 1024
 
-EPS_VALUES = [1e-3, 1e-2, 1e-1]
+# Chosen so the three widths are all exercised on bf16 N(0,1) activations
+# (block range ~6.5): 0.05 -> 8-bit, 0.15 -> 6-bit, 0.5 -> 4-bit.
+#
+# Tighter values are not an oversight. bf16 carries 8 mantissa bits, so the
+# half-ulp near |x| ~ 3 is already ~0.008; below eps ~ 0.02 the output dtype's
+# own rounding consumes the whole budget and every group is stored raw. That is
+# a property of the representation, not a bug to tune around, and it is one of
+# the things the note has to say out loud.
+EPS_VALUES = [0.05, 0.15, 0.5]
 BIT_WIDTHS = [4, 6, 8]
 
 

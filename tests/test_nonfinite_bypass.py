@@ -23,31 +23,40 @@ def roundtrip(x: torch.Tensor, cfg: CodecConfig) -> torch.Tensor:
     return reference.decode(payload)
 
 
+BLOCK = 256
+EPS = 0.15
+
+
 @pytest.mark.parametrize("bad", [float("nan"), float("inf"), float("-inf")])
 def test_nonfinite_block_is_bit_exact(bad, gen):
+    """Only the affected *block* is bit-exact -- not the whole row.
+
+    Contamination is contained at block granularity, which is the point: one bad
+    value costs one block's ratio, not the tensor's.
+    """
     x = hidden_state(gen=gen)
     x[0, 0] = bad
-    out = roundtrip(x, CodecConfig(eps=1e-2))
-    head = out[0, :HIDDEN]
-    assert torch.equal(head.view(torch.int16), x[0, :HIDDEN].view(torch.int16))
+    out = roundtrip(x, CodecConfig(eps=EPS, block_size=BLOCK))
+    assert torch.equal(out[0, :BLOCK].view(torch.int16), x[0, :BLOCK].view(torch.int16))
 
 
 def test_nonfinite_blocks_are_counted(gen):
     x = hidden_state(gen=gen)
     x[0, 0] = float("nan")
-    _, stats = reference.encode(x, CodecConfig(eps=1e-2))
+    _, stats = reference.encode(x, CodecConfig(eps=EPS, block_size=BLOCK))
     assert stats.nonfinite_blocks >= 1
     assert 0.0 < stats.nonfinite_block_rate <= 1.0
 
 
 def test_all_finite_reports_zero_nonfinite(gen):
-    _, stats = reference.encode(hidden_state(gen=gen), CodecConfig(eps=1e-2))
+    _, stats = reference.encode(hidden_state(gen=gen), CodecConfig(eps=EPS, block_size=BLOCK))
     assert stats.nonfinite_blocks == 0
 
 
 def test_finite_blocks_still_compress_alongside_nonfinite(gen):
-    """One bad value must not force the whole tensor onto the bypass path."""
+    """One bad value must not push the whole tensor onto the bypass path."""
     x = hidden_state(tokens=128, gen=gen)
     x[0, 0] = float("inf")
-    _, stats = reference.encode(x, CodecConfig(eps=1e-2))
+    _, stats = reference.encode(x, CodecConfig(eps=EPS, block_size=BLOCK))
     assert stats.nonfinite_blocks < stats.total_blocks
+    assert stats.compressed_bytes < stats.original_bytes, "finite blocks did not compress"
