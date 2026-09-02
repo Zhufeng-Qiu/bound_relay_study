@@ -1,0 +1,19 @@
+{
+  "source": "D6 topology smoke, 2xA40 CA-MTL-1",
+  "bw_gbps": [
+    8.45,
+    23.0
+  ],
+  "labels": [
+    "host-staged",
+    "one-way PCIe"
+  ],
+  "net_benefit_s": [
+    0.0008590308089154713,
+    -9.464064979304435e-05
+  ],
+  "err_s": [
+    0.0,
+    0.0
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "host": "b712caaafbce",
+  "torch": "2.8.0+cu128",
+  "cuda_built": "12.8",
+  "driver_gpu": "NVIDIA A40",
+  "capability": [
+    8,
+    6
+  ],
+  "triton": "3.4.0",
+  "gpu_count": 1
+}
