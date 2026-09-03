@@ -1,0 +1,1072 @@
+{
+  "baseline_nll": 2.7514277696609497,
+  "baseline_bytes": 117440512,
+  "rows": [
+    {
+      "doc": "d00",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 408.4823303222656,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d00",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 1047.32861328125,
+      "ntok": 128,
+      "bytes": 54366052
+    },
+    {
+      "doc": "d00",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 409.7744140625,
+      "ntok": 128,
+      "bytes": 78289224
+    },
+    {
+      "doc": "d00",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 499.341796875,
+      "ntok": 128,
+      "bytes": 77970144
+    },
+    {
+      "doc": "d00",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1286.70263671875,
+      "ntok": 128,
+      "bytes": 38818856
+    },
+    {
+      "doc": "d00",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 408.8902587890625,
+      "ntok": 128,
+      "bytes": 56928352
+    },
+    {
+      "doc": "d00",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 1105.3980712890625,
+      "ntok": 128,
+      "bytes": 50715956
+    },
+    {
+      "doc": "d01",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 370.5682678222656,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d01",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 889.2247314453125,
+      "ntok": 128,
+      "bytes": 54376452
+    },
+    {
+      "doc": "d01",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 365.5709228515625,
+      "ntok": 128,
+      "bytes": 78280980
+    },
+    {
+      "doc": "d01",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 516.949462890625,
+      "ntok": 128,
+      "bytes": 77986116
+    },
+    {
+      "doc": "d01",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1085.16064453125,
+      "ntok": 128,
+      "bytes": 38826584
+    },
+    {
+      "doc": "d01",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 369.25201416015625,
+      "ntok": 128,
+      "bytes": 56942624
+    },
+    {
+      "doc": "d01",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 899.2877197265625,
+      "ntok": 128,
+      "bytes": 50724924
+    },
+    {
+      "doc": "d02",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 374.5901184082031,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d02",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 1059.50732421875,
+      "ntok": 128,
+      "bytes": 54335512
+    },
+    {
+      "doc": "d02",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 372.58355712890625,
+      "ntok": 128,
+      "bytes": 78286132
+    },
+    {
+      "doc": "d02",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 450.683349609375,
+      "ntok": 128,
+      "bytes": 77943288
+    },
+    {
+      "doc": "d02",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1163.226318359375,
+      "ntok": 128,
+      "bytes": 38788908
+    },
+    {
+      "doc": "d02",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 375.9482116699219,
+      "ntok": 128,
+      "bytes": 56898484
+    },
+    {
+      "doc": "d02",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 1096.46533203125,
+      "ntok": 128,
+      "bytes": 50684760
+    },
+    {
+      "doc": "d03",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 340.0623779296875,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d03",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 1518.970703125,
+      "ntok": 128,
+      "bytes": 54378284
+    },
+    {
+      "doc": "d03",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 337.04339599609375,
+      "ntok": 128,
+      "bytes": 78281216
+    },
+    {
+      "doc": "d03",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 476.7899169921875,
+      "ntok": 128,
+      "bytes": 77986424
+    },
+    {
+      "doc": "d03",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1384.1220703125,
+      "ntok": 128,
+      "bytes": 38827128
+    },
+    {
+      "doc": "d03",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 340.1528625488281,
+      "ntok": 128,
+      "bytes": 56949492
+    },
+    {
+      "doc": "d03",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 1562.7315673828125,
+      "ntok": 128,
+      "bytes": 50726676
+    },
+    {
+      "doc": "d04",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 287.0572204589844,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d04",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 908.1376953125,
+      "ntok": 128,
+      "bytes": 54355684
+    },
+    {
+      "doc": "d04",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 291.56378173828125,
+      "ntok": 128,
+      "bytes": 78282152
+    },
+    {
+      "doc": "d04",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 367.2857666015625,
+      "ntok": 128,
+      "bytes": 77963548
+    },
+    {
+      "doc": "d04",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1058.490234375,
+      "ntok": 128,
+      "bytes": 38805188
+    },
+    {
+      "doc": "d04",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 285.9523010253906,
+      "ntok": 128,
+      "bytes": 56919420
+    },
+    {
+      "doc": "d04",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 930.3429565429688,
+      "ntok": 128,
+      "bytes": 50703968
+    },
+    {
+      "doc": "d05",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 441.4467468261719,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d05",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 1264.811279296875,
+      "ntok": 128,
+      "bytes": 54360916
+    },
+    {
+      "doc": "d05",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 441.89117431640625,
+      "ntok": 128,
+      "bytes": 78286852
+    },
+    {
+      "doc": "d05",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 612.7114868164062,
+      "ntok": 128,
+      "bytes": 77959720
+    },
+    {
+      "doc": "d05",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1500.665283203125,
+      "ntok": 128,
+      "bytes": 38806060
+    },
+    {
+      "doc": "d05",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 441.15081787109375,
+      "ntok": 128,
+      "bytes": 56919288
+    },
+    {
+      "doc": "d05",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 1316.979736328125,
+      "ntok": 128,
+      "bytes": 50709384
+    },
+    {
+      "doc": "d06",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 319.2093505859375,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d06",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 1100.7158203125,
+      "ntok": 128,
+      "bytes": 54373824
+    },
+    {
+      "doc": "d06",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 321.17889404296875,
+      "ntok": 128,
+      "bytes": 78288212
+    },
+    {
+      "doc": "d06",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 482.1842041015625,
+      "ntok": 128,
+      "bytes": 77978060
+    },
+    {
+      "doc": "d06",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1275.0517578125,
+      "ntok": 128,
+      "bytes": 38825760
+    },
+    {
+      "doc": "d06",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 318.36273193359375,
+      "ntok": 128,
+      "bytes": 56945760
+    },
+    {
+      "doc": "d06",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 1164.59814453125,
+      "ntok": 128,
+      "bytes": 50723624
+    },
+    {
+      "doc": "d07",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 304.4542236328125,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d07",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 1078.55078125,
+      "ntok": 128,
+      "bytes": 54365400
+    },
+    {
+      "doc": "d07",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 310.15203857421875,
+      "ntok": 128,
+      "bytes": 78267048
+    },
+    {
+      "doc": "d07",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 329.65777587890625,
+      "ntok": 128,
+      "bytes": 77989012
+    },
+    {
+      "doc": "d07",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1152.50341796875,
+      "ntok": 128,
+      "bytes": 38815548
+    },
+    {
+      "doc": "d07",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 303.25982666015625,
+      "ntok": 128,
+      "bytes": 56933040
+    },
+    {
+      "doc": "d07",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 1110.967041015625,
+      "ntok": 128,
+      "bytes": 50713772
+    },
+    {
+      "doc": "d08",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 377.59442138671875,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d08",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 1066.5179443359375,
+      "ntok": 128,
+      "bytes": 54383560
+    },
+    {
+      "doc": "d08",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 372.6769104003906,
+      "ntok": 128,
+      "bytes": 78253536
+    },
+    {
+      "doc": "d08",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 447.016845703125,
+      "ntok": 128,
+      "bytes": 78012640
+    },
+    {
+      "doc": "d08",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1158.943115234375,
+      "ntok": 128,
+      "bytes": 38825664
+    },
+    {
+      "doc": "d08",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 378.9010009765625,
+      "ntok": 128,
+      "bytes": 56946532
+    },
+    {
+      "doc": "d08",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 1101.4720458984375,
+      "ntok": 128,
+      "bytes": 50731672
+    },
+    {
+      "doc": "d09",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 352.204345703125,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d09",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 1191.60400390625,
+      "ntok": 128,
+      "bytes": 54339008
+    },
+    {
+      "doc": "d09",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 348.2698669433594,
+      "ntok": 128,
+      "bytes": 78281432
+    },
+    {
+      "doc": "d09",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 431.7317199707031,
+      "ntok": 128,
+      "bytes": 77951904
+    },
+    {
+      "doc": "d09",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1171.3709716796875,
+      "ntok": 128,
+      "bytes": 38792824
+    },
+    {
+      "doc": "d09",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 350.7560729980469,
+      "ntok": 128,
+      "bytes": 56903844
+    },
+    {
+      "doc": "d09",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 1250.9224853515625,
+      "ntok": 128,
+      "bytes": 50688028
+    },
+    {
+      "doc": "d10",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 394.0078125,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d10",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 1179.0875244140625,
+      "ntok": 128,
+      "bytes": 54353612
+    },
+    {
+      "doc": "d10",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 393.5860900878906,
+      "ntok": 128,
+      "bytes": 78278592
+    },
+    {
+      "doc": "d10",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 582.416015625,
+      "ntok": 128,
+      "bytes": 77966404
+    },
+    {
+      "doc": "d10",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1111.1619873046875,
+      "ntok": 128,
+      "bytes": 38804484
+    },
+    {
+      "doc": "d10",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 396.4234619140625,
+      "ntok": 128,
+      "bytes": 56917944
+    },
+    {
+      "doc": "d10",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 1255.367919921875,
+      "ntok": 128,
+      "bytes": 50701096
+    },
+    {
+      "doc": "d11",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 329.0039978027344,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d11",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 1218.854736328125,
+      "ntok": 128,
+      "bytes": 54327644
+    },
+    {
+      "doc": "d11",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 325.78509521484375,
+      "ntok": 128,
+      "bytes": 78268388
+    },
+    {
+      "doc": "d11",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 466.6457214355469,
+      "ntok": 128,
+      "bytes": 77955148
+    },
+    {
+      "doc": "d11",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1172.7242431640625,
+      "ntok": 128,
+      "bytes": 38783024
+    },
+    {
+      "doc": "d11",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 327.7639465332031,
+      "ntok": 128,
+      "bytes": 56885588
+    },
+    {
+      "doc": "d11",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 1255.47265625,
+      "ntok": 128,
+      "bytes": 50676164
+    },
+    {
+      "doc": "d12",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 368.2945556640625,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d12",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 1176.618896484375,
+      "ntok": 128,
+      "bytes": 54297160
+    },
+    {
+      "doc": "d12",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 361.982666015625,
+      "ntok": 128,
+      "bytes": 78241368
+    },
+    {
+      "doc": "d12",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 468.3712158203125,
+      "ntok": 128,
+      "bytes": 77948188
+    },
+    {
+      "doc": "d12",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1135.60400390625,
+      "ntok": 128,
+      "bytes": 38749044
+    },
+    {
+      "doc": "d12",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 367.05181884765625,
+      "ntok": 128,
+      "bytes": 56860688
+    },
+    {
+      "doc": "d12",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 1230.302978515625,
+      "ntok": 128,
+      "bytes": 50646260
+    },
+    {
+      "doc": "d13",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 334.10296630859375,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d13",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 928.7845458984375,
+      "ntok": 128,
+      "bytes": 54347156
+    },
+    {
+      "doc": "d13",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 339.1666259765625,
+      "ntok": 128,
+      "bytes": 78284740
+    },
+    {
+      "doc": "d13",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 388.9691467285156,
+      "ntok": 128,
+      "bytes": 77953876
+    },
+    {
+      "doc": "d13",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1080.6346435546875,
+      "ntok": 128,
+      "bytes": 38798104
+    },
+    {
+      "doc": "d13",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 334.95562744140625,
+      "ntok": 128,
+      "bytes": 56907932
+    },
+    {
+      "doc": "d13",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 956.3238525390625,
+      "ntok": 128,
+      "bytes": 50694740
+    },
+    {
+      "doc": "d14",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 292.0670471191406,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d14",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 882.2735595703125,
+      "ntok": 128,
+      "bytes": 54386480
+    },
+    {
+      "doc": "d14",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 284.8946533203125,
+      "ntok": 128,
+      "bytes": 78295748
+    },
+    {
+      "doc": "d14",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 371.77044677734375,
+      "ntok": 128,
+      "bytes": 77980032
+    },
+    {
+      "doc": "d14",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1170.50390625,
+      "ntok": 128,
+      "bytes": 38835268
+    },
+    {
+      "doc": "d14",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 290.4969482421875,
+      "ntok": 128,
+      "bytes": 56947360
+    },
+    {
+      "doc": "d14",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 920.9901733398438,
+      "ntok": 128,
+      "bytes": 50735012
+    },
+    {
+      "doc": "d15",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 341.7782897949219,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d15",
+      "strategy": "cK0.005_cV0.1",
+      "cK": 0.005,
+      "cV": 0.1,
+      "nll_sum": 1369.6363525390625,
+      "ntok": 128,
+      "bytes": 54373220
+    },
+    {
+      "doc": "d15",
+      "strategy": "cKNone_cV0.1",
+      "cK": null,
+      "cV": 0.1,
+      "nll_sum": 343.1692810058594,
+      "ntok": 128,
+      "bytes": 78289652
+    },
+    {
+      "doc": "d15",
+      "strategy": "cK0.1_cVNone",
+      "cK": 0.1,
+      "cV": null,
+      "nll_sum": 521.613037109375,
+      "ntok": 128,
+      "bytes": 77973132
+    },
+    {
+      "doc": "d15",
+      "strategy": "cK0.1_cV0.1",
+      "cK": 0.1,
+      "cV": 0.1,
+      "nll_sum": 1301.39697265625,
+      "ntok": 128,
+      "bytes": 38822272
+    },
+    {
+      "doc": "d15",
+      "strategy": "cK0.01_cV0.03",
+      "cK": 0.01,
+      "cV": 0.03,
+      "nll_sum": 344.27337646484375,
+      "ntok": 128,
+      "bytes": 56928456
+    },
+    {
+      "doc": "d15",
+      "strategy": "cK0.01_cV0.1",
+      "cK": 0.01,
+      "cV": 0.1,
+      "nll_sum": 1374.1484375,
+      "ntok": 128,
+      "bytes": 50720608
+    }
+  ],
+  "summary": [
+    {
+      "cK": 0.005,
+      "cV": 0.1,
+      "bytes": 54357497.75,
+      "ppl": 6190.515782711784,
+      "dnll": 5.979345917701721,
+      "dnll_ci": [
+        5.378565606474877,
+        6.668831998854874
+      ],
+      "significant": true
+    },
+    {
+      "cK": null,
+      "cV": 0.1,
+      "bytes": 78278454.5,
+      "ppl": 15.545848672123531,
+      "dnll": -0.0076341331005096436,
+      "dnll_ci": [
+        -0.02236265502870083,
+        0.008240485936403268
+      ],
+      "significant": false
+    },
+    {
+      "cK": 0.1,
+      "cV": null,
+      "bytes": 77969852.25,
+      "ppl": 37.34445820410442,
+      "dnll": 0.8687567561864853,
+      "dnll_ci": [
+        0.6945645961910486,
+        1.056413760781288
+      ],
+      "significant": true
+    },
+    {
+      "cK": 0.1,
+      "cV": 0.1,
+      "bytes": 38807794.75,
+      "ppl": 11837.577456361705,
+      "dnll": 6.627606511116028,
+      "dnll_ci": [
+        6.262774826213717,
+        7.047266422584653
+      ],
+      "significant": true
+    },
+    {
+      "cK": 0.01,
+      "cV": 0.03,
+      "bytes": 56920925.25,
+      "ppl": 15.65479079533198,
+      "dnll": -0.0006507784128189087,
+      "dnll_ci": [
+        -0.005570676177740097,
+        0.004978198558092115
+      ],
+      "significant": false
+    },
+    {
+      "cK": 0.01,
+      "cV": 0.1,
+      "bytes": 50706040.25,
+      "ppl": 8507.610257199705,
+      "dnll": 6.297288596630096,
+      "dnll_ci": [
+        5.660209331661463,
+        6.958563302457332
+      ],
+      "significant": true
+    }
+  ]
+}
