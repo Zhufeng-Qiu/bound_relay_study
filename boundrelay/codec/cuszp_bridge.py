@@ -46,7 +46,7 @@ def lib(path: str = "/workspace/cuSZp/build/libcuSZp.so"):
 
 
 def roundtrip(x_bf16: torch.Tensor, eps: float, mode: str = "plain",
-              want_decode: bool = True) -> dict:
+              want_decode: bool = True, probe_writes: bool = False) -> dict:
     """Compress and (optionally) reconstruct, returning bytes and achieved error.
 
     The error reported is against the **final bf16** value, not the fp32
@@ -56,7 +56,9 @@ def roundtrip(x_bf16: torch.Tensor, eps: float, mode: str = "plain",
     L = lib()
     d32 = x_bf16.cuda().float().contiguous().reshape(-1)
     n = d32.numel()
-    cmp_buf = torch.empty(n * 4 + 4096, dtype=torch.uint8, device="cuda")
+    # zeroed, like the decode destination: cuSZp reads past cmpSize and leftovers
+    # there make the decoder silently return an all-zero reconstruction
+    cmp_buf = torch.zeros(n * 4 + 4096, dtype=torch.uint8, device="cuda")
     size = ctypes.c_size_t(0)
 
     getattr(L, _MANGLED[("compress", mode)])(
@@ -74,23 +76,30 @@ def roundtrip(x_bf16: torch.Tensor, eps: float, mode: str = "plain",
         # is exactly what happened in the first corpus run: three modes produced
         # different compressed bytes and byte-identical reconstruction errors, which
         # is impossible unless the errors were stale.
-        SENTINEL = float("nan")
-        dec = torch.full((n,), SENTINEL, dtype=torch.float32, device="cuda")
+        # cuSZp's decompress does not write elements it expects to be zero: 128 to
+        # 2912 per tensor here, rising with the error bound. The destination must
+        # therefore arrive **zeroed** -- an API contract its headers do not state.
+        # Filling with anything else leaves the allocator's previous contents in
+        # those positions, which is what made the first corpus run appear to show
+        # cuSZp missing its bound on a third of tensors. It was not; measured
+        # against a zeroed buffer the error is 0.9984-0.9999 of eps throughout.
+        dec = torch.zeros(n, dtype=torch.float32, device="cuda")
         getattr(L, _MANGLED[("decompress", mode)])(
             ctypes.c_void_p(dec.data_ptr()), ctypes.c_void_p(cmp_buf.data_ptr()),
             ctypes.c_size_t(n), ctypes.c_size_t(int(size.value)),
             ctypes.c_float(eps), None)
         torch.cuda.synchronize()
 
-        untouched = int((~torch.isfinite(dec)).sum())
-        out["decoded_elements"] = n - untouched
-        out["fully_decoded"] = untouched == 0
-        if untouched:
-            # Refuse to report an error for a reconstruction that was not produced.
-            out["max_error_fp32"] = None
-            out["max_error_bf16"] = None
-            out["within_eps_fp32"] = None
-            return out
+        if probe_writes:
+            # Same decode into a poisoned buffer, purely to report how much the
+            # decoder left untouched. Diagnostic, never the reconstruction.
+            probe = torch.full((n,), float("nan"), dtype=torch.float32, device="cuda")
+            getattr(L, _MANGLED[("decompress", mode)])(
+                ctypes.c_void_p(probe.data_ptr()), ctypes.c_void_p(cmp_buf.data_ptr()),
+                ctypes.c_size_t(n), ctypes.c_size_t(int(size.value)),
+                ctypes.c_float(eps), None)
+            torch.cuda.synchronize()
+            out["unwritten_elements"] = int((~torch.isfinite(probe)).sum())
 
         back = dec.to(torch.bfloat16)
         src = x_bf16.cuda().reshape(-1)

@@ -24,6 +24,7 @@ manifest recorded.
 from __future__ import annotations
 
 import ctypes, json, os, statistics as st, subprocess, sys, time
+import numpy as np
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -56,14 +57,19 @@ def environment() -> dict:
 def closed_e2e(cache):
     n = len(cache)
     eps = [C * float(x.float().std()) for x in cache]
-    scr = [torch.empty(x.numel()*4+4096, dtype=torch.uint8, device="cuda:0") for x in cache]
-    recv = [torch.empty(x.numel()*4+4096, dtype=torch.uint8, device="cuda:1") for x in cache]
-    dst = [torch.empty(x.numel(), dtype=torch.float32, device="cuda:1") for x in cache]
+    # cuSZp requires zeroed buffers -- not only the decode destination but the
+    # compressed-data buffer too. With torch.empty, the allocator's leftovers in the
+    # region past cmpSize make the decoder produce an all-zero reconstruction and
+    # report nothing. Neither requirement is stated in its headers; both were found
+    # by poisoning the buffers and watching what survived.
+    scr = [torch.zeros(x.numel()*4+4096, dtype=torch.uint8, device="cuda:0") for x in cache]
+    recv = [torch.zeros(x.numel()*4+4096, dtype=torch.uint8, device="cuda:1") for x in cache]
+    dst = [torch.zeros(x.numel(), dtype=torch.float32, device="cuda:1") for x in cache]
     host = torch.empty(sum(x.numel()*2 for x in cache)*2, dtype=torch.uint8,
                        device="cpu", pin_memory=True)
     L = lib()
     ev = lambda: torch.cuda.Event(enable_timing=True)
-    marks = ["upcast", "encode", "d2h", "h2d", "decode", "downcast"]
+    marks = ["upcast", "encode", "d2h", "h2d", "zero_dst", "decode", "downcast"]
 
     def one_iter(collect):
         e = {m: [ev(), ev()] for m in marks} if collect else None
@@ -96,6 +102,13 @@ def closed_e2e(cache):
         if collect: e["h2d"][0].record()
         for i, s in enumerate(sizes): recv[i][:s].copy_(host[off[i]:off[i]+s])
         if collect: e["h2d"][1].record()
+        # cuSZp's decode skips elements it expects to be zero, so the receiver has
+        # to supply a zeroed destination. That is not an artefact of this harness --
+        # it is work a real receiver performs, so it is timed as a stage rather than
+        # hidden outside the region.
+        if collect: e["zero_dst"][0].record()
+        for d in dst: d.zero_()
+        if collect: e["zero_dst"][1].record()
         if collect: e["decode"][0].record()
         for i, s in enumerate(sizes):
             getattr(L, _MANGLED[("decompress", MODE)])(
@@ -121,11 +134,24 @@ def closed_e2e(cache):
     sizes0, _, final0 = one_iter(False)
     worst = 0.0
     for i, x in enumerate(cache):
-        worst = max(worst, float((x.cuda(1).float().reshape(-1) - final0[i].float()).abs().max()))
+        # compare on the host: x lives on GPU0 and the reconstruction on GPU1, and
+        # the peer path between them is the pathological one, so a device-side
+        # comparison would be checking the copy rather than the codec
+        worst = max(worst, float((x.cpu().float().reshape(-1)
+                                  - final0[i].cpu().float()).abs().max()))
+    # cuSZp guarantees eps in fp32; the receiver's downcast to bf16 adds up to half
+    # a bf16 ulp on top. The delivered contract is therefore eps + rounding_bound,
+    # and checking against the bare fp32 eps fails by a fraction of a percent for
+    # exactly that reason.
     eps_max = max(eps)
-    if worst > eps_max * 1.001:
-        raise SystemExit(f"E2E reconstruction outside bound: {worst:.5f} > {eps_max:.5f}")
-    print(f"  correctness gate: max |x - x_hat_bf16| = {worst:.6f} <= {eps_max:.6f}", flush=True)
+    mx = max(float(x.abs().max()) for x in cache)
+    half_ulp = 2.0 ** (int(np.floor(np.log2(mx))) - 8) if mx > 0 else 0.0
+    bound = eps_max + half_ulp
+    if worst > bound:
+        raise SystemExit(f"E2E reconstruction outside contract: {worst:.5f} > "
+                         f"{eps_max:.5f} + {half_ulp:.5f}")
+    print(f"  correctness gate: max |x - x_hat_bf16| = {worst:.5f} <= eps {eps_max:.5f} "
+          f"+ bf16 half-ulp {half_ulp:.5f}", flush=True)
 
     for _ in range(5): one_iter(False); raw_iter()
     # (a) true E2E: no per-stage instrumentation at all
@@ -144,6 +170,7 @@ def closed_e2e(cache):
     gpu_sum = sum(st.median(v) for v in stages.values())
     return {
         "reconstruction_max_error": worst, "eps_max": eps_max,
+        "bf16_half_ulp": half_ulp, "delivered_bound": bound,
         "n_tensors": n, "raw_bytes": sum(x.numel()*2 for x in cache), "comp_bytes": sum(sizes),
         "e2e_median_s": st.median(wall), "e2e_p95_s": sorted(wall)[int(.95*ITERS)],
         "e2e_samples_s": wall,
