@@ -60,10 +60,9 @@ before being quoted.
 tensors are kept, and a correctness gate verifies `max |x − x̂_bf16| ≤ ε` on a full
 iteration **before** any timing begins.
 
-## D3 — the raw baseline discards 55 of its 56 results
+## D3 — the raw baseline discards 55 of its 56 results, and it costs nothing
 
-D2 was found and fixed in the compressed path. The path it is compared against
-still has it. `raw_iter` in `session_close.py` reads, in full:
+`raw_iter` in `session_close.py` reads, in full:
 
 ```python
 for x in cache:
@@ -72,26 +71,37 @@ for x in cache:
 ```
 
 `host[:nb]` and `recv[0]` — the same host slot and the same device buffer, 56 times.
-Every tensor overwrites the last, so 55 of the 56 reconstructions never exist, and
-the baseline never pays for touching the 470 MB of distinct memory a receiver that
-keeps its data has to touch. The compressed path was given per-tensor offsets when
-D2 was fixed; this one was not, because nothing checks the raw path's output — there
-is nothing to decompress and so no correctness gate ever ran on it.
+Every tensor overwrites the last, so 55 of the 56 arrive nowhere. That is the shape
+of D2, fixed in the compressed path and left standing in the path it is compared
+against, and nothing caught it because nothing checks the raw path's output: there
+is nothing to decompress, so no correctness gate ever ran on it.
 
-Rebuilt with distinct buffers on both sides, the same 56 tensors take **27.87 ms
-against the baseline's 23.64 ms**, and the compressed arm of the same rebuild
-reproduces its reference to 1.057×. So the gap is in the raw arm, and it is 18%.
+**It is a correctness defect and not a timing one, and the first version of this
+entry got that wrong.** This entry originally claimed the shared buffers made the
+baseline 18% cheaper and that every ratio quoted against it was inflated. Measured
+directly, on one host, same bytes, differing only in where they land:
 
-**Every ratio quoted against the raw baseline is too large by that factor.** The
-end-to-end comparison is **1.91×, not 2.14×**; the serial break-even and everything
-derived from it move with it. The direction of every conclusion is unchanged — the
-compressed path is still about twice the raw one — but the number was flattering
-the wrong side, which is the direction that matters least for this project's
-conclusions and most for its credibility.
+| variant | ms | GB/s |
+|---|---|---|
+| shared host + shared device — `raw_iter` as written | 28.18 | 8.34 |
+| distinct host slots, shared device | 27.22 | 8.63 |
+| **distinct host + distinct device — a receiver that keeps its data** | **25.94** | **9.05** |
 
-Found by building a control for a different experiment. The pipeline harness
-rebuilt the serial reference inside itself so a depth-1 pipeline could be checked
-against it, and the compressed arm agreed while the raw arm did not.
+Writing to distinct buffers is **8% faster**, not slower. The reuse is not buying
+the baseline anything; if anything the repeated write to one hot destination
+serialises against itself.
+
+So where did the 18% come from? The host. `raw_iter` re-run on *this* pod takes
+**28.18 ms** against the 23.64 ms recorded on the pod it was first measured on, and
+this harness's rebuilt stage-major loop takes 27.87 ms — **agreeing with the
+original code to 1.1% when both run on the same machine.** The control passes. The
+gap was a machine, and this entry blamed a buffer for it.
+
+What stands: `raw_iter` does not deliver 55 of the 56 tensors it claims to move, and
+a transport benchmark whose receiver never receives is not measuring a transport.
+Its *timing* is representative, so no ratio changes. It should still be fixed, and
+the pipeline harness's raw arm — which does deliver every tensor and is checked
+against the source — is the one to quote from here.
 
 ## What is not affected
 

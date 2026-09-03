@@ -39,15 +39,15 @@ topologies a rented pair comes in (PXB and SYS). A KV transfer built the obvious
 way moves zeros between GPUs and reports that it worked.
 → `results/public/peer_copy_findings.md`
 
-**Models built from separately measured parts are optimistic, three times over.**
+**Models built from separately measured parts are optimistic, twice over.**
 A component model — codec throughput from one 20 MB tensor, link from another
 session — was **4× optimistic**; per-tensor granularity was the cause. A stage-sum
-model built from the *right* stages on the *right* hardware was still **2×
-optimistic** about a real pipeline, because a stage sum contains no per-item cost.
-And the raw baseline both were compared against was itself **18% too cheap**: it
-overwrote 55 of its 56 results. Measured like for like, compressed is **1.91×** raw
-serial and **1.97×** pipelined.
-→ `results/public/c_transport_findings.md`, `pipeline_findings.md`, `DEFECTS.md`
+model built from the *right* stages, on the real cache, on the right hardware was
+still **2× optimistic** about a real pipeline: predicted 21.43 ms, measured 43.65,
+because a stage sum contains no per-item cost. Measured on one host, compressed is
+**1.91×** raw serial and **1.97×** pipelined — pipelining moves both arms and
+neither past the other.
+→ `results/public/c_transport_findings.md`, `pipeline_findings.md`
 
 **Overlapping encode against decode cannot rescue it; a full pipeline is not
 tested.** Measured cross-GPU overlap is **53.7%** with two host threads (IQR

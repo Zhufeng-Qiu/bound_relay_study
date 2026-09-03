@@ -1,0 +1,72 @@
+56 tensors, 234.9 MB bf16
+depth 1 is the control. Note it is *tensor-major* serial -- encode, ship, decode, next -- while the reference is *stage-major*: all 56 encodes, then all 56 transfers. Same total work, different per-call amortisation, so they should agree closely without that being a tautology.
+
+=== contention probe: does a D2H overlap an encode on one device? ===
+  encode  0.436 ms   d2h  0.230 ms   together  0.543 ms   (sum 0.666, max 0.436)
+  -> transfer overlaps codec
+
+=== control: stage-major serial, the reference's own loop ===
+  compressed     53.35 ms  vs reference   50.48 ms  (1.057x)  OK  max|err| 2.141
+  raw            27.87 ms  vs reference   23.64 ms  (1.179x)  ** CONTROL FAILED **  max|err| 0
+
+=== compressed HostRing ===
+  depth 1    119.93 ms  [108.98, 268.37]    1.96 GB/s of cache  vs serial 50.48 ms (2.38x)  max|err| 2.141
+          busy: producer    55.26 ms  consumer    51.02 ms   waiting: producer   63.48  consumer   65.69  -> producer (GPU0)
+  depth 2     41.98 ms  [39.62, 261.53]    5.60 GB/s of cache  vs serial 50.48 ms (0.83x)  max|err| 2.141
+          busy: producer    37.77 ms  consumer    38.97 ms   waiting: producer    2.57  consumer    1.00  -> consumer (GPU1)
+  depth 4     44.41 ms  [40.07, 229.86]    5.29 GB/s of cache  vs serial 50.48 ms (0.88x)  max|err| 2.141
+          busy: producer    39.65 ms  consumer    39.65 ms   waiting: producer    2.03  consumer    0.83  -> consumer (GPU1)
+  depth 8     43.65 ms  [41.56, 138.67]    5.38 GB/s of cache  vs serial 50.48 ms (0.86x)  max|err| 2.141
+          busy: producer    37.22 ms  consumer    38.85 ms   waiting: producer    2.11  consumer    0.67  -> consumer (GPU1)
+
+=== raw        HostRing ===
+  depth 1     42.41 ms  [38.20, 44.76]    5.54 GB/s of cache  vs serial 23.64 ms (1.79x)  max|err| 0
+          busy: producer     8.05 ms  consumer    24.01 ms   waiting: producer   32.57  consumer   16.15  -> consumer (GPU1)
+  depth 2     22.53 ms  [21.43, 24.47]   10.42 GB/s of cache  vs serial 23.64 ms (0.95x)  max|err| 0
+          busy: producer     8.17 ms  consumer    19.72 ms   waiting: producer   12.71  consumer    0.66  -> consumer (GPU1)
+  depth 4     21.84 ms  [21.12, 23.36]   10.75 GB/s of cache  vs serial 23.64 ms (0.92x)  max|err| 0
+          busy: producer     8.50 ms  consumer    19.75 ms   waiting: producer   11.39  consumer    0.27  -> consumer (GPU1)
+  depth 8     22.19 ms  [21.52, 28.67]   10.59 GB/s of cache  vs serial 23.64 ms (0.94x)  max|err| 0
+          busy: producer     7.67 ms  consumer    20.00 ms   waiting: producer   11.39  consumer    0.23  -> consumer (GPU1)
+
+=== compressed FileSpool /workspace/spool ===
+  depth 1   2496.78 ms  [2135.01, 2777.65]    0.09 GB/s of cache  vs serial 50.48 ms (49.46x)  max|err| 2.141
+          busy: producer  1949.95 ms  consumer   493.26 ms   waiting: producer  505.39  consumer 1968.34  -> producer (GPU0)
+  depth 2   2066.74 ms  [1863.91, 2309.26]    0.11 GB/s of cache  vs serial 50.48 ms (40.94x)  max|err| 2.141
+          busy: producer  2050.58 ms  consumer   537.83 ms   waiting: producer    0.75  consumer 1490.16  -> producer (GPU0)
+  depth 4   2026.22 ms  [1913.79, 2268.84]    0.12 GB/s of cache  vs serial 50.48 ms (40.14x)  max|err| 2.141
+          busy: producer  2014.39 ms  consumer   558.27 ms   waiting: producer    0.71  consumer 1491.49  -> producer (GPU0)
+  depth 8   1976.83 ms  [1838.09, 2080.33]    0.12 GB/s of cache  vs serial 50.48 ms (39.16x)  max|err| 2.141
+          busy: producer  1965.54 ms  consumer   552.24 ms   waiting: producer    0.72  consumer 1425.65  -> producer (GPU0)
+
+=== raw        FileSpool /workspace/spool ===
+  depth 1   2188.92 ms  [1956.24, 2249.76]    0.11 GB/s of cache  vs serial 23.64 ms (92.59x)  max|err| 0
+          busy: producer  1817.30 ms  consumer   352.97 ms   waiting: producer  365.13  consumer 1833.94  -> producer (GPU0)
+  depth 2   2001.35 ms  [1716.64, 3423.04]    0.12 GB/s of cache  vs serial 23.64 ms (84.66x)  max|err| 0
+          busy: producer  1990.96 ms  consumer   409.15 ms   waiting: producer    0.79  consumer 1583.95  -> producer (GPU0)
+  depth 4   1938.95 ms  [1727.69, 2228.95]    0.12 GB/s of cache  vs serial 23.64 ms (82.02x)  max|err| 0
+          busy: producer  1926.68 ms  consumer   411.69 ms   waiting: producer    0.74  consumer 1525.32  -> producer (GPU0)
+  depth 8   1721.69 ms  [1618.27, 2070.28]    0.14 GB/s of cache  vs serial 23.64 ms (72.83x)  max|err| 0
+          busy: producer  1711.00 ms  consumer   387.23 ms   waiting: producer    0.78  consumer 1374.03  -> producer (GPU0)
+
+=== compressed FileConcat /workspace/spool_concat ===
+  depth 1    574.84 ms  [375.81, 611.63]    0.41 GB/s of cache  vs serial 50.48 ms (11.39x)  max|err| 2.141
+          busy: producer   338.04 ms  consumer   204.40 ms   waiting: producer  215.09  consumer  352.10  -> producer (GPU0)
+  depth 2    396.92 ms  [274.49, 602.66]    0.59 GB/s of cache  vs serial 50.48 ms (7.86x)  max|err| 2.141
+          busy: producer   388.86 ms  consumer   222.20 ms   waiting: producer    2.55  consumer  145.64  -> producer (GPU0)
+  depth 4    396.03 ms  [277.88, 594.61]    0.59 GB/s of cache  vs serial 50.48 ms (7.85x)  max|err| 2.141
+          busy: producer   389.73 ms  consumer   248.26 ms   waiting: producer    0.53  consumer  126.87  -> producer (GPU0)
+  depth 8    425.95 ms  [287.20, 650.59]    0.55 GB/s of cache  vs serial 50.48 ms (8.44x)  max|err| 2.141
+          busy: producer   420.14 ms  consumer   253.21 ms   waiting: producer    0.56  consumer  142.86  -> producer (GPU0)
+
+=== raw        FileConcat /workspace/spool_concat ===
+  depth 1    516.56 ms  [354.48, 611.71]    0.45 GB/s of cache  vs serial 23.64 ms (21.85x)  max|err| 0
+          busy: producer   389.59 ms  consumer   111.50 ms   waiting: producer  122.44  consumer  400.53  -> producer (GPU0)
+  depth 2    338.45 ms  [302.79, 380.21]    0.69 GB/s of cache  vs serial 23.64 ms (14.32x)  max|err| 0
+          busy: producer   333.50 ms  consumer    96.04 ms   waiting: producer    0.50  consumer  238.37  -> producer (GPU0)
+  depth 4    353.87 ms  [309.49, 373.00]    0.66 GB/s of cache  vs serial 23.64 ms (14.97x)  max|err| 0
+          busy: producer   348.73 ms  consumer   102.49 ms   waiting: producer    0.50  consumer  246.80  -> producer (GPU0)
+  depth 8    516.36 ms  [462.93, 605.64]    0.45 GB/s of cache  vs serial 23.64 ms (21.84x)  max|err| 0
+          busy: producer   509.56 ms  consumer   154.85 ms   waiting: producer    0.61  consumer  355.29  -> producer (GPU0)
+
+wrote /workspace/out/pipeline_v2.json
