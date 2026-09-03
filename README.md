@@ -83,7 +83,7 @@ Compressing both at `c = 0.10` ships **0.33×** the bytes with no detectable cos
 `pysz` can reach — 28 of them, chosen per tensor as an oracle — no-prediction still
 beats the best predictor on **28 / 28 value tensors** at every `c`, and loses on 22 of
 28 key tensors. The mechanism is measured: adjacent-difference std over tensor std is
-√2 (white) along channels and heads for both kinds, and **0.49 for K against 1.12 for
+√2 (white) along channels and heads for both kinds, and **0.50 for K against 1.10 for
 V along the token axis**. The cache carries correlation on one axis, mostly for keys.
 → `results/public/a3_sz3_full_findings.md`
 

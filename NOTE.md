@@ -135,10 +135,13 @@ The mechanism is measurable and it is two statistics, not one:
 
 | | K | V |
 |---|---|---|
-| adjacent-difference std / σ, along channels | 1.414 (white) | 1.413 (white) |
-| adjacent-difference std / σ, along tokens | **0.49** | 1.12 |
+| adjacent-difference std / σ, along channels | 1.417 (white) | 1.413 (white) |
+| adjacent-difference std / σ, along tokens | **0.50** | 1.10 |
 | per-channel scale spread (max/median) | **15.4×** | 1.54× |
 | per-token scale spread | 1.19× | 1.55× |
+
+*Medians over 28 tensors of each kind; the scale statistic is skewed (K's channel
+spread has mean 25.4× against median 15.4×), so medians throughout.*
 
 Keys carry correlation on exactly one axis — tokens — and enormous scale
 heterogeneity across channels. Values carry neither, anywhere. Across tensors,

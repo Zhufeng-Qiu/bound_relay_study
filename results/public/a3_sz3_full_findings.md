@@ -93,10 +93,14 @@ Std of adjacent differences divided by the tensor's own std, per axis. A white
 sequence gives √2 = 1.414; below it means there is something for a predictor to
 work with.
 
+Medians over 28 tensors of each kind. Medians rather than means throughout, because
+the scale statistic below is strongly skewed — K's channel spread has mean 25.4×
+against median 15.4× — and one document should not mix estimators.
+
 | | along `head_dim` | along tokens | across heads |
 |---|---|---|---|
-| K (28 tensors) | 1.414 | **0.489** | 1.405 |
-| V (28 tensors) | 1.413 | **1.118** | 1.418 |
+| K (28 tensors) | 1.417 | **0.50** | 1.401 |
+| V (28 tensors) | 1.413 | **1.10** | 1.419 |
 
 The KV cache is indistinguishable from white noise along the contiguous axis and
 across heads, for both kinds. Correlation exists on exactly one axis — tokens — and
@@ -123,8 +127,8 @@ them. Measured side by side it does not:
 
 | | K | V |
 |---|---|---|
-| adjacent-difference std / σ, **along channels** | 1.414 — white | 1.413 — white |
-| adjacent-difference std / σ, **along tokens** | **0.49** | 1.12 |
+| adjacent-difference std / σ, **along channels** | 1.417 — white | 1.413 — white |
+| adjacent-difference std / σ, **along tokens** | **0.50** | 1.10 |
 | **per-channel scale spread** (max / median channel σ) | **15.4×** | 1.54× |
 | per-token scale spread | 1.19× | 1.55× |
 
@@ -134,7 +138,7 @@ per-channel quantisation takes the scale, and a predictor finds nothing to take.
 That is why no-prediction wins here without the channel-wise quantisation
 literature being wrong.
 
-V is flat in all four cells — 1.413, 1.12, 1.54×, 1.55× — which is why `NOPRED`
+V is flat in all four cells — 1.413, 1.10, 1.54×, 1.55× — which is why `NOPRED`
 beats every predictor on 28 of 28 value tensors, and why PackKV can pick token-wise
 for V on purely computational grounds without paying for it statistically.
 
@@ -173,7 +177,7 @@ Not established:
   document axis is not. The comparison is built to need no train/test split, but
   it cannot speak to across-document variance. The pilot's four-document result
   points the same way and is on a corpus this one supersedes.
-* **One model.** Whether `adj/std ≈ 0.49` along tokens for keys is a Qwen3
+* **One model.** Whether `adj/std ≈ 0.50` along tokens for keys is a Qwen3
   property, a GQA property, or general is untested.
 * **Ratio only, and CPU only.** `pysz` contributes no throughput number here by
   design.
