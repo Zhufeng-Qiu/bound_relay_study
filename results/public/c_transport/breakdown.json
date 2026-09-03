@@ -1,0 +1,15 @@
+{
+  "parts_s": {
+    "bf16->fp32 upcast": 0.0014327021781355143,
+    "cuSZp encode": 0.019892222713679075,
+    "transfer (compressed)": 0.008987083099782467,
+    "cuSZp decode": 0.017068116459995508,
+    "fp32->bf16 downcast": 0.0012716124765574932
+  },
+  "raw_transfer_s": 4.720740370452404,
+  "raw_bytes": 234881024,
+  "comp_bytes": 77693156,
+  "n_tensors": 56,
+  "c": 0.1,
+  "mode": "fixed"
+}

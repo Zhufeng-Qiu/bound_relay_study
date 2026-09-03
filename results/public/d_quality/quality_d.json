@@ -1,0 +1,1396 @@
+{
+  "baseline_nll": 2.7514277696609497,
+  "baseline_bytes": 117440512,
+  "rows": [
+    {
+      "doc": "d00",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 408.4823303222656,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d00",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 409.65142822265625,
+      "ntok": 128,
+      "bytes": 62672768
+    },
+    {
+      "doc": "d00",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 409.103271484375,
+      "ntok": 128,
+      "bytes": 51178116
+    },
+    {
+      "doc": "d00",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1286.70263671875,
+      "ntok": 128,
+      "bytes": 38818856
+    },
+    {
+      "doc": "d00",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 410.6041564941406,
+      "ntok": 128,
+      "bytes": 89867244
+    },
+    {
+      "doc": "d00",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 411.8617858886719,
+      "ntok": 128,
+      "bytes": 84117008
+    },
+    {
+      "doc": "d00",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 499.341796875,
+      "ntok": 128,
+      "bytes": 77970144
+    },
+    {
+      "doc": "d00",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 409.27520751953125,
+      "ntok": 128,
+      "bytes": 90246036
+    },
+    {
+      "doc": "d00",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 409.00677490234375,
+      "ntok": 128,
+      "bytes": 84501620
+    },
+    {
+      "doc": "d00",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 409.7744140625,
+      "ntok": 128,
+      "bytes": 78289224
+    },
+    {
+      "doc": "d01",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 370.5682678222656,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d01",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 371.4284362792969,
+      "ntok": 128,
+      "bytes": 62683964
+    },
+    {
+      "doc": "d01",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 373.29803466796875,
+      "ntok": 128,
+      "bytes": 51185564
+    },
+    {
+      "doc": "d01",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1085.16064453125,
+      "ntok": 128,
+      "bytes": 38826584
+    },
+    {
+      "doc": "d01",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 369.6421813964844,
+      "ntok": 128,
+      "bytes": 89884456
+    },
+    {
+      "doc": "d01",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 383.7298889160156,
+      "ntok": 128,
+      "bytes": 84127396
+    },
+    {
+      "doc": "d01",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 516.949462890625,
+      "ntok": 128,
+      "bytes": 77986116
+    },
+    {
+      "doc": "d01",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 371.2177429199219,
+      "ntok": 128,
+      "bytes": 90240020
+    },
+    {
+      "doc": "d01",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 369.20220947265625,
+      "ntok": 128,
+      "bytes": 84498680
+    },
+    {
+      "doc": "d01",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 365.5709228515625,
+      "ntok": 128,
+      "bytes": 78280980
+    },
+    {
+      "doc": "d02",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 374.5901184082031,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d02",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 375.590576171875,
+      "ntok": 128,
+      "bytes": 62641752
+    },
+    {
+      "doc": "d02",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 375.7167053222656,
+      "ntok": 128,
+      "bytes": 51146132
+    },
+    {
+      "doc": "d02",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1163.226318359375,
+      "ntok": 128,
+      "bytes": 38788908
+    },
+    {
+      "doc": "d02",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 376.3616027832031,
+      "ntok": 128,
+      "bytes": 89839140
+    },
+    {
+      "doc": "d02",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 375.0970458984375,
+      "ntok": 128,
+      "bytes": 84086788
+    },
+    {
+      "doc": "d02",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 450.683349609375,
+      "ntok": 128,
+      "bytes": 77943288
+    },
+    {
+      "doc": "d02",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 376.2976379394531,
+      "ntok": 128,
+      "bytes": 90243124
+    },
+    {
+      "doc": "d02",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 375.75469970703125,
+      "ntok": 128,
+      "bytes": 84499856
+    },
+    {
+      "doc": "d02",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 372.58355712890625,
+      "ntok": 128,
+      "bytes": 78286132
+    },
+    {
+      "doc": "d03",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 340.0623779296875,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d03",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 341.1021728515625,
+      "ntok": 128,
+      "bytes": 62680540
+    },
+    {
+      "doc": "d03",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 342.4739990234375,
+      "ntok": 128,
+      "bytes": 51190116
+    },
+    {
+      "doc": "d03",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1384.1220703125,
+      "ntok": 128,
+      "bytes": 38827128
+    },
+    {
+      "doc": "d03",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 342.4093322753906,
+      "ntok": 128,
+      "bytes": 89885972
+    },
+    {
+      "doc": "d03",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 347.716552734375,
+      "ntok": 128,
+      "bytes": 84126596
+    },
+    {
+      "doc": "d03",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 476.7899169921875,
+      "ntok": 128,
+      "bytes": 77986424
+    },
+    {
+      "doc": "d03",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 340.660888671875,
+      "ntok": 128,
+      "bytes": 90235080
+    },
+    {
+      "doc": "d03",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 340.96124267578125,
+      "ntok": 128,
+      "bytes": 84504032
+    },
+    {
+      "doc": "d03",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 337.04339599609375,
+      "ntok": 128,
+      "bytes": 78281216
+    },
+    {
+      "doc": "d04",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 287.0572204589844,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d04",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 286.04901123046875,
+      "ntok": 128,
+      "bytes": 62666192
+    },
+    {
+      "doc": "d04",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 288.54840087890625,
+      "ntok": 128,
+      "bytes": 51162052
+    },
+    {
+      "doc": "d04",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1058.490234375,
+      "ntok": 128,
+      "bytes": 38805188
+    },
+    {
+      "doc": "d04",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 285.21356201171875,
+      "ntok": 128,
+      "bytes": 89862328
+    },
+    {
+      "doc": "d04",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 290.9788513183594,
+      "ntok": 128,
+      "bytes": 84104960
+    },
+    {
+      "doc": "d04",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 367.2857666015625,
+      "ntok": 128,
+      "bytes": 77963548
+    },
+    {
+      "doc": "d04",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 287.2767028808594,
+      "ntok": 128,
+      "bytes": 90244376
+    },
+    {
+      "doc": "d04",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 287.97125244140625,
+      "ntok": 128,
+      "bytes": 84497604
+    },
+    {
+      "doc": "d04",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 291.56378173828125,
+      "ntok": 128,
+      "bytes": 78282152
+    },
+    {
+      "doc": "d05",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 441.4467468261719,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d05",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 441.2107849121094,
+      "ntok": 128,
+      "bytes": 62667432
+    },
+    {
+      "doc": "d05",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 447.353271484375,
+      "ntok": 128,
+      "bytes": 51161584
+    },
+    {
+      "doc": "d05",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1500.665283203125,
+      "ntok": 128,
+      "bytes": 38806060
+    },
+    {
+      "doc": "d05",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 446.767822265625,
+      "ntok": 128,
+      "bytes": 89863044
+    },
+    {
+      "doc": "d05",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 456.95233154296875,
+      "ntok": 128,
+      "bytes": 84105340
+    },
+    {
+      "doc": "d05",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 612.7114868164062,
+      "ntok": 128,
+      "bytes": 77959720
+    },
+    {
+      "doc": "d05",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 441.19384765625,
+      "ntok": 128,
+      "bytes": 90244900
+    },
+    {
+      "doc": "d05",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 441.3959045410156,
+      "ntok": 128,
+      "bytes": 84496756
+    },
+    {
+      "doc": "d05",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 441.89117431640625,
+      "ntok": 128,
+      "bytes": 78286852
+    },
+    {
+      "doc": "d06",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 319.2093505859375,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d06",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 318.2555847167969,
+      "ntok": 128,
+      "bytes": 62680048
+    },
+    {
+      "doc": "d06",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 320.5201110839844,
+      "ntok": 128,
+      "bytes": 51194072
+    },
+    {
+      "doc": "d06",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1275.0517578125,
+      "ntok": 128,
+      "bytes": 38825760
+    },
+    {
+      "doc": "d06",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 318.53594970703125,
+      "ntok": 128,
+      "bytes": 89875924
+    },
+    {
+      "doc": "d06",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 324.6490173339844,
+      "ntok": 128,
+      "bytes": 84124236
+    },
+    {
+      "doc": "d06",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 482.1842041015625,
+      "ntok": 128,
+      "bytes": 77978060
+    },
+    {
+      "doc": "d06",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 318.2325744628906,
+      "ntok": 128,
+      "bytes": 90244636
+    },
+    {
+      "doc": "d06",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 317.793212890625,
+      "ntok": 128,
+      "bytes": 84510348
+    },
+    {
+      "doc": "d06",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 321.17889404296875,
+      "ntok": 128,
+      "bytes": 78288212
+    },
+    {
+      "doc": "d07",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 304.4542236328125,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d07",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 304.5614013671875,
+      "ntok": 128,
+      "bytes": 62678624
+    },
+    {
+      "doc": "d07",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 304.2861328125,
+      "ntok": 128,
+      "bytes": 51183220
+    },
+    {
+      "doc": "d07",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1152.50341796875,
+      "ntok": 128,
+      "bytes": 38815548
+    },
+    {
+      "doc": "d07",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 305.07440185546875,
+      "ntok": 128,
+      "bytes": 89887236
+    },
+    {
+      "doc": "d07",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 302.92828369140625,
+      "ntok": 128,
+      "bytes": 84137416
+    },
+    {
+      "doc": "d07",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 329.65777587890625,
+      "ntok": 128,
+      "bytes": 77989012
+    },
+    {
+      "doc": "d07",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 304.7940673828125,
+      "ntok": 128,
+      "bytes": 90231900
+    },
+    {
+      "doc": "d07",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 304.5981750488281,
+      "ntok": 128,
+      "bytes": 84486316
+    },
+    {
+      "doc": "d07",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 310.15203857421875,
+      "ntok": 128,
+      "bytes": 78267048
+    },
+    {
+      "doc": "d08",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 377.59442138671875,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d08",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 378.77862548828125,
+      "ntok": 128,
+      "bytes": 62686856
+    },
+    {
+      "doc": "d08",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 383.45147705078125,
+      "ntok": 128,
+      "bytes": 51189680
+    },
+    {
+      "doc": "d08",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1158.943115234375,
+      "ntok": 128,
+      "bytes": 38825664
+    },
+    {
+      "doc": "d08",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 379.7422180175781,
+      "ntok": 128,
+      "bytes": 89918648
+    },
+    {
+      "doc": "d08",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 376.1977233886719,
+      "ntok": 128,
+      "bytes": 84161796
+    },
+    {
+      "doc": "d08",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 447.016845703125,
+      "ntok": 128,
+      "bytes": 78012640
+    },
+    {
+      "doc": "d08",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 378.7837829589844,
+      "ntok": 128,
+      "bytes": 90208720
+    },
+    {
+      "doc": "d08",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 379.1674499511719,
+      "ntok": 128,
+      "bytes": 84468396
+    },
+    {
+      "doc": "d08",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 372.6769104003906,
+      "ntok": 128,
+      "bytes": 78253536
+    },
+    {
+      "doc": "d09",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 352.204345703125,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d09",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 351.0906066894531,
+      "ntok": 128,
+      "bytes": 62646552
+    },
+    {
+      "doc": "d09",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 352.0471496582031,
+      "ntok": 128,
+      "bytes": 51146528
+    },
+    {
+      "doc": "d09",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1171.3709716796875,
+      "ntok": 128,
+      "bytes": 38792824
+    },
+    {
+      "doc": "d09",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 350.7781066894531,
+      "ntok": 128,
+      "bytes": 89847108
+    },
+    {
+      "doc": "d09",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 355.5477294921875,
+      "ntok": 128,
+      "bytes": 84089792
+    },
+    {
+      "doc": "d09",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 431.7317199707031,
+      "ntok": 128,
+      "bytes": 77951904
+    },
+    {
+      "doc": "d09",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 351.8275451660156,
+      "ntok": 128,
+      "bytes": 90239956
+    },
+    {
+      "doc": "d09",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 351.14691162109375,
+      "ntok": 128,
+      "bytes": 84497248
+    },
+    {
+      "doc": "d09",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 348.2698669433594,
+      "ntok": 128,
+      "bytes": 78281432
+    },
+    {
+      "doc": "d10",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 394.0078125,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d10",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 396.2430114746094,
+      "ntok": 128,
+      "bytes": 62660952
+    },
+    {
+      "doc": "d10",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 397.3935852050781,
+      "ntok": 128,
+      "bytes": 51161268
+    },
+    {
+      "doc": "d10",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1111.1619873046875,
+      "ntok": 128,
+      "bytes": 38804484
+    },
+    {
+      "doc": "d10",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 399.51422119140625,
+      "ntok": 128,
+      "bytes": 89863016
+    },
+    {
+      "doc": "d10",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 400.50421142578125,
+      "ntok": 128,
+      "bytes": 84106340
+    },
+    {
+      "doc": "d10",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 582.416015625,
+      "ntok": 128,
+      "bytes": 77966404
+    },
+    {
+      "doc": "d10",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 394.15740966796875,
+      "ntok": 128,
+      "bytes": 90238448
+    },
+    {
+      "doc": "d10",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 394.3656921386719,
+      "ntok": 128,
+      "bytes": 84495440
+    },
+    {
+      "doc": "d10",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 393.5860900878906,
+      "ntok": 128,
+      "bytes": 78278592
+    },
+    {
+      "doc": "d11",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 329.0039978027344,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d11",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 327.73187255859375,
+      "ntok": 128,
+      "bytes": 62634220
+    },
+    {
+      "doc": "d11",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 330.84686279296875,
+      "ntok": 128,
+      "bytes": 51138684
+    },
+    {
+      "doc": "d11",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1172.7242431640625,
+      "ntok": 128,
+      "bytes": 38783024
+    },
+    {
+      "doc": "d11",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 332.1683349609375,
+      "ntok": 128,
+      "bytes": 89848288
+    },
+    {
+      "doc": "d11",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 333.5259094238281,
+      "ntok": 128,
+      "bytes": 84101384
+    },
+    {
+      "doc": "d11",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 466.6457214355469,
+      "ntok": 128,
+      "bytes": 77955148
+    },
+    {
+      "doc": "d11",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 327.7103271484375,
+      "ntok": 128,
+      "bytes": 90226444
+    },
+    {
+      "doc": "d11",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 328.88482666015625,
+      "ntok": 128,
+      "bytes": 84477812
+    },
+    {
+      "doc": "d11",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 325.78509521484375,
+      "ntok": 128,
+      "bytes": 78268388
+    },
+    {
+      "doc": "d12",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 368.2945556640625,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d12",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 367.93316650390625,
+      "ntok": 128,
+      "bytes": 62608320
+    },
+    {
+      "doc": "d12",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 387.431640625,
+      "ntok": 128,
+      "bytes": 51105088
+    },
+    {
+      "doc": "d12",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1135.60400390625,
+      "ntok": 128,
+      "bytes": 38749044
+    },
+    {
+      "doc": "d12",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 369.8927001953125,
+      "ntok": 128,
+      "bytes": 89845404
+    },
+    {
+      "doc": "d12",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 369.3865966796875,
+      "ntok": 128,
+      "bytes": 84089804
+    },
+    {
+      "doc": "d12",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 468.3712158203125,
+      "ntok": 128,
+      "bytes": 77948188
+    },
+    {
+      "doc": "d12",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 368.6889953613281,
+      "ntok": 128,
+      "bytes": 90203428
+    },
+    {
+      "doc": "d12",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 367.97650146484375,
+      "ntok": 128,
+      "bytes": 84455796
+    },
+    {
+      "doc": "d12",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 361.982666015625,
+      "ntok": 128,
+      "bytes": 78241368
+    },
+    {
+      "doc": "d13",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 334.10296630859375,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d13",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 333.625,
+      "ntok": 128,
+      "bytes": 62654280
+    },
+    {
+      "doc": "d13",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 415.00079345703125,
+      "ntok": 128,
+      "bytes": 51157784
+    },
+    {
+      "doc": "d13",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1080.6346435546875,
+      "ntok": 128,
+      "bytes": 38798104
+    },
+    {
+      "doc": "d13",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 339.98394775390625,
+      "ntok": 128,
+      "bytes": 89850512
+    },
+    {
+      "doc": "d13",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 336.5386962890625,
+      "ntok": 128,
+      "bytes": 84100364
+    },
+    {
+      "doc": "d13",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 388.9691467285156,
+      "ntok": 128,
+      "bytes": 77953876
+    },
+    {
+      "doc": "d13",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 334.45196533203125,
+      "ntok": 128,
+      "bytes": 90244280
+    },
+    {
+      "doc": "d13",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 335.4662170410156,
+      "ntok": 128,
+      "bytes": 84497932
+    },
+    {
+      "doc": "d13",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 339.1666259765625,
+      "ntok": 128,
+      "bytes": 78284740
+    },
+    {
+      "doc": "d14",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 292.0670471191406,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d14",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 290.922119140625,
+      "ntok": 128,
+      "bytes": 62696176
+    },
+    {
+      "doc": "d14",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 290.9449462890625,
+      "ntok": 128,
+      "bytes": 51192276
+    },
+    {
+      "doc": "d14",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1170.50390625,
+      "ntok": 128,
+      "bytes": 38835268
+    },
+    {
+      "doc": "d14",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 294.798095703125,
+      "ntok": 128,
+      "bytes": 89879776
+    },
+    {
+      "doc": "d14",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 297.6931457519531,
+      "ntok": 128,
+      "bytes": 84124692
+    },
+    {
+      "doc": "d14",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 371.77044677734375,
+      "ntok": 128,
+      "bytes": 77980032
+    },
+    {
+      "doc": "d14",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 290.8655700683594,
+      "ntok": 128,
+      "bytes": 90256912
+    },
+    {
+      "doc": "d14",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 291.4355163574219,
+      "ntok": 128,
+      "bytes": 84508096
+    },
+    {
+      "doc": "d14",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 284.8946533203125,
+      "ntok": 128,
+      "bytes": 78295748
+    },
+    {
+      "doc": "d15",
+      "strategy": "none",
+      "c": null,
+      "nll_sum": 341.7782897949219,
+      "ntok": 128,
+      "bytes": 117440512
+    },
+    {
+      "doc": "d15",
+      "strategy": "uniform",
+      "c": 0.01,
+      "nll_sum": 342.59063720703125,
+      "ntok": 128,
+      "bytes": 62680068
+    },
+    {
+      "doc": "d15",
+      "strategy": "uniform",
+      "c": 0.03,
+      "nll_sum": 347.1268005371094,
+      "ntok": 128,
+      "bytes": 51171080
+    },
+    {
+      "doc": "d15",
+      "strategy": "uniform",
+      "c": 0.1,
+      "nll_sum": 1301.39697265625,
+      "ntok": 128,
+      "bytes": 38822272
+    },
+    {
+      "doc": "d15",
+      "strategy": "k_only",
+      "c": 0.01,
+      "nll_sum": 337.8979187011719,
+      "ntok": 128,
+      "bytes": 89871468
+    },
+    {
+      "doc": "d15",
+      "strategy": "k_only",
+      "c": 0.03,
+      "nll_sum": 350.63409423828125,
+      "ntok": 128,
+      "bytes": 84114092
+    },
+    {
+      "doc": "d15",
+      "strategy": "k_only",
+      "c": 0.1,
+      "nll_sum": 521.613037109375,
+      "ntok": 128,
+      "bytes": 77973132
+    },
+    {
+      "doc": "d15",
+      "strategy": "v_only",
+      "c": 0.01,
+      "nll_sum": 341.9866027832031,
+      "ntok": 128,
+      "bytes": 90249112
+    },
+    {
+      "doc": "d15",
+      "strategy": "v_only",
+      "c": 0.03,
+      "nll_sum": 344.4016418457031,
+      "ntok": 128,
+      "bytes": 84497500
+    },
+    {
+      "doc": "d15",
+      "strategy": "v_only",
+      "c": 0.1,
+      "nll_sum": 343.1692810058594,
+      "ntok": 128,
+      "bytes": 78289652
+    }
+  ],
+  "summary": [
+    {
+      "strategy": "uniform",
+      "c": 0.01,
+      "bytes": 62664921.5,
+      "ppl": 15.679065017944202,
+      "dppl": 0.014083106986069183,
+      "dnll": 0.0008986145257949829,
+      "dnll_ci": [
+        -0.0029873833060264587,
+        0.005112505331635469
+      ]
+    },
+    {
+      "strategy": "uniform",
+      "c": 0.03,
+      "bytes": 51166452.75,
+      "ppl": 16.696625481328187,
+      "dppl": 1.0316435703700542,
+      "dnll": 0.06377886235713959,
+      "dnll_ci": [
+        0.013395676389336586,
+        0.14722105413675307
+      ]
+    },
+    {
+      "strategy": "uniform",
+      "c": 0.1,
+      "bytes": 38807794.75,
+      "ppl": 11837.577456361705,
+      "dppl": 11821.912474450746,
+      "dnll": 6.627606511116028,
+      "dnll_ci": [
+        6.248186691850424,
+        7.029374021664261
+      ]
+    },
+    {
+      "strategy": "k_only",
+      "c": 0.01,
+      "bytes": 89868097.75,
+      "ppl": 15.853199850853603,
+      "dppl": 0.18821793989546975,
+      "dnll": 0.011943593621253967,
+      "dnll_ci": [
+        0.0019719399511814117,
+        0.02234814688563347
+      ]
+    },
+    {
+      "strategy": "k_only",
+      "c": 0.03,
+      "bytes": 84113625.25,
+      "ppl": 16.281193615430844,
+      "dppl": 0.6162117044727111,
+      "dnll": 0.03858290612697601,
+      "dnll_ci": [
+        0.02141232006251812,
+        0.05663055069744587
+      ]
+    },
+    {
+      "strategy": "k_only",
+      "c": 0.1,
+      "bytes": 77969852.25,
+      "ppl": 37.34445820410442,
+      "dppl": 21.679476293146287,
+      "dnll": 0.8687567561864853,
+      "dnll_ci": [
+        0.6918099679052829,
+        1.0413351740688084
+      ]
+    },
+    {
+      "strategy": "v_only",
+      "c": 0.01,
+      "bytes": 90237335.75,
+      "ppl": 15.68409133970907,
+      "dppl": 0.01910942875093724,
+      "dnll": 0.001219138503074646,
+      "dnll_ci": [
+        -0.001911230757832527,
+        0.00426656790077686
+      ]
+    },
+    {
+      "strategy": "v_only",
+      "c": 0.03,
+      "bytes": 84493339.5,
+      "ppl": 15.700238337148063,
+      "dppl": 0.03525642618992997,
+      "dnll": 0.002248123288154602,
+      "dnll_ci": [
+        -0.0016704089939594269,
+        0.006156389415264121
+      ]
+    },
+    {
+      "strategy": "v_only",
+      "c": 0.1,
+      "bytes": 78278454.5,
+      "ppl": 15.545848672123531,
+      "dppl": -0.11913323883460158,
+      "dnll": -0.0076341331005096436,
+      "dnll_ci": [
+        -0.022835354879498483,
+        0.008127414807677263
+      ]
+    }
+  ]
+}
