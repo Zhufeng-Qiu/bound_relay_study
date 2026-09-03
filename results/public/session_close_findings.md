@@ -19,11 +19,17 @@ from what was committed.
 > overlap with two host threads is **53.7%** (IQR 46.6–62.1), not 30%. Two absolute
 > figures below are also wrong by 20×: "7.46 ms" and "6.01 ms" are totals of 20
 > iterations, so the per-call times are 0.373 and 0.301 ms. Overlap efficiency is a
-> ratio and was unaffected by that. The conclusion is unchanged and now rests on an
-> arithmetic ceiling rather than on the measured efficiency: overlap can remove at
-> most `min(encode, decode)` = 15.01 ms from the 50.48 ms compressed path, and
-> matching the 23.64 ms raw path needs 26.84 ms, so **no overlap efficiency
-> whatsoever reaches the baseline.**
+> ratio and was unaffected by that.
+>
+> **The "95% overlap efficiency" figure below is withdrawn, and so is the sentence
+> that the pipeline question is settled.** Both treat a two-stage overlap as though
+> it were a pipeline. A pipeline's cost is its busiest resource: grouped that way
+> the measured stages give GPU0 21.43 ms, GPU1 17.28 ms, link 5.01 ms, so a
+> free-overlap pipeline lands at 21.43 ms and **beats** this document's own 23.64 ms
+> raw path. It does not beat a raw path that is also allowed to pipeline (11.82 ms),
+> which is the comparison that matters, but the break-even moves from 3.82 to
+> **10.96 GB/s** and that is a different conclusion. See `gate2_findings.md` and
+> correction 20.
 >
 > The SZ3/zfp same-host timings and the storage probe are unaffected.
 
