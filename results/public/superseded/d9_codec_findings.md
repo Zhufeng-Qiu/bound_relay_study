@@ -1,7 +1,7 @@
 # D9–D15 — GPU codec verified and measured (1×A40, CA-MTL-1)
 
 torch 2.8.0+cu128, Triton 3.4.0, A40 sm_86. Session cost $0.12 (955 s).
-Raw: `results/public/d9_codec/cost_table.json`.
+Raw: `results/public/superseded/d9_codec/cost_table.json`.
 
 > **Conditioned in Phase A.** The 19.6 GB/s break-even below is not an
 > unconditional number. It is: measured on A40 with this project's own codec, with

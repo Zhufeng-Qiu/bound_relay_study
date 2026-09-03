@@ -3,7 +3,7 @@
 24 captured Qwen3-1.7B KV tensors, matched absolute error bounds, all ratios
 against **bf16 bytes** (2 B/element). SZ3 and zfp read a lossless bf16→fp32
 upcast; reporting their ratio against those fp32 bytes would hand each a free 2×.
-Run entirely on the laptop, **$0**. Raw: `results/public/d14_table_b/table_b_kv.json`.
+Run entirely on the laptop, **$0**. Raw: `results/public/superseded/d14_table_b/table_b_kv.json`.
 
 > **Corrected in Phase A, twice.** (1) The cross-tensor means used a fixed
 > absolute ε and are withdrawn for the reason given in `d13_table_a_findings.md`;

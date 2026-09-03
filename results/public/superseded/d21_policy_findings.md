@@ -2,7 +2,7 @@
 
 Candidates are the measured 4/6/8-bit options from the A40 cost table (D9–D15);
 the bandwidth axis spans 0.5–450 GB/s and includes the two points measured on the
-same hardware in D6. Raw: `results/public/d21_policy/policy_eval.json`.
+same hardware in D6. Raw: `results/public/superseded/d21_policy/policy_eval.json`.
 
 > **Relabelled in Phase A.** This is an **offline oracle analysis**, not an online
 > controller. `eval_policy.py` reads each candidate's *measured* `compressed_bytes`

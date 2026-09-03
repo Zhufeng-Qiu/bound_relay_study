@@ -2,7 +2,7 @@
 
 Qwen3-1.7B (28 layers, 8 KV heads, head_dim 128), bf16, greedy decode, 4 prompts
 × 64 new tokens. Layers 0 / 14 / 27 sampled, keys and values separately.
-1×A40. Raw: `results/public/d8_kv/allocation_study_kv.json`.
+1×A40. Raw: `results/public/superseded/d8_kv/allocation_study_kv.json`.
 
 Every ratio below is the mean over the four prompts; they agreed closely, so the
 structure is a property of the tensors rather than of one input.

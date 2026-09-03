@@ -1,7 +1,7 @@
 # D13 — Table A, native transport benchmark on captured tensors
 
 24 KV tensors captured from Qwen3-1.7B (D8), flattened to `[tokens × heads, head_dim]`,
-bf16 throughout. Reference codec. Raw: `results/public/d13_table_a/table_a_kv.json`.
+bf16 throughout. Reference codec. Raw: `results/public/superseded/d13_table_a/table_a_kv.json`.
 
 > **Corrected in Phase A.** Every cross-tensor mean below was computed at a fixed
 > *absolute* ε. Across this corpus the per-tensor std spans 115× and the range

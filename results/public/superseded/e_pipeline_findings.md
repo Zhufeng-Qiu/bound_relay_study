@@ -1,7 +1,7 @@
 # Phase E — a narrow microbenchmark, not a verdict on pipelining
 
 Stretch phase, stopped at its feasibility gate. Raw:
-`results/public/e_pipeline/pipeline.json`.
+`results/public/superseded/e_pipeline/pipeline.json`.
 
 ## Why it was worth trying
 

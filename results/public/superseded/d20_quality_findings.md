@@ -2,7 +2,7 @@
 
 Qwen3-0.6B, WikiText-2 test split, 16 sequences of 256 tokens. Prefill 128 →
 decode 128. Per-channel allocation. fp32 on Apple MPS, **$0 of GPU rental**.
-Raw: `results/public/d20_quality/quality_kv.json`.
+Raw: `results/public/superseded/d20_quality/quality_kv.json`.
 
 > **Superseded in Phase A/D.** The sweep below used a fixed absolute ε applied
 > uniformly to the whole cache, and reconstructed through this project's reference

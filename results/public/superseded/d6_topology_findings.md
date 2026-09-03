@@ -52,4 +52,4 @@ research object, and diagnosing it further would spend budget on someone else's 
    **23 GB/s** (one-way PCIe ceiling). The pathological peer path is reported but excluded
    from the bandwidth axis, since it is a fixed cost rather than a rate.
 
-Raw: `results/public/d6_topology/d6_topology_v2.json`
+Raw: `results/public/superseded/d6_topology/d6_topology_v2.json`

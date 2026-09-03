@@ -58,6 +58,6 @@ Capture is one `model(input_ids, use_cache=True)` prefill.
   Any measurement that does not amortise it measures context creation.
 * Local work (property tests, model fitting, plotting, SZ3/zfp ratios) ran on
   Apple M5. Ratios are deterministic and unaffected; **the SZ3/zfp *timings* in
-  `d14_table_b_findings.md` come from that host and must not be compared against
+  `superseded/d14_table_b_findings.md` come from that host and must not be compared against
   GPU timings** — they are a floor, single-threaded, and were used in one
   cross-environment comparison that is flagged there.

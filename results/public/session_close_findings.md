@@ -87,7 +87,7 @@ it cannot flip the decision here.
 
 ## 4. SZ3 and zfp on this host, not a laptop
 
-`d14_table_b_findings.md` compared Apple-M5 CPU timings against A40 GPU timings.
+`superseded/d14_table_b_findings.md` compared Apple-M5 CPU timings against A40 GPU timings.
 Re-measured on this session's Xeon, 12 tensors, single-threaded:
 
 | | c = 0.01 | c = 0.03 | c = 0.10 | throughput @ c = 0.10 |

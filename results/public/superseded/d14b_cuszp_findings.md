@@ -2,7 +2,7 @@
 
 cuSZp built from source on 1×A40 (sm_86, CUDA 12.8), benchmarked through a small
 C++ driver against the same 24 captured Qwen3-1.7B KV tensors. Session cost ~$0.20.
-Raw: `results/public/d14b_cuszp/`.
+Raw: `results/public/superseded/d14b_cuszp/`.
 
 > **Corrected in Phase A.** The comparison below used a fixed absolute ε across
 > tensors and is withdrawn as an aggregate; the per-tensor conclusion (cuSZp wins
