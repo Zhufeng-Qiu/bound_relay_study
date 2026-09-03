@@ -10,6 +10,9 @@ cache offloading. The codec is a controlled variable, not the contribution.
 > `docs/corrections.md`. Superseded work is under `results/public/superseded/`,
 > not deleted. Nothing here is a placeholder.
 
+> **[Read the research note →](NOTE.md)** — four pages: what was measured, what it
+> cost, and which of this project's own models did not survive it.
+
 ## The question
 
 Components benchmarked independently predict one thing; a real KV cache moving
