@@ -177,15 +177,24 @@ def run_pipeline(cache, L, depth: int, compressed: bool, transport_cls,
     stream it was issued on. Gate 2 measured that directly -- 1.4% overlap from one
     thread against 53.7% from two.
 
-    Two and not three, which has a consequence worth stating rather than discovering
-    later. One consumer thread runs H2D and decode in sequence, so those two cannot
-    overlap each other even though they use different resources; the consumer side
-    is therefore charged 22.29 ms rather than max(5.01, 17.28). It does not bind:
-    the producer side is 21.4-25.8 ms depending on which hypothesis holds, so GPU0
-    is the bottleneck under both and a third thread would not move the answer. The
-    per-thread busy times are reported so that assumption is checkable rather than
-    assumed -- if the consumer ever comes out ahead, this harness has understated
-    the pipeline and the run needs a third thread before its number means anything.
+    Two and not three, which has a consequence that depends on which hypothesis
+    holds, so it is worth writing down before the run rather than after. One consumer
+    thread runs H2D and decode in sequence, so those cannot overlap each other even
+    though they use different resources, and the consumer side is charged
+    5.01 + 0.93 + 15.01 + 1.34 = 22.29 ms rather than max(5.01, 17.28) = 17.28.
+
+    * If the codec serialises its own device (H2), the producer is
+      1.44 + 19.99 + 4.32 = 25.75 ms and binds. Two threads are enough and the
+      measurement is tight.
+    * If transfers overlap the codec freely (H1), the producer is max(21.43, 4.32)
+      = 21.43 ms and the **consumer** binds at 22.29 ms. Two threads then overstate
+      the pipeline's cost by about 4%, and the true bound is the 21.43 the
+      resource grouping predicts.
+
+    So the per-thread busy times are not decoration. If the consumer comes out
+    ahead, this harness has understated the pipeline, the reported number is an
+    upper bound, and a third thread is needed before it can be quoted as the
+    pipeline's cost rather than as this harness's cost.
 
     Slot ownership runs the whole chain: scratch on GPU0, the host ring entry, the
     receive buffer and the decode destination on GPU1 all carry the same index, and
