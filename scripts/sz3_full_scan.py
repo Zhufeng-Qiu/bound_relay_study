@@ -195,9 +195,23 @@ def axis_predictability(x: torch.Tensor) -> dict:
     h, s_, d = x.shape[1], x.shape[2], x.shape[3]
     a = x.float().reshape(h, s_, d).numpy()
     sd = float(a.std())
+
+    # Smoothness is not the only structure an axis can carry, and it is not the one
+    # KIVI and PackKV exploit. They quantise the K cache channel-wise, citing
+    # channel correlations -- and adj/std says the channel axis is white. Both hold,
+    # because per-channel quantisation needs *scale* heterogeneity, not smoothness:
+    # it wins when some channels are consistently larger than others, however
+    # uncorrelated neighbouring channels are. Different statistic, measured here
+    # alongside, so the two results read together instead of as a contradiction.
+    ch = a.std(axis=(0, 1))                 # one std per channel, pooled over heads/tokens
+    tk = a.std(axis=(0, 2))                 # one std per token, for contrast
     return {"adj_over_std_head_dim": float(np.diff(a, axis=2).std() / sd),
             "adj_over_std_tokens": float(np.diff(a, axis=1).std() / sd),
             "adj_over_std_heads": float(np.diff(a, axis=0).std() / sd),
+            "chan_scale_max_over_median": float(ch.max() / np.median(ch)),
+            "chan_scale_cv": float(ch.std() / ch.mean()),
+            "token_scale_max_over_median": float(tk.max() / np.median(tk)),
+            "token_scale_cv": float(tk.std() / tk.mean()),
             "white_noise_value": float(np.sqrt(2.0)), "std": sd}
 
 
