@@ -84,7 +84,7 @@ def main() -> int:
             "mean_regret_ms": round(regret_ms / total, 5),
         }
 
-    out = Path("results/public/d21_policy"); out.mkdir(parents=True, exist_ok=True)
+    out = Path("results/public/superseded/d21_policy"); out.mkdir(parents=True, exist_ok=True)
     (out / "policy_eval.json").write_text(json.dumps(
         {"bw_points_gbps": BW_POINTS, "measured_points": [8.45, 23.0],
          "fabric": FABRIC_GBPS, "summary": summary, "decisions_margin0": rows}, indent=2))

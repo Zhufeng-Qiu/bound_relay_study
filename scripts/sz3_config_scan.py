@@ -1,4 +1,9 @@
-"""A3 — SZ3 configuration scan.
+"""A3 — SZ3 configuration scan. **Superseded by `sz3_full_scan.py`.**
+
+Kept because its results are cited in the correction register, not because
+it should be run again: it scans three `cmprAlgo` values out of the space
+`Config::loadcfg` reaches, and it reads the superseded 81-token decode
+corpus rather than the Gate B0 prefill capture.
 
 SZ3 was authored by one of the groups this work is being sent to. Reporting a
 number produced by whatever `pysz` defaults to would *under*-report their system,
@@ -81,8 +86,8 @@ def main() -> int:
                 r["within_bound"] = r["max_error"] <= eps * 1.001
                 out["rows"][f"{name}|c{c:g}|{algo}"] = {"doc": doc, "c": c, "algo": algo, **r}
 
-    Path("results/public/d14_table_b").mkdir(parents=True, exist_ok=True)
-    Path("results/public/d14_table_b/sz3_config_scan.json").write_text(json.dumps(out, indent=2))
+    Path("results/public/superseded/d14_table_b").mkdir(parents=True, exist_ok=True)
+    Path("results/public/superseded/d14_table_b/sz3_config_scan.json").write_text(json.dumps(out, indent=2))
 
     def mean_ratio(algo, c, docs):
         v = [r["ratio"] for r in out["rows"].values()
