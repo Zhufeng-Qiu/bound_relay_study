@@ -46,8 +46,21 @@ Capture is one `model(input_ids, use_cache=True)` prefill.
 | B0 corpus + B2 variance | 1×A40 | EU-SE-1 | — | not recorded | $0.26 |
 | C/D/E transport, quality, pipeline | 2×A40 | EU-SE-1 | `SYS`, cross-NUMA | not recorded | $0.82 |
 | *(terminated: GPU 0 hardware fault)* | 2×A40 | CA-MTL-1 | `PXB`, same-NUMA | 570.195.03 | $0.23, unused |
+| Re-measurement (zeroed buffers) | 2×A40 | CA-MTL-1 | not recorded | not recorded | $0.03 |
+| Gate 2 re-run + peer-copy audit | 2×RTX A6000 | EU-SE-1 | `PXB`, one PCIe switch | CUDA 12.8 | $0.76 |
+| Multi-stage pipeline + peer audit | 2×A40 | CA-MTL-1 | `SYS`, cross-NUMA | CUDA 12.8 | see ledger |
 
-**Total $1.90.**
+**Roughly $2 through the Gate 2 session**, per the provider's own billing; the
+running total is in `budget_ledger.md`, which is the authority.
+
+A40 was chosen over the cheaper A6000 for the pipeline session even though the
+A6000 has the same GA102 die and `sm_86`: the depth-1 control has to reproduce a
+serial baseline measured on A40, and a control that fails because the hardware
+changed tells you nothing about the harness.
+
+**Peer-to-peer copies are broken on every one of these hosts** — both GPU models,
+both data centres, both topologies. `peer_copy_findings.md` characterises it. It is
+the reason every transport number here is host-staged.
 
 ## Measured environment properties worth carrying forward
 
