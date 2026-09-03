@@ -25,6 +25,20 @@ Baseline perplexity **15.665**, full-cache payload **117.4 MB**.
 > +0.0228 NLL (about 0.15% of perplexity) and compressing **both** kinds at c = 0.10
 > ships 0.33× the bytes with no detectable degradation. The direction of the K/V
 > asymmetry stands; the magnitude does not. See `remeasure_findings.md`.
+>
+> **One sentence below is now wrong in the other direction.** "Nor did V-only
+> *improve* quality" was true of the buggy measurement, whose interval crossed zero.
+> The corrected measurement does not: V-only at c = 0.10 gives ΔNLL **−0.0323**,
+> CI [−0.0382, −0.0258], and **all 16 of 16 documents improve**, the worst of them
+> by −0.0078. The effect grows with the bound — a wash at c_V = 0.03 (8/16
+> documents), unanimous from c_V = 0.06 — so it is a dose response, not a coincidence
+> at one setting. What it is *not* is evidence that compression improves the model:
+> 16 documents, 128 scored tokens each, one model, one eval, and a 3% perplexity
+> move. The defensible reading is the weaker one the byte argument actually needs —
+> **the error budget on V is not a cost at all on this corpus.** Why it is negative
+> rather than zero is not established here; noise regularisation, value-outlier
+> suppression and an interaction with bf16 rounding are all consistent with it and
+> none is tested.
 
 ## At a matched byte budget, only one of them degrades measurably
 

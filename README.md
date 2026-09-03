@@ -52,9 +52,10 @@ reading `cmpSize` back to a host pointer. Even 100% would land at 1.50× the raw
 → `results/public/gate2_findings.md`
 
 **Keys and values are not equally safe to compress.** At payloads within 0.4% of each
-other, K-only compression degrades perplexity significantly (ΔNLL +0.0228); V-only
-shows no detectable degradation. Compressing both gently beats compressing one hard:
-uniform at `c = 0.10` ships **0.33×** the bytes with no detectable degradation.
+other, K-only compression degrades perplexity significantly (ΔNLL +0.0228, 2 of 16
+documents improving); V-only *improves* it — ΔNLL −0.0323, CI [−0.0382, −0.0258],
+**16 of 16 documents**, growing with the bound. Reported as observed, not explained.
+Compressing both at `c = 0.10` ships **0.33×** the bytes with no detectable cost.
 → `results/public/d_quality_findings.md`
 
 **SZ3's predictor costs ratio on values and pays on keys.** Given every configuration
@@ -90,7 +91,7 @@ reconstruction. Re-measured: **0 bound violations**, worst error exactly 1.000×
 
 ## Corrections
 
-Eighteen claims have been withdrawn or conditioned, each marked in place in the
+Nineteen claims have been withdrawn or conditioned, each marked in place in the
 document that made it. `docs/corrections.md` is the register.
 
 ## Reproduction
