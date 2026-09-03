@@ -1,8 +1,8 @@
-# Two defects found by audit, and what they invalidate
+# Three defects found by audit, and what they invalidate
 
-Both are in this project's measurement code, not in the systems being measured.
-Recorded before the re-run so the record shows what was believed and why it was
-wrong.
+All three are in this project's measurement code, not in the systems being
+measured. Recorded before the re-run so the record shows what was believed and why
+it was wrong.
 
 ## D1 — reconstruction errors were stale, so no cuSZp error-bound claim stands
 
@@ -59,6 +59,39 @@ before being quoted.
 **Fix.** Each tensor gets its own offset in the staging buffer, the final bf16
 tensors are kept, and a correctness gate verifies `max |x − x̂_bf16| ≤ ε` on a full
 iteration **before** any timing begins.
+
+## D3 — the raw baseline discards 55 of its 56 results
+
+D2 was found and fixed in the compressed path. The path it is compared against
+still has it. `raw_iter` in `session_close.py` reads, in full:
+
+```python
+for x in cache:
+    nb = x.numel()*2
+    host[:nb].copy_(x.reshape(-1).view(torch.uint8)); recv[0][:nb].copy_(host[:nb])
+```
+
+`host[:nb]` and `recv[0]` — the same host slot and the same device buffer, 56 times.
+Every tensor overwrites the last, so 55 of the 56 reconstructions never exist, and
+the baseline never pays for touching the 470 MB of distinct memory a receiver that
+keeps its data has to touch. The compressed path was given per-tensor offsets when
+D2 was fixed; this one was not, because nothing checks the raw path's output — there
+is nothing to decompress and so no correctness gate ever ran on it.
+
+Rebuilt with distinct buffers on both sides, the same 56 tensors take **27.87 ms
+against the baseline's 23.64 ms**, and the compressed arm of the same rebuild
+reproduces its reference to 1.057×. So the gap is in the raw arm, and it is 18%.
+
+**Every ratio quoted against the raw baseline is too large by that factor.** The
+end-to-end comparison is **1.91×, not 2.14×**; the serial break-even and everything
+derived from it move with it. The direction of every conclusion is unchanged — the
+compressed path is still about twice the raw one — but the number was flattering
+the wrong side, which is the direction that matters least for this project's
+conclusions and most for its credibility.
+
+Found by building a control for a different experiment. The pipeline harness
+rebuilt the serial reference inside itself so a depth-1 pipeline could be checked
+against it, and the compressed arm agreed while the raw arm did not.
 
 ## What is not affected
 
