@@ -1,0 +1,31 @@
+56 tensors   raw 234.9 MB   compressed 77.7 MB   ratio 3.02x
+
+=== /workspace/offload ===
+  per-tensor writes, fsync     raw            563.1 ms  [  279.7,   837.1]  0.417 GB/s of payload   exact
+  per-tensor writes, fsync     compressed     354.6 ms  [  243.8,   824.5]  0.219 GB/s of payload   err/eps 0.9999
+  per-tensor writes, fsync                 -> compression 1.59x FASTER
+  one write, fsync             raw            461.6 ms  [  442.8,   834.1]  0.509 GB/s of payload   exact
+  one write, fsync             compressed     382.3 ms  [  246.0,   943.2]  0.203 GB/s of payload   err/eps 0.9999
+  one write, fsync                         -> compression 1.21x FASTER
+  per-tensor writes, no fsync  raw            709.7 ms  [  501.3,  1220.8]  0.331 GB/s of payload   exact
+  per-tensor writes, no fsync  compressed     337.7 ms  [  252.9,   604.9]  0.230 GB/s of payload   err/eps 0.9999
+  per-tensor writes, no fsync              -> compression 2.10x FASTER
+  one write, no fsync          raw            526.7 ms  [  470.1,   596.4]  0.446 GB/s of payload   exact
+  one write, no fsync          compressed     277.8 ms  [  233.1,  1152.2]  0.280 GB/s of payload   err/eps 0.9999
+  one write, no fsync                      -> compression 1.90x FASTER
+
+=== /root/offload ===
+  per-tensor writes, fsync     raw            130.0 ms  [  128.7,   131.3]  1.807 GB/s of payload   exact
+  per-tensor writes, fsync     compressed      62.9 ms  [   61.8,   152.9]  1.235 GB/s of payload   err/eps 0.9999
+  per-tensor writes, fsync                 -> compression 2.07x FASTER
+  one write, fsync             raw            131.4 ms  [  129.3,   133.9]  1.788 GB/s of payload   exact
+  one write, fsync             compressed      65.4 ms  [   62.7,   173.8]  1.188 GB/s of payload   err/eps 0.9999
+  one write, fsync                         -> compression 2.01x FASTER
+  per-tensor writes, no fsync  raw             71.9 ms  [   70.5,    73.3]  3.268 GB/s of payload   exact
+  per-tensor writes, no fsync  compressed      42.1 ms  [   40.0,   142.5]  1.848 GB/s of payload   err/eps 0.9999
+  per-tensor writes, no fsync              -> compression 1.71x FASTER
+  one write, no fsync          raw             74.5 ms  [   74.0,    76.5]  3.151 GB/s of payload   exact
+  one write, no fsync          compressed      48.0 ms  [   44.6,   139.2]  1.618 GB/s of payload   err/eps 0.9999
+  one write, no fsync                      -> compression 1.55x FASTER
+
+wrote /workspace/out/fsync_offload.json

@@ -57,14 +57,16 @@ saturated with under 2.2 ms of waiting, so there is no headroom left to schedule
 The break-even moves from 3.82 to **5.38 GB/s**, not the 10.96 the model implied.
 → `results/public/pipeline_findings.md`, `gate2_findings.md`
 
-**On storage, compression loses while moving a third of the bytes — until the write
-is durable.** Offloading the cache to a MooseFS mount: raw wins 1.15× with a file
-per tensor and 1.17× with one file, because opening a file per tensor costs 4.3×
-more than seeking within one and a break-even expression counts only bytes. Swept
-with `fsync`, the same mount writes at 0.43 GB/s and compression wins **3×**. The
-crossing is bracketed — 10.58 GB/s loses, 5.38 GB/s is the break-even, 3.47 and
-0.43 GB/s pay.
-→ `results/public/pipeline_findings.md`
+**Compression is 1.97× slower on the host-staged pipeline and 1.2–2.1× faster for
+an `fsync`-acknowledged filesystem offload write — and never the 3.02× its byte
+reduction implies.** Eight configurations across two filesystems, raw verified byte
+for byte and compressed at 0.9999 × ε in all of them. A bandwidth-only model
+predicts 3.02× everywhere and is short by 1.44–2.50×, because **achieved bandwidth
+is a function of how much you write**: the same incompressible bytes at 77.7 MB get
+0.55× the throughput they get at 234.9 MB on that mount. The denominator of
+`bytes ÷ bandwidth` depends on its numerator. Durability moves the ratio in
+*opposite directions* on the two filesystems and never flips the sign.
+→ `results/public/fsync_offload_findings.md`
 → `results/public/gate2_findings.md`
 
 **Keys and values are not equally safe to compress.** At payloads within 0.4% of each

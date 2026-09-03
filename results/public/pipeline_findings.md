@@ -163,14 +163,20 @@ So the crossing is bracketed on both sides, and it took durability to find it:
 |---|---|---|
 | host-staged ring | 10.58 GB/s | compression loses, 1.97× |
 | **measured pipelined break-even** | **5.38 GB/s** | |
-| container overlay, durable | 3.47 GB/s | compression pays — *implied by the sweep* |
-| MooseFS, durable | 0.43 GB/s | compression pays, 3× — *implied by the sweep* |
-| MooseFS as the pipeline used it, unsynced | — | compression loses, 1.17× — measured |
+| container overlay, durable | 3.47 GB/s | compression pays — ~~implied~~ **measured 2.07×** |
+| MooseFS, durable | 0.43 GB/s | ~~compression pays 3×~~ — **measured 1.59×** |
+| MooseFS as the pipeline used it, unsynced round trip | — | compression loses, 1.17× — measured |
 
-The two "implied" rows are arithmetic over a bandwidth sweep, not an offload: they
-assume the cost is bytes over bandwidth, which is exactly the assumption the row
-below them breaks. `fsync_offload_findings.md` measures the offload itself, on one
-mount, with and without durability, and replaces them.
+**The two projected rows were arithmetic over a bandwidth sweep and both were
+optimistic.** `fsync_offload_findings.md` measured the offload write itself:
+compression pays on every configuration of both filesystems, at **1.21×–2.10×** and
+never at the 3.02× the byte reduction implies, because a 77.7 MB write is given
+0.55× the bandwidth a 234.9 MB write gets on that mount. The projection assumed a
+bandwidth independent of the payload, which is the same shape of error as assuming
+a codec's throughput is independent of tensor size — the mistake Phase C found.
+
+The last row is not comparable to the two above it: it is a round trip through a
+two-thread ring in another data centre, not an offload write.
 
 The last two rows are the same filesystem. What separates them is whether the write
 is durable and whether it is issued as one object or fifty-six — neither of which
