@@ -4,6 +4,12 @@ Qwen3-0.6B, WikiText-2 test split, 16 sequences of 256 tokens. Prefill 128 →
 decode 128. Per-channel allocation. fp32 on Apple MPS, **$0 of GPU rental**.
 Raw: `results/public/d20_quality/quality_kv.json`.
 
+> **Superseded in Phase A/D.** The sweep below used a fixed absolute ε applied
+> uniformly to the whole cache, and reconstructed through this project's reference
+> codec rather than through a real cuSZp round trip ending in bf16. Phase D
+> re-measures it with `eps_i = c · std_i`, a real codec round trip, final-bf16
+> error checking, and document-level bootstrap CIs.
+
 ## Semantics: prefill → transport → decode
 
 A prefix is prefilled to produce a KV cache; that cache is round-tripped through

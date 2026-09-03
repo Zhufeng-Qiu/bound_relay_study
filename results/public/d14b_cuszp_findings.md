@@ -4,6 +4,12 @@ cuSZp built from source on 1×A40 (sm_86, CUDA 12.8), benchmarked through a smal
 C++ driver against the same 24 captured Qwen3-1.7B KV tensors. Session cost ~$0.20.
 Raw: `results/public/d14b_cuszp/`.
 
+> **Corrected in Phase A.** The comparison below used a fixed absolute ε across
+> tensors and is withdrawn as an aggregate; the per-tensor conclusion (cuSZp wins
+> on both ratio and speed) is unaffected, but the *size* of the gap was measured in
+> coordinates that exaggerate it. cuSZp under normalised ε is re-measured on the
+> Gate B0 corpus, not re-labelled from the old runs.
+
 ## The result
 
 Same 24 tensors, same absolute error bounds, ratios against bf16 bytes:
@@ -39,7 +45,7 @@ compressor on the target data, and saying otherwise would not survive a reviewer
 with a GPU and an afternoon.
 
 What survives is codec-agnostic and, if anything, stronger for being instantiated
-with the state of the art rather than with a self-built component:
+with the strongest tested baseline rather than with a self-built component:
 
 * **The transport-decision framework.** Measure codec cost on the target hardware,
   measure the link, compute the break-even boundary, and bypass when the payload

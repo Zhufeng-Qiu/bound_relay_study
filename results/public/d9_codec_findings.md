@@ -3,6 +3,16 @@
 torch 2.8.0+cu128, Triton 3.4.0, A40 sm_86. Session cost $0.12 (955 s).
 Raw: `results/public/d9_codec/cost_table.json`.
 
+> **Conditioned in Phase A.** The 19.6 GB/s break-even below is not an
+> unconditional number. It is: measured on A40 with this project's own codec, with
+> **dtype conversion excluded** — cuSZp reads fp32 while KV is bf16, so a real path
+> pays an upcast and a downcast that were never counted — and **unvalidated below
+> 4 MB**, which is the smallest payload the link was ever measured at, while the
+> decision grid extends to 0.26 MB. A conversion-inclusive estimate puts it near
+> 14 GB/s, but that estimate comes from memory-bandwidth arithmetic and **no GPU
+> timing of the conversion exists in this repository**; it is an unverified
+> hypothesis until Phase C measures the four components directly.
+
 ## Verification before measurement
 
 `tests/test_gpu_equivalence.py`: **16/16 pass**. Local suite: 108 pass.

@@ -1,6 +1,9 @@
 # BoundRelay
 
-**Error-bounded GPU compression for intermediate-state transport in multi-stage LLM inference.**
+**When does error-bounded compression pay for LLM state movement?**
+
+A measurement study of disaggregated prefill–decode KV transfer, KV migration and
+cache offloading. The codec is a controlled variable, not the contribution.
 
 > **Status: scaffold.** No measurements yet. Every `[X]` below is a placeholder.
 > Nothing enters this README, the CV, or any email until it traces back to a
@@ -15,20 +18,22 @@ intermediate states are not smooth along the token axis. So:
 > payload × bandwidth regime let error-bounded compression pay for its own
 > overhead?
 
-The answer is a boundary, not a speedup. Public SGLang-Omni profiling already
-puts inter-stage IPC at ~0.4% of wall time on the canonical single-host path,
-with same-node relay running as zero-copy CUDA IPC — so on that path the correct
-behaviour is to **bypass**, and the interesting question is where the boundary
-lies for the paths that are not that one.
+The answer is a boundary, not a speedup. Whether moving compressed state beats
+moving raw state depends on the payload, the link, and what the codec costs on
+the hardware in hand — and across the operating points measured so far, most sit
+outside the profitable regime.
 
 ## What is out of scope
 
-- Not a KV-cache compression method. PackKV and CacheGen are the neighbours this
-  work is positioned against, not competitors it is trying to beat.
-- Not a claim of backend generality: one edge, one relay backend.
-- Not multi-node. Slow paths are host-staged or bandwidth-capped, and are
-  labelled **controlled regimes**, never presented as production cross-node.
-- Not a quality guarantee. An element-wise error bound bounds tensors, not WER.
+- Not a new codec. cuSZp is the strongest tested baseline and beats this
+  project's reference implementation on both ratio and speed; the reference codec
+  exists because the harness was developed against it.
+- Not an online controller. The decision study is offline; a predictor that uses
+  only pre-compression information is evaluated separately.
+- Not a serving-runtime integration, and not multi-node.
+- Not a quality guarantee. An element-wise error bound bounds tensors, not output.
+- Not a resilience study. Payload corruption, bit flips and retransmission are
+  explicitly out of scope.
 
 ## Results
 

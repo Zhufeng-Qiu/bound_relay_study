@@ -3,6 +3,16 @@
 24 KV tensors captured from Qwen3-1.7B (D8), flattened to `[tokens × heads, head_dim]`,
 bf16 throughout. Reference codec. Raw: `results/public/d13_table_a/table_a_kv.json`.
 
+> **Corrected in Phase A.** Every cross-tensor mean below was computed at a fixed
+> *absolute* ε. Across this corpus the per-tensor std spans 115× and the range
+> spans 255×, so ε = 0.15 is 0.009 std on one tensor and 1.03 std on another —
+> the averages are therefore not comparisons and are withdrawn. Re-derived under
+> `eps_i = c · std_i` in `table_a_kv_rel.json`: blockwise 1.00/1.35/2.18×,
+> per-channel 1.35/2.01/2.87×, per-token 1.02/1.44/2.25× at c = 0.01/0.03/0.10.
+> Normalisation *widens* per-channel's lead (1.49× over blockwise at c = 0.03,
+> against 1.25× under the old coordinates). The matched-error int8 comparison is
+> unaffected — it is matched per tensor, not aggregated at a shared ε.
+
 ## At matched error
 
 Each int8 baseline is measured first, its *achieved* maximum absolute error read

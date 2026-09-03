@@ -1,0 +1,2904 @@
+{
+  "c_grid": [
+    0.01,
+    0.03,
+    0.1
+  ],
+  "algorithms": [
+    "LORENZO_REG",
+    "INTERP_LORENZO",
+    "INTERP",
+    "NOPRED"
+  ],
+  "tuning_docs": [
+    "p0",
+    "p1"
+  ],
+  "heldout_docs": [
+    "p2",
+    "p3"
+  ],
+  "note": "Phase A: script + knob validation only. Final configuration selection waits for the Gate B0 corpus.",
+  "rows": {
+    "p0_l0_k|c0.01|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 61570,
+      "encode_s": 0.0020467920039664023,
+      "max_error": 0.16342419385910034,
+      "ratio": 2.694299171674517,
+      "within_bound": true
+    },
+    "p0_l0_k|c0.01|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 61841,
+      "encode_s": 0.0012582079943967983,
+      "max_error": 0.1634211540222168,
+      "ratio": 2.6824921977328957,
+      "within_bound": true
+    },
+    "p0_l0_k|c0.01|INTERP": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 66702,
+      "encode_s": 0.000873208002303727,
+      "max_error": 0.16342121362686157,
+      "ratio": 2.487001888998831,
+      "within_bound": true
+    },
+    "p0_l0_k|c0.01|NOPRED": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 52572,
+      "encode_s": 0.000677791002090089,
+      "max_error": 0.16338565945625305,
+      "ratio": 3.155443962565624,
+      "within_bound": true
+    },
+    "p0_l0_k|c0.03|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 41885,
+      "encode_s": 0.0008541249990230426,
+      "max_error": 0.4902729392051697,
+      "ratio": 3.9605586725558077,
+      "within_bound": true
+    },
+    "p0_l0_k|c0.03|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 40817,
+      "encode_s": 0.0008400420047109947,
+      "max_error": 0.49027305841445923,
+      "ratio": 4.064188940882476,
+      "within_bound": true
+    },
+    "p0_l0_k|c0.03|INTERP": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 45898,
+      "encode_s": 0.0007890410051913932,
+      "max_error": 0.49026986956596375,
+      "ratio": 3.6142751318140225,
+      "within_bound": true
+    },
+    "p0_l0_k|c0.03|NOPRED": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 34401,
+      "encode_s": 0.0005759160048910417,
+      "max_error": 0.490234375,
+      "ratio": 4.822185401587163,
+      "within_bound": true
+    },
+    "p0_l0_k|c0.1|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 20441,
+      "encode_s": 0.0007203749992186204,
+      "max_error": 1.6340603828430176,
+      "ratio": 8.115454234137273,
+      "within_bound": true
+    },
+    "p0_l0_k|c0.1|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 22430,
+      "encode_s": 0.0007171249962993897,
+      "max_error": 1.6342432498931885,
+      "ratio": 7.3958091841283995,
+      "within_bound": true
+    },
+    "p0_l0_k|c0.1|INTERP": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 25979,
+      "encode_s": 0.0006272919999901205,
+      "max_error": 1.634169340133667,
+      "ratio": 6.3854651834173755,
+      "within_bound": true
+    },
+    "p0_l0_k|c0.1|NOPRED": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 16500,
+      "encode_s": 0.00040304200229002163,
+      "max_error": 1.6328125,
+      "ratio": 10.053818181818182,
+      "within_bound": true
+    },
+    "p0_l0_v|c0.01|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 86127,
+      "encode_s": 0.0008358330014743842,
+      "max_error": 0.0014776713214814663,
+      "ratio": 1.9260858964087917,
+      "within_bound": true
+    },
+    "p0_l0_v|c0.01|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 89075,
+      "encode_s": 0.0011037500007660128,
+      "max_error": 0.001477748155593872,
+      "ratio": 1.862340724108897,
+      "within_bound": true
+    },
+    "p0_l0_v|c0.01|INTERP": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 90470,
+      "encode_s": 0.0006950829993002117,
+      "max_error": 0.001477763056755066,
+      "ratio": 1.8336244058804023,
+      "within_bound": true
+    },
+    "p0_l0_v|c0.01|NOPRED": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 65909,
+      "encode_s": 0.000491457998577971,
+      "max_error": 0.0014764070510864258,
+      "ratio": 2.516924850930829,
+      "within_bound": true
+    },
+    "p0_l0_v|c0.03|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 65337,
+      "encode_s": 0.0007837500015739352,
+      "max_error": 0.004433108493685722,
+      "ratio": 2.5389595481886222,
+      "within_bound": true
+    },
+    "p0_l0_v|c0.03|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 67707,
+      "encode_s": 0.0009129169993684627,
+      "max_error": 0.004433281719684601,
+      "ratio": 2.4500864017014488,
+      "within_bound": true
+    },
+    "p0_l0_v|c0.03|INTERP": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 70164,
+      "encode_s": 0.000698499999998603,
+      "max_error": 0.004433304071426392,
+      "ratio": 2.3642893791688047,
+      "within_bound": true
+    },
+    "p0_l0_v|c0.03|NOPRED": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 63677,
+      "encode_s": 0.00045737499749520794,
+      "max_error": 0.004431962966918945,
+      "ratio": 2.605147855583649,
+      "within_bound": true
+    },
+    "p0_l0_v|c0.1|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 36192,
+      "encode_s": 0.0006978339952183887,
+      "max_error": 0.014775946736335754,
+      "ratio": 4.583554376657825,
+      "within_bound": true
+    },
+    "p0_l0_v|c0.1|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 50062,
+      "encode_s": 0.0007530830043833703,
+      "max_error": 0.014777421951293945,
+      "ratio": 3.3136510726698893,
+      "within_bound": true
+    },
+    "p0_l0_v|c0.1|INTERP": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 51002,
+      "encode_s": 0.0006067499998607673,
+      "max_error": 0.014777123928070068,
+      "ratio": 3.2525783302615583,
+      "within_bound": true
+    },
+    "p0_l0_v|c0.1|NOPRED": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 34347,
+      "encode_s": 0.00041241700091632083,
+      "max_error": 0.0147705078125,
+      "ratio": 4.8297667918595515,
+      "within_bound": true
+    },
+    "p0_l14_k|c0.01|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 85087,
+      "encode_s": 0.0008801660005701706,
+      "max_error": 0.020425260066986084,
+      "ratio": 1.9496280277833276,
+      "within_bound": true
+    },
+    "p0_l14_k|c0.01|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 87745,
+      "encode_s": 0.0010045829985756427,
+      "max_error": 0.02042531967163086,
+      "ratio": 1.8905692632058806,
+      "within_bound": true
+    },
+    "p0_l14_k|c0.01|INTERP": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 91050,
+      "encode_s": 0.0007586670035379939,
+      "max_error": 0.020424455404281616,
+      "ratio": 1.8219439868204284,
+      "within_bound": true
+    },
+    "p0_l14_k|c0.01|NOPRED": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 80870,
+      "encode_s": 0.0005391250015236437,
+      "max_error": 0.020421989262104034,
+      "ratio": 2.051292197353778,
+      "within_bound": true
+    },
+    "p0_l14_k|c0.03|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 63586,
+      "encode_s": 0.0008219160008593462,
+      "max_error": 0.061275869607925415,
+      "ratio": 2.608876167709873,
+      "within_bound": true
+    },
+    "p0_l14_k|c0.03|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 66857,
+      "encode_s": 0.0008983329971670173,
+      "max_error": 0.06127572059631348,
+      "ratio": 2.481236071017246,
+      "within_bound": true
+    },
+    "p0_l14_k|c0.03|INTERP": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 69657,
+      "encode_s": 0.0006846670003142208,
+      "max_error": 0.06127583980560303,
+      "ratio": 2.3814979111934194,
+      "within_bound": true
+    },
+    "p0_l14_k|c0.03|NOPRED": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 61385,
+      "encode_s": 0.0004882079956587404,
+      "max_error": 0.06127263605594635,
+      "ratio": 2.7024191577747008,
+      "within_bound": true
+    },
+    "p0_l14_k|c0.1|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 42948,
+      "encode_s": 0.000787583994679153,
+      "max_error": 0.2042461782693863,
+      "ratio": 3.862531433361274,
+      "within_bound": true
+    },
+    "p0_l14_k|c0.1|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 46584,
+      "encode_s": 0.0008183329991879873,
+      "max_error": 0.20424872636795044,
+      "ratio": 3.561051004636785,
+      "within_bound": true
+    },
+    "p0_l14_k|c0.1|INTERP": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 49180,
+      "encode_s": 0.0006554170031449758,
+      "max_error": 0.204249769449234,
+      "ratio": 3.3730784871899147,
+      "within_bound": true
+    },
+    "p0_l14_k|c0.1|NOPRED": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 41446,
+      "encode_s": 0.00044545799755724147,
+      "max_error": 0.2041682004928589,
+      "ratio": 4.002509289195579,
+      "within_bound": true
+    },
+    "p0_l14_v|c0.01|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 82542,
+      "encode_s": 0.0009287499997299165,
+      "max_error": 0.034316062927246094,
+      "ratio": 2.0097404957476193,
+      "within_bound": true
+    },
+    "p0_l14_v|c0.01|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 85530,
+      "encode_s": 0.0011205830014660023,
+      "max_error": 0.034317225217819214,
+      "ratio": 1.9395299894773763,
+      "within_bound": true
+    },
+    "p0_l14_v|c0.01|INTERP": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 88762,
+      "encode_s": 0.0007695410022279248,
+      "max_error": 0.0343165397644043,
+      "ratio": 1.8689078659786846,
+      "within_bound": true
+    },
+    "p0_l14_v|c0.01|NOPRED": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 79367,
+      "encode_s": 0.0005756659957114607,
+      "max_error": 0.03431081771850586,
+      "ratio": 2.0901382186551087,
+      "within_bound": true
+    },
+    "p0_l14_v|c0.03|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 61563,
+      "encode_s": 0.0007977500063134357,
+      "max_error": 0.1029508113861084,
+      "ratio": 2.694605526046489,
+      "within_bound": true
+    },
+    "p0_l14_v|c0.03|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 64598,
+      "encode_s": 0.0009053749963641167,
+      "max_error": 0.10295204818248749,
+      "ratio": 2.568005201399424,
+      "within_bound": true
+    },
+    "p0_l14_v|c0.03|INTERP": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 67372,
+      "encode_s": 0.0007530000002589077,
+      "max_error": 0.10295112431049347,
+      "ratio": 2.4622691919491775,
+      "within_bound": true
+    },
+    "p0_l14_v|c0.03|NOPRED": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 60200,
+      "encode_s": 0.0005005839993827976,
+      "max_error": 0.10287731885910034,
+      "ratio": 2.7556146179401995,
+      "within_bound": true
+    },
+    "p0_l14_v|c0.1|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 40769,
+      "encode_s": 0.0007098339992808178,
+      "max_error": 0.34316912293434143,
+      "ratio": 4.068973975324389,
+      "within_bound": true
+    },
+    "p0_l14_v|c0.1|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 44470,
+      "encode_s": 0.0007231249983306043,
+      "max_error": 0.34316861629486084,
+      "ratio": 3.730335057342028,
+      "within_bound": true
+    },
+    "p0_l14_v|c0.1|INTERP": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 46785,
+      "encode_s": 0.0007674579974263906,
+      "max_error": 0.3431663513183594,
+      "ratio": 3.545751843539596,
+      "within_bound": true
+    },
+    "p0_l14_v|c0.1|NOPRED": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 40041,
+      "encode_s": 0.0004781659954460338,
+      "max_error": 0.34276771545410156,
+      "ratio": 4.142953472690492,
+      "within_bound": true
+    },
+    "p0_l27_k|c0.01|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 80481,
+      "encode_s": 0.000956374999077525,
+      "max_error": 0.030384093523025513,
+      "ratio": 2.061206992954859,
+      "within_bound": true
+    },
+    "p0_l27_k|c0.01|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 82689,
+      "encode_s": 0.0010670839983504266,
+      "max_error": 0.030385375022888184,
+      "ratio": 2.006167688568008,
+      "within_bound": true
+    },
+    "p0_l27_k|c0.01|INTERP": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 85089,
+      "encode_s": 0.0007428750031976961,
+      "max_error": 0.03038489818572998,
+      "ratio": 1.9495822021647922,
+      "within_bound": true
+    },
+    "p0_l27_k|c0.01|NOPRED": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 76181,
+      "encode_s": 0.0005798329948447645,
+      "max_error": 0.030375584959983826,
+      "ratio": 2.17755083288484,
+      "within_bound": true
+    },
+    "p0_l27_k|c0.03|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 58891,
+      "encode_s": 0.0008112920040730387,
+      "max_error": 0.09115129709243774,
+      "ratio": 2.8168650557810193,
+      "within_bound": true
+    },
+    "p0_l27_k|c0.03|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 61898,
+      "encode_s": 0.0009497920036665164,
+      "max_error": 0.091156005859375,
+      "ratio": 2.6800219716307474,
+      "within_bound": true
+    },
+    "p0_l27_k|c0.03|INTERP": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 64079,
+      "encode_s": 0.0006810839986428618,
+      "max_error": 0.0911557674407959,
+      "ratio": 2.588804444513803,
+      "within_bound": true
+    },
+    "p0_l27_k|c0.03|NOPRED": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 56786,
+      "encode_s": 0.0005492499985848553,
+      "max_error": 0.09112422168254852,
+      "ratio": 2.921283414926214,
+      "within_bound": true
+    },
+    "p0_l27_k|c0.1|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 38142,
+      "encode_s": 0.0008827079946058802,
+      "max_error": 0.30382663011550903,
+      "ratio": 4.349221330816423,
+      "within_bound": true
+    },
+    "p0_l27_k|c0.1|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 41396,
+      "encode_s": 0.0007439999972120859,
+      "max_error": 0.303851842880249,
+      "ratio": 4.007343704705769,
+      "within_bound": true
+    },
+    "p0_l27_k|c0.1|INTERP": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 43497,
+      "encode_s": 0.000647832996037323,
+      "max_error": 0.3038240671157837,
+      "ratio": 3.813780260707635,
+      "within_bound": true
+    },
+    "p0_l27_k|c0.1|NOPRED": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 37128,
+      "encode_s": 0.00045441700058290735,
+      "max_error": 0.3035311698913574,
+      "ratio": 4.468002585649645,
+      "within_bound": true
+    },
+    "p0_l27_v|c0.01|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 86702,
+      "encode_s": 0.0008500420008203946,
+      "max_error": 0.14575958251953125,
+      "ratio": 1.913312264999654,
+      "within_bound": true
+    },
+    "p0_l27_v|c0.01|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 93246,
+      "encode_s": 0.001055665998137556,
+      "max_error": 0.1457691192626953,
+      "ratio": 1.7790360980631876,
+      "within_bound": true
+    },
+    "p0_l27_v|c0.01|INTERP": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 93246,
+      "encode_s": 0.0006752080007572658,
+      "max_error": 0.1457691192626953,
+      "ratio": 1.7790360980631876,
+      "within_bound": true
+    },
+    "p0_l27_v|c0.01|NOPRED": {
+      "doc": "p0",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 84157,
+      "encode_s": 0.000457416994322557,
+      "max_error": 0.1456146240234375,
+      "ratio": 1.9711729267915918,
+      "within_bound": true
+    },
+    "p0_l27_v|c0.03|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 66446,
+      "encode_s": 0.0007570000016130507,
+      "max_error": 0.43730926513671875,
+      "ratio": 2.496583692020588,
+      "within_bound": true
+    },
+    "p0_l27_v|c0.03|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 69176,
+      "encode_s": 0.0008587499978602864,
+      "max_error": 0.43732786178588867,
+      "ratio": 2.3980571296403377,
+      "within_bound": true
+    },
+    "p0_l27_v|c0.03|INTERP": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 72351,
+      "encode_s": 0.0006665420005447231,
+      "max_error": 0.4373149871826172,
+      "ratio": 2.2928224903594976,
+      "within_bound": true
+    },
+    "p0_l27_v|c0.03|NOPRED": {
+      "doc": "p0",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 65205,
+      "encode_s": 0.0004549590012175031,
+      "max_error": 0.4371567964553833,
+      "ratio": 2.5440993788819877,
+      "within_bound": true
+    },
+    "p0_l27_v|c0.1|LORENZO_REG": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 46622,
+      "encode_s": 0.0006897499988554046,
+      "max_error": 1.4577174186706543,
+      "ratio": 3.5581485135772812,
+      "within_bound": true
+    },
+    "p0_l27_v|c0.1|INTERP_LORENZO": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 50006,
+      "encode_s": 0.0007128340002964251,
+      "max_error": 1.4577465057373047,
+      "ratio": 3.3173619165700114,
+      "within_bound": true
+    },
+    "p0_l27_v|c0.1|INTERP": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 52921,
+      "encode_s": 0.00060374999884516,
+      "max_error": 1.4577465057373047,
+      "ratio": 3.1346346440921375,
+      "within_bound": true
+    },
+    "p0_l27_v|c0.1|NOPRED": {
+      "doc": "p0",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 46435,
+      "encode_s": 0.00038712500099791214,
+      "max_error": 1.456045150756836,
+      "ratio": 3.5724776569398085,
+      "within_bound": true
+    },
+    "p1_l0_k|c0.01|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 59282,
+      "encode_s": 0.0008964579974417575,
+      "max_error": 0.16059339046478271,
+      "ratio": 2.6600991869370127,
+      "within_bound": true
+    },
+    "p1_l0_k|c0.01|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 59524,
+      "encode_s": 0.0009752910045790486,
+      "max_error": 0.16059668362140656,
+      "ratio": 2.6492843222901685,
+      "within_bound": true
+    },
+    "p1_l0_k|c0.01|INTERP": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 63199,
+      "encode_s": 0.000820791996375192,
+      "max_error": 0.16058659553527832,
+      "ratio": 2.495229354894856,
+      "within_bound": true
+    },
+    "p1_l0_k|c0.01|NOPRED": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 50238,
+      "encode_s": 0.0005787500049336813,
+      "max_error": 0.16053342819213867,
+      "ratio": 3.1389784625184123,
+      "within_bound": true
+    },
+    "p1_l0_k|c0.03|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 39240,
+      "encode_s": 0.0007709170022280887,
+      "max_error": 0.48178383708000183,
+      "ratio": 4.018756371049949,
+      "within_bound": true
+    },
+    "p1_l0_k|c0.03|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 40265,
+      "encode_s": 0.0008377920021302998,
+      "max_error": 0.481790691614151,
+      "ratio": 3.9164534955917047,
+      "within_bound": true
+    },
+    "p1_l0_k|c0.03|INTERP": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 43909,
+      "encode_s": 0.0007080409995978698,
+      "max_error": 0.4817851781845093,
+      "ratio": 3.5914277255232414,
+      "within_bound": true
+    },
+    "p1_l0_k|c0.03|NOPRED": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 33410,
+      "encode_s": 0.0004472500004339963,
+      "max_error": 0.481728196144104,
+      "ratio": 4.720023944926669,
+      "within_bound": true
+    },
+    "p1_l0_k|c0.1|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 20010,
+      "encode_s": 0.0006924999979673885,
+      "max_error": 1.6058919429779053,
+      "ratio": 7.880859570214892,
+      "within_bound": true
+    },
+    "p1_l0_k|c0.1|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 20751,
+      "encode_s": 0.0006337500017252751,
+      "max_error": 1.6059613227844238,
+      "ratio": 7.599440990795625,
+      "within_bound": true
+    },
+    "p1_l0_k|c0.1|INTERP": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 25550,
+      "encode_s": 0.0006127919987193309,
+      "max_error": 1.6059319972991943,
+      "ratio": 6.172054794520548,
+      "within_bound": true
+    },
+    "p1_l0_k|c0.1|NOPRED": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 15388,
+      "encode_s": 0.00039729200216243044,
+      "max_error": 1.6033134460449219,
+      "ratio": 10.247985443202495,
+      "within_bound": true
+    },
+    "p1_l0_v|c0.01|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 74695,
+      "encode_s": 0.0007942500014905818,
+      "max_error": 0.001461541629396379,
+      "ratio": 2.1111988754267355,
+      "within_bound": true
+    },
+    "p1_l0_v|c0.01|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 83382,
+      "encode_s": 0.000988625004538335,
+      "max_error": 0.0014614807441830635,
+      "ratio": 1.8912475114533112,
+      "within_bound": true
+    },
+    "p1_l0_v|c0.01|INTERP": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 86655,
+      "encode_s": 0.0006895000042277388,
+      "max_error": 0.0014615356922149658,
+      "ratio": 1.8198142057584674,
+      "within_bound": true
+    },
+    "p1_l0_v|c0.01|NOPRED": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 78584,
+      "encode_s": 0.00047933299356373027,
+      "max_error": 0.0014585256576538086,
+      "ratio": 2.0067189249720045,
+      "within_bound": true
+    },
+    "p1_l0_v|c0.03|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 55791,
+      "encode_s": 0.0007330410007853061,
+      "max_error": 0.004384472966194153,
+      "ratio": 2.826549084977864,
+      "within_bound": true
+    },
+    "p1_l0_v|c0.03|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 64499,
+      "encode_s": 0.0008454580020043068,
+      "max_error": 0.004384525120258331,
+      "ratio": 2.4449371308082295,
+      "within_bound": true
+    },
+    "p1_l0_v|c0.03|INTERP": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 67072,
+      "encode_s": 0.0006375829980242997,
+      "max_error": 0.004384525120258331,
+      "ratio": 2.351145038167939,
+      "within_bound": true
+    },
+    "p1_l0_v|c0.03|NOPRED": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 59241,
+      "encode_s": 0.00045566700282506645,
+      "max_error": 0.004381060600280762,
+      "ratio": 2.661940210327307,
+      "within_bound": true
+    },
+    "p1_l0_v|c0.1|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 42924,
+      "encode_s": 0.000676417002978269,
+      "max_error": 0.014615058898925781,
+      "ratio": 3.673842139595564,
+      "within_bound": true
+    },
+    "p1_l0_v|c0.1|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 46515,
+      "encode_s": 0.000723332996130921,
+      "max_error": 0.014614537358283997,
+      "ratio": 3.3902182091798343,
+      "within_bound": true
+    },
+    "p1_l0_v|c0.1|INTERP": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 48672,
+      "encode_s": 0.0005902910052100196,
+      "max_error": 0.014615057967603207,
+      "ratio": 3.239973701512163,
+      "within_bound": true
+    },
+    "p1_l0_v|c0.1|NOPRED": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 40703,
+      "encode_s": 0.00039820800157031044,
+      "max_error": 0.014595121145248413,
+      "ratio": 3.8743090189912293,
+      "within_bound": true
+    },
+    "p1_l14_k|c0.01|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 81065,
+      "encode_s": 0.0008438750010100193,
+      "max_error": 0.02097405306994915,
+      "ratio": 1.945303151791772,
+      "within_bound": true
+    },
+    "p1_l14_k|c0.01|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 83014,
+      "encode_s": 0.0009113749983953312,
+      "max_error": 0.02097421884536743,
+      "ratio": 1.8996313874768112,
+      "within_bound": true
+    },
+    "p1_l14_k|c0.01|INTERP": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 86098,
+      "encode_s": 0.0007024160004220903,
+      "max_error": 0.020973801612854004,
+      "ratio": 1.8315872610281307,
+      "within_bound": true
+    },
+    "p1_l14_k|c0.01|NOPRED": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 76621,
+      "encode_s": 0.0005144579990883358,
+      "max_error": 0.020961523056030273,
+      "ratio": 2.0581302776001356,
+      "within_bound": true
+    },
+    "p1_l14_k|c0.03|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 60132,
+      "encode_s": 0.0008392080053454265,
+      "max_error": 0.06292274594306946,
+      "ratio": 2.622497172886317,
+      "within_bound": true
+    },
+    "p1_l14_k|c0.03|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 63012,
+      "encode_s": 0.0008061249973252416,
+      "max_error": 0.06292247772216797,
+      "ratio": 2.502634418840856,
+      "within_bound": true
+    },
+    "p1_l14_k|c0.03|INTERP": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 65460,
+      "encode_s": 0.000664792001771275,
+      "max_error": 0.06292271614074707,
+      "ratio": 2.409043690803544,
+      "within_bound": true
+    },
+    "p1_l14_k|c0.03|NOPRED": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 58104,
+      "encode_s": 0.0004919580023852177,
+      "max_error": 0.06289958953857422,
+      "ratio": 2.7140300151452568,
+      "within_bound": true
+    },
+    "p1_l14_k|c0.1|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 40448,
+      "encode_s": 0.0007247909961733967,
+      "max_error": 0.2097429633140564,
+      "ratio": 3.8987341772151898,
+      "within_bound": true
+    },
+    "p1_l14_k|c0.1|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 44411,
+      "encode_s": 0.0006979160025366582,
+      "max_error": 0.2097393274307251,
+      "ratio": 3.5508320010808134,
+      "within_bound": true
+    },
+    "p1_l14_k|c0.1|INTERP": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 46083,
+      "encode_s": 0.0006168340041767806,
+      "max_error": 0.20974111557006836,
+      "ratio": 3.4219994358006205,
+      "within_bound": true
+    },
+    "p1_l14_k|c0.1|NOPRED": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 38845,
+      "encode_s": 0.00043704099516617134,
+      "max_error": 0.20958518981933594,
+      "ratio": 4.059621572918007,
+      "within_bound": true
+    },
+    "p1_l14_v|c0.01|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 77689,
+      "encode_s": 0.0008837080022203736,
+      "max_error": 0.037968069314956665,
+      "ratio": 2.0298369138488073,
+      "within_bound": true
+    },
+    "p1_l14_v|c0.01|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 80775,
+      "encode_s": 0.0010769589935080148,
+      "max_error": 0.03797554969787598,
+      "ratio": 1.9522872175796966,
+      "within_bound": true
+    },
+    "p1_l14_v|c0.01|INTERP": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 84303,
+      "encode_s": 0.0008695840006112121,
+      "max_error": 0.03797423839569092,
+      "ratio": 1.8705858628993037,
+      "within_bound": true
+    },
+    "p1_l14_v|c0.01|NOPRED": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 74907,
+      "encode_s": 0.0005661670002155006,
+      "max_error": 0.03796246647834778,
+      "ratio": 2.1052238108587984,
+      "within_bound": true
+    },
+    "p1_l14_v|c0.03|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 57502,
+      "encode_s": 0.0007800830062478781,
+      "max_error": 0.1139242947101593,
+      "ratio": 2.7424437410872664,
+      "within_bound": true
+    },
+    "p1_l14_v|c0.03|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 60543,
+      "encode_s": 0.0008794579989626072,
+      "max_error": 0.11392617225646973,
+      "ratio": 2.6046941842987628,
+      "within_bound": true
+    },
+    "p1_l14_v|c0.03|INTERP": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 63253,
+      "encode_s": 0.00065320899739163,
+      "max_error": 0.11392733454704285,
+      "ratio": 2.4930991415426935,
+      "within_bound": true
+    },
+    "p1_l14_v|c0.03|NOPRED": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 56153,
+      "encode_s": 0.00048587499622954056,
+      "max_error": 0.11391434073448181,
+      "ratio": 2.808327248766762,
+      "within_bound": true
+    },
+    "p1_l14_v|c0.1|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 37858,
+      "encode_s": 0.0008218330040108413,
+      "max_error": 0.3797405958175659,
+      "ratio": 4.165460404670083,
+      "within_bound": true
+    },
+    "p1_l14_v|c0.1|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 41015,
+      "encode_s": 0.0008083749999059364,
+      "max_error": 0.379758358001709,
+      "ratio": 3.844837254662928,
+      "within_bound": true
+    },
+    "p1_l14_v|c0.1|INTERP": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 43498,
+      "encode_s": 0.0006172079956741072,
+      "max_error": 0.3797558546066284,
+      "ratio": 3.6253620856131317,
+      "within_bound": true
+    },
+    "p1_l14_v|c0.1|NOPRED": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 36899,
+      "encode_s": 0.00046708299487363547,
+      "max_error": 0.3794001340866089,
+      "ratio": 4.2737201550177515,
+      "within_bound": true
+    },
+    "p1_l27_k|c0.01|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 76407,
+      "encode_s": 0.0008703749990672804,
+      "max_error": 0.028933091089129448,
+      "ratio": 2.063894669336579,
+      "within_bound": true
+    },
+    "p1_l27_k|c0.01|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 77822,
+      "encode_s": 0.0010048750045825727,
+      "max_error": 0.02893298864364624,
+      "ratio": 2.0263678651281127,
+      "within_bound": true
+    },
+    "p1_l27_k|c0.01|INTERP": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 81118,
+      "encode_s": 0.0008095410012174398,
+      "max_error": 0.028932664543390274,
+      "ratio": 1.9440321506940506,
+      "within_bound": true
+    },
+    "p1_l27_k|c0.01|NOPRED": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 72359,
+      "encode_s": 0.0005353749947971664,
+      "max_error": 0.0289306640625,
+      "ratio": 2.1793557124891167,
+      "within_bound": true
+    },
+    "p1_l27_k|c0.03|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 55789,
+      "encode_s": 0.0007608329979120754,
+      "max_error": 0.08679759502410889,
+      "ratio": 2.8266504149563536,
+      "within_bound": true
+    },
+    "p1_l27_k|c0.03|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 58179,
+      "encode_s": 0.0008237499932874925,
+      "max_error": 0.08679914474487305,
+      "ratio": 2.710531291359425,
+      "within_bound": true
+    },
+    "p1_l27_k|c0.03|INTERP": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 61004,
+      "encode_s": 0.0006681249942630529,
+      "max_error": 0.08679676055908203,
+      "ratio": 2.585010818962691,
+      "within_bound": true
+    },
+    "p1_l27_k|c0.03|NOPRED": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 53960,
+      "encode_s": 0.0005210000017541461,
+      "max_error": 0.08674365282058716,
+      "ratio": 2.922461082283173,
+      "within_bound": true
+    },
+    "p1_l27_k|c0.1|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 36373,
+      "encode_s": 0.000687749998178333,
+      "max_error": 0.28933092951774597,
+      "ratio": 4.335523602672312,
+      "within_bound": true
+    },
+    "p1_l27_k|c0.1|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 39793,
+      "encode_s": 0.0007002079946687445,
+      "max_error": 0.28932666778564453,
+      "ratio": 3.962908049154374,
+      "within_bound": true
+    },
+    "p1_l27_k|c0.1|INTERP": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 41624,
+      "encode_s": 0.0005899169991607778,
+      "max_error": 0.2893275022506714,
+      "ratio": 3.788583509513742,
+      "within_bound": true
+    },
+    "p1_l27_k|c0.1|NOPRED": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 35339,
+      "encode_s": 0.00040666700078872964,
+      "max_error": 0.2890625,
+      "ratio": 4.462378675118141,
+      "within_bound": true
+    },
+    "p1_l27_v|c0.01|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 82416,
+      "encode_s": 0.0007476669998141006,
+      "max_error": 0.11406080424785614,
+      "ratio": 1.9134148708988545,
+      "within_bound": true
+    },
+    "p1_l27_v|c0.01|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 85209,
+      "encode_s": 0.000975042006757576,
+      "max_error": 0.11406326293945312,
+      "ratio": 1.8506965226677934,
+      "within_bound": true
+    },
+    "p1_l27_v|c0.01|INTERP": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 90121,
+      "encode_s": 0.0006776250011171214,
+      "max_error": 0.11406326293945312,
+      "ratio": 1.7498252349618846,
+      "within_bound": true
+    },
+    "p1_l27_v|c0.01|NOPRED": {
+      "doc": "p1",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 80229,
+      "encode_s": 0.00043566699605435133,
+      "max_error": 0.11405771970748901,
+      "ratio": 1.9655735457253611,
+      "within_bound": true
+    },
+    "p1_l27_v|c0.03|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 63283,
+      "encode_s": 0.0007187910014181398,
+      "max_error": 0.34218505024909973,
+      "ratio": 2.491917260559708,
+      "within_bound": true
+    },
+    "p1_l27_v|c0.03|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 66089,
+      "encode_s": 0.0008104160006041639,
+      "max_error": 0.342180073261261,
+      "ratio": 2.3861156924752986,
+      "within_bound": true
+    },
+    "p1_l27_v|c0.03|INTERP": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 69913,
+      "encode_s": 0.0006767079976270907,
+      "max_error": 0.34218597412109375,
+      "ratio": 2.2556033927881796,
+      "within_bound": true
+    },
+    "p1_l27_v|c0.03|NOPRED": {
+      "doc": "p1",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 62157,
+      "encode_s": 0.00044766599603462964,
+      "max_error": 0.3421732187271118,
+      "ratio": 2.5370593818878002,
+      "within_bound": true
+    },
+    "p1_l27_v|c0.1|LORENZO_REG": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 45104,
+      "encode_s": 0.0006538340021506883,
+      "max_error": 1.1406309604644775,
+      "ratio": 3.4962752749201846,
+      "within_bound": true
+    },
+    "p1_l27_v|c0.1|INTERP_LORENZO": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 49899,
+      "encode_s": 0.0007216249941848218,
+      "max_error": 1.1406011581420898,
+      "ratio": 3.1603038137036816,
+      "within_bound": true
+    },
+    "p1_l27_v|c0.1|INTERP": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 50757,
+      "encode_s": 0.0005870419990969822,
+      "max_error": 1.1406354904174805,
+      "ratio": 3.1068818094055994,
+      "within_bound": true
+    },
+    "p1_l27_v|c0.1|NOPRED": {
+      "doc": "p1",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 44242,
+      "encode_s": 0.00034166700061177835,
+      "max_error": 1.140625,
+      "ratio": 3.564395822973645,
+      "within_bound": true
+    },
+    "p2_l0_k|c0.01|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 60732,
+      "encode_s": 0.0009701250019134022,
+      "max_error": 0.15949177742004395,
+      "ratio": 2.630310215372456,
+      "within_bound": true
+    },
+    "p2_l0_k|c0.01|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 62616,
+      "encode_s": 0.0009093749977182597,
+      "max_error": 0.15949195623397827,
+      "ratio": 2.5511690302798007,
+      "within_bound": true
+    },
+    "p2_l0_k|c0.01|INTERP": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 64756,
+      "encode_s": 0.0007925000027171336,
+      "max_error": 0.15949583053588867,
+      "ratio": 2.466860213725369,
+      "within_bound": true
+    },
+    "p2_l0_k|c0.01|NOPRED": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 51506,
+      "encode_s": 0.0005956250024610199,
+      "max_error": 0.15948420763015747,
+      "ratio": 3.1014639071176173,
+      "within_bound": true
+    },
+    "p2_l0_k|c0.03|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 40312,
+      "encode_s": 0.0008149160057655536,
+      "max_error": 0.4784865975379944,
+      "ratio": 3.962691010121056,
+      "within_bound": true
+    },
+    "p2_l0_k|c0.03|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 44979,
+      "encode_s": 0.0008736670060898177,
+      "max_error": 0.4784889221191406,
+      "ratio": 3.5515240445541254,
+      "within_bound": true
+    },
+    "p2_l0_k|c0.03|INTERP": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 44979,
+      "encode_s": 0.0007344579935306683,
+      "max_error": 0.4784889221191406,
+      "ratio": 3.5515240445541254,
+      "within_bound": true
+    },
+    "p2_l0_k|c0.03|NOPRED": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 34816,
+      "encode_s": 0.0004800829992746003,
+      "max_error": 0.4784841537475586,
+      "ratio": 4.588235294117647,
+      "within_bound": true
+    },
+    "p2_l0_k|c0.1|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 20729,
+      "encode_s": 0.0006818749970989302,
+      "max_error": 1.5947935581207275,
+      "ratio": 7.706305176323026,
+      "within_bound": true
+    },
+    "p2_l0_k|c0.1|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 22858,
+      "encode_s": 0.0006517500005429611,
+      "max_error": 1.5949749946594238,
+      "ratio": 6.988537929827632,
+      "within_bound": true
+    },
+    "p2_l0_k|c0.1|INTERP": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 26175,
+      "encode_s": 0.0006195419991854578,
+      "max_error": 1.5949978828430176,
+      "ratio": 6.102922636103152,
+      "within_bound": true
+    },
+    "p2_l0_k|c0.1|NOPRED": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 16359,
+      "encode_s": 0.0004092499948455952,
+      "max_error": 1.59375,
+      "ratio": 9.764900055015588,
+      "within_bound": true
+    },
+    "p2_l0_v|c0.01|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 83623,
+      "encode_s": 0.0008578330016462132,
+      "max_error": 0.001453740056604147,
+      "ratio": 1.9102878394700022,
+      "within_bound": true
+    },
+    "p2_l0_v|c0.01|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 86500,
+      "encode_s": 0.0010015409934567288,
+      "max_error": 0.0014537423849105835,
+      "ratio": 1.8467514450867053,
+      "within_bound": true
+    },
+    "p2_l0_v|c0.01|INTERP": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 88116,
+      "encode_s": 0.0006674579999526031,
+      "max_error": 0.0014536455273628235,
+      "ratio": 1.8128830178401198,
+      "within_bound": true
+    },
+    "p2_l0_v|c0.01|NOPRED": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 80230,
+      "encode_s": 0.00046275000204332173,
+      "max_error": 0.001453721895813942,
+      "ratio": 1.9910756574847315,
+      "within_bound": true
+    },
+    "p2_l0_v|c0.03|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 63370,
+      "encode_s": 0.0007461670029442757,
+      "max_error": 0.004361229948699474,
+      "ratio": 2.52081426542528,
+      "within_bound": true
+    },
+    "p2_l0_v|c0.03|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 65643,
+      "encode_s": 0.0009284589978051372,
+      "max_error": 0.0043611833825707436,
+      "ratio": 2.433526804076596,
+      "within_bound": true
+    },
+    "p2_l0_v|c0.03|INTERP": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 68051,
+      "encode_s": 0.0006511249957839027,
+      "max_error": 0.0043612271547317505,
+      "ratio": 2.3474159086567425,
+      "within_bound": true
+    },
+    "p2_l0_v|c0.03|NOPRED": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 60422,
+      "encode_s": 0.00045649999810848385,
+      "max_error": 0.004358452744781971,
+      "ratio": 2.6438052365032605,
+      "within_bound": true
+    },
+    "p2_l0_v|c0.1|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 43928,
+      "encode_s": 0.0006802499992772937,
+      "max_error": 0.014536581933498383,
+      "ratio": 3.6364960845019123,
+      "within_bound": true
+    },
+    "p2_l0_v|c0.1|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 47421,
+      "encode_s": 0.0007099590002326295,
+      "max_error": 0.014537304639816284,
+      "ratio": 3.3686341494274687,
+      "within_bound": true
+    },
+    "p2_l0_v|c0.1|INTERP": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 49506,
+      "encode_s": 0.0005795830002170987,
+      "max_error": 0.014537230134010315,
+      "ratio": 3.226760392679675,
+      "within_bound": true
+    },
+    "p2_l0_v|c0.1|NOPRED": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 33455,
+      "encode_s": 0.0003853329981211573,
+      "max_error": 0.0145263671875,
+      "ratio": 4.774891645493947,
+      "within_bound": true
+    },
+    "p2_l14_k|c0.01|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 81546,
+      "encode_s": 0.0008508329992764629,
+      "max_error": 0.0223923921585083,
+      "ratio": 1.9589434184386727,
+      "within_bound": true
+    },
+    "p2_l14_k|c0.01|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 83267,
+      "encode_s": 0.0009520000021439046,
+      "max_error": 0.02239282615482807,
+      "ratio": 1.9184550902518405,
+      "within_bound": true
+    },
+    "p2_l14_k|c0.01|INTERP": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 86857,
+      "encode_s": 0.000734957997337915,
+      "max_error": 0.022392764687538147,
+      "ratio": 1.8391609196725653,
+      "within_bound": true
+    },
+    "p2_l14_k|c0.01|NOPRED": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 76925,
+      "encode_s": 0.0005323340010363609,
+      "max_error": 0.02235889434814453,
+      "ratio": 2.0766200844978875,
+      "within_bound": true
+    },
+    "p2_l14_k|c0.03|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 60570,
+      "encode_s": 0.0007837090015527792,
+      "max_error": 0.06717419624328613,
+      "ratio": 2.6373452204061416,
+      "within_bound": true
+    },
+    "p2_l14_k|c0.03|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 64584,
+      "encode_s": 0.0008213749970309436,
+      "max_error": 0.06717830896377563,
+      "ratio": 2.473429951690821,
+      "within_bound": true
+    },
+    "p2_l14_k|c0.03|INTERP": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 65780,
+      "encode_s": 0.0006603340007131919,
+      "max_error": 0.06717818975448608,
+      "ratio": 2.4284584980237156,
+      "within_bound": true
+    },
+    "p2_l14_k|c0.03|NOPRED": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 58178,
+      "encode_s": 0.0005049579995102249,
+      "max_error": 0.06713411211967468,
+      "ratio": 2.7457801918250886,
+      "within_bound": true
+    },
+    "p2_l14_k|c0.1|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 40629,
+      "encode_s": 0.0007356249989243224,
+      "max_error": 0.22392809391021729,
+      "ratio": 3.9317728715941813,
+      "within_bound": true
+    },
+    "p2_l14_k|c0.1|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 43738,
+      "encode_s": 0.0007183339985203929,
+      "max_error": 0.22392137348651886,
+      "ratio": 3.652293200420687,
+      "within_bound": true
+    },
+    "p2_l14_k|c0.1|INTERP": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 46005,
+      "encode_s": 0.0006046249982318841,
+      "max_error": 0.22391152381896973,
+      "ratio": 3.4723182262797523,
+      "within_bound": true
+    },
+    "p2_l14_k|c0.1|NOPRED": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 38917,
+      "encode_s": 0.0004567080031847581,
+      "max_error": 0.2238396406173706,
+      "ratio": 4.104735719608398,
+      "within_bound": true
+    },
+    "p2_l14_v|c0.01|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 78354,
+      "encode_s": 0.0008576659965910949,
+      "max_error": 0.033699989318847656,
+      "ratio": 2.038747224136611,
+      "within_bound": true
+    },
+    "p2_l14_v|c0.01|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 81559,
+      "encode_s": 0.0012076670027454384,
+      "max_error": 0.033699989318847656,
+      "ratio": 1.9586311749776235,
+      "within_bound": true
+    },
+    "p2_l14_v|c0.01|INTERP": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 84659,
+      "encode_s": 0.0007925419995444827,
+      "max_error": 0.03369954228401184,
+      "ratio": 1.886911019501766,
+      "within_bound": true
+    },
+    "p2_l14_v|c0.01|NOPRED": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 75292,
+      "encode_s": 0.0005743329966207966,
+      "max_error": 0.03369140625,
+      "ratio": 2.121659671678266,
+      "within_bound": true
+    },
+    "p2_l14_v|c0.03|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 58135,
+      "encode_s": 0.0007986249984242022,
+      "max_error": 0.1010948121547699,
+      "ratio": 2.747811129268083,
+      "within_bound": true
+    },
+    "p2_l14_v|c0.03|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 61188,
+      "encode_s": 0.0008852079990901984,
+      "max_error": 0.10109886527061462,
+      "ratio": 2.6107079819572467,
+      "within_bound": true
+    },
+    "p2_l14_v|c0.03|INTERP": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 63880,
+      "encode_s": 0.0006825839955126867,
+      "max_error": 0.10109996795654297,
+      "ratio": 2.500688791484033,
+      "within_bound": true
+    },
+    "p2_l14_v|c0.03|NOPRED": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 56548,
+      "encode_s": 0.0005500830011442304,
+      "max_error": 0.10107421875,
+      "ratio": 2.824927495225295,
+      "within_bound": true
+    },
+    "p2_l14_v|c0.1|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 38028,
+      "encode_s": 0.000712541994289495,
+      "max_error": 0.33698898553848267,
+      "ratio": 4.200694225307668,
+      "within_bound": true
+    },
+    "p2_l14_v|c0.1|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 42346,
+      "encode_s": 0.0007610000029671937,
+      "max_error": 0.33699703216552734,
+      "ratio": 3.772351579842252,
+      "within_bound": true
+    },
+    "p2_l14_v|c0.1|INTERP": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 43915,
+      "encode_s": 0.000640958001895342,
+      "max_error": 0.3369934558868408,
+      "ratio": 3.6375725833997494,
+      "within_bound": true
+    },
+    "p2_l14_v|c0.1|NOPRED": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 37294,
+      "encode_s": 0.00042258400208083913,
+      "max_error": 0.33663415908813477,
+      "ratio": 4.283369979085108,
+      "within_bound": true
+    },
+    "p2_l27_k|c0.01|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 77695,
+      "encode_s": 0.0008889579985407181,
+      "max_error": 0.029250383377075195,
+      "ratio": 2.0560396421906173,
+      "within_bound": true
+    },
+    "p2_l27_k|c0.01|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 78692,
+      "encode_s": 0.001058832996932324,
+      "max_error": 0.029252052307128906,
+      "ratio": 2.029990342093224,
+      "within_bound": true
+    },
+    "p2_l27_k|c0.01|INTERP": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 82665,
+      "encode_s": 0.0007212920027086511,
+      "max_error": 0.029252052307128906,
+      "ratio": 1.9324260569769551,
+      "within_bound": true
+    },
+    "p2_l27_k|c0.01|NOPRED": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 73621,
+      "encode_s": 0.0005547499968088232,
+      "max_error": 0.02923583984375,
+      "ratio": 2.1698156775919912,
+      "within_bound": true
+    },
+    "p2_l27_k|c0.03|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 56975,
+      "encode_s": 0.0007914169982541353,
+      "max_error": 0.08775556087493896,
+      "ratio": 2.8037560333479594,
+      "within_bound": true
+    },
+    "p2_l27_k|c0.03|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 60169,
+      "encode_s": 0.0008123750012600794,
+      "max_error": 0.08775615692138672,
+      "ratio": 2.6549219697851054,
+      "within_bound": true
+    },
+    "p2_l27_k|c0.03|INTERP": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 62169,
+      "encode_s": 0.0006710000016028062,
+      "max_error": 0.08775675296783447,
+      "ratio": 2.5695121362737057,
+      "within_bound": true
+    },
+    "p2_l27_k|c0.03|NOPRED": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 54997,
+      "encode_s": 0.00047649999760324135,
+      "max_error": 0.08770084381103516,
+      "ratio": 2.904594796079786,
+      "within_bound": true
+    },
+    "p2_l27_k|c0.1|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 36934,
+      "encode_s": 0.0007180000029620714,
+      "max_error": 0.29249900579452515,
+      "ratio": 4.325120485189798,
+      "within_bound": true
+    },
+    "p2_l27_k|c0.1|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 40275,
+      "encode_s": 0.0006857910047983751,
+      "max_error": 0.29252415895462036,
+      "ratio": 3.9663314711359403,
+      "within_bound": true
+    },
+    "p2_l27_k|c0.1|INTERP": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 42284,
+      "encode_s": 0.0006204579985933378,
+      "max_error": 0.2925228178501129,
+      "ratio": 3.7778828871440733,
+      "within_bound": true
+    },
+    "p2_l27_k|c0.1|NOPRED": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 35895,
+      "encode_s": 0.0004556250059977174,
+      "max_error": 0.2924919128417969,
+      "ratio": 4.45031341412453,
+      "within_bound": true
+    },
+    "p2_l27_v|c0.01|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 83583,
+      "encode_s": 0.0007567909997305833,
+      "max_error": 0.13629508018493652,
+      "ratio": 1.9112020386920785,
+      "within_bound": true
+    },
+    "p2_l27_v|c0.01|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 87412,
+      "encode_s": 0.0009570830006850883,
+      "max_error": 0.13629204034805298,
+      "ratio": 1.8274836406900654,
+      "within_bound": true
+    },
+    "p2_l27_v|c0.01|INTERP": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 90388,
+      "encode_s": 0.0006789580002077855,
+      "max_error": 0.1362926959991455,
+      "ratio": 1.7673142452537947,
+      "within_bound": true
+    },
+    "p2_l27_v|c0.01|NOPRED": {
+      "doc": "p2",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 81375,
+      "encode_s": 0.00044299999717622995,
+      "max_error": 0.13618981838226318,
+      "ratio": 1.9630599078341013,
+      "within_bound": true
+    },
+    "p2_l27_v|c0.03|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 64007,
+      "encode_s": 0.0007279589990503155,
+      "max_error": 0.40886592864990234,
+      "ratio": 2.4957270298561096,
+      "within_bound": true
+    },
+    "p2_l27_v|c0.03|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 67762,
+      "encode_s": 0.0008802919983281754,
+      "max_error": 0.4088892936706543,
+      "ratio": 2.3574274667217616,
+      "within_bound": true
+    },
+    "p2_l27_v|c0.03|INTERP": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 69856,
+      "encode_s": 0.0006645840039709583,
+      "max_error": 0.4088709354400635,
+      "ratio": 2.2867613376087954,
+      "within_bound": true
+    },
+    "p2_l27_v|c0.03|NOPRED": {
+      "doc": "p2",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 62787,
+      "encode_s": 0.00044229099876247346,
+      "max_error": 0.408782958984375,
+      "ratio": 2.5442209374552056,
+      "within_bound": true
+    },
+    "p2_l27_v|c0.1|LORENZO_REG": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 44879,
+      "encode_s": 0.0006444579994422384,
+      "max_error": 1.362950086593628,
+      "ratio": 3.5594375988769804,
+      "within_bound": true
+    },
+    "p2_l27_v|c0.1|INTERP_LORENZO": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 49237,
+      "encode_s": 0.0007029170010355301,
+      "max_error": 1.362959861755371,
+      "ratio": 3.2443893819688445,
+      "within_bound": true
+    },
+    "p2_l27_v|c0.1|INTERP": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 50662,
+      "encode_s": 0.0005959999980404973,
+      "max_error": 1.3629369735717773,
+      "ratio": 3.153132525364178,
+      "within_bound": true
+    },
+    "p2_l27_v|c0.1|NOPRED": {
+      "doc": "p2",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 44714,
+      "encode_s": 0.0003897080023307353,
+      "max_error": 1.36102294921875,
+      "ratio": 3.5725723487051035,
+      "within_bound": true
+    },
+    "p3_l0_k|c0.01|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 57870,
+      "encode_s": 0.0009561659971950576,
+      "max_error": 0.16235780715942383,
+      "ratio": 2.654224987039917,
+      "within_bound": true
+    },
+    "p3_l0_k|c0.01|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 60613,
+      "encode_s": 0.0009394589942530729,
+      "max_error": 0.16235768795013428,
+      "ratio": 2.5341098444228134,
+      "within_bound": true
+    },
+    "p3_l0_k|c0.01|INTERP": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 62507,
+      "encode_s": 0.0008122910003294237,
+      "max_error": 0.16235733032226562,
+      "ratio": 2.457324779624682,
+      "within_bound": true
+    },
+    "p3_l0_k|c0.01|NOPRED": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 49364,
+      "encode_s": 0.0005986250034766272,
+      "max_error": 0.162353515625,
+      "ratio": 3.1115792885503604,
+      "within_bound": true
+    },
+    "p3_l0_k|c0.03|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 38919,
+      "encode_s": 0.0007771250020596199,
+      "max_error": 0.4870572090148926,
+      "ratio": 3.946658444461574,
+      "within_bound": true
+    },
+    "p3_l0_k|c0.03|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 41042,
+      "encode_s": 0.0007898749972810037,
+      "max_error": 0.48704230785369873,
+      "ratio": 3.742507675064568,
+      "within_bound": true
+    },
+    "p3_l0_k|c0.03|INTERP": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 43059,
+      "encode_s": 0.000698124997143168,
+      "max_error": 0.4870721101760864,
+      "ratio": 3.567198495088135,
+      "within_bound": true
+    },
+    "p3_l0_k|c0.03|NOPRED": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 32854,
+      "encode_s": 0.0005031249966123141,
+      "max_error": 0.48694419860839844,
+      "ratio": 4.675229804590004,
+      "within_bound": true
+    },
+    "p3_l0_k|c0.1|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 19367,
+      "encode_s": 0.0006749580061296001,
+      "max_error": 1.6232247352600098,
+      "ratio": 7.931016677854082,
+      "within_bound": true
+    },
+    "p3_l0_k|c0.1|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 21381,
+      "encode_s": 0.00062479200278176,
+      "max_error": 1.62351655960083,
+      "ratio": 7.183948365371124,
+      "within_bound": true
+    },
+    "p3_l0_k|c0.1|INTERP": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 24257,
+      "encode_s": 0.0005765000023529865,
+      "max_error": 1.6235355138778687,
+      "ratio": 6.33219276909758,
+      "within_bound": true
+    },
+    "p3_l0_k|c0.1|NOPRED": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 15665,
+      "encode_s": 0.00037724999856436625,
+      "max_error": 1.6221561431884766,
+      "ratio": 9.80529843600383,
+      "within_bound": true
+    },
+    "p3_l0_v|c0.01|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 80202,
+      "encode_s": 0.0007772500030114315,
+      "max_error": 0.0014779381453990936,
+      "ratio": 1.9151642103688187,
+      "within_bound": true
+    },
+    "p3_l0_v|c0.01|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 84910,
+      "encode_s": 0.0009925830017891712,
+      "max_error": 0.001477941870689392,
+      "ratio": 1.8089742079849251,
+      "within_bound": true
+    },
+    "p3_l0_v|c0.01|INTERP": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 84910,
+      "encode_s": 0.0006282920003286563,
+      "max_error": 0.001477941870689392,
+      "ratio": 1.8089742079849251,
+      "within_bound": true
+    },
+    "p3_l0_v|c0.01|NOPRED": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 76611,
+      "encode_s": 0.00046837500121910125,
+      "max_error": 0.0014758175238966942,
+      "ratio": 2.0049340173082193,
+      "within_bound": true
+    },
+    "p3_l0_v|c0.03|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 60676,
+      "encode_s": 0.0007582079997519031,
+      "max_error": 0.004433333873748779,
+      "ratio": 2.5314786736106534,
+      "within_bound": true
+    },
+    "p3_l0_v|c0.03|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 63032,
+      "encode_s": 0.000809958997706417,
+      "max_error": 0.004433873575180769,
+      "ratio": 2.4368574692219824,
+      "within_bound": true
+    },
+    "p3_l0_v|c0.03|INTERP": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 65375,
+      "encode_s": 0.0006499999944935553,
+      "max_error": 0.004433782771229744,
+      "ratio": 2.3495219885277248,
+      "within_bound": true
+    },
+    "p3_l0_v|c0.03|NOPRED": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 59134,
+      "encode_s": 0.00043445800110930577,
+      "max_error": 0.004429856315255165,
+      "ratio": 2.5974904454290257,
+      "within_bound": true
+    },
+    "p3_l0_v|c0.1|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 41747,
+      "encode_s": 0.0006532499974127859,
+      "max_error": 0.014779433608055115,
+      "ratio": 3.6793062974585,
+      "within_bound": true
+    },
+    "p3_l0_v|c0.1|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 46500,
+      "encode_s": 0.0006879579959786497,
+      "max_error": 0.014779597520828247,
+      "ratio": 3.303225806451613,
+      "within_bound": true
+    },
+    "p3_l0_v|c0.1|INTERP": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 47388,
+      "encode_s": 0.0006191659995238297,
+      "max_error": 0.014779269695281982,
+      "ratio": 3.241326918207141,
+      "within_bound": true
+    },
+    "p3_l0_v|c0.1|NOPRED": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 40502,
+      "encode_s": 0.00043091599945910275,
+      "max_error": 0.0147705078125,
+      "ratio": 3.792405313317861,
+      "within_bound": true
+    },
+    "p3_l14_k|c0.01|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 79090,
+      "encode_s": 0.0008088339964160696,
+      "max_error": 0.021237283945083618,
+      "ratio": 1.9420912884056138,
+      "within_bound": true
+    },
+    "p3_l14_k|c0.01|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 82756,
+      "encode_s": 0.0009130840044235811,
+      "max_error": 0.021237745881080627,
+      "ratio": 1.8560587751945479,
+      "within_bound": true
+    },
+    "p3_l14_k|c0.01|INTERP": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 84943,
+      "encode_s": 0.0006978749952395447,
+      "max_error": 0.02123725414276123,
+      "ratio": 1.8082714290759685,
+      "within_bound": true
+    },
+    "p3_l14_k|c0.01|NOPRED": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 74892,
+      "encode_s": 0.0004992500034859404,
+      "max_error": 0.02123560756444931,
+      "ratio": 2.050953372856914,
+      "within_bound": true
+    },
+    "p3_l14_k|c0.03|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 58985,
+      "encode_s": 0.0007577500000479631,
+      "max_error": 0.06371317058801651,
+      "ratio": 2.604051877595999,
+      "within_bound": true
+    },
+    "p3_l14_k|c0.03|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 63278,
+      "encode_s": 0.0008375420002266765,
+      "max_error": 0.06371232867240906,
+      "ratio": 2.4273839249028097,
+      "within_bound": true
+    },
+    "p3_l14_k|c0.03|INTERP": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 64496,
+      "encode_s": 0.0006450829969253391,
+      "max_error": 0.06371355056762695,
+      "ratio": 2.381543041428926,
+      "within_bound": true
+    },
+    "p3_l14_k|c0.03|NOPRED": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 56991,
+      "encode_s": 0.00047562499821651727,
+      "max_error": 0.06369590759277344,
+      "ratio": 2.6951623940622205,
+      "within_bound": true
+    },
+    "p3_l14_k|c0.1|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 39818,
+      "encode_s": 0.0006917920036357827,
+      "max_error": 0.21237146854400635,
+      "ratio": 3.8575518609674018,
+      "within_bound": true
+    },
+    "p3_l14_k|c0.1|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 44396,
+      "encode_s": 0.0006881250010337681,
+      "max_error": 0.21237120032310486,
+      "ratio": 3.459771150554104,
+      "within_bound": true
+    },
+    "p3_l14_k|c0.1|INTERP": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 45343,
+      "encode_s": 0.0005903329947614111,
+      "max_error": 0.21237018704414368,
+      "ratio": 3.387512956795977,
+      "within_bound": true
+    },
+    "p3_l14_k|c0.1|NOPRED": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 38275,
+      "encode_s": 0.0004347080030129291,
+      "max_error": 0.21232032775878906,
+      "ratio": 4.013063357282822,
+      "within_bound": true
+    },
+    "p3_l14_v|c0.01|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 75836,
+      "encode_s": 0.0008625839982414618,
+      "max_error": 0.03881584107875824,
+      "ratio": 2.0254232818186613,
+      "within_bound": true
+    },
+    "p3_l14_v|c0.01|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 79280,
+      "encode_s": 0.0009357079979963601,
+      "max_error": 0.03881622850894928,
+      "ratio": 1.9374369323915237,
+      "within_bound": true
+    },
+    "p3_l14_v|c0.01|INTERP": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 81842,
+      "encode_s": 0.0008013750048121437,
+      "max_error": 0.03881573677062988,
+      "ratio": 1.8767869797903276,
+      "within_bound": true
+    },
+    "p3_l14_v|c0.01|NOPRED": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 72632,
+      "encode_s": 0.0005414170009316877,
+      "max_error": 0.03881459683179855,
+      "ratio": 2.1147703491573964,
+      "within_bound": true
+    },
+    "p3_l14_v|c0.03|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 55764,
+      "encode_s": 0.0007406660006381571,
+      "max_error": 0.11644794046878815,
+      "ratio": 2.754465246395524,
+      "within_bound": true
+    },
+    "p3_l14_v|c0.03|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 58679,
+      "encode_s": 0.0007772080061840825,
+      "max_error": 0.11644773185253143,
+      "ratio": 2.6176315206462277,
+      "within_bound": true
+    },
+    "p3_l14_v|c0.03|INTERP": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 61264,
+      "encode_s": 0.0006973339986870997,
+      "max_error": 0.11644911766052246,
+      "ratio": 2.507182031862105,
+      "within_bound": true
+    },
+    "p3_l14_v|c0.03|NOPRED": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 54144,
+      "encode_s": 0.0004562500034808181,
+      "max_error": 0.11625289916992188,
+      "ratio": 2.8368794326241136,
+      "within_bound": true
+    },
+    "p3_l14_v|c0.1|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 36343,
+      "encode_s": 0.0007094999964465387,
+      "max_error": 0.3881490230560303,
+      "ratio": 4.2263984811380455,
+      "within_bound": true
+    },
+    "p3_l14_v|c0.1|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 40008,
+      "encode_s": 0.0007111250015441328,
+      "max_error": 0.38816070556640625,
+      "ratio": 3.839232153569286,
+      "within_bound": true
+    },
+    "p3_l14_v|c0.1|INTERP": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 41936,
+      "encode_s": 0.0006214160021045245,
+      "max_error": 0.388153076171875,
+      "ratio": 3.6627241510873714,
+      "within_bound": true
+    },
+    "p3_l14_v|c0.1|NOPRED": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 35583,
+      "encode_s": 0.00046304200077429414,
+      "max_error": 0.3880338668823242,
+      "ratio": 4.316668071832055,
+      "within_bound": true
+    },
+    "p3_l27_k|c0.01|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 74601,
+      "encode_s": 0.0008446249994449317,
+      "max_error": 0.030867815017700195,
+      "ratio": 2.058953633329312,
+      "within_bound": true
+    },
+    "p3_l27_k|c0.01|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 75420,
+      "encode_s": 0.0009510829986538738,
+      "max_error": 0.03086763620376587,
+      "ratio": 2.0365950676213207,
+      "within_bound": true
+    },
+    "p3_l27_k|c0.01|INTERP": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 79038,
+      "encode_s": 0.0006927920039743185,
+      "max_error": 0.03086787462234497,
+      "ratio": 1.9433690123737948,
+      "within_bound": true
+    },
+    "p3_l27_k|c0.01|NOPRED": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 70494,
+      "encode_s": 0.0005421660025604069,
+      "max_error": 0.03085237368941307,
+      "ratio": 2.1789088433058135,
+      "within_bound": true
+    },
+    "p3_l27_k|c0.03|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 54648,
+      "encode_s": 0.0007559160003438592,
+      "max_error": 0.09259998798370361,
+      "ratio": 2.810715854194115,
+      "within_bound": true
+    },
+    "p3_l27_k|c0.03|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 56530,
+      "encode_s": 0.0007790000017848797,
+      "max_error": 0.09260392189025879,
+      "ratio": 2.717141340880948,
+      "within_bound": true
+    },
+    "p3_l27_k|c0.03|INTERP": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 59341,
+      "encode_s": 0.0006667090055998415,
+      "max_error": 0.09260344505310059,
+      "ratio": 2.5884295849412715,
+      "within_bound": true
+    },
+    "p3_l27_k|c0.03|NOPRED": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 52742,
+      "encode_s": 0.000520125002367422,
+      "max_error": 0.09250330924987793,
+      "ratio": 2.9122900155473816,
+      "within_bound": true
+    },
+    "p3_l27_k|c0.1|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 35394,
+      "encode_s": 0.0006747919978806749,
+      "max_error": 0.3086700439453125,
+      "ratio": 4.339718596372267,
+      "within_bound": true
+    },
+    "p3_l27_k|c0.1|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 37663,
+      "encode_s": 0.0006890410004416481,
+      "max_error": 0.30867576599121094,
+      "ratio": 4.07827310623158,
+      "within_bound": true
+    },
+    "p3_l27_k|c0.1|INTERP": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 40167,
+      "encode_s": 0.0005767920010839589,
+      "max_error": 0.3086748719215393,
+      "ratio": 3.8240346553140636,
+      "within_bound": true
+    },
+    "p3_l27_k|c0.1|NOPRED": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 34412,
+      "encode_s": 0.0003996250015916303,
+      "max_error": 0.30859375,
+      "ratio": 4.463559223526676,
+      "within_bound": true
+    },
+    "p3_l27_v|c0.01|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "LORENZO_REG",
+      "bytes": 80645,
+      "encode_s": 0.0007402080009342171,
+      "max_error": 0.16727054119110107,
+      "ratio": 1.9046438092876186,
+      "within_bound": true
+    },
+    "p3_l27_v|c0.01|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "INTERP_LORENZO",
+      "bytes": 83501,
+      "encode_s": 0.0010068339979625307,
+      "max_error": 0.1672663688659668,
+      "ratio": 1.839498928156549,
+      "within_bound": true
+    },
+    "p3_l27_v|c0.01|INTERP": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "INTERP",
+      "bytes": 86294,
+      "encode_s": 0.0006665840046480298,
+      "max_error": 0.16727089881896973,
+      "ratio": 1.7799615268732474,
+      "within_bound": true
+    },
+    "p3_l27_v|c0.01|NOPRED": {
+      "doc": "p3",
+      "c": 0.01,
+      "algo": "NOPRED",
+      "bytes": 78155,
+      "encode_s": 0.0004387500011944212,
+      "max_error": 0.16714000701904297,
+      "ratio": 1.9653253150790098,
+      "within_bound": true
+    },
+    "p3_l27_v|c0.03|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "LORENZO_REG",
+      "bytes": 61667,
+      "encode_s": 0.000702875004208181,
+      "max_error": 0.5017822980880737,
+      "ratio": 2.4907973470413673,
+      "within_bound": true
+    },
+    "p3_l27_v|c0.03|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "INTERP_LORENZO",
+      "bytes": 64187,
+      "encode_s": 0.0008023749978747219,
+      "max_error": 0.5018119812011719,
+      "ratio": 2.393007929954664,
+      "within_bound": true
+    },
+    "p3_l27_v|c0.03|INTERP": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "INTERP",
+      "bytes": 66984,
+      "encode_s": 0.0006281250025494955,
+      "max_error": 0.5018043518066406,
+      "ratio": 2.2930849158007884,
+      "within_bound": true
+    },
+    "p3_l27_v|c0.03|NOPRED": {
+      "doc": "p3",
+      "c": 0.03,
+      "algo": "NOPRED",
+      "bytes": 60393,
+      "encode_s": 0.0004287919946364127,
+      "max_error": 0.5,
+      "ratio": 2.543341115692216,
+      "within_bound": true
+    },
+    "p3_l27_v|c0.1|LORENZO_REG": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "LORENZO_REG",
+      "bytes": 43064,
+      "encode_s": 0.0006515000059152953,
+      "max_error": 1.6726446151733398,
+      "ratio": 3.566784321010589,
+      "within_bound": true
+    },
+    "p3_l27_v|c0.1|INTERP_LORENZO": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "INTERP_LORENZO",
+      "bytes": 46361,
+      "encode_s": 0.0009761249966686592,
+      "max_error": 1.672708511352539,
+      "ratio": 3.3131295701128103,
+      "within_bound": true
+    },
+    "p3_l27_v|c0.1|INTERP": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "INTERP",
+      "bytes": 48861,
+      "encode_s": 0.0005679589958162978,
+      "max_error": 1.6726713180541992,
+      "ratio": 3.14361146926997,
+      "within_bound": true
+    },
+    "p3_l27_v|c0.1|NOPRED": {
+      "doc": "p3",
+      "c": 0.1,
+      "algo": "NOPRED",
+      "bytes": 42293,
+      "encode_s": 0.00037287500163074583,
+      "max_error": 1.671875,
+      "ratio": 3.631806681956825,
+      "within_bound": true
+    }
+  }
+}

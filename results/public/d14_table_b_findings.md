@@ -5,6 +5,15 @@ against **bf16 bytes** (2 B/element). SZ3 and zfp read a lossless bf16→fp32
 upcast; reporting their ratio against those fp32 bytes would hand each a free 2×.
 Run entirely on the laptop, **$0**. Raw: `results/public/d14_table_b/table_b_kv.json`.
 
+> **Corrected in Phase A, twice.** (1) The cross-tensor means used a fixed
+> absolute ε and are withdrawn for the reason given in `d13_table_a_findings.md`;
+> re-derived in `table_b_kv_rel.json`. Under normalised ε SZ3's lead over this
+> codec narrows from ~4× to **1.47×** (4.21× vs 2.87× at c = 0.10) — the absolute-ε
+> comparison had exaggerated it. (2) SZ3 was run at the `pysz` default
+> `INTERP_LORENZO`, which under-reports it by up to 9.5%; see
+> `a3_sz3_config_findings.md`, which also finds that turning prediction off beats
+> every predictor on this data.
+
 ## Compression ratio — SZ3 wins, decisively
 
 | ε | SZ3 (INTERP_LORENZO) | zfp (fixed-accuracy) | ours, blockwise | ours, per-channel |

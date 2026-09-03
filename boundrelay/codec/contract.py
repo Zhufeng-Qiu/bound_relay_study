@@ -92,6 +92,26 @@ class CodecConfig:
         if self.bit_width is not None and self.bit_width not in (4, 6, 8):
             raise ValueError("bit_width must be one of 4, 6, 8")
 
+    @classmethod
+    def relative(cls, x, c: float, **kw) -> "CodecConfig":
+        """Build a config whose bound is ``c`` times this tensor's own std.
+
+        A single absolute eps means different things to different tensors. Across
+        the captured KV corpus the per-tensor std spans 115x and the range spans
+        255x, so eps = 0.15 is 0.009 std on one tensor and 1.03 std on another --
+        larger than the signal. Any average taken across tensors at a fixed
+        absolute eps is therefore not a comparison, and the ones already
+        published were withdrawn for this reason.
+
+        Within a single tensor an absolute bound is still the right contract; it
+        is only cross-tensor aggregation that requires normalising first.
+        """
+        import torch  # local: keep the contract module import-light
+        sd = float(x.float().std()) if torch.is_tensor(x) else float(x)
+        if sd <= 0:
+            raise ValueError("cannot normalise against zero std")
+        return cls(eps=c * sd, **kw)
+
 
 @dataclass
 class EncodeStats:

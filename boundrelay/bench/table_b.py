@@ -39,7 +39,7 @@ import torch
 
 from boundrelay.codec import Allocation, CodecConfig, reference
 
-EPS_GRID = [0.05, 0.15, 0.5]
+C_GRID = [0.01, 0.03, 0.10]   # eps_i = c * std(tensor_i)
 
 
 def _sz3(x32: np.ndarray, eps: float) -> dict:
@@ -82,7 +82,7 @@ def run(corpus: Path, out: Path) -> dict:
     from boundrelay.bench.table_a import load_corpus
 
     tensors = load_corpus(corpus)
-    res: dict = {"eps_grid": EPS_GRID, "n_tensors": len(tensors),
+    res: dict = {"c_grid": C_GRID, "n_tensors": len(tensors),
                  "note": "all ratios are against bf16 bytes (2 B/element); "
                          "SZ3 and zfp consume a lossless bf16->fp32 upcast",
                  "rows": {}}
@@ -94,7 +94,8 @@ def run(corpus: Path, out: Path) -> dict:
         x32 = x.float().numpy()                      # lossless upcast
         upcast_s = time.perf_counter() - t0
 
-        for eps in EPS_GRID:
+        for cc in C_GRID:
+            eps = cc * float(x.float().std())
             entries = {
                 "sz3": _sz3(x32, eps),
                 "zfp": _zfp(x32, eps),
@@ -104,12 +105,14 @@ def run(corpus: Path, out: Path) -> dict:
             for k, e in entries.items():
                 e["ratio"] = bf16_bytes / e["bytes"]
                 e["within_bound"] = e["max_error"] <= eps + 1e-5
-                agg.setdefault(f"{k}.eps{eps:g}.ratio", []).append(e["ratio"])
-                agg.setdefault(f"{k}.eps{eps:g}.err", []).append(e["max_error"])
-                agg.setdefault(f"{k}.eps{eps:g}.enc_s", []).append(e["encode_s"])
+                agg.setdefault(f"{k}.c{cc:g}.ratio", []).append(e["ratio"])
+                agg.setdefault(f"{k}.c{cc:g}.err", []).append(e["max_error"])
+                agg.setdefault(f"{k}.c{cc:g}.enc_s", []).append(e["encode_s"])
+            entries["c"] = cc
+            entries["eps_abs"] = eps
             entries["upcast_s"] = upcast_s
             entries["upcast_extra_bytes"] = bf16_bytes      # fp32 doubles traffic
-            res["rows"].setdefault(name, {})[f"eps{eps:g}"] = entries
+            res["rows"].setdefault(name, {})[f"c{cc:g}"] = entries
 
     res["mean"] = {k: sum(v) / len(v) for k, v in agg.items()}
     out.parent.mkdir(parents=True, exist_ok=True)

@@ -1,5 +1,13 @@
 # Edge budget
 
+> **Superseded.** This document was written when the target was an inter-stage
+> relay edge in SGLang-Omni. The corpus is KV cache, which is not a short-lived
+> stage-edge payload, so the scenario is now disaggregated prefill–decode
+> transfer, KV migration and cache offloading. Kept as the record of how the
+> target edge was originally chosen; the payload arithmetic below no longer
+> describes what is being measured.
+
+
 Paper arithmetic done before renting anything. Confirm each row against a real
 trace; the point is to know which edges are worth capturing, not to guess.
 

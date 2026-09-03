@@ -25,7 +25,7 @@ import torch
 
 from boundrelay.codec import Allocation, CodecConfig, reference, serialize
 
-EPS_GRID = [0.05, 0.15, 0.5]
+C_GRID = [0.01, 0.03, 0.10]   # eps_i = c * std(tensor_i)
 
 
 def raw_pct(buf: bytes) -> float:
@@ -62,6 +62,15 @@ def codec_row(x: torch.Tensor, eps: float, alloc: Allocation) -> dict:
             "bits_per_element": 8 * st.compressed_bytes / x.numel()}
 
 
+def codec_row_rel(x: torch.Tensor, c: float, alloc: Allocation) -> dict:
+    """Same, but the bound is normalised to this tensor's own std."""
+    cfg = CodecConfig.relative(x, c, allocation=alloc)
+    row = codec_row(x, cfg.eps, alloc)
+    row["c"] = c
+    row["std"] = float(x.float().std())
+    return row
+
+
 def load_corpus(root: Path) -> dict[str, torch.Tensor]:
     """Captured KV tensors, flattened to [tokens x heads, head_dim].
 
@@ -77,7 +86,10 @@ def load_corpus(root: Path) -> dict[str, torch.Tensor]:
 
 def run(corpus: Path, out: Path) -> dict:
     tensors = load_corpus(corpus)
-    result = {"n_tensors": len(tensors), "eps_grid": EPS_GRID, "per_tensor": {}}
+    result = {"n_tensors": len(tensors), "c_grid": C_GRID,
+              "eps_semantics": "eps_i = c * std(tensor_i); cross-tensor means are only "
+                               "meaningful under this normalisation",
+              "per_tensor": {}}
 
     agg: dict[str, list[float]] = {}
     for name, x in tensors.items():
@@ -93,11 +105,11 @@ def run(corpus: Path, out: Path) -> dict:
             row[f"matched_{tag}"] = m
             agg.setdefault(f"matched_{tag}.ratio", []).append(m["ratio"])
 
-        for eps in EPS_GRID:
+        for cc in C_GRID:
             for a in Allocation:
-                c = codec_row(x, eps, a)
-                row[f"eps{eps:g}_{a.value}"] = c
-                agg.setdefault(f"eps{eps:g}_{a.value}.ratio", []).append(c["ratio"])
+                r = codec_row_rel(x, cc, a)
+                row[f"c{cc:g}_{a.value}"] = r
+                agg.setdefault(f"c{cc:g}_{a.value}.ratio", []).append(r["ratio"])
         result["per_tensor"][name] = row
 
     result["mean"] = {k: sum(v) / len(v) for k, v in agg.items()}

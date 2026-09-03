@@ -4,6 +4,14 @@ Candidates are the measured 4/6/8-bit options from the A40 cost table (D9–D15)
 the bandwidth axis spans 0.5–450 GB/s and includes the two points measured on the
 same hardware in D6. Raw: `results/public/d21_policy/policy_eval.json`.
 
+> **Relabelled in Phase A.** This is an **offline oracle analysis**, not an online
+> controller. `eval_policy.py` reads each candidate's *measured* `compressed_bytes`
+> to decide whether compressing is worth it — the cost of compression has already
+> been paid before the decision is taken. The 69% figure is the share of
+> **equal-weighted sweep cells** (4 payloads × 9 bandwidths), not of requests in
+> any workload. A predictor that decides from information available *before*
+> compression is evaluated separately in Phase B.
+
 ## How this is scored, and why not as "regret vs oracle"
 
 A controller scored against an oracle that shares its cost model has zero regret
