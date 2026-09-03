@@ -76,7 +76,10 @@ cuSZp's 1D predictor — it scored 2.50–2.62× on the tiled array against 3.09
 the individual tensors. The per-tensor numbers above are the fair comparison; the
 tiled figures are reported in the raw JSON but should not be quoted.
 
-`fixed` mode also showed 3–6× encode-time variance across processes at tight ε
+`fixed` mode appeared to show 3–6× encode-time variance across processes at tight ε
+(**withdrawn — see `b0_corpus_findings.md`**: under a protocol separating cold start
+from warm cost, all modes have the same ~0.88 ms median and the spread is the
+measurement environment, not the mode)
 (3.08 ms vs 0.49 ms at ε = 0.05, median of 7 runs); `plain` and `outlier` were
 stable near 40 GB/s. Data-dependent cost is expected for a predictor, but the
 spread has not been characterised properly and no throughput claim should rest on

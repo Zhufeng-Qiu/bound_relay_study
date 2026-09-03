@@ -13,6 +13,7 @@ record of what was believed and why it was wrong is part of the evidence.
 | 5 | Dtype conversion adds 37% | 37% is the surcharge on encode+decode; as a share of codec-side time it is 27%. Both come from memory-bandwidth arithmetic — **no GPU timing exists** | withdrawn in Phase A, measurement moved to Phase C |
 | 6 | An online controller bypasses in 69% of cases | The controller reads measured compressed bytes, so it is an offline oracle; 69% is the share of equal-weighted sweep cells, not of requests | `d21_policy_findings.md`, relabelled in Phase A |
 | 7 | SZ3's ratio (at the `pysz` default configuration) | The default under-reports SZ3 by up to 9.5% against a documented scan | `a3_sz3_config_findings.md` |
+| 8 | cuSZp `fixed` mode has 3–6× cross-process time variance | Measured cold start, not the mode. All modes share a ~0.88 ms warm median; cold start is 347× that, and the tails belong to a shared virtualised GPU | `b0_corpus_findings.md`, withdrawn by B2 |
 
 Correction 3 is the one that reaches furthest: it invalidates aggregates in four
 documents at once. Correction 5 is the one that was caught before it reached
