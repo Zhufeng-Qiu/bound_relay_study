@@ -117,7 +117,8 @@ document that made it. `docs/corrections.md` is the register.
 | **L0** | `uv run pytest` — codec property tests, both suites | no |
 | **L1** | `scripts/predictability.py`, `scripts/sz3_full_scan.py` from the committed manifests | no |
 | **L2** | `scripts/capture_corpus.py`, `transport_e2e.py`, `quality_d.py` per `docs/environment.lock.md` | yes |
-| **L3** | `scripts/gate2_rerun.py`, `scripts/peer_copy_audit.py` | two GPUs |
+| **L3** | `scripts/gate2_rerun.py`, `scripts/pipeline_multistage.py`, `scripts/peer_copy_audit.py` | two GPUs |
+| **L4** | `scripts/fsync_offload.py`, `scripts/storage_bandwidth.py` — needs a real filesystem under `/workspace`, and the numbers are that mount's, not a property of the filesystem | one GPU |
 
 ```bash
 uv sync --extra dev && uv run pytest
