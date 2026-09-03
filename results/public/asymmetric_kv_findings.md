@@ -8,6 +8,15 @@ Phase D found K-only compression significantly damaging and V-only harmless, and
 pointed at `c_K ≪ c_V` as the design rule. **That rule is wrong, and the reason is
 more interesting than the rule.**
 
+> **Withdrawn in full.** Every catastrophic result below came from a
+> `torch.empty` reconstruction buffer. cuSZp does not write elements it expects to
+> be zero, and leaves more of them the looser the bound — which is exactly why the
+> collapse appeared at large `c_V`. Re-measured against zeroed buffers the 2×2
+> interaction contrasts are +0.0012 [−0.0030, +0.0052] and −0.0027 [−0.0081,
+> +0.0021]: **there is no interaction**, and nothing in the grid is catastrophic.
+> See `remeasure_findings.md`. Kept as the record of a result that did not survive
+> its own audit.
+
 ## The grid
 
 | c_K | c_V | payload | vs raw | ΔNLL | 95% CI | |

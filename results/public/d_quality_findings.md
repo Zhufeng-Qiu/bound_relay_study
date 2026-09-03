@@ -19,6 +19,13 @@ Baseline perplexity **15.665**, full-cache payload **117.4 MB**.
 | V-only | 0.03 | 84.5 MB | 0.72× | +0.035 | +0.23% |
 | V-only | 0.10 | **78.3 MB** | 0.67× | −0.119 | **−0.76%** |
 
+> **Superseded.** The quality round trip below used `torch.empty` buffers, so any
+> configuration at a loose bound reconstructed partly from allocator leftovers. The
+> "+138% versus −0.76%" contrast does not survive: re-measured, K-only costs
+> +0.0228 NLL (about 0.15% of perplexity) and compressing **both** kinds at c = 0.10
+> ships 0.33× the bytes with no detectable degradation. The direction of the K/V
+> asymmetry stands; the magnitude does not. See `remeasure_findings.md`.
+
 ## At a matched byte budget, only one of them degrades measurably
 
 The two c = 0.10 one-sided rows ship almost identical payloads — 78.0 MB against

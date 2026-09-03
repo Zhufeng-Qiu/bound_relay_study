@@ -8,6 +8,18 @@ Earlier phases spanned four machines and recorded no driver version. This sessio
 exists because three results rested on measurements that could not be reproduced
 from what was committed.
 
+> **Partly superseded.** The E2E numbers here (46.84 ms, break-even 4.06 GB/s) came
+> from a run whose staging buffer overwrote itself, so 55 of 56 receivers got the
+> wrong payload; and its decode wrote into `torch.empty`. Corrected figures —
+> raw 23.64 ms, compressed 50.48 ms, break-even 3.82 GB/s, with a correctness gate
+> and zeroing counted as a stage — are in `remeasure_findings.md`.
+>
+> **Gate 2's serialisation result is suspect** for the same reason: its decode
+> destination was uninitialised, so it may have timed a call that wrote nothing.
+> Do not quote the 30% overlap figure until it is re-run.
+>
+> The SZ3/zfp same-host timings and the storage probe are unaffected.
+
 ## 1. The 6.29 ms gap was methodology, not overhead
 
 Phase C timed each stage in its own loop and added the medians, leaving 11.4% of
