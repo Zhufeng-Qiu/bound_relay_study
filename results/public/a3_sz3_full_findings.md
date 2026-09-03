@@ -108,6 +108,36 @@ That is the mechanism, and it makes the K/V split a prediction rather than an
 observation: a key at token *t* is close to the key at *t−1*; a value is much less
 so; and nothing in either is predictable along the head or channel axes.
 
+### Smoothness is not the only structure, and not the one KIVI and PackKV use
+
+The table above measures **smoothness** — whether stepping one position along an
+axis lands near where you were. That is what a predictor needs, and along channels
+there is none, for either kind.
+
+It is not what per-channel quantisation needs. That wins when some channels are
+consistently *larger* than others, however uncorrelated neighbouring channels are —
+a scale claim, not a smoothness one. KIVI quantises the K cache channel-wise and
+V token-wise, citing channel correlations, and PackKV inherits the split. Read
+against the smoothness row alone, this project's result looks like it contradicts
+them. Measured side by side it does not:
+
+| | K | V |
+|---|---|---|
+| adjacent-difference std / σ, **along channels** | 1.414 — white | 1.413 — white |
+| adjacent-difference std / σ, **along tokens** | **0.49** | 1.12 |
+| **per-channel scale spread** (max / median channel σ) | **15.4×** | 1.54× |
+| per-token scale spread | 1.19× | 1.55× |
+
+**The K cache's channel axis is white and 15× heterogeneous in scale at the same
+time.** Both designs are right and they exploit different structure on one axis:
+per-channel quantisation takes the scale, and a predictor finds nothing to take.
+That is why no-prediction wins here without the channel-wise quantisation
+literature being wrong.
+
+V is flat in all four cells — 1.413, 1.12, 1.54×, 1.55× — which is why `NOPRED`
+beats every predictor on 28 of 28 value tensors, and why PackKV can pick token-wise
+for V on purely computational grounds without paying for it statistically.
+
 Layout tests it. `c = 0.10`:
 
 | layout | K: NOPRED wins | K mean | V: NOPRED wins | V mean | NOPRED ratio |
@@ -149,3 +179,8 @@ Not established:
   design.
 * **`BlockSize` is unreachable through this binding**, not shown to be irrelevant.
   A build exposing it might move the predictor numbers.
+* **The scale statistic is descriptive, not a compression result.** It says the K
+  cache's channels differ in magnitude by 15×; it does not measure what a
+  per-channel quantiser achieves on this corpus, and no comparison against KIVI or
+  PackKV was run. It is reported to place this project's smoothness result beside
+  theirs, not to adjudicate between them.
