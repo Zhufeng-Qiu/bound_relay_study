@@ -25,12 +25,37 @@ Every cell says bypass. Compressing is **2.3× slower than moving the cache raw.
 | transfer (compressed bytes) | 8.99 ms | 18.5% | 8.64 GB/s |
 | **cuSZp decode** | **17.07 ms** | **35.1%** | 13.8 GB/s |
 | fp32 → bf16 downcast | 1.27 ms | 2.6% | 185 GB/s |
-| **total** | **48.65 ms** | | |
+| **component sum** | **48.65 ms** | | |
+| **measured end to end** | **54.94 ms** | | |
+| **unaccounted** | **6.29 ms** | **11.4% of E2E** | |
 
 Compression does save transfer: 8.99 ms against the raw path's 23.47 ms. It costs
 36.96 ms of codec to save 14.48 ms of transfer.
 
-**Measured break-even: 4.83 GB/s.** The link is 10.01 GB/s, twice that.
+**The components do not sum to the measured path.** Each stage was timed in its
+own loop and the medians added, so 6.29 ms — 11.4% of the end-to-end time — is
+unattributed: the size-table round trip, 56 rounds of Python/ctypes dispatch and
+allocation, per-tensor synchronisation, and the error of adding medians taken from
+separate distributions. Until every stage is timed *inside the same iteration*
+with raw samples kept, the decomposition explains the path only to within that
+gap, and no break-even derived from it is closed.
+
+**The break-even is not yet closed, and the number previously stated here was
+wrong.** 4.83 GB/s came from `raw_bytes / total_compressed_time`, which is not a
+break-even at all. The quantity is the bandwidth at which the transfer saved
+equals the codec cost — `bytes_saved / codec_cost` — and it depends on what counts
+as codec cost:
+
+| what counts as codec cost | implied break-even |
+|---|---|
+| encode + decode | 4.25 GB/s |
+| + dtype conversion | 3.96 GB/s |
+| everything the E2E measured except transfer | **3.42 GB/s** |
+
+The last is the honest one, and it is **model-implied from measured costs**, not
+measured: only one link speed (10.01 GB/s) was ever exercised, so no measurement
+sits on the other side of the crossing. Calling it a "measured break-even" was
+wrong on two counts.
 
 ## Two things this corrects
 

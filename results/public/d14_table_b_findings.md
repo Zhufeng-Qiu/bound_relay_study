@@ -42,6 +42,12 @@ between keys and values and with depth.
 
 ## Transport decision — the ranking inverts
 
+> **Cross-environment comparison.** The SZ3 and zfp timings below were measured on
+> an Apple M5 CPU, single-threaded, and are compared against GPU timings from an
+> A40. That is not a like-for-like comparison: a server CPU with OpenMP would
+> narrow it substantially. The direction survives — Phase C later measured cuSZp
+> itself losing on a real cache — but the magnitude here should not be quoted.
+
 For a 21 MB payload at the 8.45 GB/s link measured in D6, encode+decode scaled
 from the per-tensor measurements:
 

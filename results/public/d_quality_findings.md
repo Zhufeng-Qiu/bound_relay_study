@@ -19,15 +19,29 @@ Baseline perplexity **15.665**, full-cache payload **117.4 MB**.
 | V-only | 0.03 | 84.5 MB | 0.72× | +0.035 | +0.23% |
 | V-only | 0.10 | **78.3 MB** | 0.67× | −0.119 | **−0.76%** |
 
-## Same byte budget, 180× different quality cost
+## At a matched byte budget, only one of them degrades measurably
 
 The two c = 0.10 one-sided rows ship almost identical payloads — 78.0 MB against
 78.3 MB, 0.4% apart — which makes them a matched-budget comparison without any
-bisection needed. **K-only costs +138% perplexity; V-only costs −0.76%**, which is
-no measurable damage at all.
+bisection needed.
 
-The gap holds at every bound: at c = 0.03 it is +3.93% against +0.23%, a factor of
-17. **Error in the keys is expensive; error in the values is nearly free.**
+| | ΔNLL | 95% CI (document bootstrap) | |
+|---|---|---|---|
+| K-only | +0.869 | [+0.692, +1.041] | large, significant |
+| V-only | −0.008 | [−0.023, +0.008] | **crosses zero** |
+
+**K-only compression caused a large and statistically significant degradation;
+V-only showed no detectable degradation.** That is the claim the data supports.
+
+An earlier version of this document reported a "180× difference" from the ratio of
+the point estimates (+138% against −0.76%). That ratio is not defensible: its
+denominator is statistically indistinguishable from zero, so the quotient is
+arbitrary. Nor did V-only *improve* quality — the negative point estimate is
+inside its own interval.
+
+The direction holds at the tighter bound too, where V-only's effect is also small
+(+0.23% against K-only's +3.93%), but the same caution applies to reading a ratio
+from it.
 
 That ordering is mechanically unsurprising once stated. Keys enter attention
 through a dot product inside a softmax, so perturbing them moves *where* the model

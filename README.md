@@ -5,79 +5,94 @@
 A measurement study of disaggregated prefill–decode KV transfer, KV migration and
 cache offloading. The codec is a controlled variable, not the contribution.
 
-> **Status: scaffold.** No measurements yet. Every `[X]` below is a placeholder.
-> Nothing enters this README, the CV, or any email until it traces back to a
-> committed manifest, a commit SHA, and a raw JSON file in `results/public/`.
+> **Status: measurements in hand, evidence closure incomplete.** Phases A–E are
+> run and committed. Three things must land before this is a finished artifact:
+> the end-to-end decomposition does not sum to the measured path (11.4%
+> unaccounted), the break-even is model-implied rather than measured, and the
+> asymmetric-bound experiment the quality result points at has not been run.
+> Everything below traces to a manifest; nothing is a placeholder.
 
-## The research question
+## The question
 
-Scientific data compressors earn their ratio from spatial smoothness. LLM
-intermediate states are not smooth along the token axis. So:
+Independently benchmarked codec and transport components predict one thing; a real
+KV cache moving end to end does another. This project measures the gap and what
+causes it.
 
-> For non-smooth LLM intermediate states, what codec design and what
-> payload × bandwidth regime let error-bounded compression pay for its own
-> overhead?
+## What is measured
 
-The answer is a boundary, not a speedup. Whether moving compressed state beats
-moving raw state depends on the payload, the link, and what the codec costs on
-the hardware in hand — and across the operating points measured so far, most sit
-outside the profitable regime.
+| | |
+|---|---|
+| Model | Qwen3-1.7B, revision `b9352fbb`, bf16, 28 layers, 8 KV heads |
+| Corpus | 24 independent WikiText-2 articles → **1152 tensor observations**, nested in documents |
+| Bounds | `eps_i = c · std_i`, `c ∈ {0.01, 0.03, 0.10}` |
+| Compressors | cuSZp (3 modes) · SZ3 (pilot configuration scan) · CUDA zfp · int8 baselines |
+| Transport | one real 56-tensor, 234.9 MB full cache, host-staged, 2×A40 |
+| Quality | 16 documents, 1024→128 tokens, real cuSZp round trip ending in bf16 |
+| Spend | **$1.90** |
 
-## What is out of scope
+## Findings
 
-- Not a new codec. cuSZp is the strongest tested baseline and beats this
-  project's reference implementation on both ratio and speed; the reference codec
-  exists because the harness was developed against it.
-- Not an online controller. The decision study is offline; a predictor that uses
-  only pre-compression information is evaluated separately.
-- Not a serving-runtime integration, and not multi-node.
-- Not a quality guarantee. An element-wise error bound bounds tensors, not output.
-- Not a resilience study. Payload corruption, bit flips and retransmission are
-  explicitly out of scope.
+**Characterization.** cuSZp is flat on this corpus — about 10% spread across every
+layer, both kinds and four sequence lengths. Request metadata alone (layer, K/V,
+sequence length, ε) predicts the compressed size to **within 1%**; a pass over the
+tensor buys a further 11%.
+→ `results/public/b0_corpus_findings.md`, `b1_predictability_findings.md`
 
-## Results
+**A component model predicted the wrong decision.** Codec cost measured on a
+single 20 MB tensor and a link measured in a separate session predicted a benefit.
+The real 56-tensor cache moves raw in 23.47 ms and compressed in 54.94 ms —
+**2.3× slower**, every cell bypass. Per-tensor granularity costs **3.4×** of codec
+throughput (40 GB/s on one 20 MB tensor, 11.8 GB/s over the real cache).
+→ `results/public/c_transport_findings.md`
 
-| | Result | Where |
-|---|---|---|
-| Codec | `[X]` GB/s encode / `[Y]` GB/s decode at `[Z]`× on `[GPU]` | `results/public/table_a.json` |
-| Coordinate | benchmarked against cuSZp, SZ3, CUDA zfp under matched error settings | `results/public/table_b.json` |
-| Boundary | compression pays below `[B]` GB/s effective bandwidth | Figure 1 |
-| Quality | perplexity delta `[d]` at eps `[e]` | Figure 3 |
+**Keys and values are not equally safe to compress.** At payloads within 0.4% of
+each other, K-only compression degrades perplexity significantly (ΔNLL +0.869,
+CI [+0.692, +1.041]); V-only shows no detectable degradation (ΔNLL −0.008, CI
+[−0.023, +0.008]). Compressing both gently beats compressing one hard: uniform at
+c = 0.01 ships **0.53×** the bytes for **+0.09%** perplexity.
+→ `results/public/d_quality_findings.md`
 
-## Error contract
+**SZ3's prediction stage costs ratio here.** Turning prediction off beats every
+predictor by **14.4%** in the contiguous layout — checked in both layouts, so not
+an artefact. The SZ family's advantage on this data is in quantisation and entropy
+coding. *Pilot scan: four documents, block size not swept.*
+→ `results/public/a3_sz3_config_findings.md`
 
-See [`docs/codec_contract.md`](docs/codec_contract.md). In short: `max|x - x̂| ≤ ε`
-on finite blocks; NaN/Inf blocks travel bit-exact, are counted, and are outside
-the guarantee; every fallback is `bf16_passthrough` with a recorded reason.
+## What is not established
+
+* One model, one corpus, one GPU generation, one link speed.
+* The break-even (3.42–4.25 GB/s depending on what counts as codec cost) is
+  **implied by measured costs, not measured** — no experiment sits on the other
+  side of the crossing.
+* Phase E measured same-GPU encode/encode concurrency, not the cross-GPU pipeline
+  it stood in for. No conclusion about pipelined transport follows.
+* Asymmetric bounds (`c_K ≪ c_V`), which the quality result points at, are untested.
+* Payload corruption, bit flips and retransmission are out of scope.
+
+## Corrections
+
+Eleven claims have been withdrawn or conditioned, each marked in place in the
+document that made it. `docs/corrections.md` is the register.
 
 ## Reproduction
 
-| Level | What | Needs a model? |
+| level | what | needs a GPU? |
 |---|---|---|
-| **L0** | `pytest` — codec property tests, both suites | no |
-| **L1** | download the sanitised tensor sample, redraw one break-even curve | no |
-| **L2** | rebuild baseline + one adaptive cell per `docs/environment.lock.md` | yes, 2×H100 |
+| **L0** | `uv run pytest` — codec property tests, both suites | no |
+| **L1** | `scripts/predictability.py`, `scripts/sz3_config_scan.py` from the committed manifests | no |
+| **L2** | `scripts/capture_corpus.py`, `transport_e2e.py`, `quality_d.py` per `docs/environment.lock.md` | yes |
 
 ```bash
-uv sync --extra dev
-uv run pytest
+uv sync --extra dev && uv run pytest
 ```
-
-## What did not work
-
-`results/public/` carries the failed and excluded configurations alongside the
-successful ones. A sweep that only publishes its best cell is not a measurement.
 
 ## Layout
 
 ```
-boundrelay/codec/        contract, reference, allocation, packing, Triton kernel
-boundrelay/trace/        edge capture + replay manifest
-boundrelay/policy/       break-even cost model + decision log
-boundrelay/integration/  SGLang-Omni transform hook (stretch)
-boundrelay/bench/        Table A, Table B, atlas, quality
-tests/                   two separate suites: finite bound, non-finite bypass
-docs/                    contract, environment lock, budget ledger, edge budget
-results/public/          sanitised JSON, committed
-results/private_raw/     never committed
+boundrelay/codec/     contract, reference, allocation, packing, Triton kernel, cuSZp bridge
+boundrelay/policy/    break-even cost model, decision rule
+boundrelay/bench/     Table A, Table B, quality
+scripts/              capture, benchmarks, transport, analysis
+docs/                 corrections, environment lock, budget ledger, codec contract
+results/public/       findings and sanitised JSON
 ```
