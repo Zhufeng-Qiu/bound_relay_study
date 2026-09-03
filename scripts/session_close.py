@@ -80,12 +80,21 @@ def closed_e2e(cache):
                 ctypes.c_size_t(f.numel()), ctypes.byref(m), ctypes.c_float(eps[i]), None)
             sizes[i] = int(m.value)
         if collect: e["encode"][1].record()
+        # Each tensor gets its own slice of the staging buffer. Writing them all to
+        # host[:s] made every D2H overwrite the last, so by the time the H2D loop
+        # ran the buffer held only the final tensor and 55 of 56 receivers were
+        # given the wrong bytes. The timing was of comparable work; the transfer
+        # was not correct.
+        off = [0]*len(sizes)
+        acc = 0
+        for i, s in enumerate(sizes):
+            off[i] = acc; acc += s
         if collect: e["d2h"][0].record()
-        for i, s in enumerate(sizes): host[:s].copy_(scr[i][:s])
+        for i, s in enumerate(sizes): host[off[i]:off[i]+s].copy_(scr[i][:s])
         if collect: e["d2h"][1].record()
         torch.cuda.set_device(1)
         if collect: e["h2d"][0].record()
-        for i, s in enumerate(sizes): recv[i][:s].copy_(host[:s])
+        for i, s in enumerate(sizes): recv[i][:s].copy_(host[off[i]:off[i]+s])
         if collect: e["h2d"][1].record()
         if collect: e["decode"][0].record()
         for i, s in enumerate(sizes):
@@ -95,11 +104,11 @@ def closed_e2e(cache):
                 ctypes.c_float(eps[i]), None)
         if collect: e["decode"][1].record()
         if collect: e["downcast"][0].record()
-        for d in dst: d.to(torch.bfloat16)
+        final = [d.to(torch.bfloat16) for d in dst]     # kept, not discarded
         if collect: e["downcast"][1].record()
         torch.cuda.set_device(0)
         torch.cuda.synchronize(0); torch.cuda.synchronize(1)
-        return sizes, e
+        return sizes, e, final
 
     def raw_iter():
         torch.cuda.set_device(0)
@@ -107,6 +116,16 @@ def closed_e2e(cache):
             nb = x.numel()*2
             host[:nb].copy_(x.reshape(-1).view(torch.uint8)); recv[0][:nb].copy_(host[:nb])
         torch.cuda.synchronize(0); torch.cuda.synchronize(1)
+
+        # correctness gate: the path must deliver the right bytes before it is timed
+    sizes0, _, final0 = one_iter(False)
+    worst = 0.0
+    for i, x in enumerate(cache):
+        worst = max(worst, float((x.cuda(1).float().reshape(-1) - final0[i].float()).abs().max()))
+    eps_max = max(eps)
+    if worst > eps_max * 1.001:
+        raise SystemExit(f"E2E reconstruction outside bound: {worst:.5f} > {eps_max:.5f}")
+    print(f"  correctness gate: max |x - x_hat_bf16| = {worst:.6f} <= {eps_max:.6f}", flush=True)
 
     for _ in range(5): one_iter(False); raw_iter()
     # (a) true E2E: no per-stage instrumentation at all
@@ -119,11 +138,12 @@ def closed_e2e(cache):
     # (b) same iteration, instrumented: GPU time per stage
     stages = {m: [] for m in marks}; inst = []
     for _ in range(ITERS):
-        t = time.perf_counter(); sizes, e = one_iter(True); inst.append(time.perf_counter()-t)
+        t = time.perf_counter(); sizes, e, _ = one_iter(True); inst.append(time.perf_counter()-t)
         for m in marks: stages[m].append(e[m][0].elapsed_time(e[m][1])/1e3)
 
     gpu_sum = sum(st.median(v) for v in stages.values())
     return {
+        "reconstruction_max_error": worst, "eps_max": eps_max,
         "n_tensors": n, "raw_bytes": sum(x.numel()*2 for x in cache), "comp_bytes": sum(sizes),
         "e2e_median_s": st.median(wall), "e2e_p95_s": sorted(wall)[int(.95*ITERS)],
         "e2e_samples_s": wall,

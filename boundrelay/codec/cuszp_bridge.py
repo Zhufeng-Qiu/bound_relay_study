@@ -67,12 +67,31 @@ def roundtrip(x_bf16: torch.Tensor, eps: float, mode: str = "plain",
            "ratio_vs_bf16": (n * 2) / max(int(size.value), 1)}
 
     if want_decode:
-        dec = torch.empty(n, dtype=torch.float32, device="cuda")
+        # Poison the destination before decoding. PyTorch's caching allocator hands
+        # back the same block across repeated calls, so a decompress that silently
+        # writes nothing leaves the *previous* call's reconstruction in place — and
+        # the error then measured belongs to that earlier call, not this one. That
+        # is exactly what happened in the first corpus run: three modes produced
+        # different compressed bytes and byte-identical reconstruction errors, which
+        # is impossible unless the errors were stale.
+        SENTINEL = float("nan")
+        dec = torch.full((n,), SENTINEL, dtype=torch.float32, device="cuda")
         getattr(L, _MANGLED[("decompress", mode)])(
             ctypes.c_void_p(dec.data_ptr()), ctypes.c_void_p(cmp_buf.data_ptr()),
             ctypes.c_size_t(n), ctypes.c_size_t(int(size.value)),
             ctypes.c_float(eps), None)
         torch.cuda.synchronize()
+
+        untouched = int((~torch.isfinite(dec)).sum())
+        out["decoded_elements"] = n - untouched
+        out["fully_decoded"] = untouched == 0
+        if untouched:
+            # Refuse to report an error for a reconstruction that was not produced.
+            out["max_error_fp32"] = None
+            out["max_error_bf16"] = None
+            out["within_eps_fp32"] = None
+            return out
+
         back = dec.to(torch.bfloat16)
         src = x_bf16.cuda().reshape(-1)
         out["max_error_fp32"] = float((d32 - dec).abs().max())
