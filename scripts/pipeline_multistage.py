@@ -169,7 +169,7 @@ def contention_probe(x, L, iters: int = 20) -> dict:
 # --------------------------------------------------------------------------- #
 
 def run_pipeline(cache, L, depth: int, compressed: bool, transport_cls,
-                 spool: Path | None, iters: int = 5) -> dict:
+                 spool: Path | None, iters: int = 15) -> dict:
     """Producer on GPU0, consumer on GPU1, `depth` slots between them.
 
     Two host threads rather than streams alone: cuSZp's compress writes the
@@ -336,6 +336,10 @@ def main() -> int:
     cache = [torch.load(p).to("cuda:0") for p in sorted(CACHE.glob("l*.pt"))]
     raw_bytes = sum(x.numel() * 2 for x in cache)
     print(f"{len(cache)} tensors, {raw_bytes/1e6:.1f} MB bf16", flush=True)
+    print("depth 1 is the control. Note it is *tensor-major* serial -- encode, ship, "
+          "decode, next -- while the reference is *stage-major*: all 56 encodes, then "
+          "all 56 transfers. Same total work, different per-call amortisation, so they "
+          "should agree closely without that being a tautology.", flush=True)
 
     res: dict = {"n_tensors": len(cache), "raw_bytes": raw_bytes, "c": C, "mode": MODE,
                  "gpus": [torch.cuda.get_device_name(i) for i in range(2)],

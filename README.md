@@ -33,9 +33,10 @@ the largest single cause turned out not to be the codec.
 **Peer-to-peer GPU copies report success and transfer nothing.**
 `can_device_access_peer` returns `True`, `cudaMemcpyPeer` returns `cudaSuccess`,
 and the destination is left entirely zero — both directions, 4 B through 32 MB, ten
-of ten attempts, fully synchronised. Through host memory it is exact. **Second of
-two rented multi-GPU hosts** on which the peer path has misbehaved. A KV transfer
-built the obvious way moves zeros between GPUs and reports that it worked.
+of ten attempts, fully synchronised. Through host memory it is exact. **Three of
+three rented pods**: two GPU models, two data centres, and both interconnect
+topologies a rented pair comes in (PXB and SYS). A KV transfer built the obvious
+way moves zeros between GPUs and reports that it worked.
 → `results/public/peer_copy_findings.md`
 
 **A component model predicted the wrong decision.** Codec cost measured on a single
