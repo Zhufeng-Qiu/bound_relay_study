@@ -1,7 +1,17 @@
 # A3 — SZ3 configuration scan: prediction costs ratio on KV tensors
 
 24 captured Qwen3-1.7B KV tensors, `eps_i = c · std_i`, ratios against bf16 bytes.
-`pysz` on CPU, **$0**. Raw: `results/public/d14_table_b/sz3_config_scan.json`.
+`pysz` on CPU, **$0**. Raw: `results/public/superseded/d14_table_b/sz3_config_scan.json`.
+
+> **Superseded by `../a3_sz3_full_findings.md`.** Two things this scan stated as its
+> own limits turned out to carry most of the result. It scanned three `cmprAlgo`
+> values out of the space `Config::loadcfg` reaches, and it ran on the *superseded*
+> corpus — an 81-token greedy-decode cache from an unpinned revision, not the Gate
+> B0 prefill capture. Against the whole reachable grid on Gate B0 data the margin
+> below falls from **14.4% to 2.9%**, and it stops being a property of KV cache:
+> no-prediction beats every predictor on 28 of 28 **value** tensors and loses on 22
+> of 28 **key** tensors. The numbers below reproduce exactly; the conclusion drawn
+> from them was too broad.
 
 SZ3 was authored by one of the groups this work is being sent to, so reporting a
 number produced by whatever `pysz` defaults to would *under*-report their system —

@@ -90,7 +90,7 @@ reconstruction. Re-measured: **0 bound violations**, worst error exactly 1.000×
 
 ## Corrections
 
-Seventeen claims have been withdrawn or conditioned, each marked in place in the
+Eighteen claims have been withdrawn or conditioned, each marked in place in the
 document that made it. `docs/corrections.md` is the register.
 
 ## Reproduction

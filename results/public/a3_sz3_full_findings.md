@@ -56,13 +56,16 @@ over all 56 tensors:
 | one frozen configuration: NOPRED | 2.263× | 2.924× | 4.327× |
 | one frozen configuration: best predictor (`INTERP`) | 2.218× | 2.867× | 4.206× |
 
-Where the pilot's 14.4% went, in two steps:
+The pilot's three-algorithm numbers reproduce here exactly — NOPRED 5.046×,
+`LORENZO_REG` 4.411×, `INTERP` and `INTERP_LORENZO` 4.139× — so the difference
+below is the scan, not a different measurement of the same thing. Where the 14.4%
+went, in two steps:
 
 | | c = 0.10, native, frozen |
 |---|---|
-| pilot corpus, pilot's three algorithms | **+14.5%** |
-| pilot corpus, whole reachable grid | **+9.1%** |
-| Gate B0 prefill corpus, whole reachable grid | **+2.9%** |
+| pilot corpus, pilot's three algorithms | **+14.4%** (5.046× / 4.411×) |
+| pilot corpus, whole reachable grid | **+9.0%** (5.046× / 4.630×) |
+| Gate B0 prefill corpus, whole reachable grid | **+2.9%** (4.327× / 4.206×) |
 
 Roughly a third of the inflation was configuration space and two thirds was the
 corpus. Both halves were the pilot's own stated limits; neither was free.
@@ -98,8 +101,8 @@ work with.
 The KV cache is indistinguishable from white noise along the contiguous axis and
 across heads, for both kinds. Correlation exists on exactly one axis — tokens — and
 it is strong for keys and weak for values. Across tensors, NOPRED's advantage
-correlates with the token-axis statistic at **+0.43** (c = 0.01) and **+0.42**
-(c = 0.10): the more token-correlated a tensor, the less no-prediction wins.
+correlates with the token-axis statistic at **+0.43** (c = 0.01), **+0.46** (c = 0.03)
+and **+0.42** (c = 0.10): the more token-correlated a tensor, the less no-prediction wins.
 
 That is the mechanism, and it makes the K/V split a prediction rather than an
 observation: a key at token *t* is close to the key at *t−1*; a value is much less
