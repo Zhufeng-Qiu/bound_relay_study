@@ -52,6 +52,11 @@ curve — it is the one whose cost fits inside the transfer it saves.
 
 ## The advantage here is implementation, not algorithm
 
+> **Retracted by D14b.** cuSZp — a GPU implementation from the same family —
+> compresses these tensors 2–3× better than this codec *and* runs ~9× faster. It
+> is a better algorithm that also maps onto a GPU, so the framing below is wrong:
+> there is no trade, this codec simply loses. See `d14b_cuszp_findings.md`.
+
 Worth stating plainly, because the table invites the opposite reading. On CPU,
 this codec's reference implementation manages 0.027 GB/s against SZ3's 0.213 and
 zfp's 0.362 — it is the **slowest** of the three. The entire transport advantage
