@@ -49,13 +49,22 @@ because a stage sum contains no per-item cost. Measured on one host, compressed 
 neither past the other.
 → `results/public/c_transport_findings.md`, `pipeline_findings.md`
 
-**Overlapping encode against decode cannot rescue it; a full pipeline is not
-tested.** Measured cross-GPU overlap is **53.7%** with two host threads (IQR
-46.6–62.1) and **1.4%** with one, because cuSZp's compress blocks the caller
-reading `cmpSize` back to a host pointer. Two-stage overlap tops out at 1.50× raw.
-A seven-stage pipeline is bound by the busiest resource instead — GPU0, at 21.43 ms
-against a raw path of 23.64 ms — which moves the break-even from **3.82 to 10.96
-GB/s**. Implied by measured stage costs, **not measured**; it is the open question.
+**Pipelining moves both arms and neither past the other.** A real seven-stage
+pipeline, with the raw path through identical machinery: compressed 43.65 ms against
+raw 22.19 ms, **1.97×** — against 1.91× for the same two paths run serially. The
+stage-sum model said 21.43 ms and was optimistic by 2×; both threads finish
+saturated with under 2.2 ms of waiting, so there is no headroom left to schedule.
+The break-even moves from 3.82 to **5.38 GB/s**, not the 10.96 the model implied.
+→ `results/public/pipeline_findings.md`, `gate2_findings.md`
+
+**On storage, compression loses while moving a third of the bytes — until the write
+is durable.** Offloading the cache to a MooseFS mount: raw wins 1.15× with a file
+per tensor and 1.17× with one file, because opening a file per tensor costs 4.3×
+more than seeking within one and a break-even expression counts only bytes. Swept
+with `fsync`, the same mount writes at 0.43 GB/s and compression wins **3×**. The
+crossing is bracketed — 10.58 GB/s loses, 5.38 GB/s is the break-even, 3.47 and
+0.43 GB/s pay.
+→ `results/public/pipeline_findings.md`
 → `results/public/gate2_findings.md`
 
 **Keys and values are not equally safe to compress.** At payloads within 0.4% of each
