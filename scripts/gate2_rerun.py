@@ -161,8 +161,12 @@ def variant(x, name: str, zeroed: bool, L) -> dict:
         ctypes.c_void_p(d1.data_ptr()), ctypes.c_void_p(r1.data_ptr()),
         ctypes.c_size_t(n), ctypes.c_size_t(sz), ctypes.c_float(eps), None)
     torch.cuda.synchronize(1)
-    ref = f.to("cuda:1")
-    err = float((ref - d1).abs().max())
+    # via host, deliberately. On this host a direct device-0 -> device-1 copy
+    # reports success and delivers zeros (see `peer_copy_audit.py`), so a
+    # reference fetched across the peer path would fail every tensor and blame
+    # the codec for it. This is the second rented multi-GPU host on which that
+    # has happened, and it is why the transport in this project is host-staged.
+    err = float((f.cpu() - d1.cpu()).abs().max())
 
     probe = torch.full((n,), float("nan"), dtype=torch.float32, device="cuda:1")
     getattr(L, _MANGLED[("decompress", MODE)])(
@@ -171,6 +175,7 @@ def variant(x, name: str, zeroed: bool, L) -> dict:
     torch.cuda.synchronize(1)
     unwritten = int((~torch.isfinite(probe)).sum())
     torch.cuda.set_device(0)
+    del probe
 
     return {"variant": name, "buffers": "zeroed" if zeroed else "uninitialised",
             "eps": eps, "cmp_bytes": sz, "n": n,
@@ -186,10 +191,11 @@ def main() -> int:
                          f"{torch.cuda.device_count()}")
 
     L = lib()
-    paths = sorted(CACHE.glob("l*_k.pt"))
-    # layer 0 is the tensor the original Gate 2 used; the others check that
-    # whatever the answer is, it is not a property of one tensor
-    picks = [paths[0], paths[len(paths) // 2], paths[-1]]
+    ks = sorted(CACHE.glob("l*_k.pt"))
+    vs = sorted(CACHE.glob("l*_v.pt"))
+    # layer 0 K is the tensor the original Gate 2 used; the rest check that
+    # whatever the answer is, it is not a property of one tensor or one kind
+    picks = [ks[0], ks[len(ks) // 2], ks[-1], vs[0], vs[len(vs) // 2], vs[-1]]
     out = {"environment": env, "c": C, "mode": MODE, "iters": ITERS,
            "reps": REPS, "tensors": {}}
 
@@ -211,6 +217,38 @@ def main() -> int:
                   f"-> {'within' if r['within_eps'] else 'VIOLATED'}   "
                   f"unwritten {r['unwritten_elements']}", flush=True)
         out["tensors"][p.stem] = rows
+
+    # Six tensors were enough to show the two buffer regimes differ; they are not
+    # enough to quote an overlap number, because the between-tensor spread turned
+    # out to be wider than the effect. The sweep runs the corrected regime over
+    # every tensor in the cache and reports the distribution instead of a point.
+    print("\n=== sweep: corrected regime over the whole cache ===", flush=True)
+    sweep = {}
+    for i, p in enumerate(sorted(CACHE.glob("l*.pt")), 1):
+        x = torch.load(p)
+        r = variant(x, "corrected", True, L)
+        sweep[p.stem] = r
+        if i % 8 == 0 or i == 1:
+            print(f"  {i}/56 {p.stem}  overlap 1thr {100*r['overlap_one_thread']:6.1f}%  "
+                  f"2thr {100*r['overlap_two_threads']:6.1f}%  "
+                  f"{'within' if r['within_eps'] else 'VIOLATED'}", flush=True)
+    out["sweep"] = sweep
+
+    import statistics as _st
+    for key, label in (("overlap_one_thread", "one host thread"),
+                       ("overlap_two_threads", "two host threads")):
+        v = sorted(100 * r[key] for r in sweep.values())
+        n = len(v)
+        out.setdefault("sweep_summary", {})[key] = {
+            "n": n, "median": _st.median(v), "q1": v[n // 4], "q3": v[3 * n // 4],
+            "min": v[0], "max": v[-1],
+            "n_above_90pct": sum(1 for z in v if z >= 90)}
+        print(f"  {label:<16} overlap median {_st.median(v):6.1f}%  "
+              f"IQR [{v[n//4]:.1f}, {v[3*n//4]:.1f}]  range [{v[0]:.1f}, {v[-1]:.1f}]  "
+              f"reaching 90%: {sum(1 for z in v if z >= 90)}/{n}", flush=True)
+    bad = [k for k, r in sweep.items() if not r["within_eps"]]
+    print(f"  bound violations across the sweep: {len(bad)}/{len(sweep)}", flush=True)
+    out["sweep_violations"] = bad
 
     dst = Path("/workspace/out/gate2_rerun.json")
     dst.parent.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,66 @@
+{
+  "gpus": [
+    "NVIDIA RTX A6000",
+    "NVIDIA RTX A6000"
+  ],
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "can_access_peer_0_1": true,
+  "can_access_peer_1_0": true,
+  "paths": {
+    "torch copy_ 0->1, synchronised, current device 0": {
+      "exact_fraction": 0.0,
+      "zero_fraction": 1.0
+    },
+    "torch copy_ 0->1, synchronised, current device 1": {
+      "exact_fraction": 0.015625,
+      "zero_fraction": 0.984375
+    },
+    "torch, routed through host memory": {
+      "exact_fraction": 1.0,
+      "zero_fraction": 0.0
+    },
+    "cudaMemcpyPeer, runtime returned 0": {
+      "exact_fraction": 0.0,
+      "zero_fraction": 1.0
+    },
+    "cudaMemcpy(cudaMemcpyDefault), runtime returned 0": {
+      "exact_fraction": 0.015625,
+      "zero_fraction": 0.984375
+    },
+    "torch copy_ 1->0, the reverse direction": {
+      "exact_fraction": 0.0,
+      "zero_fraction": 1.0
+    }
+  },
+  "size_sweep": {
+    "1": {
+      "exact_fraction": 0.0,
+      "zero_fraction": 1.0
+    },
+    "4096": {
+      "exact_fraction": 0.0,
+      "zero_fraction": 1.0
+    },
+    "262144": {
+      "exact_fraction": 0.0,
+      "zero_fraction": 1.0
+    },
+    "1048576": {
+      "exact_fraction": 0.0,
+      "zero_fraction": 1.0
+    },
+    "8388608": {
+      "exact_fraction": 0.0,
+      "zero_fraction": 1.0
+    }
+  },
+  "repeats": {
+    "n": 10,
+    "min": 0.0,
+    "max": 0.0
+  },
+  "enable_peer_access_rc": 0,
+  "cudaMemcpyPeer_rc": 0,
+  "cudaMemcpyDefault_rc": 0
+}

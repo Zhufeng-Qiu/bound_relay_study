@@ -180,6 +180,27 @@ def views(x: torch.Tensor) -> dict[str, np.ndarray]:
     }
 
 
+def axis_predictability(x: torch.Tensor) -> dict:
+    """Std of adjacent differences along each axis, over the tensor's own std.
+
+    For a white sequence this is sqrt(2). Below that means a predictor has
+    something to work with along that axis; at or above it means there is nothing
+    to predict, and any predictor stage is spending bits on residuals no smaller
+    than the values it replaced.
+
+    This is the mechanism test for the whole finding: the compression result says
+    prediction does not pay, and this says whether that is because the data is
+    unpredictable or because SZ3 is looking in the wrong place.
+    """
+    h, s_, d = x.shape[1], x.shape[2], x.shape[3]
+    a = x.float().reshape(h, s_, d).numpy()
+    sd = float(a.std())
+    return {"adj_over_std_head_dim": float(np.diff(a, axis=2).std() / sd),
+            "adj_over_std_tokens": float(np.diff(a, axis=1).std() / sd),
+            "adj_over_std_heads": float(np.diff(a, axis=0).std() / sd),
+            "white_noise_value": float(np.sqrt(2.0)), "std": sd}
+
+
 def load_fullcache(root: Path) -> dict[str, torch.Tensor]:
     out = {}
     for p in sorted(root.glob("l*_?.pt")):
@@ -305,7 +326,16 @@ def main() -> int:
         print(f"\nscanning {label}: {len(tensors)} tensors", flush=True)
         rows = scan(tensors, label)
         result["rows"].update({f"{label}|{k}": v for k, v in rows.items()})
+        stats = {n: axis_predictability(x) for n, x in tensors.items()}
         result["corpora"][label] = {
+            "axis_predictability": stats,
+            "corr_nopred_gain_vs_token_axis": {
+                f"c{c:g}": float(np.corrcoef(
+                    [100 * (p["nopred_over_oracle"] - 1) for p in
+                     oracle_vs_frozen(rows, "native_HSD")[f"c{c:g}"]["per_tensor"]],
+                    [stats[p["tensor"]]["adj_over_std_tokens"] for p in
+                     oracle_vs_frozen(rows, "native_HSD")[f"c{c:g}"]["per_tensor"]],
+                )[0, 1]) for c in C_GRID},
             "n_tensors": len(tensors),
             "n_configs_native": len(grid(3)),
             "n_configs_token_major": len(grid(2)),

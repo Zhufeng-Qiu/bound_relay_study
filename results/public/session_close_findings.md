@@ -14,9 +14,16 @@ from what was committed.
 > raw 23.64 ms, compressed 50.48 ms, break-even 3.82 GB/s, with a correctness gate
 > and zeroing counted as a stage — are in `remeasure_findings.md`.
 >
-> **Gate 2's serialisation result is suspect** for the same reason: its decode
-> destination was uninitialised, so it may have timed a call that wrote nothing.
-> Do not quote the 30% overlap figure until it is re-run.
+> **Gate 2 is superseded by `gate2_findings.md`.** Its decode destination was
+> uninitialised; re-measured with zeroed buffers over all 56 tensors, cross-GPU
+> overlap with two host threads is **53.7%** (IQR 46.6–62.1), not 30%. Two absolute
+> figures below are also wrong by 20×: "7.46 ms" and "6.01 ms" are totals of 20
+> iterations, so the per-call times are 0.373 and 0.301 ms. Overlap efficiency is a
+> ratio and was unaffected by that. The conclusion is unchanged and now rests on an
+> arithmetic ceiling rather than on the measured efficiency: overlap can remove at
+> most `min(encode, decode)` = 15.01 ms from the 50.48 ms compressed path, and
+> matching the 23.64 ms raw path needs 26.84 ms, so **no overlap efficiency
+> whatsoever reaches the baseline.**
 >
 > The SZ3/zfp same-host timings and the storage probe are unaffected.
 

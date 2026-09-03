@@ -43,6 +43,21 @@ Either they coincide on this data or the difference is below reporting precision
 either way they are not two independent options here. `fixed` is consistently
 2–6% better.
 
+> **The error columns in this manifest are not usable; the byte counts are.**
+> Every `max_error_fp32`, `max_error_bf16` and `within_eps_fp32` field in
+> `b0_corpus/manifest.json` was measured against a `torch.empty` destination,
+> before cuSZp's zeroed-buffer requirement was known. 374 of 1152 observations
+> (32.5%) carry a `within_eps_fp32: false`, and 168 of them (14.6%) report the
+> *same* error across all nine (c, mode) cells — impossible for a real
+> measurement, and the signature of a reconstruction left over from the previous
+> call. The remaining 984 scale correctly (median `err(0.10)/err(0.01)` = 10.00).
+> `error_bound_audit.py` re-measured the bound against zeroed buffers and found
+> **0 violations in 56 tensors at every mode and every c**.
+>
+> `cmp_bytes` is an encoder output and never passed through the poisoned buffer:
+> it differs between c = 0.01 and c = 0.10 on all 1152 observations. **Every ratio
+> in the table above stands.** See `remeasure_findings.md`.
+
 ## The "3–6× fixed-mode variance" was an artefact
 
 D14b reported cuSZp's `fixed` mode showing 3–6× encode-time spread across
