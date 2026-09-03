@@ -79,6 +79,51 @@ class HostRing:
         pass
 
 
+class FileConcat:
+    """One file, kept open, with each slot at a fixed offset in it.
+
+    The per-tensor spool costs about the same per tensor whether that tensor is
+    1.4 MB or 4.2 MB, which is per-object cost rather than bandwidth -- and a
+    break-even argument counts only bytes, so it cannot see that at all. This
+    transport differs from `FileSpool` in exactly one thing: it opens two handles
+    once and seeks, instead of opening, writing and closing per tensor. Whatever
+    separates the two numbers is the per-object cost.
+
+    Fixed offsets rather than an append cursor, so the file does not grow across
+    the fifteen timed passes -- 235 MB per pass would otherwise put 4 GB on a shared
+    network mount to measure something that does not need it.
+    """
+
+    def __init__(self, depth: int, slot_bytes: int, spool: Path):
+        self.slots = [torch.empty(slot_bytes, dtype=torch.uint8,
+                                  device="cpu", pin_memory=True) for _ in range(depth)]
+        self.slot_bytes = slot_bytes
+        spool.mkdir(parents=True, exist_ok=True)
+        self.path = spool / "cache.bin"
+        with open(self.path, "wb") as f:            # preallocate
+            f.truncate(depth * slot_bytes)
+        self.fw = open(self.path, "r+b", buffering=0)
+        self.fr = open(self.path, "rb", buffering=0)
+        self.name = f"file_concat:{spool}"
+
+    def put(self, slot: int, src: torch.Tensor, nbytes: int) -> None:
+        self.slots[slot][:nbytes].copy_(src[:nbytes], non_blocking=True)
+        torch.cuda.current_stream().synchronize()
+        self.fw.seek(slot * self.slot_bytes)
+        self.fw.write(memoryview(self.slots[slot][:nbytes].numpy()))
+
+    def get(self, slot: int, dst: torch.Tensor, nbytes: int) -> None:
+        self.fr.seek(slot * self.slot_bytes)
+        n = self.fr.readinto(memoryview(self.slots[slot][:nbytes].numpy()))
+        assert n == nbytes, (n, nbytes)
+        dst[:nbytes].copy_(self.slots[slot][:nbytes], non_blocking=True)
+
+    def close(self) -> None:
+        self.fw.close()
+        self.fr.close()
+        self.path.unlink(missing_ok=True)
+
+
 class FileSpool:
     """Same ring, with a file system between the two halves.
 
@@ -142,9 +187,11 @@ def contention_probe(x, L, iters: int = 20) -> dict:
         with torch.cuda.stream(s_copy):
             host[: other.numel()].copy_(other, non_blocking=True)
 
-    def timed(fn, k=iters):
-        for _ in range(3):
-            fn()
+    def both():
+        d2h()
+        enc()
+
+    def timed(fn, k):
         torch.cuda.synchronize(0)
         t = time.perf_counter()
         for _ in range(k):
@@ -152,21 +199,116 @@ def contention_probe(x, L, iters: int = 20) -> dict:
         torch.cuda.synchronize(0)
         return (time.perf_counter() - t) / k
 
-    def both():
-        d2h()
-        enc()
+    # The first version of this probe timed the three variants in sequence and
+    # reported `together` at 0.534 ms against `encode` alone at 3.945 ms -- which
+    # cannot happen, since `both` calls `enc`. Whatever inflated the first
+    # measurement (B2 found cuSZp's first call after context creation runs 347x the
+    # warm median), timing them back to back let it land on one variant only.
+    # So: a long warm-up, then the three interleaved inside one loop and reduced by
+    # median, which is the protocol B2 settled on for exactly this failure.
+    for _ in range(20):
+        enc(); d2h(); both()
+    torch.cuda.synchronize(0)
 
-    a, b, c = timed(enc), timed(d2h), timed(both)
+    reps = {"enc": [], "d2h": [], "both": []}
+    for _ in range(12):
+        reps["enc"].append(timed(enc, 5))
+        reps["d2h"].append(timed(d2h, 5))
+        reps["both"].append(timed(both, 5))
+    import statistics as _st
+    a = _st.median(reps["enc"]); b = _st.median(reps["d2h"]); c = _st.median(reps["both"])
+    consistent = c >= 0.9 * max(a, b)      # `both` does at least the larger job
     return {"encode_s": a, "d2h_s": b, "together_s": c,
-            "sum_s": a + b, "max_s": max(a, b),
+            "sum_s": a + b, "max_s": max(a, b), "reps_s": reps,
+            "self_consistent": consistent,
             "overlap": (a + b - c) / min(a, b) if min(a, b) > 0 else None,
-            "verdict": "transfer overlaps codec" if c < 0.85 * (a + b)
-                       else "device serialised by the codec's own allocations"}
+            "verdict": ("INCONSISTENT - `both` came out below the larger of its parts"
+                        if not consistent else
+                        "transfer overlaps codec" if c < 0.85 * (a + b)
+                        else "device serialised by the codec's own allocations")}
 
 
 # --------------------------------------------------------------------------- #
 # the pipeline
 # --------------------------------------------------------------------------- #
+
+def serial_stage_major(cache, L, compressed: bool, iters: int = 15) -> dict:
+    """The closing session's loop, rebuilt inside this harness.
+
+    Comparing a depth-1 pipeline against a number measured by a different program
+    was the wrong control, and it failed: 79.42 ms against 50.48 ms. The two are not
+    the same loop. Stage-major runs all 56 encodes, then all 56 transfers; tensor-
+    major hands every tensor between two threads with a host synchronisation on each
+    side. That per-tensor handoff is a real cost of pipelining, and charging it to
+    "the harness disagrees with the reference" hid it.
+
+    So the harness measures both. This one is the calibration -- it must land on
+    50.48 / 23.64 ms, because it is the same computation as the reference. The
+    depth-1 pipeline is then a *measurement* of what the handoff costs rather than a
+    control that failed.
+    """
+    n = len(cache)
+    eps = [C * float(x.float().std()) for x in cache]
+    slot_bytes = max(x.numel() * 4 + 4096 for x in cache)
+    torch.cuda.set_device(0)
+    scr = [torch.zeros(slot_bytes, dtype=torch.uint8, device="cuda:0") for _ in range(n)]
+    host = torch.empty(n * slot_bytes, dtype=torch.uint8, device="cpu", pin_memory=True)
+    torch.cuda.set_device(1)
+    recv = [torch.zeros(slot_bytes, dtype=torch.uint8, device="cuda:1") for _ in range(n)]
+    dst = [torch.zeros(max(x.numel() for x in cache), dtype=torch.float32,
+                       device="cuda:1") for _ in range(n)]
+
+    def one() -> float:
+        torch.cuda.set_device(0)
+        torch.cuda.synchronize(0); torch.cuda.synchronize(1)
+        t0 = time.perf_counter()
+        sizes = [0] * n
+        if compressed:
+            f32 = [x.float().contiguous().reshape(-1) for x in cache]
+            for i, f in enumerate(f32):
+                m = ctypes.c_size_t(0)
+                getattr(L, _MANGLED[("compress", MODE)])(
+                    ctypes.c_void_p(f.data_ptr()), ctypes.c_void_p(scr[i].data_ptr()),
+                    ctypes.c_size_t(f.numel()), ctypes.byref(m),
+                    ctypes.c_float(eps[i]), None)
+                sizes[i] = int(m.value)
+            src = scr
+        else:
+            sizes = [x.numel() * 2 for x in cache]
+            src = [x.reshape(-1).view(torch.uint8) for x in cache]
+        off, acc = [0] * n, 0
+        for i, sz in enumerate(sizes):
+            off[i] = acc; acc += sz
+        for i, sz in enumerate(sizes):
+            host[off[i]:off[i] + sz].copy_(src[i][:sz])
+        torch.cuda.set_device(1)
+        for i, sz in enumerate(sizes):
+            recv[i][:sz].copy_(host[off[i]:off[i] + sz])
+        if compressed:
+            for d in dst:
+                d.zero_()
+            for i, sz in enumerate(sizes):
+                getattr(L, _MANGLED[("decompress", MODE)])(
+                    ctypes.c_void_p(dst[i].data_ptr()), ctypes.c_void_p(recv[i].data_ptr()),
+                    ctypes.c_size_t(cache[i].numel()), ctypes.c_size_t(sz),
+                    ctypes.c_float(eps[i]), None)
+            fin = [dst[i][: cache[i].numel()].to(torch.bfloat16) for i in range(n)]
+        else:
+            fin = [recv[i][: sizes[i]].view(torch.bfloat16) for i in range(n)]
+        torch.cuda.set_device(0)
+        torch.cuda.synchronize(0); torch.cuda.synchronize(1)
+        el = time.perf_counter() - t0
+        one.last = fin
+        return el
+
+    one()
+    samples = [one() for _ in range(iters)]
+    worst = max(float((x.float().cpu().reshape(-1) - one.last[i].float().cpu().reshape(-1))
+                      .abs().max()) for i, x in enumerate(cache))
+    return {"mode": "serial_stage_major", "compressed": compressed,
+            "median_s": st.median(samples), "min_s": min(samples), "max_s": max(samples),
+            "samples_s": samples, "reconstruction_max_error": worst}
+
 
 def run_pipeline(cache, L, depth: int, compressed: bool, transport_cls,
                  spool: Path | None, iters: int = 15) -> dict:
@@ -221,17 +363,26 @@ def run_pipeline(cache, L, depth: int, compressed: bool, transport_cls,
         ready: queue.Queue = queue.Queue()
         err: list[BaseException] = []
 
-        busy = {"producer_s": 0.0, "consumer_s": 0.0}
+        # elapsed-per-thread is wall time measured twice and says nothing about
+        # which side binds. What is wanted is time spent *working*, with the wait
+        # for a slot or an item excluded -- that is the occupancy the resource model
+        # is about. The first version of this harness reported elapsed and called it
+        # `bound_by`; every row then said the two threads were within 2% of each
+        # other, which is what coupled elapsed times always say.
+        busy = {"producer_s": 0.0, "consumer_s": 0.0,
+                "producer_wait_s": 0.0, "consumer_wait_s": 0.0}
 
         def producer():
             try:
                 torch.cuda.set_device(0)
-                t_busy = time.perf_counter()
                 s_copy = torch.cuda.Stream(device=0)
                 for i, x in enumerate(cache):
+                    t_w = time.perf_counter()
                     slot = free.get()
+                    busy["producer_wait_s"] += time.perf_counter() - t_w
                     if slot < 0:            # consumer died and unblocked us
                         return
+                    t_w = time.perf_counter()
                     if compressed:
                         f = x.float().contiguous().reshape(-1)
                         m = ctypes.c_size_t(0)
@@ -248,8 +399,8 @@ def run_pipeline(cache, L, depth: int, compressed: bool, transport_cls,
                         ring.put(slot, src, nb)
                         ev = torch.cuda.Event()
                         ev.record(s_copy)
+                    busy["producer_s"] += time.perf_counter() - t_w
                     ready.put((i, slot, nb, ev))
-                busy["producer_s"] = time.perf_counter() - t_busy
                 ready.put(None)
             except BaseException as e:      # noqa: BLE001 - re-raised on the main thread
                 err.append(e)
@@ -259,13 +410,14 @@ def run_pipeline(cache, L, depth: int, compressed: bool, transport_cls,
             try:
                 torch.cuda.set_device(1)
                 s_copy = torch.cuda.Stream(device=1)
-                t_busy = time.perf_counter()
                 while True:
+                    t_w = time.perf_counter()
                     item = ready.get()
+                    busy["consumer_wait_s"] += time.perf_counter() - t_w
                     if item is None:
-                        busy["consumer_s"] = time.perf_counter() - t_busy
                         return
                     i, slot, nb, ev = item
+                    t_w = time.perf_counter()
                     ev.synchronize()                    # the bytes are in the ring
                     with torch.cuda.stream(s_copy):
                         ring.get(slot, recv[slot], nb)
@@ -282,6 +434,7 @@ def run_pipeline(cache, L, depth: int, compressed: bool, transport_cls,
                         fin = recv[slot][:nb].view(torch.bfloat16).clone()
                     if keep:
                         out[i] = fin.cpu()
+                    busy["consumer_s"] += time.perf_counter() - t_w
                     free.put(slot)
             except BaseException as e:      # noqa: BLE001
                 err.append(e)
@@ -308,7 +461,8 @@ def run_pipeline(cache, L, depth: int, compressed: bool, transport_cls,
     one_pass(False)                               # warm
     runs = [one_pass(False) for _ in range(iters)]
     samples = [r[0] for r in runs]
-    busy = {k: st.median([r[1][k] for r in runs]) for k in ("producer_s", "consumer_s")}
+    busy = {k: st.median([r[1][k] for r in runs])
+            for k in ("producer_s", "consumer_s", "producer_wait_s", "consumer_wait_s")}
     one_pass(True)                                # the pass that is checked
     ring.close()
 
@@ -363,9 +517,22 @@ def main() -> int:
           f"(sum {cp['sum_s']*1e3:.3f}, max {cp['max_s']*1e3:.3f})", flush=True)
     print(f"  -> {cp['verdict']}", flush=True)
 
+    print("\n=== control: stage-major serial, the reference's own loop ===", flush=True)
+    res["serial"] = []
+    for comp in (True, False):
+        r = serial_stage_major(cache, L, comp)
+        res["serial"].append(r)
+        want = res["serial_reference"]["compressed_s" if comp else "raw_s"]
+        ok = 0.85 < r["median_s"] / want < 1.15
+        print(f"  {'compressed' if comp else 'raw':<11} {r['median_s']*1e3:8.2f} ms  "
+              f"vs reference {want*1e3:7.2f} ms  ({r['median_s']/want:.3f}x)  "
+              f"{'OK' if ok else '** CONTROL FAILED **'}  "
+              f"max|err| {r['reconstruction_max_error']:.4g}", flush=True)
+
     transports: list[tuple[type, Path | None]] = [(HostRing, None)]
     if a.spool:
         transports.append((FileSpool, Path(a.spool)))
+        transports.append((FileConcat, Path(a.spool + "_concat")))
 
     for cls, spool in transports:
         for compressed in (True, False):
@@ -380,8 +547,10 @@ def main() -> int:
                       f"{raw_bytes/1e6/(r['median_s']*1e3):6.2f} GB/s of cache  "
                       f"vs serial {ref*1e3:.2f} ms ({r['median_s']/ref:.2f}x)  "
                       f"max|err| {r['reconstruction_max_error']:.4g}", flush=True)
-                print(f"          producer {r['producer_s']*1e3:7.2f} ms  "
-                      f"consumer {r['consumer_s']*1e3:7.2f} ms  -> {r['bound_by']}", flush=True)
+                print(f"          busy: producer {r['producer_s']*1e3:8.2f} ms  "
+                      f"consumer {r['consumer_s']*1e3:8.2f} ms   "
+                      f"waiting: producer {r['producer_wait_s']*1e3:7.2f}  "
+                      f"consumer {r['consumer_wait_s']*1e3:7.2f}  -> {r['bound_by']}", flush=True)
 
     dst = Path(a.out)
     dst.parent.mkdir(parents=True, exist_ok=True)
