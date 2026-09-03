@@ -61,11 +61,75 @@ them:
 | compressed path at 100% overlap | 35.48 ms — **1.50× raw** |
 | compressed path at the measured 53.7% | 42.42 ms — **1.79× raw** |
 
-**Perfect overlap is not enough.** The pipeline question is settled not by the
-53.7% but by the ceiling above it: even a hypothetical codec whose encode and
-decode overlapped completely would leave this path half again slower than moving
-the bytes uncompressed. Pipelining was the one mechanism that could have flipped
-the decision on this hardware, and it cannot, at any efficiency.
+**Perfect overlap of these two stages is not enough.** But that is a narrower
+statement than "pipelining cannot help", and an earlier version of this document
+made the wider one. It does not follow.
+
+> **Corrected.** This section originally read "pipelining was the one mechanism
+> that could have flipped the decision, and it cannot, at any efficiency." That
+> generalises a *two-stage* result to a *seven-stage* pipeline, and the arithmetic
+> does not survive the generalisation. See below.
+
+## What a real pipeline would do, which is not what was measured
+
+Gate 2 overlaps encode against decode. A pipelined transport overlaps every stage:
+while tensor *i* is encoding on GPU0, *i−1* is crossing to the host, *i−2* is
+crossing to GPU1, and *i−3* is decoding. Steady-state cost is then the **busiest
+resource**, not the sum of stages and not `total − min(two of them)`.
+
+Grouping the measured stages by the resource each one occupies:
+
+| resource | stages | ms per cache |
+|---|---|---|
+| GPU0 compute | upcast 1.44 + encode 19.99 | **21.43** |
+| GPU1 compute | zero 0.93 + decode 15.01 + downcast 1.34 | 17.28 |
+| link | D2H 4.32 ∥ H2D 5.01 | 5.01 |
+
+so a perfect pipeline is **GPU0-bound at 21.43 ms** — against a raw path of
+23.64 ms. **It wins.** Not by the margin that matters, and not against a raw path
+that is also allowed to pipeline, but the claim as originally written was false.
+
+The comparison has to be like for like, because `raw_iter` is serial too — it
+copies each tensor down and then up on the default stream. Pipeline both sides:
+
+| | serial | pipelined |
+|---|---|---|
+| raw | 23.64 ms | **11.82 ms** |
+| compressed | 50.48 ms | **21.43 ms** |
+| ratio | 2.14× | **1.81×** |
+
+Pipelining helps the compressed path more than it helps raw (2.4× against 2.0×),
+and still does not close a 2.1× gap on this link. The surviving conclusion is the
+same one, on a correct footing — but the number that matters changes a great deal:
+
+| | break-even |
+|---|---|
+| serial, as measured | 3.82 GB/s |
+| **fully pipelined** | **10.96 GB/s** |
+| measured link | 19.87 GB/s per direction |
+
+**Pipelining nearly triples the link speed below which compression pays.** 10.96
+GB/s sits above NVMe (2–7 GB/s), above 25/50 GbE, and around PCIe Gen3 x16 — so
+the pipelined verdict on a slower path is the opposite of the verdict here, and
+this is now the question worth measuring rather than a settled one.
+
+It also relocates the lever. The pipeline is bound by GPU0, and GPU0 is bound by
+an encode that reads **fp32** because cuSZp does not take bf16 — 23.5 GB/s of its
+own input, but only 11.75 GB/s of actual cache:
+
+| | pipeline bound | break-even |
+|---|---|---|
+| as measured | 21.43 ms | 10.96 GB/s |
+| bf16-native encode, no upcast | 17.28 ms — now **GPU1**-bound | 13.59 GB/s |
+| bf16-native at both ends | 9.99 ms | **23.51 GB/s** |
+
+A codec that took bf16 directly at both ends would put the break-even *above* this
+host's own link. That is a concrete, quantified target, and it is not reachable by
+scheduling — it is a codec change.
+
+**None of the pipelined numbers above are measured.** They are what the measured
+per-stage costs imply if a pipeline achieved perfect overlap with no fill, drain,
+or contention. That experiment has not been run.
 
 ## A labelling error in the superseded numbers
 

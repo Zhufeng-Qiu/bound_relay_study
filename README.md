@@ -44,11 +44,13 @@ built the obvious way moves zeros between GPUs and reports that it worked.
 every cell bypass. Per-tensor granularity costs **3.4×** of codec throughput.
 → `results/public/c_transport_findings.md`, `session_close_findings.md`
 
-**Pipelining cannot rescue it, at any efficiency.** Encode and decode sit on
-different GPUs, so overlap removes at most `min(encode, decode)` = 15.01 ms where
-26.84 ms is needed. Measured cross-GPU overlap is **53.7%** with two host threads
-(IQR 46.6–62.1) and **1.4%** with one, because cuSZp's compress blocks the caller
-reading `cmpSize` back to a host pointer. Even 100% would land at 1.50× the raw path.
+**Overlapping encode against decode cannot rescue it; a full pipeline is not
+tested.** Measured cross-GPU overlap is **53.7%** with two host threads (IQR
+46.6–62.1) and **1.4%** with one, because cuSZp's compress blocks the caller
+reading `cmpSize` back to a host pointer. Two-stage overlap tops out at 1.50× raw.
+A seven-stage pipeline is bound by the busiest resource instead — GPU0, at 21.43 ms
+against a raw path of 23.64 ms — which moves the break-even from **3.82 to 10.96
+GB/s**. Implied by measured stage costs, **not measured**; it is the open question.
 → `results/public/gate2_findings.md`
 
 **Keys and values are not equally safe to compress.** At payloads within 0.4% of each
@@ -91,7 +93,7 @@ reconstruction. Re-measured: **0 bound violations**, worst error exactly 1.000×
 
 ## Corrections
 
-Nineteen claims have been withdrawn or conditioned, each marked in place in the
+Twenty claims have been withdrawn or conditioned, each marked in place in the
 document that made it. `docs/corrections.md` is the register.
 
 ## Reproduction
