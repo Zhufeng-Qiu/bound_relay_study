@@ -5,18 +5,16 @@
 A measurement study of disaggregated prefill–decode KV transfer, KV migration and
 cache offloading. The codec is a controlled variable, not the contribution.
 
-> **Status: measurements in hand, evidence closure incomplete.** Phases A–E are
-> run and committed. Three things must land before this is a finished artifact:
-> the end-to-end decomposition does not sum to the measured path (11.4%
-> unaccounted), the break-even is model-implied rather than measured, and the
-> asymmetric-bound experiment the quality result points at has not been run.
-> Everything below traces to a manifest; nothing is a placeholder.
+> **Status: closed.** Every claim below is measured, and every claim this project
+> has withdrawn is marked in place in the document that made it and listed in
+> `docs/corrections.md`. Superseded work is under `results/public/superseded/`,
+> not deleted. Nothing here is a placeholder.
 
 ## The question
 
-Independently benchmarked codec and transport components predict one thing; a real
-KV cache moving end to end does another. This project measures the gap and what
-causes it.
+Components benchmarked independently predict one thing; a real KV cache moving
+end to end does another. This project measures the gap and what causes it — and
+the largest single cause turned out not to be the codec.
 
 ## What is measured
 
@@ -25,12 +23,47 @@ causes it.
 | Model | Qwen3-1.7B, revision `b9352fbb`, bf16, 28 layers, 8 KV heads |
 | Corpus | 24 independent WikiText-2 articles → **1152 tensor observations**, nested in documents |
 | Bounds | `eps_i = c · std_i`, `c ∈ {0.01, 0.03, 0.10}` |
-| Compressors | cuSZp (3 modes) · SZ3 (pilot configuration scan) · CUDA zfp · int8 baselines |
-| Transport | one real 56-tensor, 234.9 MB full cache, host-staged, 2×A40 |
+| Compressors | cuSZp (3 modes) · SZ3 (28-configuration scan) · CUDA zfp · int8 baselines |
+| Transport | one real 56-tensor, 234.9 MB full cache, host-staged, 2×A40 and 2×A6000 |
 | Quality | 16 documents, 1024→128 tokens, real cuSZp round trip ending in bf16 |
-| Spend | **$1.90** |
+| Spend | **≈ $2** of GPU rental |
 
 ## Findings
+
+**Peer-to-peer GPU copies report success and transfer nothing.**
+`can_device_access_peer` returns `True`, `cudaMemcpyPeer` returns `cudaSuccess`,
+and the destination is left entirely zero — both directions, 4 B through 32 MB, ten
+of ten attempts, fully synchronised. Through host memory it is exact. **Second of
+two rented multi-GPU hosts** on which the peer path has misbehaved. A KV transfer
+built the obvious way moves zeros between GPUs and reports that it worked.
+→ `results/public/peer_copy_findings.md`
+
+**A component model predicted the wrong decision.** Codec cost measured on a single
+20 MB tensor and a link measured in a separate session predicted a benefit. The real
+56-tensor cache moves raw in 23.64 ms and compressed in 50.48 ms — **2.1× slower**,
+every cell bypass. Per-tensor granularity costs **3.4×** of codec throughput.
+→ `results/public/c_transport_findings.md`, `session_close_findings.md`
+
+**Pipelining cannot rescue it, at any efficiency.** Encode and decode sit on
+different GPUs, so overlap removes at most `min(encode, decode)` = 15.01 ms where
+26.84 ms is needed. Measured cross-GPU overlap is **53.7%** with two host threads
+(IQR 46.6–62.1) and **1.4%** with one, because cuSZp's compress blocks the caller
+reading `cmpSize` back to a host pointer. Even 100% would land at 1.50× the raw path.
+→ `results/public/gate2_findings.md`
+
+**Keys and values are not equally safe to compress.** At payloads within 0.4% of each
+other, K-only compression degrades perplexity significantly (ΔNLL +0.0228); V-only
+shows no detectable degradation. Compressing both gently beats compressing one hard:
+uniform at `c = 0.10` ships **0.33×** the bytes with no detectable degradation.
+→ `results/public/d_quality_findings.md`
+
+**SZ3's predictor costs ratio on values and pays on keys.** Given every configuration
+`pysz` can reach — 28 of them, chosen per tensor as an oracle — no-prediction still
+beats the best predictor on **28 / 28 value tensors** at every `c`, and loses on 22 of
+28 key tensors. The mechanism is measured: adjacent-difference std over tensor std is
+√2 (white) along channels and heads for both kinds, and **0.49 for K against 1.12 for
+V along the token axis**. The cache carries correlation on one axis, mostly for keys.
+→ `results/public/a3_sz3_full_findings.md`
 
 **Characterization.** cuSZp is flat on this corpus — about 10% spread across every
 layer, both kinds and four sequence lengths. Request metadata alone (layer, K/V,
@@ -38,40 +71,26 @@ sequence length, ε) predicts the compressed size to **within 1%**; a pass over 
 tensor buys a further 11%.
 → `results/public/b0_corpus_findings.md`, `b1_predictability_findings.md`
 
-**A component model predicted the wrong decision.** Codec cost measured on a
-single 20 MB tensor and a link measured in a separate session predicted a benefit.
-The real 56-tensor cache moves raw in 23.47 ms and compressed in 54.94 ms —
-**2.3× slower**, every cell bypass. Per-tensor granularity costs **3.4×** of codec
-throughput (40 GB/s on one 20 MB tensor, 11.8 GB/s over the real cache).
-→ `results/public/c_transport_findings.md`
-
-**Keys and values are not equally safe to compress.** At payloads within 0.4% of
-each other, K-only compression degrades perplexity significantly (ΔNLL +0.869,
-CI [+0.692, +1.041]); V-only shows no detectable degradation (ΔNLL −0.008, CI
-[−0.023, +0.008]). Compressing both gently beats compressing one hard: uniform at
-c = 0.01 ships **0.53×** the bytes for **+0.09%** perplexity.
-→ `results/public/d_quality_findings.md`
-
-**SZ3's prediction stage costs ratio here.** Turning prediction off beats every
-predictor by **14.4%** in the contiguous layout — checked in both layouts, so not
-an artefact. The SZ family's advantage on this data is in quantisation and entropy
-coding. *Pilot scan: four documents, block size not swept.*
-→ `results/public/a3_sz3_config_findings.md`
+**An undocumented API contract invalidated three findings.** cuSZp requires zeroed
+buffers on both sides — it reads past `cmpSize` and does not write elements it
+expects to be zero — and `torch.empty` put the allocator's leftovers into the
+reconstruction. Re-measured: **0 bound violations**, worst error exactly 1.000× ε.
+→ `results/public/remeasure_findings.md`, `DEFECTS.md`
 
 ## What is not established
 
-* One model, one corpus, one GPU generation, one link speed.
-* The break-even (3.42–4.25 GB/s depending on what counts as codec cost) is
-  **implied by measured costs, not measured** — no experiment sits on the other
-  side of the crossing.
-* Phase E measured same-GPU encode/encode concurrency, not the cross-GPU pipeline
-  it stood in for. No conclusion about pipelined transport follows.
-* Asymmetric bounds (`c_K ≪ c_V`), which the quality result points at, are untested.
+* One model, one corpus, one GPU generation (`sm_86`), one link speed.
+* The break-even (3.82 GB/s) is **implied by measured costs, not measured** — no
+  experiment sits on the other side of the crossing.
+* The peer-copy failure is characterised, not diagnosed: cause and prevalence both
+  need host-level access a rented pod does not have.
+* The SZ3 mechanism result rests on one document's full 28-layer cache; the depth
+  axis is complete, the document axis is not.
 * Payload corruption, bit flips and retransmission are out of scope.
 
 ## Corrections
 
-Eleven claims have been withdrawn or conditioned, each marked in place in the
+Seventeen claims have been withdrawn or conditioned, each marked in place in the
 document that made it. `docs/corrections.md` is the register.
 
 ## Reproduction
@@ -79,8 +98,9 @@ document that made it. `docs/corrections.md` is the register.
 | level | what | needs a GPU? |
 |---|---|---|
 | **L0** | `uv run pytest` — codec property tests, both suites | no |
-| **L1** | `scripts/predictability.py`, `scripts/sz3_config_scan.py` from the committed manifests | no |
+| **L1** | `scripts/predictability.py`, `scripts/sz3_full_scan.py` from the committed manifests | no |
 | **L2** | `scripts/capture_corpus.py`, `transport_e2e.py`, `quality_d.py` per `docs/environment.lock.md` | yes |
+| **L3** | `scripts/gate2_rerun.py`, `scripts/peer_copy_audit.py` | two GPUs |
 
 ```bash
 uv sync --extra dev && uv run pytest
@@ -89,10 +109,11 @@ uv sync --extra dev && uv run pytest
 ## Layout
 
 ```
-boundrelay/codec/     contract, reference, allocation, packing, Triton kernel, cuSZp bridge
-boundrelay/policy/    break-even cost model, decision rule
-boundrelay/bench/     Table A, Table B, quality
-scripts/              capture, benchmarks, transport, analysis
-docs/                 corrections, environment lock, budget ledger, codec contract
-results/public/       findings and sanitised JSON
+boundrelay/codec/          contract, reference, allocation, packing, Triton kernel, cuSZp bridge
+boundrelay/policy/         break-even cost model, decision rule
+boundrelay/bench/          Table A, Table B, quality
+scripts/                   capture, benchmarks, transport, analysis
+docs/                      corrections, environment lock, budget ledger, codec contract
+results/public/            findings and sanitised JSON — current claims
+results/public/superseded/ replaced, withdrawn and early-phase work, markers intact
 ```
