@@ -1,0 +1,112 @@
+{
+  "fresh": {
+    "n_combinations": 448,
+    "fp32_failures": 0
+  },
+  "reuse": {
+    "pool_addresses": [
+      129353553805312,
+      129352108867584
+    ],
+    "order": {
+      "c0.01": {
+        "fullcache_d00_L2048": 5,
+        "fullcache_d00_L1024": 5,
+        "fullcache_d01_L2048": 5,
+        "fullcache_d01_L1024": 5
+      },
+      "c0.1": {
+        "fullcache_d00_L2048": 5,
+        "fullcache_d00_L1024": 5,
+        "fullcache_d01_L2048": 5,
+        "fullcache_d01_L1024": 5
+      }
+    },
+    "mismatches": 0,
+    "fp32_mismatches": 0,
+    "bf16_mismatches": 0,
+    "fp32_failures": 0,
+    "nonfinite": 0,
+    "reuse_roundtrips": 2240,
+    "compared": "exact equality of BOTH the fp32 reconstruction and the delivered bf16, every round, against the fresh reference",
+    "pool_uses": 2240,
+    "addresses_stable": true
+  },
+  "negative": {
+    "cases": [
+      {
+        "case": "nan",
+        "detected": true,
+        "finite": false,
+        "fp32_ok": false,
+        "E32_over_eps": NaN
+      },
+      {
+        "case": "pos_inf",
+        "detected": true,
+        "finite": false,
+        "fp32_ok": false,
+        "E32_over_eps": Infinity
+      },
+      {
+        "case": "neg_inf",
+        "detected": true,
+        "finite": false,
+        "fp32_ok": false,
+        "E32_over_eps": Infinity
+      },
+      {
+        "case": "beyond_eps",
+        "detected": true,
+        "finite": true,
+        "fp32_ok": false,
+        "E32_over_eps": 4.482065398075598
+      },
+      {
+        "case": "single_bit_flip_in_output",
+        "detected": true,
+        "finite": true,
+        "fp32_ok": true,
+        "note": "bound checks cannot see this; the bitwise comparison must"
+      },
+      {
+        "case": "truncated_payload_bytes_removed",
+        "detected": true,
+        "finite": true,
+        "fp32_ok": false,
+        "E32_over_eps": 245.38061904508066
+      }
+    ],
+    "all_detected": true,
+    "cmpsize_argument_ignored": true,
+    "cmpsize_probe": {
+      "true": {
+        "declared_cmp_size": 628536,
+        "identical_to_honest_decode": true
+      },
+      "half": {
+        "declared_cmp_size": 314268,
+        "identical_to_honest_decode": true
+      },
+      "64_bytes": {
+        "declared_cmp_size": 64,
+        "identical_to_honest_decode": true
+      }
+    }
+  },
+  "caches": {
+    "fullcache_d00_L1024": 56,
+    "fullcache_d00_L2048": 56,
+    "fullcache_d01_L1024": 56,
+    "fullcache_d01_L2048": 56
+  },
+  "passes_per_c": 20,
+  "c_grid": [
+    0.01,
+    0.1
+  ],
+  "tau": 1e-06,
+  "elapsed_s": 25.314534917473793,
+  "gpu": "NVIDIA A40",
+  "B0_PASSED": true
+}

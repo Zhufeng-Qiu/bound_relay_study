@@ -1,0 +1,896 @@
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 0, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 1, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 2, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 3, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 4, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 5, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 6, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 7, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 8, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 9, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 10, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 11, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 12, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 13, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 14, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 15, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 16, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 17, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 18, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 19, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 20, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 21, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 22, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 23, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 24, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 25, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 26, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 27, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 28, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 29, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 30, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 31, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 32, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 33, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 34, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 35, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 36, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 37, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 38, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 39, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 40, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 41, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 42, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 43, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 44, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 45, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 46, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 47, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 48, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 49, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 50, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 51, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 52, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 53, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 54, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 55, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 0, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.6056687831878662, "err_over_own_eps": 1.2455868987059933, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 1, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.01467953622341156, "err_over_own_eps": 1.0644069241833793, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 2, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.7580093145370483, "err_over_own_eps": 1.3192450024321227, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 3, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.013439382426440716, "err_over_own_eps": 1.1626278279915072, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 4, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8825167417526245, "err_over_own_eps": 1.133122979643492, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 5, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.01953125, "eps": 0.017710715532302856, "err_over_own_eps": 1.1027928241734017, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 6, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5625, "eps": 0.5447911024093628, "err_over_own_eps": 1.032505849512444, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 7, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.04251527413725853, "err_over_own_eps": 1.1025449312326272, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 8, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8118298649787903, "err_over_own_eps": 1.2317851844808958, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 9, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.04240534082055092, "err_over_own_eps": 1.1054032132028744, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 10, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8518990278244019, "err_over_own_eps": 1.1738480351994551, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 11, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.05078125, "eps": 0.04912771284580231, "err_over_own_eps": 1.0336579306956069, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 12, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.515625, "eps": 0.5130146741867065, "err_over_own_eps": 1.0050882088654318, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 13, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.04229554906487465, "err_over_own_eps": 1.1082726441995399, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 14, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.47215548157691956, "err_over_own_eps": 1.0589731974096424, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 15, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.064453125, "eps": 0.06390947103500366, "err_over_own_eps": 1.0085066259537427, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 16, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22578804194927216, "err_over_own_eps": 1.1072331282104282, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 17, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.08162330836057663, "err_over_own_eps": 1.531425306210376, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 18, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.375, "eps": 0.3500787019729614, "err_over_own_eps": 1.0711877011842994, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 19, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.09616399556398392, "err_over_own_eps": 1.2998627944575127, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 20, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.53125, "eps": 0.5175073146820068, "err_over_own_eps": 1.0265555383046858, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 21, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.09667658060789108, "err_over_own_eps": 1.2929708437556908, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 22, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23813164234161377, "err_over_own_eps": 1.049839481816366, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 23, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.12890625, "eps": 0.12903770804405212, "err_over_own_eps": 0.9989812431881753, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 24, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.35912469029426575, "err_over_own_eps": 1.3922740861685154, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 25, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.17083747684955597, "err_over_own_eps": 1.4633791402817116, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 26, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.19140625, "eps": 0.19167311489582062, "err_over_own_eps": 0.9986077082538901, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 27, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.1888463944196701, "err_over_own_eps": 1.3238272341299209, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 28, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.237166166305542, "err_over_own_eps": 1.054113256938699, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 29, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22196689248085022, "err_over_own_eps": 1.1262940937084494, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 30, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.467212051153183, "err_over_own_eps": 1.0701778748341124, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 31, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.24714295566082, "err_over_own_eps": 1.0115602904057723, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 32, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.2309606969356537, "err_over_own_eps": 1.0824352511789082, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 33, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.28813299536705017, "err_over_own_eps": 1.0845686020856755, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 34, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.2891717553138733, "err_over_own_eps": 1.0806726253772805, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 35, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.4566047191619873, "err_over_own_eps": 1.0950390546064803, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 36, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22455298900604248, "err_over_own_eps": 1.1133229671383833, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 37, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.4936804175376892, "err_over_own_eps": 1.01280095834838, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 38, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.2256411612033844, "err_over_own_eps": 1.107953879809453, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 39, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.75, "eps": 0.6333404183387756, "err_over_own_eps": 1.1841972788776332, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 40, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22995786368846893, "err_over_own_eps": 1.0871556901340969, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 41, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.8125, "eps": 0.7936791181564331, "err_over_own_eps": 1.0237134648159627, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 42, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23680610954761505, "err_over_own_eps": 1.0557160052905308, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 43, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0625, "eps": 1.0481595993041992, "err_over_own_eps": 1.0136815049018493, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 44, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.19658882915973663, "err_over_own_eps": 1.271689755051466, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 45, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.25, "eps": 1.2072099447250366, "err_over_own_eps": 1.0354454131710367, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 46, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.2738317847251892, "err_over_own_eps": 1.0270904098377605, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 47, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.3230241537094116, "err_over_own_eps": 1.133766149162428, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 48, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.3095930218696594, "err_over_own_eps": 1.0093896758808873, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 49, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.7189366817474365, "err_over_own_eps": 1.1635099891910154, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 50, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.27666571736335754, "err_over_own_eps": 1.016569753131436, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 51, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.5, "eps": 2.1584272384643555, "err_over_own_eps": 1.1582507649313494, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 52, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.21528322994709015, "err_over_own_eps": 1.1612609122477497, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 53, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.25, "eps": 2.197911262512207, "err_over_own_eps": 1.0236991994973699, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 54, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.375, "eps": 0.2975758910179138, "err_over_own_eps": 1.2601827342841605, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 55, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.3952186107635498, "err_over_own_eps": 1.0751003379886879, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 0, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 1, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 2, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 3, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 4, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 5, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 6, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 7, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 8, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 9, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 10, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 11, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 12, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 13, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 14, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 15, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 16, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 17, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 18, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 19, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 20, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 21, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 22, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 23, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 24, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 25, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 26, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 27, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 28, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 29, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 30, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 31, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 32, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 33, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 34, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 35, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 36, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 37, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 38, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 39, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 40, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 41, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 42, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 43, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 44, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 45, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 46, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 47, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 48, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 49, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 50, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 51, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 52, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 53, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 54, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 55, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 0, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.6056687831878662, "err_over_own_eps": 1.2455868987059933, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 1, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.01467953622341156, "err_over_own_eps": 1.0644069241833793, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 2, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.7580093145370483, "err_over_own_eps": 1.3192450024321227, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 3, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.013439382426440716, "err_over_own_eps": 1.1626278279915072, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 4, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8825167417526245, "err_over_own_eps": 1.133122979643492, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 5, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.01953125, "eps": 0.017710715532302856, "err_over_own_eps": 1.1027928241734017, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 6, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5625, "eps": 0.5447911024093628, "err_over_own_eps": 1.032505849512444, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 7, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.04251527413725853, "err_over_own_eps": 1.1025449312326272, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 8, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8118298649787903, "err_over_own_eps": 1.2317851844808958, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 9, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.04240534082055092, "err_over_own_eps": 1.1054032132028744, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 10, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8518990278244019, "err_over_own_eps": 1.1738480351994551, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 11, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.05078125, "eps": 0.04912771284580231, "err_over_own_eps": 1.0336579306956069, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 12, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.515625, "eps": 0.5130146741867065, "err_over_own_eps": 1.0050882088654318, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 13, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.04229554906487465, "err_over_own_eps": 1.1082726441995399, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 14, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.47215548157691956, "err_over_own_eps": 1.0589731974096424, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 15, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.064453125, "eps": 0.06390947103500366, "err_over_own_eps": 1.0085066259537427, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 16, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22578804194927216, "err_over_own_eps": 1.1072331282104282, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 17, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.08162330836057663, "err_over_own_eps": 1.531425306210376, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 18, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.375, "eps": 0.3500787019729614, "err_over_own_eps": 1.0711877011842994, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 19, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.09616399556398392, "err_over_own_eps": 1.2998627944575127, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 20, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.53125, "eps": 0.5175073146820068, "err_over_own_eps": 1.0265555383046858, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 21, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.09667658060789108, "err_over_own_eps": 1.2929708437556908, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 22, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23813164234161377, "err_over_own_eps": 1.049839481816366, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 23, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.12890625, "eps": 0.12903770804405212, "err_over_own_eps": 0.9989812431881753, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 24, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.35912469029426575, "err_over_own_eps": 1.3922740861685154, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 25, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.17083747684955597, "err_over_own_eps": 1.4633791402817116, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 26, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.19140625, "eps": 0.19167311489582062, "err_over_own_eps": 0.9986077082538901, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 27, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.1888463944196701, "err_over_own_eps": 1.3238272341299209, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 28, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.237166166305542, "err_over_own_eps": 1.054113256938699, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 29, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22196689248085022, "err_over_own_eps": 1.1262940937084494, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 30, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.467212051153183, "err_over_own_eps": 1.0701778748341124, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 31, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.24714295566082, "err_over_own_eps": 1.0115602904057723, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 32, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.2309606969356537, "err_over_own_eps": 1.0824352511789082, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 33, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.28813299536705017, "err_over_own_eps": 1.0845686020856755, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 34, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.2891717553138733, "err_over_own_eps": 1.0806726253772805, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 35, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.4566047191619873, "err_over_own_eps": 1.0950390546064803, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 36, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22455298900604248, "err_over_own_eps": 1.1133229671383833, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 37, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.4936804175376892, "err_over_own_eps": 1.01280095834838, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 38, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.2256411612033844, "err_over_own_eps": 1.107953879809453, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 39, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.75, "eps": 0.6333404183387756, "err_over_own_eps": 1.1841972788776332, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 40, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22995786368846893, "err_over_own_eps": 1.0871556901340969, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 41, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.8125, "eps": 0.7936791181564331, "err_over_own_eps": 1.0237134648159627, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 42, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23680610954761505, "err_over_own_eps": 1.0557160052905308, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 43, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0625, "eps": 1.0481595993041992, "err_over_own_eps": 1.0136815049018493, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 44, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.19658882915973663, "err_over_own_eps": 1.271689755051466, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 45, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.25, "eps": 1.2072099447250366, "err_over_own_eps": 1.0354454131710367, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 46, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.2738317847251892, "err_over_own_eps": 1.0270904098377605, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 47, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.3230241537094116, "err_over_own_eps": 1.133766149162428, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 48, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.3095930218696594, "err_over_own_eps": 1.0093896758808873, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 49, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.7189366817474365, "err_over_own_eps": 1.1635099891910154, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 50, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.27666571736335754, "err_over_own_eps": 1.016569753131436, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 51, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.5, "eps": 2.1584272384643555, "err_over_own_eps": 1.1582507649313494, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 52, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.21528322994709015, "err_over_own_eps": 1.1612609122477497, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 53, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.25, "eps": 2.197911262512207, "err_over_own_eps": 1.0236991994973699, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 54, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.375, "eps": 0.2975758910179138, "err_over_own_eps": 1.2601827342841605, "finite": true}
+{"cache": "fullcache_d00_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 55, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.3952186107635498, "err_over_own_eps": 1.0751003379886879, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 0, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 1, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 2, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 3, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 4, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 5, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 6, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 7, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 8, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 9, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 10, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 11, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 12, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 13, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 14, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 15, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 16, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 17, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 18, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 19, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 20, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 21, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 22, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 23, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 24, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 25, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 26, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 27, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 28, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 29, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 30, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 31, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 32, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 33, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 34, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 35, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 36, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 37, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 38, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 39, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 40, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 41, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 42, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 43, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 44, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 45, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 46, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 47, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 48, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 49, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 50, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 51, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 52, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 53, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 54, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 55, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 0, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.5989322662353516, "err_over_own_eps": 1.2508347240430346, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 1, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.014650240540504456, "err_over_own_eps": 1.0665353894224852, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 2, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.7598190307617188, "err_over_own_eps": 1.316102860700264, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 3, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.013469000346958637, "err_over_own_eps": 1.1600712448959285, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 4, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8954007029533386, "err_over_own_eps": 1.1168184218547708, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 5, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.01953125, "eps": 0.017724137753248215, "err_over_own_eps": 1.1019576958783568, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 6, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5625, "eps": 0.5463350415229797, "err_over_own_eps": 1.0295879950002078, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 7, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.042279280722141266, "err_over_own_eps": 1.1086990885219103, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 8, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.826043426990509, "err_over_own_eps": 1.2105901061924311, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 9, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.04224514961242676, "err_over_own_eps": 1.109594839408767, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 10, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8615154027938843, "err_over_own_eps": 1.160745352615881, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 11, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.049072265625, "eps": 0.04907491058111191, "err_over_own_eps": 0.9999461036998216, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 12, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.53125, "eps": 0.5197150111198425, "err_over_own_eps": 1.0221948349255927, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 13, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.04175594076514244, "err_over_own_eps": 1.1225947527718239, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 14, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.47741857171058655, "err_over_own_eps": 1.0472990152195052, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 15, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.0634765625, "eps": 0.06279665231704712, "err_over_own_eps": 1.0108271724346094, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 16, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22995896637439728, "err_over_own_eps": 1.0871504770680427, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 17, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.07904351502656937, "err_over_own_eps": 1.5814074052499185, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 18, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.375, "eps": 0.3599569499492645, "err_over_own_eps": 1.0417912476835238, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 19, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.095703125, "eps": 0.09574108570814133, "err_over_own_eps": 0.9996035066047084, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 20, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.53125, "eps": 0.527891993522644, "err_over_own_eps": 1.0063611619773731, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 21, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.09471837431192398, "err_over_own_eps": 1.3197017042158408, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 22, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23768380284309387, "err_over_own_eps": 1.0518175702743895, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 23, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.126953125, "eps": 0.12704887986183167, "err_over_own_eps": 0.9992463147889552, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 24, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.3635896146297455, "err_over_own_eps": 1.375176792409666, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 25, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.16153892874717712, "err_over_own_eps": 1.5476145715394236, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 26, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.1923828125, "eps": 0.19246628880500793, "err_over_own_eps": 0.9995662809028728, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 27, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.17954692244529724, "err_over_own_eps": 1.3923936795751415, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 28, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.24150672554969788, "err_over_own_eps": 1.0351678589114668, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 29, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.20993249118328094, "err_over_own_eps": 1.190859016586138, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 30, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.4752083718776703, "err_over_own_eps": 1.0521700154910394, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 31, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.24703001976013184, "err_over_own_eps": 1.0120227502825447, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 32, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23213426768779755, "err_over_own_eps": 1.0769629253369453, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 33, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.2918111979961395, "err_over_own_eps": 1.070897902979495, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 34, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.29254841804504395, "err_over_own_eps": 1.0681992474554558, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 35, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.46198612451553345, "err_over_own_eps": 1.0822835870326846, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 36, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22518503665924072, "err_over_own_eps": 1.1101981006771346, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 37, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.500251293182373, "err_over_own_eps": 0.9994976661014219, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 38, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22628040611743927, "err_over_own_eps": 1.1048238965518309, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 39, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.75, "eps": 0.6420870423316956, "err_over_own_eps": 1.1680659327377576, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 40, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23135800659656525, "err_over_own_eps": 1.0805763918771225, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 41, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.8125, "eps": 0.7964397072792053, "err_over_own_eps": 1.0201651080100713, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 42, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.2393597662448883, "err_over_own_eps": 1.044452891653586, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 43, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0625, "eps": 1.0574054718017578, "err_over_own_eps": 1.0048179514236497, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 44, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.19889651238918304, "err_over_own_eps": 1.256935061338945, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 45, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.25, "eps": 1.1993008852005005, "err_over_own_eps": 1.042273890918561, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 46, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.2759767472743988, "err_over_own_eps": 1.0191075979323654, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 47, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.3217949867248535, "err_over_own_eps": 1.1348204638880521, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 48, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.31043922901153564, "err_over_own_eps": 1.0066382428374985, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 49, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.6978628635406494, "err_over_own_eps": 1.1779514370373159, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 50, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.27844977378845215, "err_over_own_eps": 1.0100564858554177, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 51, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.125, "eps": 2.114715576171875, "err_over_own_eps": 1.0048632657478895, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 52, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.21668541431427002, "err_over_own_eps": 1.1537463229408331, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 53, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.140625, "eps": 2.1354689598083496, "err_over_own_eps": 1.0024144767677228, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 54, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.3003687262535095, "err_over_own_eps": 1.0403879388437123, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 55, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.3579344749450684, "err_over_own_eps": 1.1046188366789043, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 0, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 1, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 2, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 3, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 4, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 5, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 6, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 7, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 8, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 9, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 10, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 11, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 12, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 13, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 14, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 15, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 16, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 17, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 18, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 19, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 20, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 21, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 22, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 23, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 24, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 25, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 26, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 27, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 28, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 29, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 30, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 31, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 32, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 33, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 34, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 35, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 36, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 37, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 38, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 39, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 40, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 41, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 42, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 43, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 44, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 45, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 46, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 47, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 48, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 49, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 50, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 51, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 52, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 53, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 54, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 55, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 0, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.5989322662353516, "err_over_own_eps": 1.2508347240430346, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 1, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.014650240540504456, "err_over_own_eps": 1.0665353894224852, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 2, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.7598190307617188, "err_over_own_eps": 1.316102860700264, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 3, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.013469000346958637, "err_over_own_eps": 1.1600712448959285, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 4, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8954007029533386, "err_over_own_eps": 1.1168184218547708, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 5, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.01953125, "eps": 0.017724137753248215, "err_over_own_eps": 1.1019576958783568, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 6, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5625, "eps": 0.5463350415229797, "err_over_own_eps": 1.0295879950002078, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 7, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.042279280722141266, "err_over_own_eps": 1.1086990885219103, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 8, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.826043426990509, "err_over_own_eps": 1.2105901061924311, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 9, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.04224514961242676, "err_over_own_eps": 1.109594839408767, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 10, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8615154027938843, "err_over_own_eps": 1.160745352615881, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 11, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.049072265625, "eps": 0.04907491058111191, "err_over_own_eps": 0.9999461036998216, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 12, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.53125, "eps": 0.5197150111198425, "err_over_own_eps": 1.0221948349255927, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 13, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.04175594076514244, "err_over_own_eps": 1.1225947527718239, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 14, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.47741857171058655, "err_over_own_eps": 1.0472990152195052, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 15, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.0634765625, "eps": 0.06279665231704712, "err_over_own_eps": 1.0108271724346094, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 16, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22995896637439728, "err_over_own_eps": 1.0871504770680427, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 17, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.07904351502656937, "err_over_own_eps": 1.5814074052499185, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 18, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.375, "eps": 0.3599569499492645, "err_over_own_eps": 1.0417912476835238, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 19, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.095703125, "eps": 0.09574108570814133, "err_over_own_eps": 0.9996035066047084, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 20, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.53125, "eps": 0.527891993522644, "err_over_own_eps": 1.0063611619773731, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 21, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.09471837431192398, "err_over_own_eps": 1.3197017042158408, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 22, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23768380284309387, "err_over_own_eps": 1.0518175702743895, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 23, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.126953125, "eps": 0.12704887986183167, "err_over_own_eps": 0.9992463147889552, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 24, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.3635896146297455, "err_over_own_eps": 1.375176792409666, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 25, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.16153892874717712, "err_over_own_eps": 1.5476145715394236, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 26, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.1923828125, "eps": 0.19246628880500793, "err_over_own_eps": 0.9995662809028728, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 27, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.17954692244529724, "err_over_own_eps": 1.3923936795751415, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 28, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.24150672554969788, "err_over_own_eps": 1.0351678589114668, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 29, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.20993249118328094, "err_over_own_eps": 1.190859016586138, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 30, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.4752083718776703, "err_over_own_eps": 1.0521700154910394, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 31, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.24703001976013184, "err_over_own_eps": 1.0120227502825447, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 32, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23213426768779755, "err_over_own_eps": 1.0769629253369453, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 33, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.2918111979961395, "err_over_own_eps": 1.070897902979495, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 34, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.29254841804504395, "err_over_own_eps": 1.0681992474554558, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 35, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.46198612451553345, "err_over_own_eps": 1.0822835870326846, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 36, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22518503665924072, "err_over_own_eps": 1.1101981006771346, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 37, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.500251293182373, "err_over_own_eps": 0.9994976661014219, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 38, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22628040611743927, "err_over_own_eps": 1.1048238965518309, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 39, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.75, "eps": 0.6420870423316956, "err_over_own_eps": 1.1680659327377576, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 40, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23135800659656525, "err_over_own_eps": 1.0805763918771225, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 41, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.8125, "eps": 0.7964397072792053, "err_over_own_eps": 1.0201651080100713, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 42, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.2393597662448883, "err_over_own_eps": 1.044452891653586, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 43, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0625, "eps": 1.0574054718017578, "err_over_own_eps": 1.0048179514236497, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 44, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.19889651238918304, "err_over_own_eps": 1.256935061338945, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 45, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.25, "eps": 1.1993008852005005, "err_over_own_eps": 1.042273890918561, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 46, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.2759767472743988, "err_over_own_eps": 1.0191075979323654, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 47, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.3217949867248535, "err_over_own_eps": 1.1348204638880521, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 48, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.31043922901153564, "err_over_own_eps": 1.0066382428374985, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 49, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.6978628635406494, "err_over_own_eps": 1.1779514370373159, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 50, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.27844977378845215, "err_over_own_eps": 1.0100564858554177, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 51, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.125, "eps": 2.114715576171875, "err_over_own_eps": 1.0048632657478895, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 52, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.21668541431427002, "err_over_own_eps": 1.1537463229408331, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 53, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.140625, "eps": 2.1354689598083496, "err_over_own_eps": 1.0024144767677228, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 54, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.3003687262535095, "err_over_own_eps": 1.0403879388437123, "finite": true}
+{"cache": "fullcache_d00_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 55, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.3579344749450684, "err_over_own_eps": 1.1046188366789043, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 0, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 1, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 2, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 3, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 4, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 5, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 6, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 7, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 8, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 9, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 10, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 11, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 12, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 13, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 14, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 15, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 16, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 17, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 18, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 19, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 20, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 21, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 22, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 23, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 24, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 25, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 26, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 27, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 28, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 29, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 30, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 31, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 32, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 33, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 34, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 35, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 36, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 37, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 38, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 39, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 40, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 41, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 42, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 43, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 44, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 45, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 46, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 47, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 48, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 49, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 50, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 51, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 52, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 53, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 54, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "raw", "depth": 1, "tensor": 55, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 0, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.6051108837127686, "err_over_own_eps": 1.246019835946671, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 1, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.014712750911712646, "err_over_own_eps": 1.062003978301646, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 2, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.7589430809020996, "err_over_own_eps": 1.3176218680475666, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 3, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.013524400070309639, "err_over_own_eps": 1.15531926878604, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 4, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8937352895736694, "err_over_own_eps": 1.1188995350927913, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 5, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.017578125, "eps": 0.01755974441766739, "err_over_own_eps": 1.001046745436347, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 6, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5625, "eps": 0.5499488711357117, "err_over_own_eps": 1.0228223559007743, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 7, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.04261477291584015, "err_over_own_eps": 1.099970662581574, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 8, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.814986526966095, "err_over_own_eps": 1.2270141492064224, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 9, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.042727503925561905, "err_over_own_eps": 1.0970685318211821, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 10, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8565457463264465, "err_over_own_eps": 1.1674799674025587, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 11, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.05078125, "eps": 0.050191909074783325, "err_over_own_eps": 1.0117417515308809, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 12, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.53125, "eps": 0.5231114625930786, "err_over_own_eps": 1.0155579412589784, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 13, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.042644694447517395, "err_over_own_eps": 1.099198871214538, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 14, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.4821285605430603, "err_over_own_eps": 1.0370677883857569, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 15, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.064453125, "eps": 0.06437139213085175, "err_over_own_eps": 1.0012697079625388, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 16, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22956833243370056, "err_over_own_eps": 1.0890003745277024, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 17, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.08168990910053253, "err_over_own_eps": 1.530176754709905, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 18, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.375, "eps": 0.35649046301841736, "err_over_own_eps": 1.0519215488259117, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 19, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.09814453125, "eps": 0.09815322607755661, "err_over_own_eps": 0.9999114157740496, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 20, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.53125, "eps": 0.5256949067115784, "err_over_own_eps": 1.0105671430662528, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 21, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.09870800375938416, "err_over_own_eps": 1.2663613409172634, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 22, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23559606075286865, "err_over_own_eps": 1.0611382855940046, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 23, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.1328125, "eps": 0.13112202286720276, "err_over_own_eps": 1.0128923966838836, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 24, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.375, "eps": 0.3551889657974243, "err_over_own_eps": 1.0557760406720365, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 25, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.17406025528907776, "err_over_own_eps": 1.436284231485253, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 26, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.19093537330627441, "err_over_own_eps": 1.3093435525903394, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 27, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.1939055472612381, "err_over_own_eps": 1.2892875089498548, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 28, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.2398434430360794, "err_over_own_eps": 1.0423466109198272, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 29, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22835640609264374, "err_over_own_eps": 1.094779884995105, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 30, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.464326947927475, "err_over_own_eps": 1.0768274428864226, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 31, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.265625, "eps": 0.26017457246780396, "err_over_own_eps": 1.0209491168967733, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 32, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22896850109100342, "err_over_own_eps": 1.0918532409863557, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 33, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.29799169301986694, "err_over_own_eps": 1.0486869510794241, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 34, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.295091450214386, "err_over_own_eps": 1.0589937450677294, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 35, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.47353047132492065, "err_over_own_eps": 1.0558982584605772, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 36, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22658619284629822, "err_over_own_eps": 1.1033328944698066, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 37, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.515625, "eps": 0.509261429309845, "err_over_own_eps": 1.0124956855632656, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 38, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22841553390026093, "err_over_own_eps": 1.0944964894951674, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 39, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.75, "eps": 0.6460751295089722, "err_over_own_eps": 1.160855705078777, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 40, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23412823677062988, "err_over_own_eps": 1.0677908971950245, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 41, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.8125, "eps": 0.8126368522644043, "err_over_own_eps": 0.9998315948088953, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 42, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.24371251463890076, "err_over_own_eps": 1.0257987792314036, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 43, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0625, "eps": 1.0534286499023438, "err_over_own_eps": 1.0086112619952925, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 44, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.20054569840431213, "err_over_own_eps": 1.2465986654871302, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 45, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.25, "eps": 1.2375205755233765, "err_over_own_eps": 1.010084215748369, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 46, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.2733232378959656, "err_over_own_eps": 1.0290014203148419, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 47, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.3605278730392456, "err_over_own_eps": 1.1025132448401749, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 48, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.31140583753585815, "err_over_own_eps": 1.0035136222005339, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 49, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.7414319515228271, "err_over_own_eps": 1.1484801334046175, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 50, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.28006666898727417, "err_over_own_eps": 1.0042251761589651, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 51, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.25, "eps": 2.157323122024536, "err_over_own_eps": 1.0429592011643074, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 52, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.21490120887756348, "err_over_own_eps": 1.1633252381676153, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 53, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.25, "eps": 2.2154829502105713, "err_over_own_eps": 1.015579921202349, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 54, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.3061574697494507, "err_over_own_eps": 1.0207165621526066, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 55, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.4813172817230225, "err_over_own_eps": 1.0126122327117162, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 0, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 1, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 2, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 3, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 4, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 5, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 6, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 7, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 8, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 9, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 10, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 11, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 12, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 13, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 14, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 15, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 16, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 17, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 18, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 19, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 20, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 21, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 22, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 23, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 24, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 25, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 26, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 27, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 28, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 29, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 30, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 31, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 32, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 33, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 34, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 35, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 36, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 37, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 38, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 39, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 40, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 41, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 42, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 43, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 44, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 45, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 46, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 47, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 48, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 49, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 50, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 51, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 52, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 53, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 54, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 55, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 0, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.6051108837127686, "err_over_own_eps": 1.246019835946671, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 1, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.014712750911712646, "err_over_own_eps": 1.062003978301646, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 2, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.7589430809020996, "err_over_own_eps": 1.3176218680475666, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 3, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.013524400070309639, "err_over_own_eps": 1.15531926878604, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 4, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8937352895736694, "err_over_own_eps": 1.1188995350927913, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 5, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.017578125, "eps": 0.01755974441766739, "err_over_own_eps": 1.001046745436347, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 6, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5625, "eps": 0.5499488711357117, "err_over_own_eps": 1.0228223559007743, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 7, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.04261477291584015, "err_over_own_eps": 1.099970662581574, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 8, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.814986526966095, "err_over_own_eps": 1.2270141492064224, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 9, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.042727503925561905, "err_over_own_eps": 1.0970685318211821, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 10, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8565457463264465, "err_over_own_eps": 1.1674799674025587, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 11, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.05078125, "eps": 0.050191909074783325, "err_over_own_eps": 1.0117417515308809, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 12, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.53125, "eps": 0.5231114625930786, "err_over_own_eps": 1.0155579412589784, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 13, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.042644694447517395, "err_over_own_eps": 1.099198871214538, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 14, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.4821285605430603, "err_over_own_eps": 1.0370677883857569, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 15, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.064453125, "eps": 0.06437139213085175, "err_over_own_eps": 1.0012697079625388, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 16, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22956833243370056, "err_over_own_eps": 1.0890003745277024, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 17, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.08168990910053253, "err_over_own_eps": 1.530176754709905, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 18, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.375, "eps": 0.35649046301841736, "err_over_own_eps": 1.0519215488259117, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 19, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.09814453125, "eps": 0.09815322607755661, "err_over_own_eps": 0.9999114157740496, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 20, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.53125, "eps": 0.5256949067115784, "err_over_own_eps": 1.0105671430662528, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 21, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.09870800375938416, "err_over_own_eps": 1.2663613409172634, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 22, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23559606075286865, "err_over_own_eps": 1.0611382855940046, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 23, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.1328125, "eps": 0.13112202286720276, "err_over_own_eps": 1.0128923966838836, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 24, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.375, "eps": 0.3551889657974243, "err_over_own_eps": 1.0557760406720365, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 25, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.17406025528907776, "err_over_own_eps": 1.436284231485253, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 26, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.19093537330627441, "err_over_own_eps": 1.3093435525903394, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 27, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.1939055472612381, "err_over_own_eps": 1.2892875089498548, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 28, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.2398434430360794, "err_over_own_eps": 1.0423466109198272, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 29, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22835640609264374, "err_over_own_eps": 1.094779884995105, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 30, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.464326947927475, "err_over_own_eps": 1.0768274428864226, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 31, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.265625, "eps": 0.26017457246780396, "err_over_own_eps": 1.0209491168967733, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 32, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22896850109100342, "err_over_own_eps": 1.0918532409863557, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 33, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.29799169301986694, "err_over_own_eps": 1.0486869510794241, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 34, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.295091450214386, "err_over_own_eps": 1.0589937450677294, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 35, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.47353047132492065, "err_over_own_eps": 1.0558982584605772, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 36, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22658619284629822, "err_over_own_eps": 1.1033328944698066, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 37, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.515625, "eps": 0.509261429309845, "err_over_own_eps": 1.0124956855632656, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 38, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22841553390026093, "err_over_own_eps": 1.0944964894951674, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 39, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.75, "eps": 0.6460751295089722, "err_over_own_eps": 1.160855705078777, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 40, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23412823677062988, "err_over_own_eps": 1.0677908971950245, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 41, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.8125, "eps": 0.8126368522644043, "err_over_own_eps": 0.9998315948088953, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 42, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.24371251463890076, "err_over_own_eps": 1.0257987792314036, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 43, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0625, "eps": 1.0534286499023438, "err_over_own_eps": 1.0086112619952925, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 44, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.20054569840431213, "err_over_own_eps": 1.2465986654871302, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 45, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.25, "eps": 1.2375205755233765, "err_over_own_eps": 1.010084215748369, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 46, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.2733232378959656, "err_over_own_eps": 1.0290014203148419, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 47, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.3605278730392456, "err_over_own_eps": 1.1025132448401749, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 48, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.31140583753585815, "err_over_own_eps": 1.0035136222005339, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 49, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.7414319515228271, "err_over_own_eps": 1.1484801334046175, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 50, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.28006666898727417, "err_over_own_eps": 1.0042251761589651, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 51, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.25, "eps": 2.157323122024536, "err_over_own_eps": 1.0429592011643074, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 52, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.21490120887756348, "err_over_own_eps": 1.1633252381676153, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 53, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.25, "eps": 2.2154829502105713, "err_over_own_eps": 1.015579921202349, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 54, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.3061574697494507, "err_over_own_eps": 1.0207165621526066, "finite": true}
+{"cache": "fullcache_d01_L1024", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 55, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.4813172817230225, "err_over_own_eps": 1.0126122327117162, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 0, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 1, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 2, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 3, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 4, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 5, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 6, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 7, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 8, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 9, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 10, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 11, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 12, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 13, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 14, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 15, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 16, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 17, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 18, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 19, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 20, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 21, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 22, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 23, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 24, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 25, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 26, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 27, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 28, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 29, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 30, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 31, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 32, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 33, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 34, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 35, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 36, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 37, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 38, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 39, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 40, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 41, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 42, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 43, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 44, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 45, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 46, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 47, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 48, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 49, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 50, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 51, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 52, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 53, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 54, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "raw", "depth": 1, "tensor": 55, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 0, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.6002070903778076, "err_over_own_eps": 1.2498382315802647, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 1, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.01471656747162342, "err_over_own_eps": 1.0617285606938047, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 2, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.7632243037223816, "err_over_own_eps": 1.3102308130425366, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 3, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.013404910452663898, "err_over_own_eps": 1.165617633566132, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 4, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.9138522148132324, "err_over_own_eps": 1.0942688366787774, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 5, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.017578125, "eps": 0.017581839114427567, "err_over_own_eps": 0.9997887527918214, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 6, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5625, "eps": 0.5512610673904419, "err_over_own_eps": 1.0203876770452174, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 7, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.041956961154937744, "err_over_own_eps": 1.1172162785312556, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 8, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8274771571159363, "err_over_own_eps": 1.2084925745689097, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 9, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.042628806084394455, "err_over_own_eps": 1.0996085582880069, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 10, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8629417419433594, "err_over_own_eps": 1.1588267798333445, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 11, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.0625, "eps": 0.049559541046619415, "err_over_own_eps": 1.2611093379821217, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 12, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.53125, "eps": 0.5260908007621765, "err_over_own_eps": 1.0098066706932511, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 13, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.042098455131053925, "err_over_own_eps": 1.1134612862651736, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 14, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.4863680303096771, "err_over_own_eps": 1.0280280956822825, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 15, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.0634765625, "eps": 0.06317830830812454, "err_over_own_eps": 1.004720832194823, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 16, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23112289607524872, "err_over_own_eps": 1.0816756117429633, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 17, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.07937869429588318, "err_over_own_eps": 1.5747298580405458, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 18, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.375, "eps": 0.35987868905067444, "err_over_own_eps": 1.0420178004683027, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 19, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.09765625, "eps": 0.09763137251138687, "err_over_own_eps": 1.0002548103951958, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 20, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.53125, "eps": 0.5303673148155212, "err_over_own_eps": 1.0016642903131876, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 21, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.09660638868808746, "err_over_own_eps": 1.2939102858257836, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 22, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.2359141856431961, "err_over_own_eps": 1.059707364855574, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 23, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.1328125, "eps": 0.1312456727027893, "err_over_own_eps": 1.0119381253868753, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 24, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.356963574886322, "err_over_own_eps": 1.4007031394147964, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 25, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.16558340191841125, "err_over_own_eps": 1.5098131642637935, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 26, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.19140625, "eps": 0.1914864033460617, "err_over_own_eps": 0.99958141494821, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 27, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.1859700232744217, "err_over_own_eps": 1.3443026763033425, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 28, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.2381148636341095, "err_over_own_eps": 1.0499134585069556, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 29, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.21783284842967987, "err_over_own_eps": 1.1476689663758597, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 30, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.46131911873817444, "err_over_own_eps": 1.0838484244217488, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 31, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.265625, "eps": 0.2599925994873047, "err_over_own_eps": 1.021663695519804, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 32, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22901475429534912, "err_over_own_eps": 1.0916327237047236, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 33, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.3022429347038269, "err_over_own_eps": 1.033936493192882, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 34, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.29086214303970337, "err_over_own_eps": 1.0743921389499733, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 35, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.4750153124332428, "err_over_own_eps": 1.052597646671166, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 36, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22483167052268982, "err_over_own_eps": 1.1119429901436872, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 37, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.515625, "eps": 0.5096656084060669, "err_over_own_eps": 1.0116927481384717, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 38, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22617551684379578, "err_over_own_eps": 1.1053362604788837, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 39, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.75, "eps": 0.648332953453064, "err_over_own_eps": 1.156813017147209, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 40, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23215536773204803, "err_over_own_eps": 1.0768650427611397, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 41, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8136787414550781, "err_over_own_eps": 1.2289862682312789, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 42, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.24336901307106018, "err_over_own_eps": 1.0272466360662098, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 43, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0625, "eps": 1.058365821838379, "err_over_own_eps": 1.0039061901625281, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 44, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.2012840211391449, "err_over_own_eps": 1.2420260614089105, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 45, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.25, "eps": 1.2290704250335693, "err_over_own_eps": 1.0170287841446182, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 46, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.2742979824542999, "err_over_own_eps": 1.0253447636890962, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 47, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.345511555671692, "err_over_own_eps": 1.1148176273010053, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 48, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.3086763620376587, "err_over_own_eps": 1.0123872069020783, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 49, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.7193523645401, "err_over_own_eps": 1.1632286907837934, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 50, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.2758515775203705, "err_over_own_eps": 1.01957002576587, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 51, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.125, "eps": 2.104462146759033, "err_over_own_eps": 1.0097591934702157, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 52, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.21593710780143738, "err_over_own_eps": 1.1577445050800845, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 53, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.25, "eps": 2.150628089904785, "err_over_own_eps": 1.046205994686703, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 54, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.31024685502052307, "err_over_own_eps": 1.0072624264936638, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "serial", "arm": "compressed", "depth": 1, "tensor": 55, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.4369096755981445, "err_over_own_eps": 1.043906952171919, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 0, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 1, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 2, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 3, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 4, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 5, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 6, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 7, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 8, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 9, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 10, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 11, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 12, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 13, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 14, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 15, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 16, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 17, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 18, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 19, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 20, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 21, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 22, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 23, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 24, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 25, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 26, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 27, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 28, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 29, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 30, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 31, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 32, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 33, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 34, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 35, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 36, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 37, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 38, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 39, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 40, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 41, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 42, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 43, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 44, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 45, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 46, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 47, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 48, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 49, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 50, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 51, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 52, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 53, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 54, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "raw", "depth": 1, "tensor": 55, "bytes_equal_to_source": true, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 0, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.6002070903778076, "err_over_own_eps": 1.2498382315802647, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 1, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.01471656747162342, "err_over_own_eps": 1.0617285606938047, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 2, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.7632243037223816, "err_over_own_eps": 1.3102308130425366, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 3, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.015625, "eps": 0.013404910452663898, "err_over_own_eps": 1.165617633566132, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 4, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.9138522148132324, "err_over_own_eps": 1.0942688366787774, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 5, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.017578125, "eps": 0.017581839114427567, "err_over_own_eps": 0.9997887527918214, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 6, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5625, "eps": 0.5512610673904419, "err_over_own_eps": 1.0203876770452174, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 7, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.041956961154937744, "err_over_own_eps": 1.1172162785312556, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 8, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8274771571159363, "err_over_own_eps": 1.2084925745689097, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 9, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.042628806084394455, "err_over_own_eps": 1.0996085582880069, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 10, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8629417419433594, "err_over_own_eps": 1.1588267798333445, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 11, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.0625, "eps": 0.049559541046619415, "err_over_own_eps": 1.2611093379821217, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 12, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.53125, "eps": 0.5260908007621765, "err_over_own_eps": 1.0098066706932511, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 13, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.046875, "eps": 0.042098455131053925, "err_over_own_eps": 1.1134612862651736, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 14, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.4863680303096771, "err_over_own_eps": 1.0280280956822825, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 15, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.0634765625, "eps": 0.06317830830812454, "err_over_own_eps": 1.004720832194823, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 16, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23112289607524872, "err_over_own_eps": 1.0816756117429633, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 17, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.07937869429588318, "err_over_own_eps": 1.5747298580405458, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 18, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.375, "eps": 0.35987868905067444, "err_over_own_eps": 1.0420178004683027, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 19, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.09765625, "eps": 0.09763137251138687, "err_over_own_eps": 1.0002548103951958, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 20, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.53125, "eps": 0.5303673148155212, "err_over_own_eps": 1.0016642903131876, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 21, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.125, "eps": 0.09660638868808746, "err_over_own_eps": 1.2939102858257836, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 22, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.2359141856431961, "err_over_own_eps": 1.059707364855574, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 23, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.1328125, "eps": 0.1312456727027893, "err_over_own_eps": 1.0119381253868753, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 24, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.356963574886322, "err_over_own_eps": 1.4007031394147964, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 25, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.16558340191841125, "err_over_own_eps": 1.5098131642637935, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 26, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.19140625, "eps": 0.1914864033460617, "err_over_own_eps": 0.99958141494821, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 27, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.1859700232744217, "err_over_own_eps": 1.3443026763033425, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 28, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.2381148636341095, "err_over_own_eps": 1.0499134585069556, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 29, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.21783284842967987, "err_over_own_eps": 1.1476689663758597, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 30, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.46131911873817444, "err_over_own_eps": 1.0838484244217488, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 31, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.265625, "eps": 0.2599925994873047, "err_over_own_eps": 1.021663695519804, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 32, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22901475429534912, "err_over_own_eps": 1.0916327237047236, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 33, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.3022429347038269, "err_over_own_eps": 1.033936493192882, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 34, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.29086214303970337, "err_over_own_eps": 1.0743921389499733, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 35, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.5, "eps": 0.4750153124332428, "err_over_own_eps": 1.052597646671166, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 36, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22483167052268982, "err_over_own_eps": 1.1119429901436872, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 37, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.515625, "eps": 0.5096656084060669, "err_over_own_eps": 1.0116927481384717, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 38, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.22617551684379578, "err_over_own_eps": 1.1053362604788837, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 39, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.75, "eps": 0.648332953453064, "err_over_own_eps": 1.156813017147209, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 40, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.23215536773204803, "err_over_own_eps": 1.0768650427611397, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 41, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0, "eps": 0.8136787414550781, "err_over_own_eps": 1.2289862682312789, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 42, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.24336901307106018, "err_over_own_eps": 1.0272466360662098, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 43, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.0625, "eps": 1.058365821838379, "err_over_own_eps": 1.0039061901625281, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 44, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.2012840211391449, "err_over_own_eps": 1.2420260614089105, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 45, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.25, "eps": 1.2290704250335693, "err_over_own_eps": 1.0170287841446182, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 46, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.2742979824542999, "err_over_own_eps": 1.0253447636890962, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 47, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.345511555671692, "err_over_own_eps": 1.1148176273010053, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 48, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.3086763620376587, "err_over_own_eps": 1.0123872069020783, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 49, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.0, "eps": 1.7193523645401, "err_over_own_eps": 1.1632286907837934, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 50, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.28125, "eps": 0.2758515775203705, "err_over_own_eps": 1.01957002576587, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 51, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.125, "eps": 2.104462146759033, "err_over_own_eps": 1.0097591934702157, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 52, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.25, "eps": 0.21593710780143738, "err_over_own_eps": 1.1577445050800845, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 53, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 2.25, "eps": 2.150628089904785, "err_over_own_eps": 1.046205994686703, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 54, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 0.3125, "eps": 0.31024685502052307, "err_over_own_eps": 1.0072624264936638, "finite": true}
+{"cache": "fullcache_d01_L2048", "path": "pipeline", "arm": "compressed", "depth": 1, "tensor": 55, "bytes_equal_to_fresh": true, "max_abs_error_vs_source": 1.5, "eps": 1.4369096755981445, "err_over_own_eps": 1.043906952171919, "finite": true}

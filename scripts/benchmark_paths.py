@@ -331,7 +331,10 @@ class Bench:
             if compressed:
                 want = refs[i][1]
                 exact = bool(torch.equal(got_bytes, want.view(torch.uint8)))
-                src = x.float().reshape(-1).double()
+                # `got` came back from GPU1 via the host; the source lives on
+                # GPU0. Compare on the host -- a direct device-to-device fetch on
+                # this infrastructure returns zeros while reporting success.
+                src = x.float().reshape(-1).double().cpu()
                 err = float((src - got.double()).abs().max())
                 rows.append({"tensor": i, "arm": "compressed",
                              "bytes_equal_to_fresh": exact,

@@ -1,0 +1,113 @@
+{
+  "depth": 8,
+  "caches": {
+    "fullcache_d00_L1024": {
+      "serial|raw": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": null
+      },
+      "serial|compressed": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": 1.531425306210376
+      },
+      "pipeline|raw": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": null
+      },
+      "pipeline|compressed": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": 1.531425306210376
+      }
+    },
+    "fullcache_d00_L2048": {
+      "serial|raw": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": null
+      },
+      "serial|compressed": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": 1.5814074052499185
+      },
+      "pipeline|raw": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": null
+      },
+      "pipeline|compressed": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": 1.5814074052499185
+      }
+    },
+    "fullcache_d01_L1024": {
+      "serial|raw": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": null
+      },
+      "serial|compressed": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": 1.530176754709905
+      },
+      "pipeline|raw": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": null
+      },
+      "pipeline|compressed": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": 1.530176754709905
+      }
+    },
+    "fullcache_d01_L2048": {
+      "serial|raw": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": null
+      },
+      "serial|compressed": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": 1.5747298580405458
+      },
+      "pipeline|raw": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": null
+      },
+      "pipeline|compressed": {
+        "n_tensors": 56,
+        "n_byte_exact": 56,
+        "n_failing": 0,
+        "max_err_over_own_eps": 1.5747298580405458
+      }
+    }
+  },
+  "gpus": [
+    "NVIDIA A40",
+    "NVIDIA A40"
+  ]
+}

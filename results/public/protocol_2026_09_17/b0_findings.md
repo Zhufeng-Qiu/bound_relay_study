@@ -98,6 +98,52 @@ this round replaced, and the right shape. That is a change to propose with the
 data, not one to make while collecting it, so this round reports the margin it
 measured and does not certify the absolute form.
 
+## The acceptance itself was too weak, twice, and is redone here
+
+A review of this document found two places where the verdict was reached on less
+evidence than the protocol asks for. Both are re-run; **both still pass**, but they
+passed the first time for a weaker reason than the write-up implied.
+
+**Reuse compared only the delivered bf16.** The justification given was that a
+bit-identical reconstruction has the same error by construction. That is true of the
+bf16 value and says nothing about the fp32 one: two fp32 reconstructions differing
+by less than half a bf16 ulp round to the same bf16, so a bf16 match can hide an
+fp32 difference — and the fp32 reconstruction is what the codec actually produces.
+Re-run comparing **both**, by exact equality against a device-resident reference:
+
+| | |
+|---|---|
+| reuse round trips | **2240** |
+| **fp32** reconstruction mismatches | **0** |
+| **bf16** output mismatches | **0** |
+| non-finite | 0 |
+
+The full check now costs no host transfer at all, which was the reason the fp32
+audit was dropped in the first place.
+
+**The two-device check judged a whole cache against its largest ε.** That is an
+aggregate: a tensor whose own ε is small can be badly wrong and still sit under the
+largest ε in the cache. Re-run per tensor, byte for byte, against a reconstruction
+made on one device through buffers zeroed for it alone — at **both** depths, both
+paths, both arms:
+
+| | |
+|---|---|
+| per-tensor comparisons | **1792** (2 depths × 2 paths × 2 arms × 4 caches × 56) |
+| raw delivered byte-exact to source | **896 / 896** |
+| compressed delivered byte-exact to the fresh baseline | **896 / 896** |
+| non-finite | 0 |
+
+**The transport is exact.** Not "within a bound" — the two-device path delivers the
+identical bytes a single GPU produces, at depth 1 and depth 8, on the serial path
+and through the ring.
+
+The residual `err/own ε` of up to **1.581** is therefore not transport error. It is
+the bf16 downcast on top of the codec's fp32 error, and 852 of 896 delivered tensors
+exceed their own ε for that reason alone. The clearest evidence it is not the
+transport: for each cache the serial and pipeline paths report the *same* worst
+value to nine digits.
+
 ## The slot lifecycle holds at depth 1 as well as depth 8
 
 The protocol asks for the two-device stress at **both** depths, and the B2 matrix

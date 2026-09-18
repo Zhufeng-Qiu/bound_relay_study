@@ -1,0 +1,96 @@
+{
+  "model": "Qwen/Qwen3-1.7B",
+  "revision": "b9352fbb8ce704292730cf54b3b1dceb2a808738",
+  "prefix": 1024,
+  "scored": 256,
+  "documents": [
+    {
+      "dtype": "bfloat16",
+      "doc": 0,
+      "title": "Valkyria Chronicles III",
+      "mean_abs_token_diff": 0.03744048625230789,
+      "median_abs_token_diff": 0.01385938748717308,
+      "max_abs_token_diff": 0.24802780151367188,
+      "n_tokens_over_0p1": 33,
+      "mean_nll_cached": 3.1685822010040283,
+      "mean_nll_full": 3.1632919311523438,
+      "mean_nll_gap": 0.00529026985168457,
+      "shift_test_mean_abs_diff": {
+        "-2": 3.6408426761627197,
+        "-1": 3.424814224243164,
+        "0": 0.03744048625230789,
+        "1": 3.4285218715667725,
+        "2": 3.639230489730835,
+        "best_shift": "0"
+      }
+    },
+    {
+      "dtype": "bfloat16",
+      "doc": 1,
+      "title": "Tower Building of the Little Rock Arsenal",
+      "mean_abs_token_diff": 0.03945573419332504,
+      "median_abs_token_diff": 0.014261633157730103,
+      "max_abs_token_diff": 0.2619447708129883,
+      "n_tokens_over_0p1": 38,
+      "mean_nll_cached": 2.863701343536377,
+      "mean_nll_full": 2.8670318126678467,
+      "mean_nll_gap": 0.0033304691314697266,
+      "shift_test_mean_abs_diff": {
+        "-2": 3.7441766262054443,
+        "-1": 3.635545253753662,
+        "0": 0.03945573419332504,
+        "1": 3.6375441551208496,
+        "2": 3.7467966079711914,
+        "best_shift": "0"
+      }
+    },
+    {
+      "dtype": "float32",
+      "doc": 0,
+      "title": "Valkyria Chronicles III",
+      "mean_abs_token_diff": 7.510974683100358e-06,
+      "median_abs_token_diff": 4.5299530029296875e-06,
+      "max_abs_token_diff": 4.9591064453125e-05,
+      "n_tokens_over_0p1": 0,
+      "mean_nll_cached": 3.1616671085357666,
+      "mean_nll_full": 3.161667585372925,
+      "mean_nll_gap": 4.76837158203125e-07,
+      "shift_test_mean_abs_diff": {
+        "-2": 3.636122226715088,
+        "-1": 3.4233224391937256,
+        "0": 7.510974683100358e-06,
+        "1": 3.423323154449463,
+        "2": 3.636122941970825,
+        "best_shift": "0"
+      }
+    },
+    {
+      "dtype": "float32",
+      "doc": 1,
+      "title": "Tower Building of the Little Rock Arsenal",
+      "mean_abs_token_diff": 7.459037078660913e-06,
+      "median_abs_token_diff": 4.291534423828125e-06,
+      "max_abs_token_diff": 4.38690185546875e-05,
+      "n_tokens_over_0p1": 0,
+      "mean_nll_cached": 2.863722801208496,
+      "mean_nll_full": 2.863722801208496,
+      "mean_nll_gap": 0.0,
+      "shift_test_mean_abs_diff": {
+        "-2": 3.739673137664795,
+        "-1": 3.6333608627319336,
+        "0": 7.459037078660913e-06,
+        "1": 3.633361339569092,
+        "2": 3.739673614501953,
+        "best_shift": "0"
+      }
+    }
+  ],
+  "note": "development articles only; this measures the harness, not the corpus",
+  "verdict": {
+    "bf16_mean_gap": 0.0043103694915771484,
+    "fp32_mean_gap": 2.384185791015625e-07,
+    "fp32_shrinks_gap_by": 18079.0,
+    "any_shift_improves": false,
+    "reading": "a position error would make a non-zero shift the best one and would not vanish in fp32; kernel-selection noise does the opposite"
+  }
+}

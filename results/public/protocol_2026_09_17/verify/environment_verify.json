@@ -1,0 +1,31 @@
+{
+  "gpus": [
+    "NVIDIA A40",
+    "NVIDIA A40"
+  ],
+  "capability": [
+    [
+      8,
+      6
+    ],
+    [
+      8,
+      6
+    ]
+  ],
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "transformers": "5.16.1",
+  "datasets": "5.0.1",
+  "numpy": "2.1.2",
+  "python": "3.12.3",
+  "driver": "570.211.01\n570.211.01",
+  "topology": "\u001b[4mGPU0\tGPU1\tNIC0\tNIC1\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tPIX\tNODE\tNODE\t24-47,72-95\t1\t\tN/A\nGPU1\tPIX\t X \tNODE\tNODE\t24-47,72-95\t1\t\tN/A\nNIC0\tNODE\tNODE\t X \tPIX\t\t\t\t\nNIC1\tNODE\tNODE\tPIX\t X \t\t\t\t\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks\n\nNIC Legend:\n\n  NIC0: mlx5_0\n  NIC1: mlx5_1",
+  "cuszp": {
+    "commit": "f581dcf329c907c320f4743a9c6e7ee2fb9c5494",
+    "so_sha256": "782606d94e1b323feeaeba97332e61c3b9a9dfe41984861c125492767a6252db",
+    "build": "Release, BUILD_SHARED_LIBS=ON, CMAKE_CUDA_ARCHITECTURES=86"
+  },
+  "workspace_mount": "mfs#ca-mtl-1.runpod.net:9421  965T  751T  215T  78% /workspace",
+  "peer_0_1": true
+}
