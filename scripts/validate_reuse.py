@@ -280,22 +280,51 @@ def negative_tests(L, caches: dict, rec) -> dict:
                   "note": "bound checks cannot see this; the bitwise comparison must"})
     rec({"kind": "negative", "cache": cname, "tensor": tname, **cases[-1]})
 
-    # a truncated payload: decode fewer bytes than were written
-    pool.dec.zero_()
-    m = ctypes.c_size_t(0)
+    # A truncated payload. The first version of this test declared a smaller
+    # cmpSize and left the bytes in place, which is not a truncation: cuSZp's
+    # decompress does not consult the argument at all (see `cmpsize` below), so it
+    # read the whole payload and returned a correct answer. Remove the bytes.
     pool.cmp.zero_()
+    m = ctypes.c_size_t(0)
     getattr(L, _MANGLED[("compress", MODE)])(
         ctypes.c_void_p(f.data_ptr()), ctypes.c_void_p(pool.cmp.data_ptr()),
         ctypes.c_size_t(x.numel()), ctypes.byref(m), ctypes.c_float(eps), None)
     torch.cuda.synchronize()
-    trunc = max(int(m.value) // 2, 64)
+    nb = int(m.value)
+    pool.cmp[nb // 2:] = 0                      # half the payload is gone
+    pool.dec.zero_()
     getattr(L, _MANGLED[("decompress", MODE)])(
         ctypes.c_void_p(pool.dec.data_ptr()), ctypes.c_void_p(pool.cmp.data_ptr()),
-        ctypes.c_size_t(x.numel()), ctypes.c_size_t(trunc), ctypes.c_float(eps), None)
+        ctypes.c_size_t(x.numel()), ctypes.c_size_t(nb), ctypes.c_float(eps), None)
     torch.cuda.synchronize()
-    check("truncated_payload", pool.dec[:x.numel()].clone())
+    check("truncated_payload_bytes_removed", pool.dec[:x.numel()].clone())
 
-    return {"cases": cases, "all_detected": all(c["detected"] for c in cases)}
+    # Not a pass/fail -- an observation about the library, recorded because a
+    # transport that sizes or validates a buffer from the declared compressed
+    # length is trusting a number the decoder never reads.
+    pool.cmp.zero_()
+    m2 = ctypes.c_size_t(0)
+    getattr(L, _MANGLED[("compress", MODE)])(
+        ctypes.c_void_p(f.data_ptr()), ctypes.c_void_p(pool.cmp.data_ptr()),
+        ctypes.c_size_t(x.numel()), ctypes.byref(m2), ctypes.c_float(eps), None)
+    torch.cuda.synchronize()
+    true_nb = int(m2.value)
+    declared = {}
+    for label, dv in (("true", true_nb), ("half", true_nb // 2), ("64_bytes", 64)):
+        pool.dec.zero_()
+        getattr(L, _MANGLED[("decompress", MODE)])(
+            ctypes.c_void_p(pool.dec.data_ptr()), ctypes.c_void_p(pool.cmp.data_ptr()),
+            ctypes.c_size_t(x.numel()), ctypes.c_size_t(dv), ctypes.c_float(eps), None)
+        torch.cuda.synchronize()
+        z = pool.dec[:x.numel()].to(torch.bfloat16)
+        declared[label] = {"declared_cmp_size": dv,
+                           "identical_to_honest_decode": bool(torch.equal(z, z_good))}
+    cmpsize_ignored = all(v["identical_to_honest_decode"] for v in declared.values())
+    rec({"kind": "observation", "what": "cmpSize_argument", "true_cmp_bytes": true_nb,
+         "declared": declared, "argument_ignored": cmpsize_ignored})
+
+    return {"cases": cases, "all_detected": all(c["detected"] for c in cases),
+            "cmpsize_argument_ignored": cmpsize_ignored, "cmpsize_probe": declared}
 
 
 # --------------------------------------------------------------------------- #
