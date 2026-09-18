@@ -293,9 +293,17 @@ class Bench:
                     bad_bytes += 1
             elif not torch.equal(got, x.reshape(-1).cpu()):
                 bad_bytes += 1
+        # Half a bf16 ulp is a property of the *data's* magnitude, not of the error:
+        # bf16 keeps 8 significant bits, so the gap between representable values at
+        # magnitude m is 2^(floor(log2 m) - 7). The first version wrote `2**-8 *
+        # worst`, which scales the allowance by the error instead of the value and
+        # is far too small -- it reported a correct delivery as out of bounds.
         eps_max = max(self.eps)
+        absmax = max(float(x.float().abs().max()) for x in self.cache)
+        half_ulp = 2.0 ** (int(np.floor(np.log2(absmax))) - 8) if absmax > 0 else 0.0
         return {"bytes_mismatched": bad_bytes, "max_abs_error": worst,
-                "within_eps_plus_round": worst <= eps_max + TAU + 2 ** -8 * worst
+                "eps_max": eps_max, "bf16_half_ulp": half_ulp,
+                "within_eps_plus_round": (worst <= eps_max + TAU + half_ulp)
                 if compressed else True}
 
     def check_written(self, compressed: bool, path: Path) -> dict:
@@ -399,10 +407,30 @@ def main() -> int:
                 for _ in range(a.warmup):
                     run(False); run(True)
 
-                pre = (b.check_written(True, fp) if path == "fsync"
-                       else b.check_moved(True))
-                checks.write(json.dumps({"segment": seg, "cache": cname, "path": path,
-                                         "when": "pre", **pre}) + "\n")
+                def verify(when: str) -> None:
+                    """Run an arm, then check what that arm produced.
+
+                    Both buffers and the file are shared between the arms, so what
+                    they hold is whatever ran last -- and the pair order is shuffled
+                    on purpose, so that is not knowable from here. Checking without
+                    running first verified the wrong arm whenever the block happened
+                    to end on raw: harmless for `check_moved`, which then compared
+                    raw output against a compressed criterion, and fatal for
+                    `check_written`, which read a raw bf16 file as a compressed
+                    stream and handed the decoder block offsets made of garbage.
+                    That is the illegal memory access this replaced.
+                    """
+                    for comp in (False, True):
+                        run(comp)
+                        r = (b.check_written(comp, fp) if path == "fsync"
+                             else b.check_moved(comp))
+                        checks.write(json.dumps({
+                            "segment": seg, "cache": cname, "path": path,
+                            "when": when, "arm": "compressed" if comp else "raw",
+                            **r}) + "\n")
+                    checks.flush()
+
+                verify("pre")
 
                 orders = [True] * (per_seg // 2) + [False] * (per_seg - per_seg // 2)
                 rng.shuffle(orders)
@@ -418,11 +446,7 @@ def main() -> int:
                         "ratio": tc / tr, "t_wall": time.time()}) + "\n")
                     trials.flush()
 
-                post = (b.check_written(True, fp) if path == "fsync"
-                        else b.check_moved(True))
-                checks.write(json.dumps({"segment": seg, "cache": cname, "path": path,
-                                         "when": "post", **post}) + "\n")
-                checks.flush()
+                verify("post")
                 rs = [p[0] for p in results[key]]
                 cs = [p[1] for p in results[key]]
                 print(f"  {cname:<26} {path:<9} raw {st.median(rs)*1e3:8.2f} ms  "
