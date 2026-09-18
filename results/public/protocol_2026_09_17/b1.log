@@ -1,0 +1,46 @@
+held-out articles frozen: 32
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 5904.64it/s]
+
+preflight on development articles ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  dev0: replace 0.00e+00 ok | full-vs-cached 5.29e-03  <- investigate
+  dev1: replace 0.00e+00 ok | full-vs-cached 3.33e-03  <- investigate
+  h00 Frank Headlam                      raw 2.7828 K_only +0.0538  V_only -0.0379  K_and_V +0.0118   (2s)
+  h01 Meridian , Mississippi             raw 2.9622 K_only +0.0285  V_only -0.0299  K_and_V -0.0018   (3s)
+  h02 Papa Stour                         raw 3.0154 K_only -0.0511  V_only -0.0372  K_and_V -0.0940   (5s)
+  h03 Calvin McCarty                     raw 2.5749 K_only +0.0020  V_only -0.0276  K_and_V -0.0226   (6s)
+  h04 Sorry ( Madonna song )             raw 3.4190 K_only +0.0105  V_only -0.0474  K_and_V -0.0289   (8s)
+  h05 Tim Richmond                       raw 2.9845 K_only +0.0485  V_only -0.0204  K_and_V +0.0253   (9s)
+  h06 Trout Creek Mountains              raw 2.6573 K_only -0.0232  V_only -0.0585  K_and_V -0.0722   (10s)
+  h07 Daniel Radcliffe                   raw 2.5031 K_only +0.0121  V_only -0.0304  K_and_V -0.0240   (11s)
+  h08 New Jersey Route 29                raw 2.4338 K_only +0.0267  V_only -0.0190  K_and_V +0.0120   (13s)
+  h09 First Mongol invasion of Burma     raw 2.5968 K_only +0.0196  V_only -0.0231  K_and_V +0.0143   (14s)
+  h10 Battle of Edson 's Ridge           raw 2.2484 K_only +0.0444  V_only -0.0192  K_and_V +0.0212   (15s)
+  h11 Air Rhodesia Flight 825            raw 2.9132 K_only +0.0157  V_only -0.0179  K_and_V -0.0031   (17s)
+  h12 Tikal                              raw 2.4637 K_only +0.0271  V_only -0.0141  K_and_V +0.0153   (18s)
+  h13 Scientology in Germany             raw 2.6692 K_only +0.0330  V_only -0.0366  K_and_V -0.0051   (20s)
+  h14 Japanese battleship Asahi          raw 1.9324 K_only +0.0317  V_only -0.0190  K_and_V -0.0010   (21s)
+  h15 J. C. W. Beckham                   raw 2.1469 K_only +0.0415  V_only -0.0369  K_and_V +0.0043   (22s)
+  h16 1888 – 89 New Zealand Native footb raw 2.3672 K_only +0.0287  V_only -0.0236  K_and_V +0.0031   (24s)
+  h17 Battle of Sullivan 's Island       raw 2.8433 K_only -0.0089  V_only -0.0269  K_and_V -0.0332   (25s)
+  h18 Hu Zhengyan                        raw 2.7206 K_only -0.0136  V_only -0.0241  K_and_V -0.0380   (27s)
+  h19 Raid on Manila ( 1798 )            raw 2.6515 K_only +0.0003  V_only -0.0214  K_and_V -0.0214   (28s)
+  h20 Battle of the Hongorai River       raw 2.3663 K_only +0.0231  V_only -0.0362  K_and_V -0.0181   (29s)
+  h21 Sonic the Hedgehog ( 1991 video ga raw 3.0847 K_only +0.0185  V_only +0.0054  K_and_V -0.0009   (31s)
+  h22 Randy Blythe manslaughter case     raw 2.5029 K_only +0.0445  V_only -0.0419  K_and_V +0.0016   (32s)
+  h23 U.S. Route 2 in Michigan           raw 3.0171 K_only +0.0289  V_only -0.0238  K_and_V +0.0013   (34s)
+  h24 Thelnetham Windmill                raw 3.2912 K_only -0.0284  V_only -0.0335  K_and_V -0.0669   (35s)
+  h25 Military history of Australia      raw 2.7677 K_only +0.0528  V_only -0.0352  K_and_V +0.0203   (37s)
+  h26 Ward Churchill                     raw 3.3712 K_only +0.0156  V_only -0.0197  K_and_V -0.0047   (39s)
+  h27 Slammiversary ( 2008 )             raw 2.2818 K_only -0.0143  V_only -0.0040  K_and_V -0.0189   (40s)
+  h28 Back Off Boogaloo                  raw 3.7479 K_only +0.0116  V_only -0.0329  K_and_V -0.0308   (42s)
+  h29 Where the Streets Have No Name     raw 3.2766 K_only +0.0119  V_only -0.0216  K_and_V -0.0094   (43s)
+  h30 Nazarov cyclization reaction       raw 2.6779 K_only +0.0010  V_only -0.0364  K_and_V -0.0342   (44s)
+  h31 Horrible Bosses                    raw 3.1890 K_only +0.0023  V_only -0.0386  K_and_V -0.0300   (46s)
+
+arm             dNLL                 95% CI     PPL %  bytes/raw   worse
+K_only       +0.0155 [+0.0068,+0.0235]    +1.56%      0.664  26/32
+V_only       -0.0278 [-0.0320,-0.0234]    -2.74%      0.667   1/32
+K_and_V      -0.0134 [-0.0235,-0.0042]    -1.33%      0.330  11/32
+
+-> /workspace/out/b1

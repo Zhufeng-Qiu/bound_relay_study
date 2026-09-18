@@ -1,0 +1,21 @@
+{
+  "checks": [
+    {
+      "dev_doc": 0,
+      "replace_max_token_nll_diff": 0.0,
+      "replace_ok": true,
+      "full_vs_cached_mean_diff": 0.005290508270263672,
+      "alignment_investigate": true,
+      "finite": true
+    },
+    {
+      "dev_doc": 1,
+      "replace_max_token_nll_diff": 0.0,
+      "replace_ok": true,
+      "full_vs_cached_mean_diff": 0.003330230712890625,
+      "alignment_investigate": true,
+      "finite": true
+    }
+  ],
+  "all_replace_ok": true
+}

@@ -1,0 +1,106 @@
+{
+  "n_documents": 32,
+  "documents": [
+    "h00",
+    "h01",
+    "h02",
+    "h03",
+    "h04",
+    "h05",
+    "h06",
+    "h07",
+    "h08",
+    "h09",
+    "h10",
+    "h11",
+    "h12",
+    "h13",
+    "h14",
+    "h15",
+    "h16",
+    "h17",
+    "h18",
+    "h19",
+    "h20",
+    "h21",
+    "h22",
+    "h23",
+    "h24",
+    "h25",
+    "h26",
+    "h27",
+    "h28",
+    "h29",
+    "h30",
+    "h31"
+  ],
+  "fp32_margin": {
+    "max_E32_over_eps": 1.0000014645712882,
+    "n_compressed_tensors": 3584,
+    "n_exceeding_eps_plus_tau": 2,
+    "tau": 1e-06,
+    "note": "the pre-declared criterion E32 <= eps + TAU (absolute) is not met by every tensor. The excess is relative -- a few float32 ulps of eps -- so it crosses an absolute tolerance only at large eps. TAU was not widened; this run does not certify the absolute criterion and reports the margin it measured instead."
+  },
+  "scored_tokens_per_arm": 256,
+  "arms": [
+    "raw",
+    "K_only",
+    "V_only",
+    "K_and_V"
+  ],
+  "delta_vs_raw": {
+    "K_only": {
+      "delta_nll": 0.015461787581443787,
+      "ci95": [
+        0.006772528402507305,
+        0.023530733957886695
+      ],
+      "ppl_pct": 1.5581939474681228,
+      "ppl_pct_ci95": [
+        0.6795513833518063,
+        2.3809765989333043
+      ],
+      "crosses_zero": false,
+      "n_docs": 32,
+      "n_docs_worse": 26
+    },
+    "V_only": {
+      "delta_nll": -0.027792487293481827,
+      "ci95": [
+        -0.03196858763694763,
+        -0.02336048455908895
+      ],
+      "ppl_pct": -2.7409829319260948,
+      "ppl_pct_ci95": [
+        -3.1462994362592145,
+        -2.308974077273074
+      ],
+      "crosses_zero": false,
+      "n_docs": 32,
+      "n_docs_worse": 1
+    },
+    "K_and_V": {
+      "delta_nll": -0.013389084488153458,
+      "ci95": [
+        -0.023530062288045883,
+        -0.004160390980541719
+      ],
+      "ppl_pct": -1.3299849399116326,
+      "ppl_pct_ci95": [
+        -2.3255388950367384,
+        -0.4151748543446132
+      ],
+      "crosses_zero": false,
+      "n_docs": 32,
+      "n_docs_worse": 11
+    }
+  },
+  "payload_over_raw": {
+    "raw": 1.0,
+    "K_only": 0.6638902191604886,
+    "V_only": 0.6665680461696216,
+    "K_and_V": 0.3304582653301103
+  },
+  "note": "payload counts the uncompressed side of a one-sided arm; metadata is not serialised, so these are tensor payload bytes, not a recoverable file size",
+  "elapsed_s": 45.842818431556225
+}

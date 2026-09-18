@@ -1,0 +1,62 @@
+fullcache_d00_L1024: 56 tensors, 117.4 MB raw, 38.8 MB compressed
+fullcache_d00_L2048: 56 tensors, 234.9 MB raw, 77.7 MB compressed
+fullcache_d01_L1024: 56 tensors, 117.4 MB raw, 38.8 MB compressed
+fullcache_d01_L2048: 56 tensors, 234.9 MB raw, 77.8 MB compressed
+
+=== segment 1/3 ===
+  fullcache_d00_L1024        serial    raw    16.14 ms  comp    52.02 ms  R 3.249
+  fullcache_d00_L1024        pipeline  raw    19.10 ms  comp    41.32 ms  R 2.162
+  fullcache_d00_L1024        fsync     raw   306.16 ms  comp   192.79 ms  R 0.728
+  fullcache_d00_L2048        serial    raw    29.12 ms  comp    59.45 ms  R 2.041
+  fullcache_d00_L2048        pipeline  raw    29.02 ms  comp    42.60 ms  R 1.493
+  fullcache_d00_L2048        fsync     raw   495.19 ms  comp   230.06 ms  R 0.454
+  fullcache_d01_L1024        serial    raw    16.06 ms  comp    53.40 ms  R 3.327
+  fullcache_d01_L1024        pipeline  raw    18.66 ms  comp    41.60 ms  R 2.206
+  fullcache_d01_L1024        fsync     raw   305.42 ms  comp   219.98 ms  R 0.743
+  fullcache_d01_L2048        serial    raw    29.60 ms  comp    62.64 ms  R 2.110
+  fullcache_d01_L2048        pipeline  raw    29.09 ms  comp    43.28 ms  R 1.495
+  fullcache_d01_L2048        fsync     raw   574.15 ms  comp   261.31 ms  R 0.444
+
+=== segment 2/3 ===
+  fullcache_d00_L1024        serial    raw    16.37 ms  comp    54.22 ms  R 3.301
+  fullcache_d00_L1024        pipeline  raw    19.49 ms  comp    42.48 ms  R 2.162
+  fullcache_d00_L1024        fsync     raw   318.08 ms  comp   208.29 ms  R 0.728
+  fullcache_d00_L2048        serial    raw    29.19 ms  comp    60.64 ms  R 2.081
+  fullcache_d00_L2048        pipeline  raw    29.33 ms  comp    42.88 ms  R 1.494
+  fullcache_d00_L2048        fsync     raw   510.88 ms  comp   232.36 ms  R 0.474
+  fullcache_d01_L1024        serial    raw    19.46 ms  comp    75.29 ms  R 3.327
+  fullcache_d01_L1024        pipeline  raw    19.14 ms  comp    42.91 ms  R 2.217
+  fullcache_d01_L1024        fsync     raw   297.30 ms  comp   226.24 ms  R 0.764
+  fullcache_d01_L2048        serial    raw    29.81 ms  comp    64.53 ms  R 2.124
+  fullcache_d01_L2048        pipeline  raw    29.04 ms  comp    43.37 ms  R 1.484
+  fullcache_d01_L2048        fsync     raw   511.46 ms  comp   243.13 ms  R 0.464
+
+=== segment 3/3 ===
+  fullcache_d00_L1024        serial    raw    16.37 ms  comp    54.04 ms  R 3.281
+  fullcache_d00_L1024        pipeline  raw    19.22 ms  comp    42.20 ms  R 2.178
+  fullcache_d00_L1024        fsync     raw   269.15 ms  comp   208.29 ms  R 0.748
+  fullcache_d00_L2048        serial    raw    29.29 ms  comp    60.46 ms  R 2.065
+  fullcache_d00_L2048        pipeline  raw    29.40 ms  comp    42.95 ms  R 1.492
+  fullcache_d00_L2048        fsync     raw   504.01 ms  comp   233.64 ms  R 0.474
+  fullcache_d01_L1024        serial    raw    16.31 ms  comp    55.47 ms  R 3.336
+  fullcache_d01_L1024        pipeline  raw    19.20 ms  comp    42.91 ms  R 2.223
+  fullcache_d01_L1024        fsync     raw   279.33 ms  comp   216.75 ms  R 0.739
+  fullcache_d01_L2048        serial    raw    29.60 ms  comp    62.64 ms  R 2.096
+  fullcache_d01_L2048        pipeline  raw    29.04 ms  comp    43.45 ms  R 1.492
+  fullcache_d01_L2048        fsync     raw   501.92 ms  comp   248.92 ms  R 0.482
+
+configuration                             raw ms   comp ms       R             95% CI
+fullcache_d00_L1024|serial                 16.37     54.04   3.471 [3.312,3.706]  compressed slower
+fullcache_d00_L1024|pipeline               19.22     42.20   2.145 [1.932,2.306]  compressed slower
+fullcache_d00_L1024|fsync                 269.15    208.29   0.657 [0.566,0.749]  compressed faster
+fullcache_d00_L2048|serial                 29.29     60.46   2.096 [2.040,2.159]  compressed slower
+fullcache_d00_L2048|pipeline               29.40     42.95   1.535 [1.463,1.667]  compressed slower
+fullcache_d00_L2048|fsync                 504.01    233.64   0.664 [0.480,0.969]  compressed faster
+fullcache_d01_L1024|serial                 16.31     55.47   6.147 [3.850,11.123]  compressed slower
+fullcache_d01_L1024|pipeline               19.20     42.91   2.326 [2.236,2.440]  compressed slower
+fullcache_d01_L1024|fsync                 279.33    216.75   0.743 [0.686,0.802]  compressed faster
+fullcache_d01_L2048|serial                 29.60     62.64   2.165 [2.109,2.229]  compressed slower
+fullcache_d01_L2048|pipeline               29.04     43.45   1.522 [1.479,1.574]  compressed slower
+fullcache_d01_L2048|fsync                 501.92    248.92   0.508 [0.470,0.554]  compressed faster
+
+-> /workspace/out/b2
