@@ -60,6 +60,8 @@ saturated with under 2.2 ms of waiting, so there is no headroom left to schedule
 The break-even moves from 3.82 to **5.38 GB/s**, not the 10.96 the model implied.
 → `results/public/pipeline_findings.md`, `gate2_findings.md`
 
+![paired path ratios](plots/results/fig5_paired_path_ratios.png)
+
 **Paired and interleaved, the path sets the sign — twelve configurations, twelve
 determinate answers.** Every earlier performance number here compared a raw loop
 against a compressed loop measured at a different moment on a shared machine. Paired
@@ -92,6 +94,8 @@ is a function of how much you write**: the same incompressible bytes at 77.7 MB 
 *opposite directions* on the two filesystems and never flips the sign.
 → `results/public/fsync_offload_findings.md`
 → `results/public/gate2_findings.md`
+
+![quality against bytes](plots/results/fig4_quality_vs_bytes_heldout.png)
 
 **Keys and values are not equally safe to compress.** At payloads within 0.4% of each
 other (0.664 against 0.667), K-only compression costs **+1.56%** of perplexity
