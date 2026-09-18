@@ -51,6 +51,25 @@ MODE = "fixed"
 C = 0.10
 
 
+def write_all(fd: int, buf: memoryview, offset: int) -> None:
+    """`pwrite` is allowed to write fewer bytes than it was given.
+
+    The earlier version ignored the return value, so a short write would have left
+    a hole in the file and the timing would have been of a write that did not
+    happen. On a network filesystem under load that is not hypothetical. Loop until
+    the payload is placed, and fail loudly if the descriptor stops accepting bytes.
+    """
+    view = buf
+    pos = offset
+    while view:
+        wrote = os.pwrite(fd, view, pos)
+        if wrote <= 0:
+            raise OSError(f"pwrite returned {wrote} with {len(view)} bytes left "
+                          f"at offset {pos}")
+        view = view[wrote:]
+        pos += wrote
+
+
 def offsets(sizes: list[int]) -> tuple[list[int], int]:
     """Contiguous layout. Built the same way for both arms so that whatever the
     layout costs, it costs both of them."""
@@ -139,10 +158,10 @@ def offload(cache, L, st_: dict, path: Path, compressed: bool,
     fd = os.open(path, os.O_WRONLY)
     try:
         if n_writes == 1:
-            os.pwrite(fd, mv[:total], 0)
+            write_all(fd, mv[:total], 0)
         else:
             for i, s in enumerate(sizes):
-                os.pwrite(fd, mv[off[i]:off[i] + s], off[i])
+                write_all(fd, mv[off[i]:off[i] + s], off[i])
         if do_fsync:
             os.fsync(fd)                            # the acknowledgement
     finally:
@@ -161,6 +180,16 @@ def verify(cache, L, st_: dict, path: Path, compressed: bool) -> dict:
     back = torch.frombuffer(buf, dtype=torch.uint8)
 
     if not compressed:
+        # byte-exact, not "the float difference is zero". A raw round trip either
+        # returns the bytes it was given or it does not, and a float comparison
+        # cannot distinguish a preserved payload from one whose bit pattern changed
+        # into a numerically equal value -- or tell NaN from NaN.
+        mismatched = 0
+        for i, x in enumerate(cache):
+            got = back[off[i]:off[i] + sizes[i]]
+            want = x.reshape(-1).view(torch.uint8).cpu()
+            if not bool(torch.equal(got, want)):
+                mismatched += 1
         worst = 0.0
         for i, x in enumerate(cache):
             # from the buffer at a byte offset rather than by viewing a slice of a
@@ -170,7 +199,8 @@ def verify(cache, L, st_: dict, path: Path, compressed: bool) -> dict:
             got = torch.frombuffer(buf, dtype=torch.bfloat16,
                                    count=x.numel(), offset=off[i]).reshape(x.shape)
             worst = max(worst, float((x.cpu().float() - got.float()).abs().max()))
-        return {"exact": worst == 0.0, "max_abs_diff": worst}
+        return {"exact": mismatched == 0, "bytes_mismatched_tensors": mismatched,
+                "max_abs_diff": worst}
 
     torch.cuda.set_device(0)
     worst_ratio, worst_abs = 0.0, 0.0

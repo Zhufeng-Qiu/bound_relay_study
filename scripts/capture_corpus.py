@@ -119,6 +119,7 @@ def main() -> int:
         "documents": [], "observations": [],
     }
     full_docs = set(range(args.full_cache_docs))   # pre-registered, first N
+    full_lengths = set(args.full_cache_lengths or [max(args.lengths)])
 
     with torch.inference_mode():
         for di, (title, body) in enumerate(arts[: args.docs]):
@@ -164,7 +165,11 @@ def main() -> int:
                                         "within_eps_fp32": r["within_eps_fp32"],
                                     }
                         manifest["observations"].append(obs)
-                if di in full_docs and L == max(args.lengths):
+                # Previously `L == max(args.lengths)` -- so asking for [1024, 2048]
+                # silently produced only the 2048 cache, and a directory named for
+                # one length could hold another. B2 needs both lengths, and a cache
+                # mislabelled by length is a wrong answer that looks like a right one.
+                if di in full_docs and L in full_lengths:
                     fc = args.out / f"fullcache_d{di:02d}_L{L}"
                     fc.mkdir(exist_ok=True)
                     for li in range(n_layers):

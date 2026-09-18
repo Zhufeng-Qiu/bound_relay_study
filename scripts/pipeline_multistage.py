@@ -354,9 +354,21 @@ def run_pipeline(cache, L, depth: int, compressed: bool, transport_cls,
     recv = [torch.zeros(slot_bytes, dtype=torch.uint8, device="cuda:1") for _ in range(depth)]
     dst = [torch.zeros(max(x.numel() for x in cache), dtype=torch.float32,
                        device="cuda:1") for _ in range(depth)]
+    # The endpoint of a transfer is the receiver holding the data, so the timed
+    # path has to actually deliver it. Previously only a verification round kept
+    # anything, and it kept host copies; a timing round let every reconstruction
+    # fall out of scope as a temporary, which times a transfer whose output nobody
+    # holds. These are per-tensor, on GPU1, allocated once and written on every
+    # pass, so after a pass returns all `n` are simultaneously live and no ring slot
+    # can overwrite them.
+    gpu_out = [torch.zeros(x.numel(), dtype=torch.bfloat16, device="cuda:1")
+               for x in cache]
     out: list[torch.Tensor | None] = [None] * n
 
     def one_pass(keep: bool) -> tuple[float, dict]:
+        # `keep` no longer changes what the pass does -- every pass delivers into
+        # gpu_out. It is retained only to name the pass that gets read back.
+        _ = keep
         free: queue.Queue = queue.Queue()
         for s in range(depth):
             free.put(s)
@@ -384,6 +396,11 @@ def run_pipeline(cache, L, depth: int, compressed: bool, transport_cls,
                         return
                     t_w = time.perf_counter()
                     if compressed:
+                        # A slot carried a different tensor last time round and
+                        # cuSZp reads past cmpSize. Conservative: zero the whole
+                        # slot, and pay for it inside the timed region because a
+                        # correct implementation has to pay for it.
+                        scr[slot].zero_()
                         f = x.float().contiguous().reshape(-1)
                         m = ctypes.c_size_t(0)
                         getattr(L, _MANGLED[("compress", MODE)])(
@@ -419,6 +436,9 @@ def run_pipeline(cache, L, depth: int, compressed: bool, transport_cls,
                     i, slot, nb, ev = item
                     t_w = time.perf_counter()
                     ev.synchronize()                    # the bytes are in the ring
+                    # the tail past nb holds whatever the previous tensor left, and
+                    # the decoder reads past cmpSize
+                    recv[slot].zero_()
                     with torch.cuda.stream(s_copy):
                         ring.get(slot, recv[slot], nb)
                     s_copy.synchronize()
@@ -429,11 +449,17 @@ def run_pipeline(cache, L, depth: int, compressed: bool, transport_cls,
                             ctypes.c_void_p(recv[slot].data_ptr()),
                             ctypes.c_size_t(cache[i].numel()), ctypes.c_size_t(nb),
                             ctypes.c_float(eps[i]), None)
-                        fin = dst[slot][: cache[i].numel()].to(torch.bfloat16)
+                        gpu_out[i].copy_(dst[slot][: cache[i].numel()])
                     else:
-                        fin = recv[slot][:nb].view(torch.bfloat16).clone()
-                    if keep:
-                        out[i] = fin.cpu()
+                        gpu_out[i].copy_(recv[slot][:nb].view(torch.bfloat16))
+                    # The write into gpu_out reads the slot and is asynchronous.
+                    # Returning the slot here without waiting lets the producer's
+                    # next ring.put race that read -- which on the raw path reads
+                    # `recv[slot]` directly, the exact buffer about to be
+                    # overwritten. Wait for the read to complete, then free.
+                    done = torch.cuda.Event()
+                    done.record()
+                    done.synchronize()
                     busy["consumer_s"] += time.perf_counter() - t_w
                     free.put(slot)
             except BaseException as e:      # noqa: BLE001
@@ -444,6 +470,9 @@ def run_pipeline(cache, L, depth: int, compressed: bool, transport_cls,
                     free.put(-1)
 
         torch.cuda.synchronize(0)
+        torch.cuda.synchronize(1)
+        for g in gpu_out:                   # so a skipped write cannot pass as stale
+            g.zero_()
         torch.cuda.synchronize(1)
         t0 = time.perf_counter()
         th = [threading.Thread(target=producer), threading.Thread(target=consumer)]
@@ -463,7 +492,14 @@ def run_pipeline(cache, L, depth: int, compressed: bool, transport_cls,
     samples = [r[0] for r in runs]
     busy = {k: st.median([r[1][k] for r in runs])
             for k in ("producer_s", "consumer_s", "producer_wait_s", "consumer_wait_s")}
-    one_pass(True)                                # the pass that is checked
+    # The checked pass is the *same* pass: identical code, identical delivery into
+    # gpu_out. Fetching to the host happens afterwards, outside the timed region, so
+    # the verification cannot introduce a synchronisation the timed path lacked --
+    # which is how a per-tensor `.cpu()` inside the loop would have hidden exactly
+    # the slot race this harness is supposed to catch.
+    one_pass(True)
+    for i in range(n):
+        out[i] = gpu_out[i].cpu()
     ring.close()
 
     # compared on the host. The source lives on GPU0 and the reconstruction came off

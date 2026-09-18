@@ -13,6 +13,11 @@ import torch
 _LIB = None
 MODES = ("plain", "outlier", "fixed")
 
+#: Absolute tolerance for every numerical acceptance check in this project.
+#: Declared here, once, before any result was seen. It is not a knob to widen when
+#: a check fails -- a failure at this tolerance is a finding, not a calibration.
+TAU = 1e-6
+
 
 #: cuSZp's headers declare no ``extern "C"``, so the shared object exports
 #: C++-mangled names. Binding by the mangled symbol is more brittle than a C
@@ -101,9 +106,43 @@ def roundtrip(x_bf16: torch.Tensor, eps: float, mode: str = "plain",
             torch.cuda.synchronize()
             out["unwritten_elements"] = int((~torch.isfinite(probe)).sum())
 
+        # Error accounting, in float64 on the host. Computing a max-abs difference
+        # in the precision being audited lets the precision hide its own error.
+        #
+        # Three quantities, deliberately separate:
+        #   E32 = max|y - x|   the codec's own error, fp32 decode against fp32 source
+        #   Ebf = max|z - x|   what a receiver actually gets, after the bf16 downcast
+        #   R   = max|z - y|   the rounding the downcast added, measured not assumed
+        #
+        # `within_eps_fp32` is the codec's contract and is checked at eps + TAU.
+        # The earlier `eps * 1.001` was a relative slack that grows with eps and has
+        # no numerical justification; TAU is an absolute, pre-declared tolerance.
+        #
+        # There is deliberately no boolean claiming the *bf16* result satisfies the
+        # original eps. It frequently does not -- the downcast adds up to half a bf16
+        # ulp on top of whatever the codec guaranteed -- and an audit of 504 earlier
+        # combinations found 489 of them outside eps by that margin while every one
+        # of them satisfied the fp32 bound. `within_eps_plus_rounding` is a posterior
+        # check against eps + TAU + this run's own measured R, not a guarantee the
+        # codec offers for bf16.
         back = dec.to(torch.bfloat16)
         src = x_bf16.cuda().reshape(-1)
-        out["max_error_fp32"] = float((d32 - dec).abs().max())
-        out["max_error_bf16"] = float((src.float() - back.float()).abs().max())
-        out["within_eps_fp32"] = out["max_error_fp32"] <= eps * 1.001
+        x64 = d32.double().cpu()
+        y64 = dec.double().cpu()
+        z64 = back.double().cpu()
+        e32 = float((y64 - x64).abs().max())
+        ebf = float((z64 - x64).abs().max())
+        rnd = float((z64 - y64).abs().max())
+        out["max_error_fp32"] = e32
+        out["max_error_bf16"] = ebf
+        out["rounding_bf16"] = rnd
+        out["eps"] = float(eps)
+        out["e32_over_eps"] = e32 / eps if eps > 0 else float("inf")
+        out["ebf_over_eps"] = ebf / eps if eps > 0 else float("inf")
+        out["finite"] = bool(torch.isfinite(dec).all() and torch.isfinite(back).all())
+        # finite first: a NaN compares false against every bound, so checking the
+        # bound first lets a non-finite reconstruction pass as "not exceeding" it
+        out["within_eps_fp32"] = out["finite"] and e32 <= eps + TAU
+        out["within_eps_plus_rounding"] = out["finite"] and ebf <= eps + TAU + rnd
+        out["within_eps_fp32_legacy_1p001"] = e32 <= eps * 1.001
     return out
