@@ -1,0 +1,214 @@
+{
+  "n": 24,
+  "documents": [
+    {
+      "title": "2011 \u2013 12 Columbus Blue Jackets season",
+      "body_sha1_16": "db0834a20fe5b39d",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "Ancient Egyptian deities",
+      "body_sha1_16": "3ffe14c29e5e447c",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "Charles Eaton ( RAAF officer )",
+      "body_sha1_16": "f286cc5144f27252",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "Cicely Mary Barker",
+      "body_sha1_16": "9db862750cca930b",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "Coldrum Long Barrow",
+      "body_sha1_16": "a55deca2989ccca3",
+      "split": "train",
+      "used_by": [
+        "b0_corpus"
+      ]
+    },
+    {
+      "title": "Devin Townsend",
+      "body_sha1_16": "caf634dbcbaaa309",
+      "split": "train",
+      "used_by": [
+        "b0_corpus"
+      ]
+    },
+    {
+      "title": "Elephanta Caves",
+      "body_sha1_16": "057d7b831ea3e715",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "Forward Intelligence Team",
+      "body_sha1_16": "8dd4e5531bc4ca0f",
+      "split": "train",
+      "used_by": [
+        "b0_corpus"
+      ]
+    },
+    {
+      "title": "General aviation in the United Kingdom",
+      "body_sha1_16": "c90a944162f3a7a8",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "Gold dollar",
+      "body_sha1_16": "7358c480efcdd010",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "Jacqueline Fernandez",
+      "body_sha1_16": "80fadd103b28ec9a",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "John Cullen",
+      "body_sha1_16": "746f1bfdec99ea66",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "Michael Jordan",
+      "body_sha1_16": "d6c795a0003ac431",
+      "split": "train",
+      "used_by": [
+        "b0_corpus"
+      ]
+    },
+    {
+      "title": "Polish culture during World War II",
+      "body_sha1_16": "b0ba46c0b5c9293e",
+      "split": "train",
+      "used_by": [
+        "b0_corpus"
+      ]
+    },
+    {
+      "title": "SMS Markgraf",
+      "body_sha1_16": "855823d7f97f6d0b",
+      "split": "train",
+      "used_by": [
+        "b0_corpus"
+      ]
+    },
+    {
+      "title": "South of Heaven",
+      "body_sha1_16": "82ea7a2d5d4d0815",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "The Feast of the Goat",
+      "body_sha1_16": "a5849b560a76aa85",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "Tina Fey",
+      "body_sha1_16": "a9b133812ef6f286",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "Tower Building of the Little Rock Arsenal",
+      "body_sha1_16": "c50ca26b0d945984",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "Treaty of Ciudad Ju\u00e1rez",
+      "body_sha1_16": "cfa49de6aa203065",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "USS Atlanta ( 1861 )",
+      "body_sha1_16": "1b1cc3ab4d2604e9",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "Valkyria Chronicles III",
+      "body_sha1_16": "2a20b27ecd1aeeb1",
+      "split": "train",
+      "used_by": [
+        "b0_corpus",
+        "quality_contrast"
+      ]
+    },
+    {
+      "title": "Wrapped in Red",
+      "body_sha1_16": "6e88e2c0ddf5d36b",
+      "split": "train",
+      "used_by": [
+        "b0_corpus"
+      ]
+    },
+    {
+      "title": "Zagreb Synagogue",
+      "body_sha1_16": "c4387271af9e5120",
+      "split": "train",
+      "used_by": [
+        "b0_corpus"
+      ]
+    }
+  ],
+  "note": "Articles read during this project's development. Excluding them establishes 'not used in development', not 'unseen by the model'."
+}

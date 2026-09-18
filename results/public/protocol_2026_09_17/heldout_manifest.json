@@ -1,0 +1,487 @@
+{
+  "frozen_n": 32,
+  "target": 32,
+  "floor": 16,
+  "selection_rule": "WikiText-2 validation, corpus order, body >= 12000 chars and >= 1281 tokens under the pinned tokenizer, not used in development, no duplicate bodies; first 32",
+  "documents": [
+    {
+      "doc": "h00",
+      "title": "Frank Headlam",
+      "split": "validation",
+      "corpus_index": 1,
+      "n_chars": 14373,
+      "n_tokens_available": 3468,
+      "body_sha1_16": "1bc77db5a2fe9f4e",
+      "body_normalised_sha1_16": "ebdde7867540692f",
+      "prefix_1281_token_sha1_16": "aaf638c719644bf0"
+    },
+    {
+      "doc": "h01",
+      "title": "Meridian , Mississippi",
+      "split": "validation",
+      "corpus_index": 4,
+      "n_chars": 59075,
+      "n_tokens_available": 14121,
+      "body_sha1_16": "a173a8ce820be693",
+      "body_normalised_sha1_16": "ded9687f75558b9e",
+      "prefix_1281_token_sha1_16": "79463ce4ba89d4bc"
+    },
+    {
+      "doc": "h02",
+      "title": "Papa Stour",
+      "split": "validation",
+      "corpus_index": 5,
+      "n_chars": 18161,
+      "n_tokens_available": 4371,
+      "body_sha1_16": "ed666b7764020a86",
+      "body_normalised_sha1_16": "47b88c79661a1195",
+      "prefix_1281_token_sha1_16": "c7cd378569b10c71"
+    },
+    {
+      "doc": "h03",
+      "title": "Calvin McCarty",
+      "split": "validation",
+      "corpus_index": 7,
+      "n_chars": 14265,
+      "n_tokens_available": 3402,
+      "body_sha1_16": "c01acdd84c745de3",
+      "body_normalised_sha1_16": "c457f1020cb6c3f6",
+      "prefix_1281_token_sha1_16": "ad17872a8224b790"
+    },
+    {
+      "doc": "h04",
+      "title": "Sorry ( Madonna song )",
+      "split": "validation",
+      "corpus_index": 10,
+      "n_chars": 13443,
+      "n_tokens_available": 3045,
+      "body_sha1_16": "aba6a85ff0a87a06",
+      "body_normalised_sha1_16": "7d2a85e7e1411245",
+      "prefix_1281_token_sha1_16": "c60fd12fe8d3b8ff"
+    },
+    {
+      "doc": "h05",
+      "title": "Tim Richmond",
+      "split": "validation",
+      "corpus_index": 12,
+      "n_chars": 19040,
+      "n_tokens_available": 4431,
+      "body_sha1_16": "c167c2f4a67b2b84",
+      "body_normalised_sha1_16": "94dea07a26768a6f",
+      "prefix_1281_token_sha1_16": "2fc4aae475da971d"
+    },
+    {
+      "doc": "h06",
+      "title": "Trout Creek Mountains",
+      "split": "validation",
+      "corpus_index": 13,
+      "n_chars": 18635,
+      "n_tokens_available": 4131,
+      "body_sha1_16": "a60cc294cf8a1211",
+      "body_normalised_sha1_16": "f440bcac1a8e2809",
+      "prefix_1281_token_sha1_16": "e0fd45eaaffd22a8"
+    },
+    {
+      "doc": "h07",
+      "title": "Daniel Radcliffe",
+      "split": "validation",
+      "corpus_index": 18,
+      "n_chars": 19833,
+      "n_tokens_available": 4547,
+      "body_sha1_16": "38d4380c68c11fb2",
+      "body_normalised_sha1_16": "f60ae0d272ad5463",
+      "prefix_1281_token_sha1_16": "0fa9710917e6c6bf"
+    },
+    {
+      "doc": "h08",
+      "title": "New Jersey Route 29",
+      "split": "validation",
+      "corpus_index": 20,
+      "n_chars": 13000,
+      "n_tokens_available": 3208,
+      "body_sha1_16": "fe96951fe9e960ec",
+      "body_normalised_sha1_16": "6948b335b54809e8",
+      "prefix_1281_token_sha1_16": "8ed637738c24a14a"
+    },
+    {
+      "doc": "h09",
+      "title": "First Mongol invasion of Burma",
+      "split": "validation",
+      "corpus_index": 21,
+      "n_chars": 27734,
+      "n_tokens_available": 6798,
+      "body_sha1_16": "8faf4259573b7c34",
+      "body_normalised_sha1_16": "17762bc8c00f9e07",
+      "prefix_1281_token_sha1_16": "19fa6e6cae282807"
+    },
+    {
+      "doc": "h10",
+      "title": "Battle of Edson 's Ridge",
+      "split": "validation",
+      "corpus_index": 22,
+      "n_chars": 34778,
+      "n_tokens_available": 8247,
+      "body_sha1_16": "b009bb0dac3d741c",
+      "body_normalised_sha1_16": "cc171eba31ee4547",
+      "prefix_1281_token_sha1_16": "6332a27a01001f29"
+    },
+    {
+      "doc": "h11",
+      "title": "Air Rhodesia Flight 825",
+      "split": "validation",
+      "corpus_index": 24,
+      "n_chars": 30416,
+      "n_tokens_available": 6612,
+      "body_sha1_16": "b6fcadbdb5e2adb2",
+      "body_normalised_sha1_16": "03a770e78eb23cbf",
+      "prefix_1281_token_sha1_16": "3ae019f0b0956af2"
+    },
+    {
+      "doc": "h12",
+      "title": "Tikal",
+      "split": "validation",
+      "corpus_index": 25,
+      "n_chars": 55093,
+      "n_tokens_available": 13202,
+      "body_sha1_16": "4e15948bec6aaaa0",
+      "body_normalised_sha1_16": "0ed2ac01e4c1c4c0",
+      "prefix_1281_token_sha1_16": "85483a9147af06bb"
+    },
+    {
+      "doc": "h13",
+      "title": "Scientology in Germany",
+      "split": "validation",
+      "corpus_index": 28,
+      "n_chars": 44331,
+      "n_tokens_available": 8597,
+      "body_sha1_16": "fca0ba01bae68643",
+      "body_normalised_sha1_16": "a36467a4520daaf3",
+      "prefix_1281_token_sha1_16": "a1073c9740e6b1b8"
+    },
+    {
+      "doc": "h14",
+      "title": "Japanese battleship Asahi",
+      "split": "validation",
+      "corpus_index": 29,
+      "n_chars": 17454,
+      "n_tokens_available": 4664,
+      "body_sha1_16": "b06fd9125db798e8",
+      "body_normalised_sha1_16": "0a6b87f98bf63c9d",
+      "prefix_1281_token_sha1_16": "0f34a03ebacdedc5"
+    },
+    {
+      "doc": "h15",
+      "title": "J. C. W. Beckham",
+      "split": "validation",
+      "corpus_index": 31,
+      "n_chars": 18550,
+      "n_tokens_available": 4000,
+      "body_sha1_16": "315ae5566292dcb2",
+      "body_normalised_sha1_16": "3de0c66dfd67400a",
+      "prefix_1281_token_sha1_16": "ea58b21dd2f9cd00"
+    },
+    {
+      "doc": "h16",
+      "title": "1888 \u2013 89 New Zealand Native football team",
+      "split": "validation",
+      "corpus_index": 32,
+      "n_chars": 35151,
+      "n_tokens_available": 7694,
+      "body_sha1_16": "44f6f79b12b05977",
+      "body_normalised_sha1_16": "2b2ca97904501e85",
+      "prefix_1281_token_sha1_16": "e5996ebebed69eb8"
+    },
+    {
+      "doc": "h17",
+      "title": "Battle of Sullivan 's Island",
+      "split": "validation",
+      "corpus_index": 34,
+      "n_chars": 20747,
+      "n_tokens_available": 4418,
+      "body_sha1_16": "94bf173e589ea5d8",
+      "body_normalised_sha1_16": "743770e57b95c5c8",
+      "prefix_1281_token_sha1_16": "04a9f3094fb7357a"
+    },
+    {
+      "doc": "h18",
+      "title": "Hu Zhengyan",
+      "split": "validation",
+      "corpus_index": 35,
+      "n_chars": 14537,
+      "n_tokens_available": 3438,
+      "body_sha1_16": "55092032f62ef34d",
+      "body_normalised_sha1_16": "c860276ebfd49f13",
+      "prefix_1281_token_sha1_16": "a6aeaab42817ea5d"
+    },
+    {
+      "doc": "h19",
+      "title": "Raid on Manila ( 1798 )",
+      "split": "validation",
+      "corpus_index": 36,
+      "n_chars": 17015,
+      "n_tokens_available": 3621,
+      "body_sha1_16": "f9d9d1852b330444",
+      "body_normalised_sha1_16": "5c167d415e5e1cbe",
+      "prefix_1281_token_sha1_16": "943a7041455e970d"
+    },
+    {
+      "doc": "h20",
+      "title": "Battle of the Hongorai River",
+      "split": "validation",
+      "corpus_index": 38,
+      "n_chars": 23404,
+      "n_tokens_available": 5095,
+      "body_sha1_16": "8e65de19dac85268",
+      "body_normalised_sha1_16": "9cfc52d86cab5fdb",
+      "prefix_1281_token_sha1_16": "8a84e5a9d9886eba"
+    },
+    {
+      "doc": "h21",
+      "title": "Sonic the Hedgehog ( 1991 video game )",
+      "split": "validation",
+      "corpus_index": 39,
+      "n_chars": 23043,
+      "n_tokens_available": 5041,
+      "body_sha1_16": "1ae6be18a4e6ffad",
+      "body_normalised_sha1_16": "6be37f38a41e13c8",
+      "prefix_1281_token_sha1_16": "fd58faab091da5a9"
+    },
+    {
+      "doc": "h22",
+      "title": "Randy Blythe manslaughter case",
+      "split": "validation",
+      "corpus_index": 41,
+      "n_chars": 27280,
+      "n_tokens_available": 6239,
+      "body_sha1_16": "725246727206bcf7",
+      "body_normalised_sha1_16": "d24a85eb4cad2124",
+      "prefix_1281_token_sha1_16": "344d14a6d9af4c3a"
+    },
+    {
+      "doc": "h23",
+      "title": "U.S. Route 2 in Michigan",
+      "split": "validation",
+      "corpus_index": 42,
+      "n_chars": 30662,
+      "n_tokens_available": 7532,
+      "body_sha1_16": "642a4c3386c1cf43",
+      "body_normalised_sha1_16": "1f6ba249bc06895f",
+      "prefix_1281_token_sha1_16": "0cdf67b3fb8b5570"
+    },
+    {
+      "doc": "h24",
+      "title": "Thelnetham Windmill",
+      "split": "validation",
+      "corpus_index": 44,
+      "n_chars": 24306,
+      "n_tokens_available": 5847,
+      "body_sha1_16": "4b1ffe44a97922e2",
+      "body_normalised_sha1_16": "086741a0a94554dc",
+      "prefix_1281_token_sha1_16": "0907d0817ec1861b"
+    },
+    {
+      "doc": "h25",
+      "title": "Military history of Australia",
+      "split": "validation",
+      "corpus_index": 46,
+      "n_chars": 107156,
+      "n_tokens_available": 23449,
+      "body_sha1_16": "3df6697fbb25776e",
+      "body_normalised_sha1_16": "ec840e0c8e9986cf",
+      "prefix_1281_token_sha1_16": "203d69b30d301c6d"
+    },
+    {
+      "doc": "h26",
+      "title": "Ward Churchill",
+      "split": "validation",
+      "corpus_index": 47,
+      "n_chars": 38496,
+      "n_tokens_available": 9254,
+      "body_sha1_16": "9bec4bfa10c27900",
+      "body_normalised_sha1_16": "e7894f27036d5bce",
+      "prefix_1281_token_sha1_16": "db45961a5791c353"
+    },
+    {
+      "doc": "h27",
+      "title": "Slammiversary ( 2008 )",
+      "split": "validation",
+      "corpus_index": 51,
+      "n_chars": 21962,
+      "n_tokens_available": 4993,
+      "body_sha1_16": "0da34f028188c623",
+      "body_normalised_sha1_16": "452c7b1d5a8f3653",
+      "prefix_1281_token_sha1_16": "9bf7439cf7af4add"
+    },
+    {
+      "doc": "h28",
+      "title": "Back Off Boogaloo",
+      "split": "validation",
+      "corpus_index": 53,
+      "n_chars": 15113,
+      "n_tokens_available": 3678,
+      "body_sha1_16": "c43a8f3160827cac",
+      "body_normalised_sha1_16": "01f97a872cc35c58",
+      "prefix_1281_token_sha1_16": "efa8ebb8e40feae8"
+    },
+    {
+      "doc": "h29",
+      "title": "Where the Streets Have No Name",
+      "split": "validation",
+      "corpus_index": 54,
+      "n_chars": 26404,
+      "n_tokens_available": 6021,
+      "body_sha1_16": "c7886589eb9a7e40",
+      "body_normalised_sha1_16": "e6420590a0b76a20",
+      "prefix_1281_token_sha1_16": "1beb20de11bd4e2d"
+    },
+    {
+      "doc": "h30",
+      "title": "Nazarov cyclization reaction",
+      "split": "validation",
+      "corpus_index": 55,
+      "n_chars": 13819,
+      "n_tokens_available": 2967,
+      "body_sha1_16": "530752610f33e5dc",
+      "body_normalised_sha1_16": "bea9bd829f87f84c",
+      "prefix_1281_token_sha1_16": "05227b9b062b1c18"
+    },
+    {
+      "doc": "h31",
+      "title": "Horrible Bosses",
+      "split": "validation",
+      "corpus_index": 56,
+      "n_chars": 29594,
+      "n_tokens_available": 6884,
+      "body_sha1_16": "a90555d77c9fabb4",
+      "body_normalised_sha1_16": "d859d61b29fbce5e",
+      "prefix_1281_token_sha1_16": "49d58dff6d54816a"
+    }
+  ],
+  "rejected": [
+    {
+      "title": "Homarus gammarus",
+      "corpus_index": 0,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "M @-@ 82 ( Michigan highway )",
+      "corpus_index": 2,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "Shikamaru Nara",
+      "corpus_index": 3,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "Angel of Death ( Slayer song )",
+      "corpus_index": 6,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "Hurricane Beatriz ( 2011 )",
+      "corpus_index": 8,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "The Bourgeois Blues",
+      "corpus_index": 9,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "High Five Interchange",
+      "corpus_index": 11,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "Mycena inclinata",
+      "corpus_index": 14,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "Capel Lligwy",
+      "corpus_index": 15,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "2011 \u2013 12 Michigan Wolverines men 's basketball team",
+      "corpus_index": 16,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "Upsilon Andromedae b",
+      "corpus_index": 17,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "... Thirteen Years Later",
+      "corpus_index": 19,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "New Jersey Route 50",
+      "corpus_index": 23,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "Tropical Storm Josephine ( 2008 )",
+      "corpus_index": 26,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "Mount Elbert",
+      "corpus_index": 27,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "Training Day ( The Office )",
+      "corpus_index": 30,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "\u00c9va Gauthier",
+      "corpus_index": 33,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "B of the Bang",
+      "corpus_index": 37,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "The Same Old Story",
+      "corpus_index": 40,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "Butterfly World Tour",
+      "corpus_index": 43,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "Sailor Mouth",
+      "corpus_index": 45,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "Exit Through the Kwik @-@ E @-@ Mart",
+      "corpus_index": 48,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "The Boat Race 2008",
+      "corpus_index": 49,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "Fort Scott National Historic Site",
+      "corpus_index": 50,
+      "reason": "below character threshold"
+    },
+    {
+      "title": "Home Made Mince Pie",
+      "corpus_index": 52,
+      "reason": "below character threshold"
+    }
+  ]
+}

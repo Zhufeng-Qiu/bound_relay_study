@@ -1,0 +1,87 @@
+{
+  "frozen_utc": "2026-09-18T01:04:12.892683+00:00",
+  "code_sha": "1c8eb91b82c8df871fc9ff9c44340769e66e27db",
+  "working_tree_clean": true,
+  "uncommitted": [],
+  "model": {
+    "id": "Qwen/Qwen3-1.7B",
+    "revision": "b9352fbb8ce704292730cf54b3b1dceb2a808738",
+    "dtype": "bfloat16",
+    "mode": "eval"
+  },
+  "codec": {
+    "name": "cuSZp",
+    "mode": "fixed",
+    "commit": "RECORDED AT RUN TIME BY environment.json"
+  },
+  "eps": "eps_i = float32(c * std(x_i.float(), correction=1)), per tensor",
+  "seeds": {
+    "run": 20260917,
+    "bootstrap": 20260918,
+    "bootstrap_resamples": 5000
+  },
+  "tolerances": {
+    "tau_absolute": 1e-06,
+    "fp32_acceptance": "E32 <= eps + tau",
+    "bf16_posterior": "Ebf <= eps + tau + R, with R the measured rounding",
+    "bf16_guarantee": "none claimed",
+    "scoring_replacement_max_nll_diff": 1e-06,
+    "full_vs_cached_alignment_investigate_above": 0.001,
+    "delta_nll_tolerance_if_used": 0.01
+  },
+  "B0": {
+    "caches": "2 dev docs x {1024, 2048} tokens",
+    "tensors_per_cache": 56,
+    "c_grid": [
+      0.01,
+      0.1
+    ],
+    "fresh_combinations": 448,
+    "reuse_passes_per_c": 20,
+    "acceptance": [
+      "raw byte-identical",
+      "legal reuse == fresh bitwise",
+      "0 non-finite",
+      "0 fp32 bound failures",
+      "all injected faults detected",
+      "56 GPU1 outputs simultaneously live"
+    ]
+  },
+  "B1": {
+    "arms": [
+      "raw",
+      "K-only c=0.10",
+      "V-only c=0.10",
+      "K+V c=0.10"
+    ],
+    "prefill_tokens": 1024,
+    "scored_tokens": 256,
+    "continuation_tokens_taken": 257,
+    "documents": 32,
+    "results_expected": 128,
+    "statistic": "paired per-document delta NLL, article-level bootstrap CI",
+    "note": "improvement is not a pass condition; a CI crossing zero means the direction is undetermined, not that compression is safe"
+  },
+  "B2": {
+    "paths": [
+      "host-staged serial",
+      "host-staged pipeline depth=8",
+      "single-file write + one fsync"
+    ],
+    "inputs": 4,
+    "paired_configurations": 12,
+    "pairs_per_configuration": 30,
+    "segments": 3,
+    "timed_runs": 720,
+    "move_endpoint": "GPU0 raw cache ready -> 56 independent bf16 outputs live on GPU1",
+    "write_endpoint": "GPU0 raw cache ready -> payload written, fsync returned, file closed",
+    "statistic": "paired R = exp(mean(log(T_comp/T_raw))), bootstrap CI",
+    "note": "no required speedup; slow samples are not removed"
+  },
+  "budget_usd": {
+    "cap": 100,
+    "experiments": 70,
+    "debug_reserve": 20,
+    "storage_transfer": 10
+  }
+}
