@@ -71,9 +71,19 @@ than for a 256-token forward over a 1024-token cache. Shifting the comparison by
 ±1 position makes the disagreement **90× worse** in both precisions, which rules out
 a position offset.
 
-It is also common-mode: **all four arms use the cached path**, so the gap sits
-identically in every arm and cancels in every ΔNLL. It would matter if this
-document compared a cached number against a full-forward number. It does not.
+**What follows from that, and what does not.** All four arms are scored through
+the cached path, so no ΔNLL here is a cached-against-full comparison and this gap
+is not one of the quantities being differenced. That is the claim the result needs
+and it holds.
+
+An earlier draft went further and said the gap "sits identically in every arm and
+cancels in every ΔNLL". That was not measured and is not safe to assert: the arms
+feed *different* values through the same kernels — one arm's cache is raw, another's
+is a reconstruction — so the bf16 kernel noise is of the same kind in each arm but
+its magnitude need not be identical, and nothing here bounds the residual. What can
+be said is that the effect is ~5e-03 on a mean NLL while the smallest effect being
+reported is 1.34e-02, and that it applies to every arm rather than to one; it is not
+established that it cancels exactly.
 
 ## The fp32 margin, measured rather than certified
 

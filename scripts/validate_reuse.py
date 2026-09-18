@@ -126,15 +126,23 @@ def roundtrip(L, x: torch.Tensor, eps: float, pool: Pool,
     y = pool.dec[:n]
     z = y.to(torch.bfloat16)
     if not audit:
-        # The reuse test's criterion is bitwise equality against the fresh
-        # reference, which is what the protocol asks for and is strictly stronger
-        # than any error summary -- a reconstruction that matches bit for bit has
-        # the same error by construction. The float64 host round trip costs three
-        # 64 MB transfers per tensor and there are thousands of these, so it is
-        # reserved for the fresh baselines and for anything that fails.
+        # Reuse rounds are checked by exact comparison against the fresh reference
+        # rather than by an error summary, and against **both** representations.
+        #
+        # An earlier version compared only the delivered bf16, and justified it by
+        # saying a bit-identical reconstruction has the same error by construction.
+        # That is true of the bf16 value and says nothing about the fp32 one: two
+        # different fp32 reconstructions round to the same bf16 whenever they differ
+        # below half an ulp, so a bf16 match can hide an fp32 difference. The fp32
+        # reconstruction is what the codec actually produced and it is what the
+        # protocol asks to see per round.
+        #
+        # Both comparisons run on the device against a resident reference, so the
+        # float64 host round trip that made the full audit expensive is not needed:
+        # this costs no transfer at all and is exact rather than approximate.
         fin = bool(torch.isfinite(z).all())
-        return {"finite": fin, "fp32_ok": fin, "audited": False}, nb, z.clone()
-    return {**errors(f, y, z, eps), "audited": True}, nb, z.clone()
+        return {"finite": fin, "fp32_ok": fin, "audited": False}, nb, (y.clone(), z.clone())
+    return {**errors(f, y, z, eps), "audited": True}, nb, (y.clone(), z.clone())
 
 
 # --------------------------------------------------------------------------- #
@@ -151,8 +159,9 @@ def fresh_baselines(L, caches: dict, rec) -> dict:
             for c in C_GRID:
                 eps = float(torch.tensor(c * sd, dtype=torch.float32))
                 pool = Pool(x.numel())              # fresh every time, by design
-                e, nb, z = roundtrip(L, x, eps, pool)
-                ref[(cname, tname, c)] = z
+                e, nb, (y32, z16) = roundtrip(L, x, eps, pool)
+                # both representations kept, on the device, for exact comparison
+                ref[(cname, tname, c)] = (y32, z16)
                 row = {"kind": "fresh", "cache": cname, "tensor": tname, "c": c,
                        "std": sd, "cmp_bytes": nb, "raw_bytes": x.numel() * 2, **e}
                 rec(row)
@@ -186,7 +195,10 @@ def reuse_passes(L, caches: dict, ref: dict, rec, passes_per_c: int) -> dict:
     max_numel = max(x.numel() for c in caches.values() for _, x in c)
     pool = Pool(max_numel)
     summary = {"pool_addresses": list(pool.addr), "order": {}, "mismatches": 0,
-               "fp32_failures": 0, "nonfinite": 0, "reuse_roundtrips": 0}
+               "fp32_mismatches": 0, "bf16_mismatches": 0,
+               "fp32_failures": 0, "nonfinite": 0, "reuse_roundtrips": 0,
+               "compared": "exact equality of BOTH the fp32 reconstruction and the "
+                           "delivered bf16, every round, against the fresh reference"}
 
     for c in C_GRID:
         seen_counts: dict[str, int] = {}
@@ -196,24 +208,51 @@ def reuse_passes(L, caches: dict, ref: dict, rec, passes_per_c: int) -> dict:
                 pool.soil(rng)          # production zeroing must survive this
             for tname, x in caches[cname]:
                 eps = float(torch.tensor(c * eps_for(x), dtype=torch.float32))
-                e, nb, z = roundtrip(L, x, eps, pool, audit=False)
+                e, nb, (y32, z16) = roundtrip(L, x, eps, pool, audit=False)
                 summary["reuse_roundtrips"] += 1
-                same = bool(torch.equal(z, ref[(cname, tname, c)]))
-                if not same or not e["finite"]:
-                    # re-run the full accounting only for something that failed,
-                    # so the record of a failure is complete
-                    e, nb, z2 = roundtrip(L, x, eps, pool, audit=True)
-                    same = bool(torch.equal(z2, ref[(cname, tname, c)]))
+                r32, r16 = ref[(cname, tname, c)]
+                same32 = bool(torch.equal(y32, r32))
+                same16 = bool(torch.equal(z16, r16))
+                same = same32 and same16
+                # every counter increments here, before the failure branch, so
+                # that an early `continue` cannot silently skip one
+                if not same32:
+                    summary["fp32_mismatches"] += 1
+                if not same16:
+                    summary["bf16_mismatches"] += 1
                 if not same:
                     summary["mismatches"] += 1
                 if not e["fp32_ok"]:
                     summary["fp32_failures"] += 1
                 if not e["finite"]:
                     summary["nonfinite"] += 1
-                if not same or not e["fp32_ok"]:
-                    rec({"kind": "reuse_failure", "cache": cname, "tensor": tname,
-                         "c": c, "pass": p, "bitwise_equal_to_fresh": same,
-                         "cmp_bytes": nb, **e})
+
+                if not same or not e["finite"]:
+                    # The failure as it happened is written first and is never
+                    # revised. A diagnostic re-run executes a *different* round
+                    # against a *different* buffer history, so if it comes back
+                    # clean that says the fault was not reproducible -- it does not
+                    # say the first round passed. Overwriting the original record
+                    # with the re-run would turn an intermittent fault into no
+                    # fault at all, which is the failure mode this whole gate
+                    # exists to catch.
+                    rec({"kind": "reuse_failure_as_observed", "cache": cname,
+                         "tensor": tname, "c": c, "pass": p,
+                         "fp32_equal_to_fresh": same32,
+                         "bf16_equal_to_fresh": same16,
+                         "cmp_bytes": nb, "audited": False, **e})
+                    summary["first_failure"] = summary.get("first_failure") or {
+                        "cache": cname, "tensor": tname, "c": c, "pass": p,
+                        "fp32_equal_to_fresh": same32, "bf16_equal_to_fresh": same16}
+                    d_e, d_nb, (y2, z2) = roundtrip(L, x, eps, pool, audit=True)
+                    rec({"kind": "reuse_failure_diagnostic_rerun", "cache": cname,
+                         "tensor": tname, "c": c, "pass": p,
+                         "fp32_equal_to_fresh": bool(torch.equal(y2, r32)),
+                         "bf16_equal_to_fresh": bool(torch.equal(z2, r16)),
+                         "reproduced": not (bool(torch.equal(y2, r32))
+                                            and bool(torch.equal(z2, r16))),
+                         "cmp_bytes": d_nb, "audited": True, **d_e})
+
             if p == len(order) - 1:
                 summary["order"][f"c{c:g}"] = dict(seen_counts)
     summary["pool_uses"] = pool.uses
@@ -237,7 +276,7 @@ def negative_tests(L, caches: dict, rec) -> dict:
     tname, x = cache[0]
     eps = float(torch.tensor(0.10 * eps_for(x), dtype=torch.float32))
     pool = Pool(x.numel())
-    good, _, z_good = roundtrip(L, x, eps, pool)
+    good, _, (_, z_good) = roundtrip(L, x, eps, pool)
     assert good["fp32_ok"], "baseline for the negative tests is itself failing"
     f = x.float().contiguous().reshape(-1)
 

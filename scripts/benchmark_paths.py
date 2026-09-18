@@ -285,6 +285,68 @@ class Bench:
             os.close(fd)
         return time.perf_counter() - t0
 
+    # ------------------------------------------------ per-tensor fresh baseline
+    def fresh_reference(self) -> list[tuple[torch.Tensor, torch.Tensor]]:
+        """One single-GPU round trip per tensor, through buffers zeroed for it alone.
+
+        This is the standard the two-device path is held to. The earlier check
+        compared the worst error over the whole cache against `max(self.eps)`, which
+        is an aggregate judgement: a tensor whose own epsilon is small can be badly
+        wrong and still sit under the largest epsilon in the cache. Per tensor,
+        against a reconstruction known to be right, there is nowhere for that to hide.
+        """
+        torch.cuda.set_device(0)
+        refs = []
+        for i, x in enumerate(self.cache):
+            f = x.float().contiguous().reshape(-1)
+            n = f.numel()
+            cmp_ = torch.zeros(n * 4 + 4096, dtype=torch.uint8, device="cuda:0")
+            dec = torch.zeros(n, dtype=torch.float32, device="cuda:0")
+            m = ctypes.c_size_t(0)
+            getattr(self.L, _MANGLED[("compress", MODE)])(
+                ctypes.c_void_p(f.data_ptr()), ctypes.c_void_p(cmp_.data_ptr()),
+                ctypes.c_size_t(n), ctypes.byref(m), ctypes.c_float(self.eps[i]), None)
+            torch.cuda.synchronize(0)
+            getattr(self.L, _MANGLED[("decompress", MODE)])(
+                ctypes.c_void_p(dec.data_ptr()), ctypes.c_void_p(cmp_.data_ptr()),
+                ctypes.c_size_t(n), ctypes.c_size_t(int(m.value)),
+                ctypes.c_float(self.eps[i]), None)
+            torch.cuda.synchronize(0)
+            refs.append((dec.cpu(), dec.to(torch.bfloat16).cpu()))
+            del cmp_, dec
+        return refs
+
+    def check_per_tensor(self, compressed: bool, refs) -> list[dict]:
+        """Every delivered output against its own fresh reference, byte for byte.
+
+        Byte comparison rather than value comparison throughout: `torch.equal` on
+        floats says two NaNs differ and says nothing about which of several bit
+        patterns produced an equal value. A transport either returns the bytes it
+        was given or it does not.
+        """
+        rows = []
+        for i, x in enumerate(self.cache):
+            got = self.out[i].cpu()
+            got_bytes = got.view(torch.uint8)
+            if compressed:
+                want = refs[i][1]
+                exact = bool(torch.equal(got_bytes, want.view(torch.uint8)))
+                src = x.float().reshape(-1).double()
+                err = float((src - got.double()).abs().max())
+                rows.append({"tensor": i, "arm": "compressed",
+                             "bytes_equal_to_fresh": exact,
+                             "max_abs_error_vs_source": err,
+                             "eps": self.eps[i],
+                             "err_over_own_eps": err / self.eps[i],
+                             "finite": bool(torch.isfinite(got).all())})
+            else:
+                want = x.reshape(-1).cpu()
+                exact = bool(torch.equal(got_bytes, want.view(torch.uint8)))
+                rows.append({"tensor": i, "arm": "raw",
+                             "bytes_equal_to_source": exact,
+                             "finite": bool(torch.isfinite(got).all())})
+        return rows
+
     # ------------------------------------------------------------ verifiers
     def check_moved(self, compressed: bool) -> dict:
         """Every delivered output, fetched after the pass, compared on the host."""
@@ -361,6 +423,60 @@ def paired_ratio(pairs: list[tuple[float, float]], seed: int, n: int = 5000) -> 
             "undetermined": bool(lo < 1.0 < hi)}
 
 
+def verify_only(a, L) -> int:
+    """B0 section 4.3 -- the two-device path, per tensor, against fresh baselines.
+
+    No timing. Runs serial and the pipeline at the requested depth, both arms, and
+    compares each of the 56 delivered outputs against a reconstruction produced on
+    one device through buffers zeroed for it alone. The transport code is the same
+    code B2 timed; only the judgement changes, from an aggregate over the cache to
+    a per-tensor byte comparison.
+    """
+    out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
+    jl = (out / f"twodevice_pertensor_depth{a.depth}.jsonl").open("w")
+    summary = {"depth": a.depth, "caches": {}, "gpus":
+               [torch.cuda.get_device_name(i) for i in range(2)]}
+    for c in a.caches:
+        d = Path(c)
+        cache = [torch.load(q).to("cuda:0") for q in sorted(d.glob("l*.pt"))]
+        b = Bench(cache, L, Path(a.mount))
+        print(f"\n{d.name}: building {len(cache)} fresh references ...", flush=True)
+        refs = b.fresh_reference()
+        entry = {}
+        for path in ("serial", "pipeline"):
+            for comp in (False, True):
+                b.arm_zero()
+                (b.serial if path == "serial" else b.pipeline)(comp)
+                rows = b.check_per_tensor(comp, refs)
+                arm = "compressed" if comp else "raw"
+                key = "bytes_equal_to_fresh" if comp else "bytes_equal_to_source"
+                bad = [r for r in rows if not r[key] or not r["finite"]]
+                worst = max((r.get("err_over_own_eps", 0.0) for r in rows), default=0.0)
+                entry[f"{path}|{arm}"] = {
+                    "n_tensors": len(rows), "n_byte_exact": sum(r[key] for r in rows),
+                    "n_failing": len(bad),
+                    "max_err_over_own_eps": worst if comp else None}
+                for r in rows:
+                    jl.write(json.dumps({"cache": d.name, "path": path, "arm": arm,
+                                         "depth": a.depth, **r}) + "\n")
+                jl.flush()
+                print(f"  {path:<9} {arm:<11} "
+                      f"{sum(r[key] for r in rows)}/{len(rows)} byte-exact vs fresh"
+                      + (f"   worst err/own eps {worst:.9f}" if comp else ""),
+                      flush=True)
+        summary["caches"][d.name] = entry
+        del b, refs
+        torch.cuda.empty_cache()
+    (out / f"twodevice_pertensor_depth{a.depth}.json").write_text(
+        json.dumps(summary, indent=2))
+    jl.close()
+    allok = all(v["n_failing"] == 0
+                for e in summary["caches"].values() for v in e.values())
+    print(f"\ndepth {a.depth}: {'ALL PER-TENSOR CHECKS PASS' if allok else 'FAILURES'}"
+          f"  -> {out}")
+    return 0 if allok else 1
+
+
 def main() -> int:
     global DEPTH                    # set from --depth before any Bench is built
     ap = argparse.ArgumentParser()
@@ -374,11 +490,15 @@ def main() -> int:
     ap.add_argument("--warmup", type=int, default=10)
     ap.add_argument("--out", default="/workspace/out/b2")
     ap.add_argument("--seed", type=int, default=20260917)
+    ap.add_argument("--verify-only", action="store_true",
+                    help="B0 4.3: per-tensor two-device verification, no timing")
     ap.add_argument("--boot-seed", type=int, default=20260918)
     a = ap.parse_args()
     if torch.cuda.device_count() < 2:
         raise SystemExit("B2 needs two devices")
     DEPTH = a.depth
+    if a.verify_only:
+        return verify_only(a, lib())
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     mount = Path(a.mount); mount.mkdir(parents=True, exist_ok=True)
     trials = (out / "path_trials.jsonl").open("w")
