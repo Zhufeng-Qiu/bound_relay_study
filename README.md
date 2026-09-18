@@ -24,12 +24,12 @@ the largest single cause turned out not to be the codec.
 | | |
 |---|---|
 | Model | Qwen3-1.7B, revision `b9352fbb`, bf16, 28 layers, 8 KV heads |
-| Corpus | 24 independent WikiText-2 articles → **1152 tensor observations**, nested in documents |
+| Corpus | 24 WikiText-2 articles → **1152 tensor observations**; plus **32 held-out articles** frozen for the quality re-test |
 | Bounds | `eps_i = c · std_i`, `c ∈ {0.01, 0.03, 0.10}` |
 | Compressors | cuSZp (3 modes) · SZ3 (28-configuration scan) · CUDA zfp · int8 baselines |
 | Transport | one real 56-tensor, 234.9 MB full cache, host-staged, 2×A40 and 2×A6000 |
 | Quality | 16 documents, 1024→128 tokens, real cuSZp round trip ending in bf16 |
-| Spend | **≈ $2** of GPU rental |
+| Spend | **≈ $5** of GPU rental |
 
 ## Findings
 
@@ -60,6 +60,27 @@ saturated with under 2.2 ms of waiting, so there is no headroom left to schedule
 The break-even moves from 3.82 to **5.38 GB/s**, not the 10.96 the model implied.
 → `results/public/pipeline_findings.md`, `gate2_findings.md`
 
+**Paired and interleaved, the path sets the sign — twelve configurations, twelve
+determinate answers.** Every earlier performance number here compared a raw loop
+against a compressed loop measured at a different moment on a shared machine. Paired
+— 360 raw/compressed measurements taken back to back, half in each order, across
+three segments — compression is slower on both GPU-to-GPU paths on all four inputs
+(serial R = 2.10–6.15, pipeline R = 1.52–2.33) and faster on an `fsync`-acknowledged
+filesystem write on all four (R = 0.51–0.74). **No interval crosses 1**, and all
+three segments agree with the pooled direction, which matters because the magnitudes
+do not: serial alone swings 2.64–4.22 between segments.
+→ `results/public/protocol_2026_09_17/b2_findings.md`
+
+**A reused buffer delivers the right bytes, and two things about the codec were
+not known.** 2,240 round trips through one pool — large→small→large, same-length
+different-content, deliberately soiled — **zero bitwise mismatches** against 448
+freshly-zeroed baselines. cuSZp's decompress **never reads its `cmpSize` argument**:
+declaring 64 bytes in place of 628,536 returns a bit-identical reconstruction, which
+gives the previously-inferred zeroed-buffer contract a mechanism. And the codec
+exceeds its own error bound by up to **1.0000015 × ε** — a few float32 ulps *of ε*,
+so no absolute tolerance is the right shape for it.
+→ `results/public/protocol_2026_09_17/b0_findings.md`
+
 **Compression is 1.97× slower on the host-staged pipeline and 1.2–2.1× faster for
 an `fsync`-acknowledged filesystem offload write — and never the 3.02× its byte
 reduction implies.** Eight configurations across two filesystems, raw verified byte
@@ -73,10 +94,14 @@ is a function of how much you write**: the same incompressible bytes at 77.7 MB 
 → `results/public/gate2_findings.md`
 
 **Keys and values are not equally safe to compress.** At payloads within 0.4% of each
-other, K-only compression degrades perplexity significantly (ΔNLL +0.0228, 2 of 16
-documents improving); V-only *improves* it — ΔNLL −0.0323, CI [−0.0382, −0.0258],
-**16 of 16 documents**, growing with the bound. Reported as observed, not explained.
-Compressing both at `c = 0.10` ships **0.33×** the bytes with no detectable cost.
+other (0.664 against 0.667), K-only compression costs **+1.56%** of perplexity
+(ΔNLL +0.0155, CI [+0.0068, +0.0235], **26 of 32 articles worse**) and V-only
+*improves* it (ΔNLL −0.0278, CI [−0.0320, −0.0234], **31 of 32 better**).
+**Replicated on 32 held-out articles**, frozen before the numbers existed, with no
+title or body overlap with the 24 this project developed on — the development set
+said the same thing on disjoint articles. The V improvement is now observed twice
+and explained neither time. Compressing both ships **0.330×** the bytes.
+→ `results/public/protocol_2026_09_17/b1_findings.md`, `d_quality_findings.md`
 → `results/public/d_quality_findings.md`
 
 **SZ3's predictor costs ratio on values and pays on keys.** Given every configuration
