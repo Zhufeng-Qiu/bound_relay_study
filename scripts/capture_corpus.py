@@ -83,6 +83,10 @@ def main() -> int:
     ap.add_argument("--full-cache-docs", type=int, default=3)
     ap.add_argument("--device", default="cuda")
     ap.add_argument("--lengths", type=int, nargs="+", default=LENGTHS)
+    ap.add_argument("--full-cache-lengths", type=int, nargs="+", default=None,
+                    help="persist a full 28-layer cache at each of these lengths. "
+                         "Default: the longest requested length only, which is what "
+                         "this script used to do unconditionally.")
     ap.add_argument("--smoke", action="store_true", help="local shape/contract check only")
     ap.add_argument("--cuszp", action="store_true",
                     help="measure cuSZp ratio inline, while each tensor is still in hand")
