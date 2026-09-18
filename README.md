@@ -102,7 +102,9 @@ other (0.664 against 0.667), K-only compression costs **+1.56%** of perplexity
 (ΔNLL +0.0155, CI [+0.0068, +0.0235], **26 of 32 articles worse**) and V-only
 *improves* it (ΔNLL −0.0278, CI [−0.0320, −0.0234], **31 of 32 better**).
 **Replicated on 32 held-out articles**, frozen before the numbers existed, with no
-title or body overlap with the 24 this project developed on — the development set
+title or body overlap with the 24 this project developed on — though that run
+carries a recorded protocol deviation: 2 of 3,584 tensors missed the pre-declared
+error tolerance and the stop rule was relaxed mid-round rather than halting — the development set
 said the same thing on disjoint articles. The V improvement is now observed twice
 and explained neither time. Compressing both ships **0.330×** the bytes.
 → `results/public/protocol_2026_09_17/b1_findings.md`, `d_quality_findings.md`
