@@ -199,8 +199,115 @@ def fig_models() -> None:
     save(fig, OUT / "fig3_models_vs_measurement.png")
 
 
+
+
+# --------------------------------------------------------------------------- #
+# 2026-09-17 protocol round
+# --------------------------------------------------------------------------- #
+ROUND = PUB / "protocol_2026_09_17"
+
+
+def fig_quality_bytes() -> None:
+    """What each arm costs in quality against what it saves in bytes.
+
+    Per-article points, not just the mean: the arms differ in how *consistent* they
+    are, and an interval alone hides that 26 of 32 articles get worse under K-only
+    while 31 of 32 get better under V-only. The two one-sided arms land within 0.5%
+    of the same payload, which is the comparison worth seeing -- same bytes,
+    opposite sign -- so they are drawn as adjacent columns rather than overplotted.
+    """
+    s_ = json.loads((ROUND / "b1" / "quality_summary.json").read_text())
+    docs = [json.loads(l) for l in
+            (ROUND / "b1" / "quality_documents.jsonl").read_text().splitlines()]
+    arms = [("K_only", "K only"), ("V_only", "V only"), ("K_and_V", "K + V")]
+
+    fig, ax = figure(7.8, 4.4)
+    for i, (arm, lab) in enumerate(arms):
+        d = np.array([r["arms"][arm]["mean_nll"] - r["arms"]["raw"]["mean_nll"]
+                      for r in docs])
+        jit = np.random.default_rng(7 + i).uniform(-0.17, 0.17, len(d))
+        ax.scatter(i + jit, d, s=15, alpha=.4, color=SERIES[i], zorder=3,
+                   linewidths=0)
+        st_ = s_["delta_vs_raw"][arm]
+        ax.errorbar([i], [st_["delta_nll"]],
+                    yerr=[[st_["delta_nll"] - st_["ci95"][0]],
+                          [st_["ci95"][1] - st_["delta_nll"]]],
+                    fmt="o", ms=10, color=SERIES[i], capsize=6, lw=2.4, zorder=5,
+                    markeredgecolor="white", markeredgewidth=1.4)
+
+    ax.axhline(0, color=MUTED, lw=1.1, ls="--", zorder=1)
+    ax.set_xticks([0, 1, 2])
+    ax.set_xticklabels(
+        [f"{lab}\n{s_['payload_over_raw'][arm]:.3f}x bytes\n"
+         f"{s_['delta_vs_raw'][arm]['delta_nll']:+.4f}   "
+         f"({s_['delta_vs_raw'][arm]['n_docs_worse']}/32 worse)"
+         for arm, lab in arms], fontsize=9)
+    ax.set_xlim(-0.55, 2.55)
+    ax.set_ylabel(r"$\Delta$NLL against the uncompressed cache")
+
+    y = ax.get_ylim()[1]
+    ax.annotate("", xy=(0, y * 0.93), xytext=(1, y * 0.93),
+                arrowprops=dict(arrowstyle="<->", color=MUTED, lw=1.2))
+    ax.text(0.5, y * 0.955, "same payload to within 0.5%", ha="center",
+            fontsize=8.5, color=MUTED)
+    ax.set_title("Compressing keys costs perplexity; compressing values does not\n"
+                 "32 held-out WikiText-2 articles, 256 scored tokens each, "
+                 "$c = 0.10$ - points are articles, bars are 95% CI",
+                 fontsize=10, loc="left", pad=10)
+    ax.grid(axis="y", color=MUTED, alpha=0.18, zorder=0)
+    save(fig, OUT / "fig4_quality_vs_bytes_heldout.png")
+
+
+def fig_paired_paths() -> None:
+    """Paired ratio per configuration. R < 1 means the compressed path is faster."""
+    s_ = json.loads((ROUND / "b2" / "path_summary.json").read_text())
+    order = [("serial", "host-staged serial"),
+             ("pipeline", "host-staged pipeline, depth 8"),
+             ("fsync", "single file + one fsync")]
+    fig, ax = figure(7.8, 4.6)
+    ypos, ylab = [], []
+    y = 0
+    for path, nice in order:
+        ypos.append(y); ylab.append(nice.upper())
+        y += 1
+        for v in sorted([v for v in s_.values() if v["path"] == path],
+                        key=lambda v: v["cache"]):
+            col = MEASURED if v["compressed_faster"] else STOP
+            ax.plot(v["ci95"], [y, y], color=col, lw=2.6, solid_capstyle="round",
+                    zorder=3)
+            ax.plot([v["R"]], [y], "o", ms=7, color=col, zorder=4,
+                    markeredgecolor="white", markeredgewidth=1.1)
+            ax.text(v["ci95"][1] * 1.07, y, f"{v['R']:.2f}", va="center",
+                    fontsize=8, color=col, fontweight="bold")
+            ypos.append(y)
+            ylab.append("    " + v["cache"].replace("fullcache_", "").replace("_", "  "))
+            y += 1
+        y += 0.5
+    ax.axvline(1.0, color=INK, lw=1.6, zorder=2)
+    ax.set_yticks(ypos)
+    ax.set_yticklabels(ylab, fontsize=8.2)
+    for t, l in zip(ax.get_yticklabels(), ylab):
+        if not l.startswith(" "):
+            t.set_fontweight("bold"); t.set_color(INK); t.set_fontsize(8.6)
+    ax.invert_yaxis()
+    ax.set_xscale("log")
+    ax.set_xticks([0.5, 0.7, 1, 1.5, 2, 3, 5, 8, 12])
+    ax.set_xticklabels(["0.5", "0.7", "1", "1.5", "2", "3", "5", "8", "12"])
+    ax.set_xlim(0.42, 16)
+    ax.set_xlabel(r"$R = T_{\mathrm{compressed}} / T_{\mathrm{raw}}$   "
+                  "(log scale; left of the line, compression is faster)")
+    ax.set_title("The path decides the sign - twelve configurations, "
+                 "no interval crossing 1\n360 paired measurements, half in each "
+                 "order, three segments; payload 0.330x raw throughout",
+                 fontsize=10, loc="left", pad=10)
+    ax.grid(axis="x", color=MUTED, alpha=0.18, zorder=0)
+    save(fig, OUT / "fig5_paired_path_ratios.png")
+
+
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     fig_decision()
     fig_mechanism()
     fig_models()
+    fig_quality_bytes()
+    fig_paired_paths()

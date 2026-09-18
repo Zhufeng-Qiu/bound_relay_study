@@ -44,6 +44,11 @@ from boundrelay.codec.cuszp_bridge import _MANGLED, TAU, lib  # noqa: E402
 
 MODE = "fixed"
 C = 0.10
+#: Pipeline depth. Module-level because the buffers are sized from it, and
+#: overridden by --depth: B2's matrix fixes it at 8, but the slot lifecycle has to
+#: be verified at 1 as well. Depth 1 is the harsher case -- a single slot is reused
+#: immediately by the next tensor, so a slot returned before the asynchronous read
+#: of it completes has no grace period at all.
 DEPTH = 8
 
 
@@ -357,10 +362,14 @@ def paired_ratio(pairs: list[tuple[float, float]], seed: int, n: int = 5000) -> 
 
 
 def main() -> int:
+    global DEPTH                    # set from --depth before any Bench is built
     ap = argparse.ArgumentParser()
     ap.add_argument("--caches", nargs="+", required=True)
     ap.add_argument("--mount", required=True, help="directory for the fsync path")
     ap.add_argument("--pairs", type=int, default=30)
+    ap.add_argument("--depth", type=int, default=8,
+                    help="pipeline depth; B2's matrix is 8, the slot-lifecycle "
+                         "check also runs 1")
     ap.add_argument("--segments", type=int, default=3)
     ap.add_argument("--warmup", type=int, default=10)
     ap.add_argument("--out", default="/workspace/out/b2")
@@ -369,6 +378,7 @@ def main() -> int:
     a = ap.parse_args()
     if torch.cuda.device_count() < 2:
         raise SystemExit("B2 needs two devices")
+    DEPTH = a.depth
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     mount = Path(a.mount); mount.mkdir(parents=True, exist_ok=True)
     trials = (out / "path_trials.jsonl").open("w")
