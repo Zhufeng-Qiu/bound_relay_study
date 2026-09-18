@@ -1,7 +1,7 @@
 # When does error-bounded compression pay for moving LLM KV cache?
 
 **Zhufeng Qiu** · [github.com/Zhufeng-Qiu/bound_relay_study](https://github.com/Zhufeng-Qiu/bound_relay_study)
-Qwen3-1.7B, 24 WikiText-2 articles, cuSZp / SZ3 / zfp, **≈ $3.5** of rented GPU time.
+Qwen3-1.7B, 24 WikiText-2 articles, cuSZp / SZ3 / zfp, **≈ $5** of rented GPU time.
 
 ---
 
@@ -79,6 +79,20 @@ compressed at 0.9999 × ε on every configuration.
 | container overlay, `fsync` offload write | 130.0 ms | 62.9 ms | **2.07× faster** |
 | MooseFS, `fsync` offload write | 563.1 ms | 354.6 ms | **1.59× faster** |
 
+Those compared arms measured at different moments on a shared machine. Re-run
+**paired** — 360 raw/compressed measurements back to back, half in each order,
+across three segments of one session — the sign holds and is determinate everywhere:
+
+| path | R = T_compressed / T_raw | 95% CI | inputs |
+|---|---|---|---|
+| serial | 2.10 – 6.15 | none crosses 1 | 4 / 4 slower |
+| pipeline | 1.52 – 2.33 | none crosses 1 | 4 / 4 slower |
+| **`fsync` write** | **0.51 – 0.74** | none crosses 1 | **4 / 4 faster** |
+
+All three segments agree with the pooled direction, which matters because the
+magnitudes do not — serial alone swings 2.64–4.22 between segments. That drift is
+what pairing exists to absorb.
+
 Pipelining moves both arms — 1.22× on the compressed path, 1.26× on the raw one —
 and neither past the other. At depth 8 both host threads finish saturated with under
 2.2 ms of waiting, so that is not a scheduling failure with headroom left in it.
@@ -153,12 +167,27 @@ scale heterogeneity and finds 15× of it. KIVI and PackKV quantise K channel-wis
 citing channel correlations, and this result agrees with them while also explaining
 why SZ3's prediction stage does not pay here.
 
-Downstream, the asymmetry reverses in a useful way. At payloads within 0.4% of each
-other, K-only compression costs ΔNLL **+0.0228** (2 of 16 documents improve) while
-V-only gives **−0.0323**, CI [−0.0382, −0.0258], with **16 of 16 documents
-improving**. Reported as observed and not explained: sixteen documents, 128 scored
-tokens each, one model, one eval. The claim the byte argument needs is the weaker
-one — the error budget on V costs nothing.
+Downstream, the asymmetry reverses in a useful way — and this is the one result
+here that has been re-tested on data the project had never read. On **32 held-out
+WikiText-2 articles**, frozen before the numbers existed and sharing no title or
+body with the 24 used to develop the project, at payloads within 0.5% of each other:
+
+| arm | ΔNLL | 95% CI | perplexity | articles worse |
+|---|---|---|---|---|
+| K-only | **+0.0155** | [+0.0068, +0.0235] | **+1.56%** | 26 / 32 |
+| V-only | **−0.0278** | [−0.0320, −0.0234] | **−2.74%** | 1 / 32 |
+| K+V | −0.0134 | [−0.0235, −0.0042] | −1.33% | 11 / 32 |
+
+All three intervals exclude zero, and the development set had said the same thing
+on disjoint articles (+0.0228 / −0.0323). **Compressing keys costs perplexity;
+compressing values does not.**
+
+The V improvement replicates too — 31 of 32 articles, having been 16 of 16 — which
+removes *sample* as its explanation and removes nothing else. It is not evidence
+that lossy compression improves a language model: one model, one bound, 256
+teacher-forced positions per article, one reconstruction. The claim the byte
+argument needs is the weaker one, and it is now firm on held-out data: the error
+budget on V costs nothing.
 
 ## Method
 
