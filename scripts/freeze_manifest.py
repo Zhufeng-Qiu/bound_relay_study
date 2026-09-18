@@ -152,13 +152,18 @@ def main() -> int:
         raise SystemExit(f"only {held['frozen_n']} qualify, below the floor of {FLOOR}")
 
     git = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True)
-    dirty = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
+    # The question this records is whether the *code* was committed when the
+    # manifest froze. This script's own output lands in `out`, so counting it would
+    # guarantee a dirty answer and make the field useless.
+    dirty_lines = [ln for ln in subprocess.run(
+        ["git", "status", "--porcelain"], capture_output=True, text=True
+    ).stdout.strip().splitlines() if a.out not in ln]
     protocol = {
         "frozen_utc": __import__("datetime").datetime.now(
             __import__("datetime").timezone.utc).isoformat(),
         "code_sha": git.stdout.strip(),
-        "working_tree_clean": dirty.stdout.strip() == "",
-        "uncommitted": dirty.stdout.strip().splitlines(),
+        "working_tree_clean": not dirty_lines,
+        "uncommitted": dirty_lines,
         "model": {"id": MODEL, "revision": REV, "dtype": "bfloat16", "mode": "eval"},
         "codec": {"name": "cuSZp", "mode": "fixed",
                   "commit": "RECORDED AT RUN TIME BY environment.json"},
