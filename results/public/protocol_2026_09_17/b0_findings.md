@@ -98,6 +98,31 @@ this round replaced, and the right shape. That is a change to propose with the
 data, not one to make while collecting it, so this round reports the margin it
 measured and does not certify the absolute form.
 
+## The slot lifecycle holds at depth 1 as well as depth 8
+
+The protocol asks for the two-device stress at **both** depths, and the B2 matrix
+fixes depth at 8. Depth 1 is the harsher case: one slot is reused immediately by the
+next tensor, so a slot returned before the asynchronous read of it completes has no
+grace period at all — it is where the race B2's harness originally had would show
+first. Run separately on d00 L2048, 2 segments, both arms verified at the start and
+end of every block:
+
+| depth | pipeline raw | pipeline compressed | R | delivery checks |
+|---|---|---|---|---|
+| **1** | 33.39 ms | 90.90 ms | 3.224 | **24 / 24 pass** |
+| **8** | 21.13 ms | 40.66 ms | 2.207 | **24 / 24 pass** |
+
+Raw delivered byte-identical and compressed within ε plus measured rounding at both
+depths. **The slot discipline is correct at depth 1**, which is the case that would
+break first.
+
+Depth 1 is also slower than the serial path it nominally resembles — 90.90 ms
+against serial's 57.88 ms on the same cache — because a one-slot ring pays the
+thread hand-off, the per-slot zeroing and the completion event while overlapping
+nothing. That is a property of the harness at an unusable setting, not a result
+about pipelining; it is reported because the run happened, not because it means
+anything for the transport.
+
 ## What this does not establish
 
 * Four caches from two documents, one model, one codec build, one GPU pair.

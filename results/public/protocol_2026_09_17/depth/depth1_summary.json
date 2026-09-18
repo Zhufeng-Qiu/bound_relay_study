@@ -1,0 +1,74 @@
+{
+  "fullcache_d00_L2048|serial": {
+    "cache": "fullcache_d00_L2048",
+    "path": "serial",
+    "raw_median_ms": 26.982243172824383,
+    "raw_iqr_ms": [
+      26.627307757735252,
+      27.330467477440834
+    ],
+    "compressed_median_ms": 57.880173437297344,
+    "compressed_iqr_ms": [
+      57.10749328136444,
+      59.43875573575497
+    ],
+    "payload_over_raw": 0.33077664034707205,
+    "R": 2.6522662467970255,
+    "ci95": [
+      2.1325779927697353,
+      3.609937060613705
+    ],
+    "latency_change_pct": 165.22662467970255,
+    "n_pairs": 12,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d00_L2048|pipeline": {
+    "cache": "fullcache_d00_L2048",
+    "path": "pipeline",
+    "raw_median_ms": 33.39239954948425,
+    "raw_iqr_ms": [
+      32.6535589993,
+      35.584039986133575
+    ],
+    "compressed_median_ms": 90.89864231646061,
+    "compressed_iqr_ms": [
+      79.54471930861473,
+      156.89577534794807
+    ],
+    "payload_over_raw": 0.33077664034707205,
+    "R": 3.223539012112651,
+    "ci95": [
+      2.6618212497013536,
+      4.028425838606688
+    ],
+    "latency_change_pct": 222.3539012112651,
+    "n_pairs": 12,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d00_L2048|fsync": {
+    "cache": "fullcache_d00_L2048",
+    "path": "fsync",
+    "raw_median_ms": 466.52716025710106,
+    "raw_iqr_ms": [
+      452.7434092015028,
+      474.65246357023716
+    ],
+    "compressed_median_ms": 246.96427024900913,
+    "compressed_iqr_ms": [
+      230.34613579511642,
+      366.9390622526407
+    ],
+    "payload_over_raw": 0.33077664034707205,
+    "R": 0.6193612660089363,
+    "ci95": [
+      0.5290942990249677,
+      0.7300320205735625
+    ],
+    "latency_change_pct": -38.06387339910637,
+    "n_pairs": 12,
+    "compressed_faster": true,
+    "undetermined": false
+  }
+}
