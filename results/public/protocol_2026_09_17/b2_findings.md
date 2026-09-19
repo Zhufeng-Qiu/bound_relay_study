@@ -73,9 +73,23 @@ segment where it was worst.
 
 ## Pipelining halves the penalty and does not remove it
 
-Serial 3.137 → pipeline 1.848 pooled. Overlapping the stages is worth roughly a
-factor of 1.7 on the compressed path, and leaves it still 1.85× slower than simply
-moving the bytes. The gap narrows with cache size — at L2048 pipeline sits at
+Pooled R falls from 3.137 serial to 1.848 pipelined. **That is not a 1.7× speedup
+of the compressed path**, and an earlier draft read it that way. Each R divides by
+its own raw baseline, and the two baselines are not the same — at L1024 the raw path
+is *slower* pipelined than serial (16.3 → 19.2 ms), so part of the drop in R is the
+denominator moving, not the numerator.
+
+Compared directly, compressed time serial → pipelined:
+
+| cache | compressed | | raw, for reference |
+|---|---|---|---|
+| d00 L1024 | 54.04 → 42.20 ms | **1.28×** | 16.37 → 19.22 ms (0.85×) |
+| d00 L2048 | 60.46 → 42.95 ms | **1.41×** | 29.29 → 29.40 ms (1.00×) |
+| d01 L1024 | 55.47 → 42.91 ms | **1.29×** | 16.31 → 19.20 ms (0.85×) |
+| d01 L2048 | 62.64 → 43.45 ms | **1.44×** | 29.60 → 29.04 ms (1.02×) |
+
+Pipelining is worth **1.28–1.44×** on the compressed path, not 1.7×, and it still
+leaves it 1.5–2.3× slower than moving the bytes. The gap narrows with cache size — at L2048 pipeline sits at
 1.52–1.54 against serial's 2.10–2.17 — which is the fixed per-cache cost amortising,
 not the per-byte cost improving.
 
@@ -93,7 +107,12 @@ fp32 bound on readback and within ε plus the measured bf16 rounding on delivery
 
 That last criterion is an **aggregate** — the worst error over a cache against the
 largest ε in that cache — and it is weaker than it should be, since a tensor with a
-small ε can be wrong and still pass under a larger one. It was replaced after these
+small ε can be wrong and still pass under a larger one. **These 1,792 per-tensor comparisons are a separate verification pass, not something
+every timed run went through.** Each timed run was bracketed by the block-level
+checks described above; the per-tensor comparison was run afterwards, on the same
+code, as a stronger check of the same transport. It establishes that the path
+delivers exactly — it does not retroactively certify each of the 720 timed runs
+individually. It was replaced after these
 timings were taken, by a per-tensor byte comparison against fresh single-device
 baselines: **1,792 comparisons, all byte-exact**, reported in `b0_findings.md`.
 The timings here are unaffected — that change is to the verifier, not to the timed

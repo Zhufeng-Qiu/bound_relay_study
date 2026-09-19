@@ -100,11 +100,22 @@ is what a quantiser working from a float32 `1/ε` will do. The excess is
 **relative**. B0's largest ε was 2.2, so its largest absolute excess was 1.79e-07
 and everything passed; at a larger ε the same relative excess crosses 1e-6.
 
-τ was not widened. What the evidence supports is a *relative* criterion of about
-`E32 ≤ ε · (1 + 1e-6)` — three orders of magnitude tighter than the `ε × 1.001`
-this round replaced, and the right shape. That is a change to propose with the
-data, not one to make while collecting it, so this round reports the margin it
-measured and does not certify the absolute form.
+τ was not widened, and no replacement threshold is proposed here either.
+
+An earlier draft suggested `E32 ≤ ε · (1 + 1e-6)`. That is arithmetically wrong as a
+pass line: `1 + 1e-6 = 1.0000010000`, and B1 went on to measure
+**1.0000014646 × ε** — the proposal fails on the very data meant to motivate it. A
+threshold cannot be set by eyeballing one round's worst case and rounding it down.
+
+What the evidence supports is narrower: **the excess observed here scales with ε
+rather than sitting under a fixed absolute bound**, so the *shape* of an absolute
+tolerance is wrong for it. Where a relative line should sit is not determined by
+this data. Fixing one would need the margin characterised across ε, mode and tensor
+shape, and it would have to be fixed before the round it governs — which is the
+whole point.
+
+So this round reports the margin it measured, certifies neither form, and leaves
+the criterion open.
 
 ## The acceptance itself was too weak, twice, and is redone here
 

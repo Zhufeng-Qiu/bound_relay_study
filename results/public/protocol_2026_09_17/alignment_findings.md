@@ -1,4 +1,4 @@
-# Scoring alignment — the full/cached gap is bf16 kernel selection, not misalignment
+# Scoring alignment — the full/cached gap is low-precision arithmetic, not misalignment
 
 Qwen3-1.7B pinned at `b9352fbb`, 1×A40, the **two development articles only**.
 1024-token prefix, 256 scored positions. Raw: `alignment/alignment_per_token.jsonl`
@@ -19,8 +19,9 @@ The per-token differences are now saved.
 
 A **position or offset error** is systematic — the cached scores would line up with
 the full scores one position over, so shifting the comparison would *reduce* the
-disagreement. **bf16 kernel selection** varying with sequence length is diffuse —
-it touches every token a little and vanishes in fp32.
+disagreement. a **low-precision arithmetic difference** between two
+differently-shaped computations is diffuse — it touches every token a little and
+shrinks with precision.
 
 Mean absolute per-token difference, by how far the comparison is shifted:
 
@@ -31,7 +32,9 @@ Mean absolute per-token difference, by how far the comparison is shifted:
 | fp32, doc 0 | 3.636 | 3.423 | **7.51e-06** | 3.423 | 3.636 |
 | fp32, doc 1 | 3.740 | 3.633 | **7.46e-06** | 3.633 | 3.740 |
 
-**Aligned is best in all four cases, by roughly 90×.** There is no offset.
+**Aligned is best in all four cases.** The margin is ~91× in bf16 and ~4.6e+05× in
+fp32 — the single figure "90×" in an earlier draft was the bf16 number applied to
+all four rows. Either way no offset improves the agreement, in either precision.
 
 ## It is precision, and it is not small in bf16
 
@@ -42,13 +45,22 @@ Mean absolute per-token difference, by how far the comparison is shifted:
 | **fp32, doc 0** | **7.51e-06** | 4.53e-06 | 4.96e-05 | **4.77e-07** | **0 / 256** |
 | **fp32, doc 1** | **7.46e-06** | 4.29e-06 | 4.39e-05 | **0.00e+00** | **0 / 256** |
 
-In fp32 the two paths compute the same function — on doc 1 the mean NLL agrees to
-the last bit. Moving to bf16 multiplies the mean-NLL gap by **18,079×**, and it is
-not a uniform bias: individual tokens move by up to 0.26 NLL and about one in seven
-moves by more than 0.1.
+In fp32 the two paths agree to within 5e-05 on any token — on doc 1 the mean NLL
+agrees to the last bit. Moving to bf16 raises the mean-NLL gap by about four orders
+of magnitude (the mean over the two documents goes from 2.4e-07 to 4.3e-03), and it
+is not a uniform bias: individual tokens move by up to 0.26 NLL and about one in
+seven moves by more than 0.1.
 
-So a 1280-token forward and a 256-token forward over a 1024-token cache select
-different kernels, or reduce in a different order, and in bf16 that is visible.
+What this supports: **the two paths are correctly aligned, and their disagreement
+lives in the low-precision compute path** — it is present in bf16, essentially
+absent in fp32, and no shift reduces it.
+
+What it does not support: a named mechanism. "A 1280-token forward and a 256-token
+forward select different kernels" is a plausible reading and it is not what was
+measured. No profiler was run, no kernel was identified, and reduction order,
+tiling, autotuning and accumulate precision would all produce this signature. The
+evidence fixes *where* the difference comes from, not *which* implementation choice
+creates it.
 
 ## What this licenses, and what it does not
 

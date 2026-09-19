@@ -22,7 +22,7 @@ Baseline perplexity **15.665**, full-cache payload **117.4 MB**.
 > **Superseded.** The quality round trip below used `torch.empty` buffers, so any
 > configuration at a loose bound reconstructed partly from allocator leftovers. The
 > "+138% versus −0.76%" contrast does not survive: re-measured, K-only costs
-> +0.0228 NLL (about 0.15% of perplexity) and compressing **both** kinds at c = 0.10
+> +0.0228 NLL (**+2.31%** of perplexity, via `exp(ΔNLL) − 1`; an earlier version said 0.15%, from dividing ΔNLL by baseline perplexity) and compressing **both** kinds at c = 0.10
 > ships 0.33× the bytes with no detectable degradation. The direction of the K/V
 > asymmetry stands; the magnitude does not. See `remeasure_findings.md`.
 >

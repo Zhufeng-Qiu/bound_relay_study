@@ -129,7 +129,10 @@ tensor buys a further 11%.
 **An undocumented API contract invalidated three findings.** cuSZp requires zeroed
 buffers on both sides — it reads past `cmpSize` and does not write elements it
 expects to be zero — and `torch.empty` put the allocator's leftovers into the
-reconstruction. Re-measured: **0 bound violations**, worst error exactly 1.000× ε.
+reconstruction. Re-measured on that audit's 56 tensors: **0 bound violations**,
+worst error 1.000× ε. That is a statement about that sample and that stage — the
+later held-out round measured **2 of 3,584** compressed tensors above `ε + 1e-6`,
+and relaxed the stop rule rather than halting (see below).
 → `results/public/remeasure_findings.md`, `DEFECTS.md`
 
 ## What is not established
@@ -150,13 +153,25 @@ document that made it. `docs/corrections.md` is the register.
 
 ## Reproduction
 
+**The current round is the 2026-09-17 protocol** (`results/public/protocol_2026_09_17/`).
+Its frozen inputs are `protocol.json` (seeds, tolerances, thresholds),
+`heldout_manifest.json` (the 32 articles, with token hashes) and
+`seen_documents.json`; the machine it ran on is in `b0/environment.json`, which pins
+the cuSZp commit and the built library's sha256.
+
 | level | what | needs a GPU? |
 |---|---|---|
 | **L0** | `uv run pytest` — codec property tests, both suites | no |
-| **L1** | `scripts/predictability.py`, `scripts/sz3_full_scan.py` from the committed manifests | no |
-| **L2** | `scripts/capture_corpus.py`, `transport_e2e.py`, `quality_d.py` per `docs/environment.lock.md` | yes |
-| **L3** | `scripts/gate2_rerun.py`, `scripts/pipeline_multistage.py`, `scripts/peer_copy_audit.py` | two GPUs |
-| **L4** | `scripts/fsync_offload.py`, `scripts/storage_bandwidth.py` — needs a real filesystem under `/workspace`, and the numbers are that mount's, not a property of the filesystem | one GPU |
+| **L1** | `scripts/freeze_manifest.py` (re-derives the frozen list), `scripts/sz3_full_scan.py`, `scripts/predictability.py` | no |
+| **L2** | `scripts/capture_corpus.py --docs 2 --full-cache-docs 2 --lengths 1024 2048 --full-cache-lengths 1024 2048`, then `scripts/quality_holdout.py` (B1) and `scripts/scoring_alignment_diag.py` | one GPU |
+| **L3** | `scripts/validate_reuse.py` (B0), `scripts/benchmark_paths.py` (B2; `--verify-only` for the per-tensor correctness pass), `scripts/peer_copy_audit.py` | two GPUs |
+| **L4** | `scripts/fsync_offload.py`, `scripts/storage_bandwidth.py` — needs a real filesystem under `/workspace`; the numbers are that mount's, not a property of the filesystem | one GPU |
+
+`scripts/run_protocol_session.sh` runs capture → B0 → B1 → B2 in order and stops if
+B0 fails. **Earlier rounds** used `quality_d.py`, `quality_contrast.py`,
+`transport_e2e.py`, `gate2_rerun.py` and `pipeline_multistage.py`; those reproduce
+the superseded results under `results/public/superseded/` and the pre-protocol
+findings, not the numbers on this page.
 
 ```bash
 uv sync --extra dev && uv run pytest

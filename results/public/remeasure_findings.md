@@ -62,7 +62,7 @@ bytes with no detectable degradation.**
 
 The K/V asymmetry survives in direction and collapses in magnitude: K-only
 compression is the one configuration that significantly *degrades* quality, and by
-0.023 NLL — about 0.15% of perplexity, not the 138% previously reported.
+0.023 NLL — **+2.33%** of perplexity via `exp(ΔNLL) − 1`, not the 138% previously reported. (An earlier version of this line said 0.15%, computed by dividing ΔNLL by the baseline perplexity rather than exponentiating it.)
 
 Several rows show small but significant **improvements**. Mild quantisation noise
 acting as regularisation is a known effect, but it is reported here as an

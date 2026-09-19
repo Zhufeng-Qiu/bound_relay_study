@@ -199,7 +199,15 @@ unrelated experiment. The largest single cause was an undocumented API contract:
 cuSZp requires **zeroed buffers on both sides** — it reads past `cmpSize` and does
 not write elements it expects to be zero — and `torch.empty` put the allocator's
 leftovers into reconstructions. That invalidated three findings, two of which had
-already been written up. Measured correctly, cuSZp has **0 bound violations**.
+already been written up. Measured correctly, that audit's 56 tensors show **0 bound
+violations**.
+
+That is scoped to that sample. A later round on 32 held-out articles found **2 of
+3,584** compressed tensors above the tolerance the protocol had declared in advance,
+and responded by relaxing the stop rule mid-round instead of halting. The quality
+results below stand as measured; **the original numerical contract was not met**,
+and the deviation is recorded in `results/public/protocol_2026_09_17/b1_findings.md`
+and `failures.jsonl`.
 
 Superseded work is under `results/public/superseded/` with its retraction markers
 intact rather than deleted. Every GPU session is in

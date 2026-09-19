@@ -9,11 +9,16 @@
 > threshold was moved to damage (`>1.001 × ε`) and the margin was recorded per
 > tensor rather than enforced.
 >
-> The reasoning is in `b0_findings.md` and I think it is right — the tolerance is
-> absolute where the error is relative, so it cannot be satisfied at large ε by any
-> conforming codec. But the reasoning does not change what happened: **a
-> pre-declared acceptance criterion was relaxed after it failed, during the run it
-> governed.** That is the thing the protocol was written to prevent.
+> The reasoning is in `b0_findings.md`: on the tensors measured here the excess
+> scales with ε rather than sitting under a fixed absolute bound, so an absolute
+> tolerance gets harder to satisfy as ε grows. That is an observation about **this
+> codec on this data**, not a proof about conforming codecs in general — nothing
+> here establishes what any other implementation would do, and two failures out of
+> 3,584 is a thin basis for a claim about a class.
+>
+> Either way the reasoning does not change what happened: **a pre-declared
+> acceptance criterion was relaxed after it failed, during the run it governed.**
+> That is the thing the protocol was written to prevent.
 >
 > So this document reports the quality results as measured and does **not** claim
 > the original numerical contract was met. Re-running would not fix it: the codec
@@ -59,17 +64,23 @@ compressing values does not cost anything.
 
 ## The V improvement replicates too, and is still unexplained
 
-V-only at `c = 0.10` improves next-token perplexity by 2.74%, with 31 of 32
-articles improving. The development set said the same thing (16/16) and it was
-recorded then as observed and unexplained. It is now observed twice, on disjoint
-article sets, which removes *sample* as the explanation and removes nothing else.
+V-only at `c = 0.10` lowers the mean teacher-forced NLL by 0.0278 on these 32
+articles — a 2.74% change when converted through `exp(ΔNLL) − 1` — with 31 of the 32
+improving. The development set showed the same direction on its own 16.
+
+Two disjoint article sets pointing the same way makes it unlikely that *one
+particular sample* produced it. It does not rule out sample effects in general: both
+sets are WikiText articles scored the same way under one model and one bound, and a
+different corpus, model or bound could behave differently.
 
 It is still not evidence that lossy compression improves a language model. One
 model, one corpus, 256 scored tokens per article, one bound, teacher-forced
 scoring of a single cache reconstruction. Noise regularisation, value-outlier
 suppression and an interaction with bf16 rounding all remain consistent with it and
-none has been tested. The claim the byte argument needs is the weaker one that is
-firmly established: **on this corpus the error budget on V costs nothing.**
+none has been tested. The claim the byte argument needs is the weaker one: **on these 32 held-out
+articles, compressing V at `c = 0.10` did not raise the mean teacher-forced NLL.**
+That is an average over articles and over 256 positions each — it is not a statement
+that any individual article, or any individual token, was unharmed.
 
 ## What the preflight established, and what it flagged
 
@@ -84,7 +95,10 @@ investigation trigger. Investigated:
 | | mean \|per-token diff\| | cached − full gap | tokens differing > 0.1 |
 |---|---|---|---|
 | bf16 | 3.74e-02 | 5.29e-03 | 33 / 256 |
-| **fp32** | **7.51e-06** | **7.15e-07** | **0 / 256** |
+| **fp32** | **7.51e-06** | **4.77e-07** | **0 / 256** |
+
+*(document 0; on document 1 the fp32 mean-NLL gap is exactly 0. Full per-token
+record in `alignment_findings.md`.)*
 
 In fp32 the two paths agree to seven decimal places, so they are computing the same
 function; the gap is bf16 kernels selecting differently for a 1280-token forward
