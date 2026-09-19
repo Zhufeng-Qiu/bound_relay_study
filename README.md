@@ -75,8 +75,10 @@ do not: serial alone swings 2.64–4.22 between segments.
 
 **A reused buffer delivers the right bytes, and two things about the codec were
 not known.** 2,240 round trips through one pool — large→small→large, same-length
-different-content, deliberately soiled — **zero bitwise mismatches** against 448
-freshly-zeroed baselines. cuSZp's decompress **never reads its `cmpSize` argument**:
+different-content, deliberately soiled — **zero mismatches in either the fp32
+reconstruction or the delivered bf16** against 448 freshly-zeroed baselines. On the
+two-device path, **1,792 per-tensor comparisons at depth 1 and 8 are byte-exact**:
+the transport is not within a bound, it is exact. cuSZp's decompress **never reads its `cmpSize` argument**:
 declaring 64 bytes in place of 628,536 returns a bit-identical reconstruction, which
 gives the previously-inferred zeroed-buffer contract a mechanism. And the codec
 exceeds its own error bound by up to **1.0000015 × ε** — a few float32 ulps *of ε*,

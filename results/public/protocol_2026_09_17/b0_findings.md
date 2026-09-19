@@ -15,7 +15,8 @@ passed.
 |---|---|
 | fresh baselines (4 caches × 56 tensors × `c ∈ {0.01, 0.10}`) | **448**, 0 fp32 failures |
 | reuse round trips through **one** pool | **2240** |
-| bitwise mismatches against the fresh reference | **0** |
+| **fp32 reconstruction** mismatches against the fresh reference | **0** |
+| **delivered bf16** mismatches against the fresh reference | **0** |
 | non-finite values | **0** |
 | pool buffer addresses unchanged throughout | yes |
 
@@ -25,9 +26,16 @@ different-content caches next to each other. Every third pass the buffers were
 deliberately filled with a non-zero byte and NaN first, so the production zeroing
 had to survive something rather than merely a fresh allocation.
 
-The criterion is **bit-identical output**, not a matching error summary. A
-reconstruction that matches bit for bit has the same error by construction; one
-that matches on max-abs error can still be a different tensor.
+The criterion is **exact equality against the fresh reference**, not a matching
+error summary — two tensors can share a max-abs error and be different tensors.
+
+Both representations are compared, and the numbers above are from the re-run that
+does so. **The first pass compared only the delivered bf16**, on the reasoning that
+a bit-identical reconstruction has the same error by construction. That reasoning
+is sound for the bf16 value and does not carry to the fp32 one, because two fp32
+reconstructions differing by less than half a bf16 ulp round to the same bf16 — so a
+bf16 match can sit on top of an fp32 difference, and the fp32 reconstruction is what
+the codec actually produces. See *The acceptance itself was too weak* below.
 
 So: with the conservative discipline — zero the scratch before encoding, zero the
 receive slot before receiving, zero the decode destination before decoding — a slot

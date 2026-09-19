@@ -53,6 +53,24 @@ segment-2 compressed against segment-1 raw would have said something different.
 `d01 L1024 | serial` has the one wide interval, [3.850, 11.123]. It is reported as
 measured. Slow samples were not removed.
 
+Bootstrapped **within each segment** as well — 36 intervals, recomputed offline from
+`path_trials.jsonl`, no GPU (`b2/path_summary_by_segment.json`):
+
+| path | segment 1 | segment 2 | segment 3 | all four caches on one side of 1 |
+|---|---|---|---|---|
+| serial | 2.11 – 3.69 | 2.13 – 18.83 | 2.05 – 3.37 | yes, all three segments |
+| pipeline | 1.48 – 2.30 | 1.50 – 2.44 | 1.52 – 2.26 | yes, all three segments |
+| fsync | 0.46 – 0.72 | 0.48 – 0.83 | 0.57 – 0.80 | yes, all three segments |
+
+Every one of the 36 point estimates falls on the expected side of 1. **Two of the 36
+intervals cross it** — `d00 L2048 | fsync` in segments 2 and 3, at 10 pairs each,
+where the interval is at its widest. Both still point the same way (R = 0.83 and
+0.77); neither reverses. The pooled configuration-level result, 30 pairs per
+configuration, is determinate in all twelve.
+
+Segment 2's serial upper end of 18.83 is the `d01 L1024` outlier again, in the
+segment where it was worst.
+
 ## Pipelining halves the penalty and does not remove it
 
 Serial 3.137 → pipeline 1.848 pooled. Overlapping the stages is worth roughly a
@@ -72,6 +90,15 @@ closed**.
 **144 verification checks, all passing**: raw delivered byte-identical on both
 transport paths and read back byte-identical from the file; compressed within its
 fp32 bound on readback and within ε plus the measured bf16 rounding on delivery.
+
+That last criterion is an **aggregate** — the worst error over a cache against the
+largest ε in that cache — and it is weaker than it should be, since a tensor with a
+small ε can be wrong and still pass under a larger one. It was replaced after these
+timings were taken, by a per-tensor byte comparison against fresh single-device
+baselines: **1,792 comparisons, all byte-exact**, reported in `b0_findings.md`.
+The timings here are unaffected — that change is to the verifier, not to the timed
+path — but the correctness claim these runs support is the stronger per-tensor one,
+not the aggregate stated above.
 Each check runs the arm it verifies — an earlier version checked whichever arm
 happened to run last, which read a raw file as a compressed stream and crashed the
 decoder.

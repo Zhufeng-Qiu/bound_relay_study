@@ -1,0 +1,362 @@
+{
+  "fullcache_d00_L1024|serial|seg1": {
+    "R": 3.4363800037264625,
+    "ci95": [
+      3.236850092713136,
+      3.6701737542856927
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d00_L1024|pipeline|seg1": {
+    "R": 1.941111042735362,
+    "ci95": [
+      1.457027841495098,
+      2.2931317391357915
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d00_L1024|fsync|seg1": {
+    "R": 0.5476194251572869,
+    "ci95": [
+      0.39650996357502316,
+      0.7353025817261429
+    ],
+    "n_pairs": 10,
+    "compressed_faster": true,
+    "undetermined": false
+  },
+  "fullcache_d00_L2048|serial|seg1": {
+    "R": 2.1142331444366738,
+    "ci95": [
+      2.0379981501044764,
+      2.22383946301614
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d00_L2048|pipeline|seg1": {
+    "R": 1.48119643894747,
+    "ci95": [
+      1.453641102028698,
+      1.5074174117220314
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d00_L2048|fsync|seg1": {
+    "R": 0.4569665974504754,
+    "ci95": [
+      0.42806948989952687,
+      0.48837208275686
+    ],
+    "n_pairs": 10,
+    "compressed_faster": true,
+    "undetermined": false
+  },
+  "fullcache_d01_L1024|serial|seg1": {
+    "R": 3.68711232490317,
+    "ci95": [
+      3.3223126165006653,
+      4.346236403334787
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d01_L1024|pipeline|seg1": {
+    "R": 2.300106955931302,
+    "ci95": [
+      2.187463940965375,
+      2.4733573237300375
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d01_L1024|fsync|seg1": {
+    "R": 0.7241751508975399,
+    "ci95": [
+      0.6017545954031726,
+      0.8578018890638043
+    ],
+    "n_pairs": 10,
+    "compressed_faster": true,
+    "undetermined": false
+  },
+  "fullcache_d01_L2048|serial|seg1": {
+    "R": 2.2094377059280874,
+    "ci95": [
+      2.101279799827069,
+      2.331395843358663
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d01_L2048|pipeline|seg1": {
+    "R": 1.5253065218681778,
+    "ci95": [
+      1.4643464814410652,
+      1.6130358672221572
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d01_L2048|fsync|seg1": {
+    "R": 0.480914964187805,
+    "ci95": [
+      0.41008606879216086,
+      0.6004095381325177
+    ],
+    "n_pairs": 10,
+    "compressed_faster": true,
+    "undetermined": false
+  },
+  "fullcache_d00_L1024|serial|seg2": {
+    "R": 3.61746544674672,
+    "ci95": [
+      3.2470961595853343,
+      4.268726232451762
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d00_L1024|pipeline|seg2": {
+    "R": 2.244747402406188,
+    "ci95": [
+      2.1277836883146635,
+      2.3770113446873116
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d00_L1024|fsync|seg2": {
+    "R": 0.6445324233900239,
+    "ci95": [
+      0.5231210256846626,
+      0.7809711080923973
+    ],
+    "n_pairs": 10,
+    "compressed_faster": true,
+    "undetermined": false
+  },
+  "fullcache_d00_L2048|serial|seg2": {
+    "R": 2.1296195711418697,
+    "ci95": [
+      2.0877902355187565,
+      2.200673998610878
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d00_L2048|pipeline|seg2": {
+    "R": 1.5001485831916852,
+    "ci95": [
+      1.4453875958843645,
+      1.5644124373647563
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d00_L2048|fsync|seg2": {
+    "R": 0.8331437728933131,
+    "ci95": [
+      0.3852956361350717,
+      2.0152929798362287
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": true
+  },
+  "fullcache_d01_L1024|serial|seg2": {
+    "R": 18.829513984423315,
+    "ci95": [
+      4.945202913864258,
+      72.72888515496207
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d01_L1024|pipeline|seg2": {
+    "R": 2.4359002130180745,
+    "ci95": [
+      2.2168579526892316,
+      2.739919541304021
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d01_L1024|fsync|seg2": {
+    "R": 0.762391831475888,
+    "ci95": [
+      0.6690453186083875,
+      0.8645234557017679
+    ],
+    "n_pairs": 10,
+    "compressed_faster": true,
+    "undetermined": false
+  },
+  "fullcache_d01_L2048|serial|seg2": {
+    "R": 2.177787866512693,
+    "ci95": [
+      2.0810163559068897,
+      2.298670253727446
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d01_L2048|pipeline|seg2": {
+    "R": 1.5223242793280005,
+    "ci95": [
+      1.4511018807446223,
+      1.6234855802313226
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d01_L2048|fsync|seg2": {
+    "R": 0.4787935208007737,
+    "ci95": [
+      0.4453628290790798,
+      0.5145879181826433
+    ],
+    "n_pairs": 10,
+    "compressed_faster": true,
+    "undetermined": false
+  },
+  "fullcache_d00_L1024|serial|seg3": {
+    "R": 3.3645012148276776,
+    "ci95": [
+      3.2650999489250734,
+      3.5313095156103973
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d00_L1024|pipeline|seg3": {
+    "R": 2.26420383764987,
+    "ci95": [
+      2.1572347531645963,
+      2.4492533235064076
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d00_L1024|fsync|seg3": {
+    "R": 0.8019471391371732,
+    "ci95": [
+      0.7388680704854214,
+      0.8789125619858115
+    ],
+    "n_pairs": 10,
+    "compressed_faster": true,
+    "undetermined": false
+  },
+  "fullcache_d00_L2048|serial|seg3": {
+    "R": 2.0462556879293468,
+    "ci95": [
+      1.9295759708990357,
+      2.2036774286279632
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d00_L2048|pipeline|seg3": {
+    "R": 1.6281208393792226,
+    "ci95": [
+      1.4360826939183868,
+      2.0405722023330153
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d00_L2048|fsync|seg3": {
+    "R": 0.7677996459176657,
+    "ci95": [
+      0.47348147376369054,
+      1.4479459491076019
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": true
+  },
+  "fullcache_d01_L1024|serial|seg3": {
+    "R": 3.3447944877333398,
+    "ci95": [
+      3.2532107392467435,
+      3.4103197145670103
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d01_L1024|pipeline|seg3": {
+    "R": 2.2453168909283923,
+    "ci95": [
+      2.177669669664755,
+      2.3156654085713524
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d01_L1024|fsync|seg3": {
+    "R": 0.7434478575726653,
+    "ci95": [
+      0.7015982981357668,
+      0.8014570499960736
+    ],
+    "n_pairs": 10,
+    "compressed_faster": true,
+    "undetermined": false
+  },
+  "fullcache_d01_L2048|serial|seg3": {
+    "R": 2.1099931278121375,
+    "ci95": [
+      2.03521618461536,
+      2.200974076870865
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d01_L2048|pipeline|seg3": {
+    "R": 1.5185919815027678,
+    "ci95": [
+      1.4441035362197225,
+      1.6034284149852627
+    ],
+    "n_pairs": 10,
+    "compressed_faster": false,
+    "undetermined": false
+  },
+  "fullcache_d01_L2048|fsync|seg3": {
+    "R": 0.568484560211386,
+    "ci95": [
+      0.5030908232529699,
+      0.6463384306509669
+    ],
+    "n_pairs": 10,
+    "compressed_faster": true,
+    "undetermined": false
+  }
+}
